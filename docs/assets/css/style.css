@@ -1,0 +1,7 @@
+.katex {
+  line-height: 1 !important; }
+
+.antex.display {
+  display: flex; }
+  .antex.display > img {
+    margin: 0 auto !important; }
