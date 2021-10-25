@@ -26,10 +26,23 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
 
+antex:
+  aliases:
+    # disable most aliases and let KaTeX render simple
+    display_math: false
+    inline_math: false
+    inline_macro: false
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  math_engine: null # lets KaTeX parse display math on client side
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
