@@ -36,5 +36,5 @@ This website is the logbook of a reading seminar that I would like to start at [
     <footer>
       <a href="{{ post.url | relative_url }}">Read more... </a>
     </footer>
-  <!-- </article> -->
+  </article>
 {% endfor %}

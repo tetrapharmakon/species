@@ -10,4 +10,8 @@
 <url>
 <loc>http://localhost:4000/species/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/species/red.pdf</loc>
+<lastmod>2021-10-26T00:44:52+03:00</lastmod>
+</url>
 </urlset>
