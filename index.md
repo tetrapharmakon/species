@@ -13,7 +13,7 @@ layout: page
     </header>
     {{ post.content | split: "</p>" | first }}
     <footer>
-      <a href="{{ post.url }}">Read more... ({{ post.content | number_of_words }} words)</a>
+      <a href="{{ post.url | relative_url }}">Read more... ({{ post.content | number_of_words }} words)</a>
     </footer>
   </article>
 {% endfor %}
