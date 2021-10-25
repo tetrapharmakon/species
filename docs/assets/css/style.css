@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
 .katex {
   line-height: 1 !important; }
 
@@ -5,3 +8,56 @@
   display: flex; }
   .antex.display > img {
     margin: 0 auto !important; }
+
+body {
+	font-size: 1.6rem;
+	background-color: #FCE8AD;
+	color: #272b2e;
+	text-align: justify;
+  margin: 20%;
+	max-width: 80%;
+}
+
+
+a:link {
+	color: #97492C;
+}
+
+/* visited link */
+a:visited {
+	color: #97492C;
+}
+
+/* mouse over link */
+a:hover {
+	color: #272b2e;
+}
+
+nav a {
+	font-size: 1.5rem;
+	/* font-weight: bold; */
+	color: #97492C;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+tbody,
+li,
+ul,
+table {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	/* font-size: 2.4rem; */
+	color: #351E24;
+}
+
+h2 {
+	/* font-size: 2rem; */
+	color: #351E24;
+}
