@@ -32,6 +32,7 @@ plugins:
   - jekyll-feed
 
 antex:
+  url_path_prefix: /species
   aliases:
     # disable most aliases and let KaTeX render simple
     display_math: false
