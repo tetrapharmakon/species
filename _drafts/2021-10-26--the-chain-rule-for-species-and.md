@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: The chain rule for species
 latex: katex
 katex:
   macros:

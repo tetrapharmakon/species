@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: FinSet and Its Universal Property
 latex: katex
 katex:
   macros:

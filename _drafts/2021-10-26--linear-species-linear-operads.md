@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: k-linear species, linear operads
 latex: katex
 katex:
   macros:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: Differential 2-rigs, a crash course
 latex: katex
 katex:
   macros:

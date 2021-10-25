@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: Cayley's theorem from Joyal's paper
 latex: katex
 katex:
   macros:

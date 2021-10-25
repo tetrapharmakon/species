@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: Taylor-Mac Lauring formula for species
 latex: katex
 katex:
   macros:

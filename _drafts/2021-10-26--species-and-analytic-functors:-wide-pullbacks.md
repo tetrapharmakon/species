@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: Species and analytic functors - the role of wide pullback
 latex: katex
 katex:
   macros:

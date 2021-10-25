@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: Yeh decomposition
 latex: katex
 katex:
   macros:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: Vistas and open problems
 latex: katex
 katex:
   macros:

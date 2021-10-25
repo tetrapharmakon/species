@@ -1,0 +1,16 @@
+cat header > $(date +%F)-01.-finset-and-its-up.md
+cat header > $(date +%F)-02.-p-and-its-up-and-species.md
+cat header > $(date +%F)-03.-monoidal-structures-on-P.md
+cat header > $(date +%F)-04.-species-and-analytic-functors:-wide-pullbacks.md
+cat header > $(date +%F)-05.-examples-of-species.md
+cat header > $(date +%F)-06.-cayleys-theorem-from-joyal-paper.md
+cat header > $(date +%F)-07.-species-in-combinatorics-fp-topology-algebra.md
+cat header > $(date +%F)-08.-species-and-operads.md
+cat header > $(date +%F)-09.-linear-species-linear-operads.md
+cat header > $(date +%F)-10.-differential-2-rigs,-a-crash-course.md
+cat header > $(date +%F)-11.-derivation-on-species-and-its-adjoints.md
+cat header > $(date +%F)-12.-the-chain-rule-for-species-and.md
+cat header > $(date +%F)-13.-taylor-formula-for-species.md
+cat header > $(date +%F)-14.-differential-equations.md
+cat header > $(date +%F)-15.-yeh-decomposition-theorem.md
+cat header > $(date +%F)-16.-vistas-for-the-future.md

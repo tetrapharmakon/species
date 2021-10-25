@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: Monoidal structures on P
 latex: katex
 katex:
   macros:

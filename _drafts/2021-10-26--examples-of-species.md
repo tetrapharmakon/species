@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: Examples of species
 latex: katex
 katex:
   macros:

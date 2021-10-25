@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: Species and operads
 latex: katex
 katex:
   macros:

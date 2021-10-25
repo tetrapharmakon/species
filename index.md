@@ -14,10 +14,10 @@ Combinatorial species are a true mathematical gem; they elegantly tie together a
 
 Combinatorial species were invented by A. Joyal. After that, entire books have been written on the topic: among these, we will often refer to two
 
-1. The red book
-2. The big book
+1. The red book: Bergeron, François, et al. _Combinatorial species and tree-like structures_. No. 67. Cambridge University Press, 1998.
+2. The big book: Aguiar, Marcelo, and Swapneel Arvind Mahajan. _Monoidal functors, species and Hopf algebras_. Vol. 29. Providence, RI: American Mathematical Society, 2010.
 
-This website is the logbook of a reading seminar that I would like to start at [taltech](https://compose.ioc.ee) during Fall 2021.
+This website is the logbook of a reading seminar that I would like to start at [taltech](https://compose.ioc.ee) during Fall 2021. Its focus is not on rigor or completeness. Its style is idiosyncratic. Its purpose is to collect pointers to the -quite vast- literature on species (and) tickle my nitpickery). My hope is not to drop the project midway.
 
 {% for post in site.posts %}
   <article>

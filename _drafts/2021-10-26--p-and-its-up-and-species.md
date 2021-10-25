@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: P, its universal property, and species
 latex: katex
 katex:
   macros:

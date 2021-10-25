@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: Differential equations
 latex: katex
 katex:
   macros:
