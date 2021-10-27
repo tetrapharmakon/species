@@ -1,3 +1,76 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/species/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/species/" rel="alternate" type="text/html" /><updated>2021-10-26T11:02:53+03:00</updated><id>http://localhost:4000/species/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">FinSet and Its Universal Property</title><link href="http://localhost:4000/species/2021/10/26/finset-and-its-up.html" rel="alternate" type="text/html" title="FinSet and Its Universal Property" /><published>2021-10-26T00:00:00+03:00</published><updated>2021-10-26T00:00:00+03:00</updated><id>http://localhost:4000/species/2021/10/26/-finset-and-its-up</id><content type="html" xml:base="http://localhost:4000/species/2021/10/26/finset-and-its-up.html">&lt;p&gt;The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="/species/feed.xml" rel="self" type="application/atom+xml" /><link href="/species/" rel="alternate" type="text/html" /><updated>2021-10-27T13:40:32+03:00</updated><id>/species/feed.xml</id><title type="html">Combinatorial species in TTU</title><subtitle>A reading seminar on Joyal's combinatorial species</subtitle><entry><title type="html">Fin and Its Universal Property</title><link href="/species/2021/10/27/finset-and-its-up.html" rel="alternate" type="text/html" title="Fin and Its Universal Property" /><published>2021-10-27T00:00:00+03:00</published><updated>2021-10-27T00:00:00+03:00</updated><id>/species/2021/10/27/finset-and-its-up</id><content type="html" xml:base="/species/2021/10/27/finset-and-its-up.html">&lt;p&gt;The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$.&lt;/p&gt;
 
-&lt;p&gt;…&lt;/p&gt;</content><author><name></name></author><summary type="html">The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$.</summary></entry></feed>
+&lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt;. The category $\bf Fin$ is the free finite coproduct completion of the singleton $\bullet$.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; It is enough to show that a functor $\bf Fin \to \mathcal{C}$ that preserves coproducts is uniquely determined by the image of $[1]$, i.e. by $F[1]=X$; this is obvious, because&lt;/p&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+F([n]) = \coprod_{i=1}^n F([1]) = \coprod_{i=1}^n X = [n] \otimes X
+$$&lt;/div&gt;
+
+&lt;p&gt;(if $ \_ \otimes \_ $ denotes the &lt;a href=&quot;&quot;&gt;tensor&lt;/a&gt; of $X\in\mathcal{C}$ with the set $[n]$). $\blacksquare$&lt;/p&gt;
+
+&lt;p&gt;As an immediate corollary, the opposite category ${\bf Fin}^\text{op}$ is the free finite &lt;em&gt;product&lt;/em&gt; completion of the singleton $\bullet$.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; There is an equivalence of categories between&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The category of all functors ${\bf Fin} \to {\bf Set}$, and natural transformations;&lt;/li&gt;
+  &lt;li&gt;The category of &lt;em&gt;finitary&lt;/em&gt; endofunctors of $\bf Set$, i.e. those $T : {\bf Set} \to {\bf Set}$ that preserve &lt;a href=&quot;&quot;&gt;filtered colimits&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; Let’s first build an adjunction between the two categories; the “tautological” inclusion functor $J : {\bf Fin} \to {\bf Set}$ induces an adjunction&lt;/p&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+\text{Lan}_J : [{\bf Fin}, {\bf Set}] \leftrightarrows [{\bf Set}, {\bf Set}] J^*
+$$&lt;/div&gt;
+
+&lt;p&gt;where $J^*$ is the “precomposition with $J$” functor, and $\text{Lan}_J$ its left adjoint. Such a left adjoint is fully faithful, because $J$ is fully faithful, and this last condition entails that in the diagram&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;antex display&quot;&gt;&lt;img data-antex=&quot;e8bdb4e0e43474a9c5cc87d8c5bb1264&quot; src=&quot;/species/antex/e8bdb4e0e43474a9c5cc87d8c5bb1264.svg&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;The 2-cell $\eta : F \Rightarrow (\text{Lan}_J F)\circ J $ is invertible; $\eta$ is exactly the unit of the adjunction $\text{Lan}_J \dashv J^*$, and this in turn entails that the left adjoint in the adjunction is fully faithful.&lt;/p&gt;
+
+&lt;p&gt;It only remains to characterise the essential image of $\text{Lan}_J$ as the full subcategory of finitary functors on $\bf Set$; a general theorem comes to the rescue again: the objects we are interested in are just the ones at whose components the counit of the adjunction $\text{Lan}_J \dashv J^*$ is an isomorphism; unwinding this condition, we get to prove that the following conditions are equivalent:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;$T : {\bf Set} \to {\bf Set}$ is finitary;&lt;/li&gt;
+  &lt;li&gt;The counit $\epsilon_T : \text{Lan}_J(TJ) \Rightarrow T$ is a natural isomorphism.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This is easily seen: let’s say that $T$ is finitary, and unwind the counit using the universal property; given $A\in \bf Set$, the left Kan extension of $TJ$ along $J$, computed in $A$, is just the &lt;a href=&quot;&quot;&gt;weighted colimit&lt;/a&gt; of $TJ$ with weight $P={\bf Set}(J-, A)$, and this is in turn the colimit of $TJ$ over the (opposite of the) &lt;a href=&quot;&quot;&gt;category of elements&lt;/a&gt; of $P$, i.e the colimit of the composition $T \circ \Sigma^\text{op}$, where the category of elements and the canonical projection $\Sigma$ appear in the upper left corner in the pullback&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;antex display&quot;&gt;&lt;img data-antex=&quot;5ba5535f5603aae7dd08559a8a3eca65&quot; src=&quot;/species/antex/5ba5535f5603aae7dd08559a8a3eca65.svg&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;This category is filtered, so in the end $\lambda A.\text{Lan}_J(TJ)A\cong \lambda A.T((\text{Lan}_J J)A)\cong \lambda A.TA$, naturally in $A$ (because $\text{Lan}_JJ$ is isomorphic to the identity functor). $\blacksquare$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Remark.&lt;/strong&gt; From a higher perspective, this is a consequence of a more general theorem (but this explanation is imprecise); given a suitable class of “shapes”, i.e. a subcategory $\mathcal{D} \subseteq {\bf Cat}$, there is an equivalence of categories between&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The category of all functors $F_\mathcal{D}(\bullet) \to {\bf Set}$, and natural transformations;&lt;/li&gt;
+  &lt;li&gt;The category of endofunctors of $\bf Set$ that commute with $\mathcal{D}$-filtered colimits,&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;where $F_\mathcal{D}(\bullet)$ is the free completion of the point under $\mathcal{D}$-shaped limits.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; Given an equivalence of categories $F :{\cal V} \leftrightarrows {\cal W} : G$, where $\cal V$ is (symmetric) monoidal, there is an essentially unique way to give $\cal W$ a monoidal structure, so that $F,G$ become &lt;a href=&quot;&quot;&gt;strong monoidal functors&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Sketch of proof.&lt;/em&gt; Let’s say $(\otimes, I)$ is a monoidal structure on $\cal V$. Define a tensor product on $\cal W$ using $F,G$: $(X,Y)\mapsto X\odot Y= F(GX \otimes GY)$. Define a monoidal unit $K:= GI$. Straightforward from here. $\blacksquare$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Corollary.&lt;/strong&gt; Under the same notation as above, there is an equivalence of categories&lt;/p&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+\text{Mon}({\cal V}) \leftrightarrows \text{Mon}({\cal W})
+$$&lt;/div&gt;
+
+&lt;p&gt;induced by $(F,G)$ between internal monoids in $(\cal V, \otimes, I)$ and internal monoids in $(\cal W, \odot, K)$.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Remark.&lt;/strong&gt; The category of all endofunctors of $\bf Set$ is strict monoidal, with respect to composition of functors. The category $[{\bf Set}, {\bf Set}]_\omega$ of finitary endofunctors inherits a strict monoidal structure from $[{\bf Set}, {\bf Set}]$, because the composition of finitary functors is again finitary.&lt;/p&gt;
+
+&lt;p&gt;As a consequence, the category $[{\bf Fin}, {\bf Set}]$ inherits a (non strict) monoidal structure, called the &lt;em&gt;substitution product&lt;/em&gt;: the substitution of a pair of functors $M,N : {\bf Fin}\to{\bf Set}$ is the functor&lt;/p&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+[n] \mapsto M \triangleleft N := (\text{Lan}_J M \circ \text{Lan}_J N) \circ J = \text{Lan}_J M \circ N
+$$&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Exercise.&lt;/em&gt; Unwind the definition of $\text{Lan}_J M \circ N$ finding an explicit formula for $M\triangleleft N$. (We will come back to this.)&lt;/p&gt;</content><author><name></name></author><summary type="html">The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$.</summary></entry></feed>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/species/2021/10/26/finset-and-its-up.html</loc>
-<lastmod>2021-10-26T00:00:00+03:00</lastmod>
+<loc>/species/2021/10/27/finset-and-its-up.html</loc>
+<lastmod>2021-10-27T00:00:00+03:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/species/about/</loc>
+<loc>/species/about/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/species/</loc>
+<loc>/species/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/species/red.pdf</loc>
+<loc>/species/red.pdf</loc>
 <lastmod>2021-10-26T00:44:52+03:00</lastmod>
 </url>
 </urlset>

@@ -32,9 +32,9 @@ This website is the logbook of a reading seminar that I would like to start at [
       <h3>{{ post.title }}</h3>
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
     </header>
-    {{ post.content }}
+    {{ post.content | split: "</p>" | first }}
     <footer>
       <a href="{{ post.url | relative_url }}">Read more...</a>
     </footer>
-  </article>
+  <!-- </article> -->
 {% endfor %}

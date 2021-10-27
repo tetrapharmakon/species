@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Fin and Its Universal Property | Combinatorial species in TTU</title>
+<meta name="generator" content="Jekyll v3.9.1" />
+<meta property="og:title" content="Fin and Its Universal Property" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$." />
+<meta property="og:description" content="The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$." />
+<link rel="canonical" href="/species/2021/10/27/finset-and-its-up.html" />
+<meta property="og:url" content="/species/2021/10/27/finset-and-its-up.html" />
+<meta property="og:site_name" content="Combinatorial species in TTU" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-27T00:00:00+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Fin and Its Universal Property" />
+<script type="application/ld+json">
+{"url":"/species/2021/10/27/finset-and-its-up.html","@type":"BlogPosting","headline":"Fin and Its Universal Property","dateModified":"2021-10-27T00:00:00+03:00","datePublished":"2021-10-27T00:00:00+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"/species/2021/10/27/finset-and-its-up.html"},"description":"The category $\\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\\bf Fin$ is the category whose objects are sets $[n]={1,\\dots,n}$ for $n\\ge 0$ (with the convention that $[0]=\\varnothing$), and morphisms are functions $f : [n] \\to [m]$.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="/species/assets/css/style.css?v=">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body,{macros:{ '':'', },delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+
+      </head>
+      <body>
+        <header id="header">
+          <nav>
+            <a href="/species/">◂</a>
+            <a href="http://tetrapharmakon.github.io">home</a>
+          </nav>
+        </header>
+
+    <main>
+      <article>
+    &bull; 27 Oct 2021 &bull;
+    <h1>Fin and Its Universal Property</h1>
+    <p>The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$.</p>
+
+<p><strong>Theorem</strong>. The category $\bf Fin$ is the free finite coproduct completion of the singleton $\bullet$.</p>
+
+<p><em>Proof.</em> It is enough to show that a functor $\bf Fin \to \mathcal{C}$ that preserves coproducts is uniquely determined by the image of $[1]$, i.e. by $F[1]=X$; this is obvious, because</p>
+
+<div class="kdmath">$$
+F([n]) = \coprod_{i=1}^n F([1]) = \coprod_{i=1}^n X = [n] \otimes X
+$$</div>
+
+<p>(if $ \_ \otimes \_ $ denotes the <a href="">tensor</a> of $X\in\mathcal{C}$ with the set $[n]$). $\blacksquare$</p>
+
+<p>As an immediate corollary, the opposite category ${\bf Fin}^\text{op}$ is the free finite <em>product</em> completion of the singleton $\bullet$.</p>
+
+<p><strong>Theorem.</strong> There is an equivalence of categories between</p>
+
+<ol>
+  <li>The category of all functors ${\bf Fin} \to {\bf Set}$, and natural transformations;</li>
+  <li>The category of <em>finitary</em> endofunctors of $\bf Set$, i.e. those $T : {\bf Set} \to {\bf Set}$ that preserve <a href="">filtered colimits</a>.</li>
+</ol>
+
+<p><em>Proof.</em> Let’s first build an adjunction between the two categories; the “tautological” inclusion functor $J : {\bf Fin} \to {\bf Set}$ induces an adjunction</p>
+
+<div class="kdmath">$$
+\text{Lan}_J : [{\bf Fin}, {\bf Set}] \leftrightarrows [{\bf Set}, {\bf Set}] J^*
+$$</div>
+
+<p>where $J^*$ is the “precomposition with $J$” functor, and $\text{Lan}_J$ its left adjoint. Such a left adjoint is fully faithful, because $J$ is fully faithful, and this last condition entails that in the diagram</p>
+
+<p><span class="antex display"><img style='margin: 0.008ex 0.101ex -9.89ex 0.0ex; height: 12.386ex; width: 14.492ex;' src="/species/antex/e8bdb4e0e43474a9c5cc87d8c5bb1264.svg" /></span></p>
+
+<p>The 2-cell $\eta : F \Rightarrow (\text{Lan}_J F)\circ J $ is invertible; $\eta$ is exactly the unit of the adjunction $\text{Lan}_J \dashv J^*$, and this in turn entails that the left adjoint in the adjunction is fully faithful.</p>
+
+<p>It only remains to characterise the essential image of $\text{Lan}_J$ as the full subcategory of finitary functors on $\bf Set$; a general theorem comes to the rescue again: the objects we are interested in are just the ones at whose components the counit of the adjunction $\text{Lan}_J \dashv J^*$ is an isomorphism; unwinding this condition, we get to prove that the following conditions are equivalent:</p>
+
+<ol>
+  <li>$T : {\bf Set} \to {\bf Set}$ is finitary;</li>
+  <li>The counit $\epsilon_T : \text{Lan}_J(TJ) \Rightarrow T$ is a natural isomorphism.</li>
+</ol>
+
+<p>This is easily seen: let’s say that $T$ is finitary, and unwind the counit using the universal property; given $A\in \bf Set$, the left Kan extension of $TJ$ along $J$, computed in $A$, is just the <a href="">weighted colimit</a> of $TJ$ with weight $P={\bf Set}(J-, A)$, and this is in turn the colimit of $TJ$ over the (opposite of the) <a href="">category of elements</a> of $P$, i.e the colimit of the composition $T \circ \Sigma^\text{op}$, where the category of elements and the canonical projection $\Sigma$ appear in the upper left corner in the pullback</p>
+
+<p><span class="antex display"><img style='margin: 0.001ex 0.163ex -11.638ex 0.0ex; height: 13.708ex; width: 19.473ex;' src="/species/antex/5ba5535f5603aae7dd08559a8a3eca65.svg" /></span></p>
+
+<p>This category is filtered, so in the end $\lambda A.\text{Lan}_J(TJ)A\cong \lambda A.T((\text{Lan}_J J)A)\cong \lambda A.TA$, naturally in $A$ (because $\text{Lan}_JJ$ is isomorphic to the identity functor). $\blacksquare$</p>
+
+<p><strong>Remark.</strong> From a higher perspective, this is a consequence of a more general theorem (but this explanation is imprecise); given a suitable class of “shapes”, i.e. a subcategory $\mathcal{D} \subseteq {\bf Cat}$, there is an equivalence of categories between</p>
+
+<ol>
+  <li>The category of all functors $F_\mathcal{D}(\bullet) \to {\bf Set}$, and natural transformations;</li>
+  <li>The category of endofunctors of $\bf Set$ that commute with $\mathcal{D}$-filtered colimits,</li>
+</ol>
+
+<p>where $F_\mathcal{D}(\bullet)$ is the free completion of the point under $\mathcal{D}$-shaped limits.</p>
+
+<p><strong>Fact.</strong> Given an equivalence of categories $F :{\cal V} \leftrightarrows {\cal W} : G$, where $\cal V$ is (symmetric) monoidal, there is an essentially unique way to give $\cal W$ a monoidal structure, so that $F,G$ become <a href="">strong monoidal functors</a>.</p>
+
+<p><em>Sketch of proof.</em> Let’s say $(\otimes, I)$ is a monoidal structure on $\cal V$. Define a tensor product on $\cal W$ using $F,G$: $(X,Y)\mapsto X\odot Y= F(GX \otimes GY)$. Define a monoidal unit $K:= GI$. Straightforward from here. $\blacksquare$</p>
+
+<p><strong>Corollary.</strong> Under the same notation as above, there is an equivalence of categories</p>
+
+<div class="kdmath">$$
+\text{Mon}({\cal V}) \leftrightarrows \text{Mon}({\cal W})
+$$</div>
+
+<p>induced by $(F,G)$ between internal monoids in $(\cal V, \otimes, I)$ and internal monoids in $(\cal W, \odot, K)$.</p>
+
+<p><strong>Remark.</strong> The category of all endofunctors of $\bf Set$ is strict monoidal, with respect to composition of functors. The category $[{\bf Set}, {\bf Set}]_\omega$ of finitary endofunctors inherits a strict monoidal structure from $[{\bf Set}, {\bf Set}]$, because the composition of finitary functors is again finitary.</p>
+
+<p>As a consequence, the category $[{\bf Fin}, {\bf Set}]$ inherits a (non strict) monoidal structure, called the <em>substitution product</em>: the substitution of a pair of functors $M,N : {\bf Fin}\to{\bf Set}$ is the functor</p>
+
+<div class="kdmath">$$
+[n] \mapsto M \triangleleft N := (\text{Lan}_J M \circ \text{Lan}_J N) \circ J = \text{Lan}_J M \circ N
+$$</div>
+
+<p><em>Exercise.</em> Unwind the definition of $\text{Lan}_J M \circ N$ finding an explicit formula for $M\triangleleft N$. (We will come back to this.)</p>
+
+</article>
+    </main>
+
+    <footer id="footer">
+      <nav>
+        <a href="/species/">◂</a>
+        <a href="#header">▴</a>
+      </nav>
+    </footer>
+  </body>
+</html>
