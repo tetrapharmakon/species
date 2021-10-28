@@ -20,7 +20,10 @@ The fundamental object of study of the theory of combinatorial species is the ca
 
 ### The groupoid of natural numbers
 
-**Definition** (The category $\bf P$).
+**Definition** (The category $\bf P$). The category $\bf P$, also called the *groupoid of natural numbers* has
+
+1. Objects the finite sets $A,B,\dots$;
+2. Hom sets $\hom(A,B)$ the set of bijective functions $\sigma : A \to B$ if $|A| = |B|$, and the empty set otherwise.
 
 **Remark** (On the structure of $\bf P$).
 
