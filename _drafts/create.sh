@@ -1,5 +1,3 @@
-cat header > $(date +%F)-01.-finset-and-its-up.md
-cat header > $(date +%F)-02.-p-and-its-up-and-species.md
 cat header > $(date +%F)-03.-monoidal-structures-on-P.md
 cat header > $(date +%F)-04.-species-and-analytic-functors:-wide-pullbacks.md
 cat header > $(date +%F)-05.-examples-of-species.md
