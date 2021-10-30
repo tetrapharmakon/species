@@ -7,17 +7,17 @@
 <meta name="generator" content="Jekyll v3.9.1" />
 <meta property="og:title" content="P, its universal property, and species" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the first category.)" />
-<meta property="og:description" content="The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the first category.)" />
-<link rel="canonical" href="http://localhost:4000/species/2021/10/27/p-and-its-up-and-species.html" />
-<meta property="og:url" content="http://localhost:4000/species/2021/10/27/p-and-its-up-and-species.html" />
+<meta name="description" content="The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second category.)" />
+<meta property="og:description" content="The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second category.)" />
+<link rel="canonical" href="/species/2021/10/27/p-and-its-up-and-species.html" />
+<meta property="og:url" content="/species/2021/10/27/p-and-its-up-and-species.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-10-27T00:00:00+03:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="P, its universal property, and species" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/2021/10/27/p-and-its-up-and-species.html","@type":"BlogPosting","headline":"P, its universal property, and species","dateModified":"2021-10-27T00:00:00+03:00","datePublished":"2021-10-27T00:00:00+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/2021/10/27/p-and-its-up-and-species.html"},"description":"The fundamental object of study of the theory of combinatorial species is the category $\\bf P$ of finite sets and bijections, and its presheaf category $[{\\bf P}^\\text{op}, {\\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\\bf P}^\\text{op}, {\\bf Set}]$ and $[{\\bf P}, {\\bf Set}]$, but we will usually speak about the first category.)","@context":"https://schema.org"}</script>
+{"url":"/species/2021/10/27/p-and-its-up-and-species.html","@type":"BlogPosting","headline":"P, its universal property, and species","dateModified":"2021-10-27T00:00:00+03:00","datePublished":"2021-10-27T00:00:00+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"/species/2021/10/27/p-and-its-up-and-species.html"},"description":"The fundamental object of study of the theory of combinatorial species is the category $\\bf P$ of finite sets and bijections, and its presheaf category $[{\\bf P}^\\text{op}, {\\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\\bf P}^\\text{op}, {\\bf Set}]$ and $[{\\bf P}, {\\bf Set}]$, but we will usually speak about the second category.)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,17 +44,46 @@
       <article>
     &bull; 27 Oct 2021 &bull;
     <h1>P, its universal property, and species</h1>
-    <p>The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t  much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the first category.)</p>
+    <p>The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t  much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second category.)</p>
 
 <h3 id="the-groupoid-of-natural-numbers">The groupoid of natural numbers</h3>
 
-<p><strong>Definition</strong> (The category $\bf P$).</p>
+<p><strong>Definition</strong> (The category $\bf P$). The category $\bf P$, also called the <em>groupoid of natural numbers</em> has</p>
 
-<p><strong>Remark</strong> (On the structure of $\bf P$).</p>
+<ol>
+  <li>Objects the finite sets $A,B,\dots$;</li>
+  <li>Hom sets $\hom(A,B)$ the set of bijective functions $\sigma : A \to B$ if $\text{card}(A) = \text{card}(B)$, and the empty set otherwise.</li>
+</ol>
 
-<p><strong>Corollary.</strong> A functor $X : {\bf P} \to {\bf Set}$ is just…</p>
+<p>A skeleton of $\bf P$ consists of the category having objects the natural numbers $[n]={1,\dots, n}$ (with the convention that $[0]$ is empty), and hom-sets $\hom(n,n)$ the symmetric groups $S_n$ for each $n\ge 0$.</p>
 
-<p><strong>Theorem.</strong> The universal property of $\bf P$ as the free symmetric monoidal category on a singleton</p>
+<p><strong>Remark</strong> (On the structure of $\bf P$). Every groupoid splits as a disjoint union of connected groupoids (each of which is); the category $\bf P$ (or rather its skeleton) splits as a disjoint union of the groups $S_n$, with $n\ge 0$. So the <em>canonical decomposition</em> of $\bf P$ is the equivalence of categories</p>
+
+<div class="kdmath">$$
+{\bf P} \cong \coprod_{n=0}^\infty S_n.
+$$</div>
+
+<p>An immediate corollary of this decomposition is that a functor $X : {\bf P} \to {\bf Set}$ is uniquely determined by a “symmetric sequence”:
+<!-- of sets $(X_n \mid n\ge 0)$ each of which has a left action of the symmetric group on $n$ elements. --></p>
+
+<p><strong>Corollary.</strong> A functor $X : {\bf P} \to {\bf Set}$ is completely determined by the following data:</p>
+
+<ol>
+  <li>A sequence of sets $(X_n \mid n\ge 0)$;</li>
+  <li>A sequence of functions $(a^X_n : S_n \times X_n \to X_n)$, each of which is a left action of $S_n$ on the set $X_n$.</li>
+</ol>
+
+<p><em>Proof.</em> It is evident that the actions $a^X_n$ are precisely the action on morphisms of a functor $X_\bullet : {\bf P} \to {\bf Set}$ (vice versa, every hom-set ${\bf P}(n,m)$ is empty for $n\neq m$, so the datum of the actions is enough to “glue” a functor $X$).</p>
+
+<p><strong>Definition</strong> (Category of species). A functor $X_\bullet : {\bf P} \to {\bf Set}$ is called a <em>combinatorial species</em>.</p>
+
+<p>The category $\bf Spc$ of combinatorial species has objects said functors, and morphisms the natural transformations $\alpha : X_\bullet \Rightarrow Y_\bullet$.</p>
+
+<p>The category $\bf P$ and $\bf Spc$ have two important universal properties:</p>
+
+<p><strong>Theorem.</strong> The category $\bf P$ is the free symmetric monoidal category on a singleton.</p>
+
+<p><strong>Theorem.</strong> The category $\bf Spc$ is the free cocomplete symmetric monoidal category on a singleton.</p>
 
 <h3 id="monoidal-structure-on-bf-p">Monoidal structure on $\bf P$</h3>
 
