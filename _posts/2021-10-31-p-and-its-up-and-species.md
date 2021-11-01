@@ -49,12 +49,12 @@ The category $\bf P$ and $\bf Spc$ have two important universal properties:
 
 **Theorem.** The category $\bf P$ is the free symmetric monoidal category on a singleton.
 
+*Proof.* ...
+
 **Theorem.** The category $\bf Spc$ is the free cocomplete symmetric monoidal category on a singleton.
 
-### Monoidal structure on $\bf P$
+*Proof.* ...
 
-**Definition** (The Cartesian monoidal structure).
+### A word on $\bf P$ as a device to do combinatorics
 
-**Definition** (The Cauchy monoidal structure).
-
-**Definition** (The substitution monoidal structure).
+...
