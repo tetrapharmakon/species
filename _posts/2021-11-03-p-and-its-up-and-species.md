@@ -69,6 +69,16 @@ The category $\bf P$ and $\bf Spc$ have two important universal properties:
 
 *Proof.* ...
 
-### A word on $\bf P$ as a device to do combinatorics
+### A few examples of species
+
+**Example** (The species of singletons).
+**Example** (The species of elements).
+**Example** (The terminal species).
+**Example** (The species of permutations).
+**Example** (The species of linear orders).
+**Example** (The species of graphs).
+**Example** (The species of trees).
+**Example** (The species of rooted trees).
+**Example** (The species of...).
 
 ...
