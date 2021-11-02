@@ -9,15 +9,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second category.)" />
 <meta property="og:description" content="The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second category.)" />
-<link rel="canonical" href="/species/2021/10/27/p-and-its-up-and-species.html" />
-<meta property="og:url" content="/species/2021/10/27/p-and-its-up-and-species.html" />
+<link rel="canonical" href="http://localhost:4000/species/2021/10/31/p-and-its-up-and-species.html" />
+<meta property="og:url" content="http://localhost:4000/species/2021/10/31/p-and-its-up-and-species.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-10-27T00:00:00+03:00" />
+<meta property="article:published_time" content="2021-10-31T00:00:00+03:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="P, its universal property, and species" />
 <script type="application/ld+json">
-{"url":"/species/2021/10/27/p-and-its-up-and-species.html","@type":"BlogPosting","headline":"P, its universal property, and species","dateModified":"2021-10-27T00:00:00+03:00","datePublished":"2021-10-27T00:00:00+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"/species/2021/10/27/p-and-its-up-and-species.html"},"description":"The fundamental object of study of the theory of combinatorial species is the category $\\bf P$ of finite sets and bijections, and its presheaf category $[{\\bf P}^\\text{op}, {\\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\\bf P}^\\text{op}, {\\bf Set}]$ and $[{\\bf P}, {\\bf Set}]$, but we will usually speak about the second category.)","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/2021/10/31/p-and-its-up-and-species.html","@type":"BlogPosting","headline":"P, its universal property, and species","dateModified":"2021-10-31T00:00:00+03:00","datePublished":"2021-10-31T00:00:00+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/2021/10/31/p-and-its-up-and-species.html"},"description":"The fundamental object of study of the theory of combinatorial species is the category $\\bf P$ of finite sets and bijections, and its presheaf category $[{\\bf P}^\\text{op}, {\\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\\bf P}^\\text{op}, {\\bf Set}]$ and $[{\\bf P}, {\\bf Set}]$, but we will usually speak about the second category.)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,7 +42,7 @@
 
     <main>
       <article>
-    &bull; 27 Oct 2021 &bull;
+    &bull; 31 Oct 2021 &bull;
     <h1>P, its universal property, and species</h1>
     <p>The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t  much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second category.)</p>
 
@@ -75,23 +75,37 @@ $$</div>
 
 <p><em>Proof.</em> It is evident that the actions $a^X_n$ are precisely the action on morphisms of a functor $X_\bullet : {\bf P} \to {\bf Set}$ (vice versa, every hom-set ${\bf P}(n,m)$ is empty for $n\neq m$, so the datum of the actions is enough to “glue” a functor $X$).</p>
 
-<p><strong>Definition</strong> (Category of species). A functor $X_\bullet : {\bf P} \to {\bf Set}$ is called a <em>combinatorial species</em>.</p>
+<p><strong>Definition</strong> (Category of species). A functor $X_\bullet : {\bf P} \to {\bf Set}$ is called a <em>combinatorial species</em>. The <em>category</em> $\bf Spc$ of combinatorial species has objects the functors $X_\bullet : {\bf P} \to {\bf Set}$, and morphisms the natural transformations $\alpha : X_\bullet \Rightarrow Y_\bullet$.</p>
 
-<p>The category $\bf Spc$ of combinatorial species has objects said functors, and morphisms the natural transformations $\alpha : X_\bullet \Rightarrow Y_\bullet$.</p>
+<p>By the above remark, a combinatorial species is completely described by a sequence of sets $(X_n\mid n\ge 0)$, each of which has an action of the symmetric group on $n$ letters.</p>
+
+<p><em>Remark.</em> (An important remark on how to think about combinatorial species). Given the corollary above, it is not a mistake to interpret a combinatorial species as a “categorified formal power series”: the sequence of the $X_n$’s above is the sequence of coefficients of a formal power series $a_0 + a_1t+a_2t^2+\dots$. In slightly more formal terms, to the species $X_\bullet$ one can associate the “exponential” formal power series</p>
+
+<div class="kdmath">$$
+g_X(t)= \sum_{n=0}^\infty \frac{|X_n|}{n!} t^n
+$$</div>
+
+<p>(don’t pay particular attention to the denominator term $n!$; it is there to simplify some expressions and blur the distinction between formal power series and analytic function to which it converges) where $t$ is a formal parameter and $|X_n|$ is the cardinality of $X_n$.</p>
+
+<p>We will soon substantiate this idea showing that most of the operations that make sense for formal power series, such as addition, multiplication and an analogue of functional composition, also make sense for combinatorial species.</p>
+
+<p>The reader shall however be warned that, while a quite intuitive invariant of the combinatorial species $X_\bullet$, its generating series is also a quite coarse one. For example, the correspondence that sends $X_\bullet$ into $g_X$ is not injective: there is plenty of species for which $\forall n.|X_n| = |Y_n|$ (and thus $g_X=g_Y$) without them being isomorphic. (For example, the species $S$ of permutations and the species $L$ of linear orders: in that case, $\forall n.|S_n| = |L_n| = n!$, and $g_S=g_L=\sum_{n=0}^\infty t^n = \frac1{1-t}$.)</p>
+
+<p><em>Remark.</em> (A remark on the generality of this definition). Originally, Joyal defined a “finitary species” (<em>espèce finitaire</em>) as an endofunctor of $\bf P$; the red book also concentrates on species having values in finite sets. These two definitions are equivalent, because a functor ${\bf P} \to {\bf Fin}$ factors along the inclusion ${\bf P} \hookrightarrow {\bf Fin}$; but the category of all $\bf Set$-valued functors ${\bf P} \to {\bf Set}$ has way nicer categorical properties.</p>
 
 <p>The category $\bf P$ and $\bf Spc$ have two important universal properties:</p>
 
 <p><strong>Theorem.</strong> The category $\bf P$ is the free symmetric monoidal category on a singleton.</p>
 
+<p><em>Proof.</em> …</p>
+
 <p><strong>Theorem.</strong> The category $\bf Spc$ is the free cocomplete symmetric monoidal category on a singleton.</p>
 
-<h3 id="monoidal-structure-on-bf-p">Monoidal structure on $\bf P$</h3>
+<p><em>Proof.</em> …</p>
 
-<p><strong>Definition</strong> (The Cartesian monoidal structure).</p>
+<h3 id="a-word-on-bf-p-as-a-device-to-do-combinatorics">A word on $\bf P$ as a device to do combinatorics</h3>
 
-<p><strong>Definition</strong> (The Cauchy monoidal structure).</p>
-
-<p><strong>Definition</strong> (The substitution monoidal structure).</p>
+<p>…</p>
 
 </article>
     </main>

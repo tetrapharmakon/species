@@ -41,9 +41,23 @@ An immediate corollary of this decomposition is that a functor $X : {\bf P} \to 
 
 *Proof.* It is evident that the actions $a^X_n$ are precisely the action on morphisms of a functor $X_\bullet : {\bf P} \to {\bf Set}$ (vice versa, every hom-set ${\bf P}(n,m)$ is empty for $n\neq m$, so the datum of the actions is enough to "glue" a functor $X$).
 
-**Definition** (Category of species). A functor $X_\bullet : {\bf P} \to {\bf Set}$ is called a *combinatorial species*.
+**Definition** (Category of species). A functor $X_\bullet : {\bf P} \to {\bf Set}$ is called a *combinatorial species*. The *category* $\bf Spc$ of combinatorial species has objects the functors $X_\bullet : {\bf P} \to {\bf Set}$, and morphisms the natural transformations $\alpha : X_\bullet \Rightarrow Y_\bullet$.
 
-The category $\bf Spc$ of combinatorial species has objects said functors, and morphisms the natural transformations $\alpha : X_\bullet \Rightarrow Y_\bullet$.
+
+By the above remark, a combinatorial species is completely described by a sequence of sets $(X_n\mid n\ge 0)$, each of which has an action of the symmetric group on $n$ letters.
+
+*Remark.* (An important remark on how to think about combinatorial species). Given the corollary above, it is not a mistake to interpret a combinatorial species as a "categorified formal power series": the sequence of the $X_n$'s above is the sequence of coefficients of a formal power series $a_0 + a_1t+a_2t^2+\dots$. In slightly more formal terms, to the species $X_\bullet$ one can associate the "exponential" formal power series
+
+$$g_X(t)= \sum_{n=0}^\infty \frac{|X_n|}{n!} t^n $$
+
+(don't pay particular attention to the denominator term $n!$; it is there to simplify some expressions and blur the distinction between formal power series and analytic function to which it converges) where $t$ is a formal parameter and $\|X_n\|$ is the cardinality of $X_n$.
+
+
+We will soon substantiate this idea showing that most of the operations that make sense for formal power series, such as addition, multiplication and an analogue of functional composition, also make sense for combinatorial species.
+
+The reader shall however be warned that, while a quite intuitive invariant of the combinatorial species $X_\bullet$, its generating series is also a quite coarse one. For example, the correspondence that sends $X_\bullet$ into $g_X$ is not injective: there is plenty of species for which $\forall n.\|X_n\| = \|Y_n\|$ (and thus $g_X=g_Y$) without them being isomorphic. (For example, the species $S$ of permutations and the species $L$ of linear orders: in that case, $\forall n.\|S_n\| = \|L_n\| = n!$, and $g_S=g_L=\sum_{n=0}^\infty t^n = \frac1{1-t}$.)
+
+*Remark.* (A remark on the generality of this definition). Originally, Joyal defined a "finitary species" (*espèce finitaire*) as an endofunctor of $\bf P$; the red book also concentrates on species having values in finite sets. These two definitions are equivalent, because a functor ${\bf P} \to {\bf Fin}$ factors along the inclusion ${\bf P} \hookrightarrow {\bf Fin}$; but the category of all $\bf Set$-valued functors ${\bf P} \to {\bf Set}$ has way nicer categorical properties.
 
 The category $\bf P$ and $\bf Spc$ have two important universal properties:
 
