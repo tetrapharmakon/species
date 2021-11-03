@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="/species/feed.xml" rel="self" type="application/atom+xml" /><link href="/species/" rel="alternate" type="text/html" /><updated>2021-11-03T11:52:01+02:00</updated><id>/species/feed.xml</id><title type="html">Combinatorial species in TTU</title><subtitle>A reading seminar on Joyal's combinatorial species</subtitle><entry><title type="html">P, its universal property, and species</title><link href="/species/2021/11/03/p-and-its-up-and-species.html" rel="alternate" type="text/html" title="P, its universal property, and species" /><published>2021-11-03T00:00:00+02:00</published><updated>2021-11-03T00:00:00+02:00</updated><id>/species/2021/11/03/p-and-its-up-and-species</id><content type="html" xml:base="/species/2021/11/03/p-and-its-up-and-species.html">&lt;p&gt;The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t  much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second category.)&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="/species/feed.xml" rel="self" type="application/atom+xml" /><link href="/species/" rel="alternate" type="text/html" /><updated>2021-11-03T11:54:46+02:00</updated><id>/species/feed.xml</id><title type="html">Combinatorial species in TTU</title><subtitle>A reading seminar on Joyal's combinatorial species</subtitle><entry><title type="html">P, its universal property, and species</title><link href="/species/2021/11/03/p-and-its-up-and-species.html" rel="alternate" type="text/html" title="P, its universal property, and species" /><published>2021-11-03T00:00:00+02:00</published><updated>2021-11-03T00:00:00+02:00</updated><id>/species/2021/11/03/p-and-its-up-and-species</id><content type="html" xml:base="/species/2021/11/03/p-and-its-up-and-species.html">&lt;p&gt;The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t  much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second category.)&lt;/p&gt;
 
 &lt;h3 id=&quot;the-groupoid-of-natural-numbers&quot;&gt;The groupoid of natural numbers&lt;/h3&gt;
 
@@ -59,15 +59,23 @@ $$&lt;/div&gt;
 
 &lt;h3 id=&quot;a-few-examples-of-species&quot;&gt;A few examples of species&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt; (The species of singletons).
-&lt;strong&gt;Example&lt;/strong&gt; (The species of elements).
-&lt;strong&gt;Example&lt;/strong&gt; (The terminal species).
-&lt;strong&gt;Example&lt;/strong&gt; (The species of permutations).
-&lt;strong&gt;Example&lt;/strong&gt; (The species of linear orders).
-&lt;strong&gt;Example&lt;/strong&gt; (The species of graphs).
-&lt;strong&gt;Example&lt;/strong&gt; (The species of trees).
-&lt;strong&gt;Example&lt;/strong&gt; (The species of rooted trees).
-&lt;strong&gt;Example&lt;/strong&gt; (The species of…).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt; (The species of singletons).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt; (The species of elements).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt; (The terminal species).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt; (The species of permutations).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt; (The species of linear orders).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt; (The species of graphs).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt; (The species of trees).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt; (The species of rooted trees).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt; (The species of…).&lt;/p&gt;
 
 &lt;p&gt;…&lt;/p&gt;</content><author><name></name></author><summary type="html">The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second category.)</summary></entry><entry><title type="html">Fin and Its Universal Property</title><link href="/species/2021/10/27/finset-and-its-up.html" rel="alternate" type="text/html" title="Fin and Its Universal Property" /><published>2021-10-27T00:00:00+03:00</published><updated>2021-10-27T00:00:00+03:00</updated><id>/species/2021/10/27/finset-and-its-up</id><content type="html" xml:base="/species/2021/10/27/finset-and-its-up.html">&lt;h2 id=&quot;the-universal-property-of-bf-fin-and-bf-finbf-set&quot;&gt;The universal property of $\bf Fin$ and $[{\bf Fin},{\bf Set}]$&lt;/h2&gt;
 
