@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/species/sitemap.xml
+Sitemap: /species/sitemap.xml
