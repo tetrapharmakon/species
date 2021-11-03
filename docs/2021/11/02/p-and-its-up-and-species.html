@@ -9,15 +9,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second category.)" />
 <meta property="og:description" content="The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second category.)" />
-<link rel="canonical" href="http://localhost:4000/species/2021/11/02/p-and-its-up-and-species.html" />
-<meta property="og:url" content="http://localhost:4000/species/2021/11/02/p-and-its-up-and-species.html" />
+<link rel="canonical" href="/species/2021/11/02/p-and-its-up-and-species.html" />
+<meta property="og:url" content="/species/2021/11/02/p-and-its-up-and-species.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-11-02T00:00:00+01:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="P, its universal property, and species" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/2021/11/02/p-and-its-up-and-species.html","@type":"BlogPosting","headline":"P, its universal property, and species","dateModified":"2021-11-02T00:00:00+01:00","datePublished":"2021-11-02T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/2021/11/02/p-and-its-up-and-species.html"},"description":"The fundamental object of study of the theory of combinatorial species is the category $\\bf P$ of finite sets and bijections, and its presheaf category $[{\\bf P}^\\text{op}, {\\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\\bf P}^\\text{op}, {\\bf Set}]$ and $[{\\bf P}, {\\bf Set}]$, but we will usually speak about the second category.)","@context":"https://schema.org"}</script>
+{"url":"/species/2021/11/02/p-and-its-up-and-species.html","@type":"BlogPosting","headline":"P, its universal property, and species","dateModified":"2021-11-02T00:00:00+01:00","datePublished":"2021-11-02T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/species/2021/11/02/p-and-its-up-and-species.html"},"description":"The fundamental object of study of the theory of combinatorial species is the category $\\bf P$ of finite sets and bijections, and its presheaf category $[{\\bf P}^\\text{op}, {\\bf Set}]$. (Note: due to the fact that a groupoid is a self-dual category, there isn’t much difference between $[{\\bf P}^\\text{op}, {\\bf Set}]$ and $[{\\bf P}, {\\bf Set}]$, but we will usually speak about the second category.)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -97,11 +97,18 @@ $$</div>
 
 <p><strong>Theorem.</strong> The category $\bf P$ is the free symmetric monoidal category on a singleton.</p>
 
-<p><em>Proof.</em> …</p>
+<p><em>Proof.</em> Proving this claims amounts to show that given a symmetric monoidal category $\cal A$ there is an equivalence of categories between</p>
+
+<ol>
+  <li>the category $\cal A$, and</li>
+  <li>The category of strong monoidal functors $F : {\bf P} \to {\cal A}$.</li>
+</ol>
+
+<p>In simple terms, a strong monoidal functor $F$ as above is determined by its value on the point. This is evident in light of the definition of the “sum and shuffle” monoidal product: the generic object of $\bf P$ is $[n] = [1] \oplus \dots \oplus [1]$, so that a strong monoidal functor $F$ must send $[n]$ to $F[1]^{\otimes n}$.</p>
+
+<p>Similarly, with the additional request of cocompleteness, one proves the following.</p>
 
 <p><strong>Theorem.</strong> The category $\bf Spc$ is the free cocomplete symmetric monoidal category on a singleton.</p>
-
-<p><em>Proof.</em> …</p>
 
 <h3 id="a-few-examples-of-species">A few examples of species</h3>
 
