@@ -63,11 +63,16 @@ The category $\bf P$ and $\bf Spc$ have two important universal properties:
 
 **Theorem.** The category $\bf P$ is the free symmetric monoidal category on a singleton.
 
-*Proof.* ...
+*Proof.* Proving this claims amounts to show that given a symmetric monoidal category $\cal A$ there is an equivalence of categories between 
+
+1. the category $\cal A$, and
+2. The category of strong monoidal functors $F : {\bf P} \to {\cal A}$.
+
+In simple terms, a strong monoidal functor $F$ as above is determined by its value on the point. This is evident in light of the definition of the "sum and shuffle" monoidal product: the generic object of $\bf P$ is $[n] = [1] \oplus \dots \oplus [1]$, so that a strong monoidal functor $F$ must send $[n]$ to $F[1]^{\otimes n}$.
+
+Similarly, with the additional request of cocompleteness, one proves the following.
 
 **Theorem.** The category $\bf Spc$ is the free cocomplete symmetric monoidal category on a singleton.
-
-*Proof.* ...
 
 ### A few examples of species
 

@@ -100,6 +100,6 @@ A last introductory remark, on the universal property of the presheaf category.
 1. The category of functors ${\cal C} \to {\cal D}$, when $\cal D$ is small-cocomplete;
 2. The category of cocontinuous functors $[{\cal C}^\text{op}, {\bf Set}] \to \cal D$.
 
-The equivalence is induced by the functor "precomposition with the Yoneda embedding ${\cal C} \to [{\cal C}^\text{op}, {\bf Set}]$, that defines a correspondence
+The equivalence is induced by the functor "precomposition with the Yoneda embedding" ${\cal C} \to [{\cal C}^\text{op}, {\bf Set}]$, that defines a correspondence
 
 $$ {\sf Cat}([{\cal C}^\text{op}, {\bf Set}], {\cal D}) \to {\sf Cat}({\cal C}, \cal D).$$
