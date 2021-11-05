@@ -1,6 +1,6 @@
 ---
 layout: post
-title: P, its universal property, and species
+title: The category P and species
 latex: katex
 katex:
   macros:
@@ -63,7 +63,7 @@ The category $\bf P$ and $\bf Spc$ have two important universal properties:
 
 **Theorem.** The category $\bf P$ is the free symmetric monoidal category on a singleton.
 
-*Proof.* Proving this claims amounts to show that given a symmetric monoidal category $\cal A$ there is an equivalence of categories between 
+*Proof.* Proving this claims amounts to show that given a symmetric monoidal category $\cal A$ there is an equivalence of categories between
 
 1. the category $\cal A$, and
 2. The category of strong monoidal functors $F : {\bf P} \to {\cal A}$.
@@ -93,5 +93,11 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 **Example** (The species of rooted trees).
 
 **Example** (The species of...).
+
+
+### Contact of order $n$ between species
+...
+
+#### Reading list
 
 ...
