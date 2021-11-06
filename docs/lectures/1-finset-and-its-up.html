@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/1-finset-and-its-up.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-06T00:18:37+02:00" />
+<meta property="article:published_time" content="2021-11-06T17:35:07+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Preliminaries; finite sets, convolution" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/1-finset-and-its-up.html","@type":"BlogPosting","headline":"Preliminaries; finite sets, convolution","dateModified":"2021-11-06T00:18:37+02:00","datePublished":"2021-11-06T00:18:37+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/1-finset-and-its-up.html"},"description":"The category $\\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\\bf Fin$ is the category whose objects are sets $[n]={1,\\dots,n}$ for $n\\ge 0$ (with the convention that $[0]=\\varnothing$), and morphisms are functions $f : [n] \\to [m]$.","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/1-finset-and-its-up.html","@type":"BlogPosting","headline":"Preliminaries; finite sets, convolution","dateModified":"2021-11-06T17:35:07+02:00","datePublished":"2021-11-06T17:35:07+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/1-finset-and-its-up.html"},"description":"The category $\\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\\bf Fin$ is the category whose objects are sets $[n]={1,\\dots,n}$ for $n\\ge 0$ (with the convention that $[0]=\\varnothing$), and morphisms are functions $f : [n] \\to [m]$.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -73,20 +73,20 @@ $$</div>
 \text{Lan}_J : [{\bf Fin}, {\bf Set}] \leftrightarrows [{\bf Set}, {\bf Set}] J^*
 $$</div>
 
-<p>where $J^*$ is the “precomposition with $J$” functor, and $\text{Lan}_J$ its left adjoint. Such a left adjoint is fully faithful, because $J$ is fully faithful, and this last condition entails that in the diagram</p>
+<p>where $J^*$ is the “precomposition with $J$” functor and $\text{Lan}_J$ its left adjoint. Such a left adjoint is fully faithful because $J$ is fully faithful, and this last condition entails that in the diagram</p>
 
 <p><span class="antex display"><img style='margin: 0.008ex 0.101ex -9.89ex 0.0ex; height: 12.386ex; width: 14.492ex;' src="/species/antex/e8bdb4e0e43474a9c5cc87d8c5bb1264.svg" /></span></p>
 
-<p>The 2-cell $\eta : F \Rightarrow (\text{Lan}_J F)\circ J $ is invertible; $\eta$ is exactly the unit of the adjunction $\text{Lan}_J \dashv J^*$, and this in turn entails that the left adjoint in the adjunction is fully faithful.</p>
+<p>The 2-cell $\eta : F \Rightarrow (\text{Lan}_J F)\circ J $ is invertible; $\eta$ is precisely the unit of the adjunction $\text{Lan}_J \dashv J^*$, and this, in turn, entails that the left adjoint in the adjunction is fully faithful.</p>
 
-<p>It only remains to characterise the essential image of $\text{Lan}_J$ as the full subcategory of finitary functors on $\bf Set$; a general theorem comes to the rescue again: the objects we are interested in are just the ones at whose components the counit of the adjunction $\text{Lan}_J \dashv J^*$ is an isomorphism; unwinding this condition, we get to prove that the following conditions are equivalent:</p>
+<p>It only remains to characterise the essential image of $\text{Lan}_J$ as the full subcategory of finitary functors on $\bf Set$. Once again, a general theorem comes to the rescue: the objects we are interested in are just the ones at whose components the counit of the adjunction $\text{Lan}_J \dashv J^*$ is an isomorphism; unwinding this condition, we get to prove that the following conditions are equivalent:</p>
 
 <ol>
   <li>$T : {\bf Set} \to {\bf Set}$ is finitary;</li>
   <li>The counit $\epsilon_T : \text{Lan}_J(TJ) \Rightarrow T$ is a natural isomorphism.</li>
 </ol>
 
-<p>This is easily seen: let’s say that $T$ is finitary, and unwind the counit using the universal property; given $A\in \bf Set$, the left Kan extension of $TJ$ along $J$, computed in $A$, is just the <a href="">weighted colimit</a> of $TJ$ with weight $P={\bf Set}(J-, A)$, and this is in turn the colimit of $TJ$ over the (opposite of the) <a href="">category of elements</a> of $P$, i.e the colimit of the composition $T \circ \Sigma^\text{op}$, where the category of elements and the canonical projection $\Sigma$ appear in the upper left corner in the pullback</p>
+<p>The equivalence is easily seen: assume $T$ is finitary, and unwind the counit using the universal property; given $A\in \bf Set$, the left Kan extension of $TJ$ along $J$, computed in $A$, is just the <a href="">weighted colimit</a> of $TJ$ with weight $P={\bf Set}(J-, A)$, and this is, in turn, the colimit of $TJ$ over the (opposite of the) <a href="">category of elements</a> of $P$, i.e the colimit of the composition $T \circ \Sigma^\text{op}$, where the category of elements and the canonical projection $\Sigma$ appear in the upper left corner in the pullback</p>
 
 <p><span class="antex display"><img style='margin: 0.001ex 0.163ex -11.638ex 0.0ex; height: 13.708ex; width: 19.473ex;' src="/species/antex/5ba5535f5603aae7dd08559a8a3eca65.svg" /></span></p>
 

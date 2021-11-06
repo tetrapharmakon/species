@@ -39,7 +39,7 @@ As an immediate corollary, the opposite category ${\bf Fin}^\text{op}$ is the fr
 
 $$ \text{Lan}_J : [{\bf Fin}, {\bf Set}] \leftrightarrows [{\bf Set}, {\bf Set}] J^* $$
 
-where $J^*$ is the "precomposition with $J$" functor, and $\text{Lan}_J$ its left adjoint. Such a left adjoint is fully faithful, because $J$ is fully faithful, and this last condition entails that in the diagram
+where $J^*$ is the "precomposition with $J$" functor and $\text{Lan}_J$ its left adjoint. Such a left adjoint is fully faithful because $J$ is fully faithful, and this last condition entails that in the diagram
 
 {% tex classes: [antex, display] %}
 \xymatrix{
@@ -48,14 +48,14 @@ where $J^*$ is the "precomposition with $J$" functor, and $\text{Lan}_J$ its lef
 }
 {% endtex %}
 
-The 2-cell $\eta : F \Rightarrow (\text{Lan}_J F)\circ J $ is invertible; $\eta$ is exactly the unit of the adjunction $\text{Lan}_J \dashv J^*$, and this in turn entails that the left adjoint in the adjunction is fully faithful.
+The 2-cell $\eta : F \Rightarrow (\text{Lan}_J F)\circ J $ is invertible; $\eta$ is precisely the unit of the adjunction $\text{Lan}_J \dashv J^*$, and this, in turn, entails that the left adjoint in the adjunction is fully faithful.
 
-It only remains to characterise the essential image of $\text{Lan}_J$ as the full subcategory of finitary functors on $\bf Set$; a general theorem comes to the rescue again: the objects we are interested in are just the ones at whose components the counit of the adjunction $\text{Lan}_J \dashv J^*$ is an isomorphism; unwinding this condition, we get to prove that the following conditions are equivalent:
+It only remains to characterise the essential image of $\text{Lan}_J$ as the full subcategory of finitary functors on $\bf Set$. Once again, a general theorem comes to the rescue: the objects we are interested in are just the ones at whose components the counit of the adjunction $\text{Lan}_J \dashv J^*$ is an isomorphism; unwinding this condition, we get to prove that the following conditions are equivalent:
 
 1. $T : {\bf Set} \to {\bf Set}$ is finitary;
 2. The counit $\epsilon_T : \text{Lan}_J(TJ) \Rightarrow T$ is a natural isomorphism.
 
-This is easily seen: let's say that $T$ is finitary, and unwind the counit using the universal property; given $A\in \bf Set$, the left Kan extension of $TJ$ along $J$, computed in $A$, is just the [weighted colimit]() of $TJ$ with weight $P={\bf Set}(J-, A)$, and this is in turn the colimit of $TJ$ over the (opposite of the) [category of elements]() of $P$, i.e the colimit of the composition $T \circ \Sigma^\text{op}$, where the category of elements and the canonical projection $\Sigma$ appear in the upper left corner in the pullback
+The equivalence is easily seen: assume $T$ is finitary, and unwind the counit using the universal property; given $A\in \bf Set$, the left Kan extension of $TJ$ along $J$, computed in $A$, is just the [weighted colimit]() of $TJ$ with weight $P={\bf Set}(J-, A)$, and this is, in turn, the colimit of $TJ$ over the (opposite of the) [category of elements]() of $P$, i.e the colimit of the composition $T \circ \Sigma^\text{op}$, where the category of elements and the canonical projection $\Sigma$ appear in the upper left corner in the pullback
 
 {% tex classes: [antex, display] %}
 \xymatrix{

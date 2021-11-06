@@ -7,17 +7,17 @@
 <meta name="generator" content="Jekyll v3.9.1" />
 <meta property="og:title" content="Monoidal Structures on $\bf P$" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study comes from the synergy between many different structures one can equip the categories $\bf P$ and $\bf Spc$ with." />
-<meta property="og:description" content="A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study comes from the synergy between many different structures one can equip the categories $\bf P$ and $\bf Spc$ with." />
+<meta name="description" content="A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects." />
+<meta property="og:description" content="A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects." />
 <link rel="canonical" href="http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html" />
 <meta property="og:url" content="http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-06T00:18:37+02:00" />
+<meta property="article:published_time" content="2021-11-06T17:35:07+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Monoidal Structures on $\bf P$" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html","@type":"BlogPosting","headline":"Monoidal Structures on $\\bf P$","dateModified":"2021-11-06T00:18:37+02:00","datePublished":"2021-11-06T00:18:37+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"},"description":"A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study comes from the synergy between many different structures one can equip the categories $\\bf P$ and $\\bf Spc$ with.","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html","@type":"BlogPosting","headline":"Monoidal Structures on $\\bf P$","dateModified":"2021-11-06T17:35:07+02:00","datePublished":"2021-11-06T17:35:07+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"},"description":"A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,11 +44,11 @@
       <article>
     <!-- &bull;  &bull; -->
     <h1>Monoidal Structures on $\bf P$</h1>
-    <p>A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study comes from the synergy between many different structures one can equip the categories $\bf P$ and $\bf Spc$ with.</p>
+    <p>A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.</p>
 
 <h3 id="monoidal-structure-on-bf-p-and-bf-spc">Monoidal structure on $\bf P$ and $\bf Spc$</h3>
 
-<p>In particular, there are three distinct <em>monoidal structures</em> on the category of species, all of which have a quite natural combinatorial interpretation. One of them is the most important for us, because it is induced on $\bf Spc$ by a natural choice of a monoidal product on $\bf P$. The monoidal structure on $\bf P$ is essentially determined by the disjoint sum of finite set: in a skeleton for $\bf P$, $[n]\cup [m] = [n+m]$. This induces a <em>convolution</em> operation on $\bf Spc$, by a renowned construction due to Brian Day.</p>
+<p>In particular, there are three distinct <em>monoidal structures</em> on the category of species, all of which have a quite natural combinatorial interpretation. One of them is the most important for us because it is induced on $\bf Spc$ by a natural choice of a monoidal product on $\bf P$. The monoidal structure on $\bf P$ is essentially determined by the disjoint sum of finite set: in a skeleton for $\bf P$, $[n]\cup [m] = [n+m]$. This operation induces a <em>convolution</em> operation on $\bf Spc$.</p>
 
 <p><strong>Definition</strong> (The “sum and shuffle” product on $\bf P$). The “sum and shuffle” monoidal structure $\oplus$ on $\bf P$ is the bifunctor $\_\oplus_ : {\bf P} \times {\bf P} \to \bf P$ defined as follows:</p>
 
@@ -69,7 +69,7 @@ $$</div>
 (X \times Y)_\bullet : [n] \mapsto X[n] \times Y[n]
 $$</div>
 
-<p>It can be easily checked that $(X\times Y)_\bullet$ is the binary product bifunctor in $\bf Spc$. (Evidently: because limits, and a fortiori products, in a category of functors, are compute pointwise.)</p>
+<p>It can be easily checked that $(X\times Y)_\bullet$ is the binary product bifunctor in $\bf Spc$. (Evidently: because limits, and <em>a fortiori</em> products, in a category of functors, are computed pointwise.)</p>
 
 <p>In terms of their formal power series representation, the product corresponds to the pointwise (or “Hadamard”) product of formal power series: given $f,g : \mathbb N \llbracket t\rrbracket$, $f\times g$ is the series</p>
 
@@ -83,11 +83,11 @@ $$</div>
 (X \cup Y)_\bullet : [n] \mapsto X[n] \cup Y[n]
 $$</div>
 
-<p>where $\cup$ denotes disjoint union of sets. It can be easily checked that $(X\cup Y)_\bullet$ is the binary coproduct bifunctor in $\bf Spc$. (Evidently: because colimits, and a fortiori coproducts, in a category of functors, are compute pointwise.)</p>
+<p>where $\cup$ denotes the disjoint union of sets. It can be easily checked that $(X\cup Y)_\bullet$ is the binary coproduct bifunctor in $\bf Spc$. (Evidently: because colimits, and <em>a fortiori</em> coproducts, in a category of functors, are computed pointwise.)</p>
 
 <p>In terms of their formal power series representation, the product corresponds to the plain <em>sum</em> of formal power series.</p>
 
-<p>In order to introduce the next construction we need the following definition: let $X,Y$ be two sets on which a group $G$ is acting, respectively on the right and on the left.</p>
+<p>In order to introduce the next construction, we need the following definition: let $X,Y$ be two sets on which a group $G$ is acting, respectively on the right and on the left.</p>
 
 <p>We define the <em>equivariant product</em> $X\otimes_G Y$ of $X$ and $Y$ to be the set obtained as the coequaliser of the pair of maps</p>
 
@@ -105,7 +105,19 @@ $$</div>
 
 <p>(Exercise: how do you use the sum and shuffle product and the equivariant product to interpret the $\otimes$ sign?)</p>
 
+<p>The last and more important monoidal structure with which the category of species is endowed is called the <em>substitution</em> monoidal structure, and its definition resembles the one given for $[{\bf Fin},{\bf Set}]$ in <a href="">lecture 1</a>.</p>
+
+<p>On generating series, this operation coincides with <em>functional substitution</em>: given two formal power series $f = \sum a_n t^n,g = \sum b_m t^m \in K\llbracket t\rrbracket$, define the series $f<a href="t">g</a>$ to be the one obtained by formally unwinding the expression</p>
+
+<div class="kdmath">$$
+a_0 + a_1 g(t) + a_2 (g(t) \cdot g(t)) + \dots
+$$</div>
+
+<p>(<em>Exercise</em>. Find an explicit expression for $[t^n](f[g])$ in terms of the $a_n, b_m$’s.)</p>
+
 <p><strong>Definition</strong> (The substitution monoidal structure).</p>
+
+<p>We have seen that the substitution product on $[{\bf Fin},{\bf Set}]$ can equivalently be described as the monoidal structure obtained on $[{\bf Fin},{\bf Set}]$ by transport of structure under the equivalence of $[{\bf Fin},{\bf Set}]$ with finitary endofunctors of $\bf Set$. A similar theorem holds in this case: the left Kan extension of a functor $X : {\bf P} \to {\bf Set}$ along the (nonfull) inclusion $j : {\bf P} \to {\bf Set}$ yields an equivalence between $\bf Spc$ and a monoidal subcategory of $[{\bf Set},{\bf Set}]$.</p>
 
 <h3 id="on-the-structure-of-bf-spc-as-a-topos">On the structure of $\bf Spc$ as a topos</h3>
 
@@ -120,7 +132,7 @@ $$</div>
   <li>that is <em>cartesian closed</em>, meaning that there is a natural bijection
 <span class="kdmath">${\cal E}(A\times B, C) \cong {\cal E}(A, C^B)$</span>
 for every three objects $A,B,C$</li>
-  <li>having a <em>subobject classifier</em>, meaning an object $\Omega$ with the property that for every $A\in\cal E$ the poset of all subobjects of $A$ is parametrized by the set of morphisms into a fixed object $\Omega$ that thus “classifies” monomorphisms.</li>
+  <li>having a <em>subobject classifier</em>, meaning an object $\Omega$ with the property that for every $A\in\cal E$ the poset of all subobjects of $A$ is parametrised by the set of morphisms into a fixed object $\Omega$ that thus “classifies” monomorphisms.</li>
 </ol>
 
 <p>Unwinding axiom 3, it means the following: there exists a unique monomorphism $\tau : 1 \to \Omega$ with the property that <em>every</em> monomorphism $m : U \to A$ into <em>every</em> object $A\in \cal E$ appears in a pullback square</p>
@@ -131,7 +143,7 @@ for every three objects $A,B,C$</li>
 
 <p>This request translates diagrammatically the request that every subset $X\hookrightarrow A$ has a “characteristic function” $\chi_X : A \to \Omega$ such that $\chi_X(a)=1$ if and only if $a\in X$.</p>
 
-<p>The meat is in the third axiom: having a subobject classifier is an extremely strong property for a category (familiar categories like groups, vector spaces, and $\bf Cat$ (categories and functor) can’t have one; prove it as an exercise.)</p>
+<p>The meat is in the third axiom: having a subobject classifier is a powerful property for a category (familiar categories like groups, vector spaces, and $\bf Cat$ (categories and functor) cannot have one; prove it as an exercise.)</p>
 
 <p><strong>Remark.</strong> The cartesian closure of $\bf Spc$</p>
 
