@@ -2,6 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 .antex-cache/*
-red.pdf
+*.pdf
 bibfiles/theorie-combinatoire-series-formelles.pdf
 docs/bibfiles/theorie-combinatoire-series-formelles.pdf
