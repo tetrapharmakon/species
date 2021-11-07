@@ -78,10 +78,21 @@ $$ a_0 + a_1 g(t) + a_2 (g(t) \cdot g(t)) + \dots $$
 
 (*Exercise*. Find an explicit expression for $\[t^n\]\(f[g]\)$ in terms of the $a_n, b_m$'s.)
 
-**Definition** (The substitution monoidal structure).
+In lesson 1 we have seen how the category $[{\bf Fin}, {\bf Set}]$ inherits a (non strict) monoidal structure, called the *substitution product*: the substitution of a pair of functors $M,N : {\bf Fin}\to{\bf Set}$ is the functor
 
-We have seen that the substitution product on $[{\bf Fin},{\bf Set}]$ can equivalently be described as the monoidal structure obtained on $[{\bf Fin},{\bf Set}]$ by transport of structure under the equivalence of $[{\bf Fin},{\bf Set}]$ with finitary endofunctors of $\bf Set$. A similar theorem holds in this case: the left Kan extension of a functor $X : {\bf P} \to {\bf Set}$ along the (nonfull) inclusion $j : {\bf P} \to {\bf Set}$ yields an equivalence between $\bf Spc$ and a monoidal subcategory of $[{\bf Set},{\bf Set}]$.
+$$ [n] \mapsto M \triangleleft N := (\text{Lan}_J M \circ \text{Lan}_J N) \circ J = \text{Lan}_J M \circ N$$
 
+**Definition** (The substitution monoidal structure). Given two combinatorial species we can define their substitution product as follows:
+
+$$ F \triangleleft G := \lambda m . \int^{n,k_1,\dots,k_n} F(n) \times Gk_1\times \dots \times Gk_n \times {\bf P}(m, k_1+\dots+k_n). $$
+
+The structure exists for a similar reason than the case of $\bf Fin$: the left Kan extension of a functor $X : {\bf P} \to {\bf Set}$ along the (nonfull) inclusion $j : {\bf P} \to {\bf Set}$ yields an equivalence between $\bf Spc$ and a monoidal subcategory of $[{\bf Set},{\bf Set}]$ (it is not immediate how to characterise it because in this case the inclusion functor $j : {\bf P} \to {\bf Set}$ is not full).
+
+*Exercise.* Given a combinatorial species $G$, define $G^{\ast 1}:=G$ and $G^{\ast (n+1)} := G \ast G^{\ast n}$. Find an explicit formula for the functor $G^{\ast n}$ using a suitable coend, and show that the substitution product admits the more concise formula
+
+$$ F\triangleleft G := \lambda m.\int^n Fn \times G^{\ast n}(m) $$
+
+*Exercise.* Given two formal power series $f,g \in K\llbracket t\rrbracket$, find an explicit formula for the coefficient $c_n$ of degree $n$ in the series $f\[g\](t)$. (Is it possible to "decategorify" the above expression for $F\triangleleft G$, given that if $f,g$ are the generating series of $F,G$ respectively, then $c_n$ is the cardinality of $F\triangleleft G$?)
 ### On the structure of $\bf Spc$ as a topos
 
 The following subsection is of no particular interest for us, but the category of species happens to be a (Grothendieck) topos, and I haven't been able to find any source investigating the consequences of this fact (or even describing this structure, at least to some extent). Thus I find a nice exercise in style to fill the gap.
