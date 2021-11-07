@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Monoidal Structures on $\bf P$ | Combinatorial species in TTU</title>
+<title>Monoidal Structures on P | Combinatorial species in TTU</title>
 <meta name="generator" content="Jekyll v3.9.1" />
-<meta property="og:title" content="Monoidal Structures on $\bf P$" />
+<meta property="og:title" content="Monoidal Structures on P" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects." />
 <meta property="og:description" content="A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects." />
@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-06T17:35:07+02:00" />
+<meta property="article:published_time" content="2021-11-07T17:49:11+02:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Monoidal Structures on $\bf P$" />
+<meta property="twitter:title" content="Monoidal Structures on P" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html","@type":"BlogPosting","headline":"Monoidal Structures on $\\bf P$","dateModified":"2021-11-06T17:35:07+02:00","datePublished":"2021-11-06T17:35:07+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"},"description":"A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html","@type":"BlogPosting","headline":"Monoidal Structures on P","dateModified":"2021-11-07T17:49:11+02:00","datePublished":"2021-11-07T17:49:11+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"},"description":"A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,7 +43,7 @@
     <main>
       <article>
     <!-- &bull;  &bull; -->
-    <h1>Monoidal Structures on $\bf P$</h1>
+    <h1>Monoidal Structures on P</h1>
     <p>A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.</p>
 
 <h3 id="monoidal-structure-on-bf-p-and-bf-spc">Monoidal structure on $\bf P$ and $\bf Spc$</h3>
@@ -121,7 +121,9 @@ $$</div>
 
 <h3 id="on-the-structure-of-bf-spc-as-a-topos">On the structure of $\bf Spc$ as a topos</h3>
 
-<p>On top of all of this structure, the category of species, i.e. functors ${\bf P}^\text{op} \to {\bf Set}$ has very nice properties of a completely different kind: it is a <em>Grothendieck topos</em> (or shortly, just a <em>topos</em>).</p>
+<p>The following subsection is of no particular interest for us, but the category of species happens to be a (Grothendieck) topos, and I haven’t been able to find any source investigating the consequences of this fact (or even describing this structure, at least to some extent). Thus I find a nice exercise in style to fill the gap.</p>
+
+<p>This said: on top of all of the structure mentioned above, the category of species, i.e. functors ${\bf P}^\text{op} \to {\bf Set}$ has very nice properties of a completely different kind; it is a <em>Grothendieck topos</em> (or shortly, just a <em>topos</em>).</p>
 
 <p>In short, a Grothendieck topos is a category $\cal E$ where “the usual kind of Mathematics can be enacted” (at the price of doing so <em>constructively</em>).</p>
 
@@ -145,13 +147,32 @@ for every three objects $A,B,C$</li>
 
 <p>The meat is in the third axiom: having a subobject classifier is a powerful property for a category (familiar categories like groups, vector spaces, and $\bf Cat$ (categories and functor) cannot have one; prove it as an exercise.)</p>
 
-<p><strong>Remark.</strong> The cartesian closure of $\bf Spc$</p>
+<p>The following facts do not add much depth to the following discussion, so we leave them as highly optional exercises; the only reason to engage with them is if you have never seen how both statements can be proved in fair generality</p>
 
-<p>…</p>
+<p><em>Exercise</em> (The cartesian closure of $\bf Spc$). Show that the category of combinatorial species is <em>cartesian closed</em>, as a consequence of the following general fact.</p>
 
-<p><strong>Remark.</strong> The subobject classifier of $\bf Spc$</p>
+<p>Let ${\cal C}^\lor = [\mathcal{C}, {\bf Set}]$ be the category of functors $F : {\cal C} \to {\bf Set}$. Show that there is a natural bijection</p>
 
-<p>…</p>
+<div class="kdmath">$$
+{\cal C}^\lor(F\times G, H) \cong {\cal C}^\lor(F, H^G) \cong {\cal C}^\lor(G, H^F)
+$$</div>
+
+<p>where $F\times G$ is the product $C\mapsto FC\times GC$, and $H^G : {\cal C}^\text{op} \to {\bf Set}$ is the “internal hom” between $G$ and $H$.</p>
+
+<p><em>Exercise</em> (The subobject classifier of $\bf Spc$). Show that the category of combinatorial species is <em>cartesian closed</em>, as a consequence of the following general fact.</p>
+
+<p>Let ${\cal C}^\lor = [\mathcal{C}, {\bf Set}]$ be the category of functors $F : {\cal C} \to {\bf Set}$. Show that the following position defines a subobject classifier $\Omega$ for ${\cal C}^\lor$.</p>
+
+<div class="kdmath">$$
+\Omega : C\mapsto \text{Sub}_{\cal C}(\text{よ}C) = \{R \hookrightarrow \text{よ}C \}
+$$</div>
+
+<p>(in simple words: $C$ goes to the set of isomorphism classes of monics with codomain $\text{よ}C$, the representable functor on $C$).</p>
+
+<ol>
+  <li>Characterise $\text{よ}(n)={\bf P}(n, -)$ in the case of species;</li>
+  <li>Specialise the above definition to $\mathcal C = \bf P$: who is $\Omega$ in this case (remember that the map $R \to \text{よ}(n)$ muts be a <em>natural transformation</em>, not just a collection of components: what constraint does this condition pose on $R$?)</li>
+</ol>
 
 </article>
     </main>

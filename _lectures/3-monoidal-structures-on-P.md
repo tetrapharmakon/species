@@ -84,7 +84,9 @@ We have seen that the substitution product on $[{\bf Fin},{\bf Set}]$ can equiva
 
 ### On the structure of $\bf Spc$ as a topos
 
-On top of all of this structure, the category of species, i.e. functors ${\bf P}^\text{op} \to {\bf Set}$ has very nice properties of a completely different kind: it is a *Grothendieck topos* (or shortly, just a *topos*).
+The following subsection is of no particular interest for us, but the category of species happens to be a (Grothendieck) topos, and I haven't been able to find any source investigating the consequences of this fact (or even describing this structure, at least to some extent). Thus I find a nice exercise in style to fill the gap.
+
+This said: on top of all of the structure mentioned above, the category of species, i.e. functors ${\bf P}^\text{op} \to {\bf Set}$ has very nice properties of a completely different kind; it is a *Grothendieck topos* (or shortly, just a *topos*).
 
 In short, a Grothendieck topos is a category $\cal E$ where "the usual kind of Mathematics can be enacted" (at the price of doing so *constructively*).
 
@@ -111,11 +113,23 @@ This request translates diagrammatically the request that every subset $X\hookri
 
 The meat is in the third axiom: having a subobject classifier is a powerful property for a category (familiar categories like groups, vector spaces, and $\bf Cat$ (categories and functor) cannot have one; prove it as an exercise.)
 
+The following facts do not add much depth to the following discussion, so we leave them as highly optional exercises; the only reason to engage with them is if you have never seen how both statements can be proved in fair generality
 
-**Remark.** The cartesian closure of $\bf Spc$
+*Exercise* (The cartesian closure of $\bf Spc$). Show that the category of combinatorial species is *cartesian closed*, as a consequence of the following general fact.
 
-...
+Let ${\cal C}^\lor = [\mathcal{C}, {\bf Set}]$ be the category of functors $F : {\cal C} \to {\bf Set}$. Show that there is a natural bijection
 
-**Remark.** The subobject classifier of $\bf Spc$
+$$ {\cal C}^\lor(F\times G, H) \cong {\cal C}^\lor(F, H^G) \cong {\cal C}^\lor(G, H^F) $$
 
-...
+where $F\times G$ is the product $C\mapsto FC\times GC$, and $H^G : {\cal C}^\text{op} \to {\bf Set}$ is the "internal hom" between $G$ and $H$.
+
+*Exercise* (The subobject classifier of $\bf Spc$). Show that the category of combinatorial species is *cartesian closed*, as a consequence of the following general fact.
+
+Let ${\cal C}^\lor = [\mathcal{C}, {\bf Set}]$ be the category of functors $F : {\cal C} \to {\bf Set}$. Show that the following position defines a subobject classifier $\Omega$ for ${\cal C}^\lor$.
+
+$$ \Omega : C\mapsto \text{Sub}_{\cal C}(\text{よ}C) = \{R \hookrightarrow \text{よ}C \} $$
+
+(in simple words: $C$ goes to the set of isomorphism classes of monics with codomain $\text{よ}C$, the representable functor on $C$).
+
+1. Characterise $\text{よ}(n)={\bf P}(n, -)$ in the case of species;
+2. Specialise the above definition to $\mathcal C = \bf P$: who is $\Omega$ in this case (remember that the map $R \to \text{よ}(n)$ muts be a *natural transformation*, not just a collection of components: what constraint does this condition pose on $R$?)
