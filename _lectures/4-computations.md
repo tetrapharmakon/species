@@ -67,7 +67,7 @@ As fascinating as it certainly looks, the accent of this exposition is however n
 
 Let's instead review one motivating example of a combinatorial identity *derived* from a couple black boxes, but whose combinatorial interpretation is elucidated by the language of combinatorial species.
 
-**Theorem.** Let $a = \sum_{k\ge 1} \frac{a_k}{k}$, $a_0 = \sum_{k\ge 1} \frac{a_{2k}}{2k}$ nd $a_1 = \sum_{k\ge 0} \frac{a_{2k+1}}{2k+1}$ be three formal power series in the ring $\mathbb{Q}\llbracket a_1, a_2, a_3,\dots\rrbracket$. Then,
+**Theorem.** Let $a = \sum_{k\ge 1} \frac{a_k}{k}$, $a_0 = \sum_{k\ge 1} \frac{a_{2k}}{2k}$ and $a_1 = \sum_{k\ge 0} \frac{a_{2k+1}}{2k+1}$ be three formal power series in the ring $\mathbb{Q}\llbracket a_1, a_2, a_3,\dots\rrbracket$. Then,
 
 $$ e^a = \exp\left(a_1 + \frac{a_2}2 + \frac{a_3}3 + \dots\right) = e^{a_0}(\cosh a_1 + \sinh a_1).$$
 
