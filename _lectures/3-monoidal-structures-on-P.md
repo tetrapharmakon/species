@@ -72,11 +72,15 @@ where the sum is indexed over all tuples $p,q$ such that $p+q=n$. It can be show
 
 The last and more important monoidal structure with which the category of species is endowed is called the *substitution* monoidal structure, and its definition resembles the one given for $[{\bf Fin},{\bf Set}]$ in [lecture 1]().
 
-On generating series, this operation coincides with *functional substitution*: given two formal power series $f = \sum a_n t^n,g = \sum b_m t^m \in K\llbracket t\rrbracket$, define the series $f[g](t)$ to be the one obtained by formally unwinding the expression
+On generating series, this operation should correspond to *functional substitution*: the operation that given two formal power series $f = \sum a_n t^n,g = \sum b_m t^m \in K\llbracket t\rrbracket$, defines the series $f\[g\](t)$ as the one obtained by formally unwinding the expression
 
 $$ a_0 + a_1 g(t) + a_2 (g(t) \cdot g(t)) + \dots $$
 
 (*Exercise*. Find an explicit expression for $\[t^n\]\(f[g]\)$ in terms of the $a_n, b_m$'s.)
+
+But one must be careful, as this relation is true for generating species but *not* for type generating species. For example, this is true for the species of permutation $\cal S$, which is equal to the substitution of the species $\cal C$ of cycles into the species $E$ of sets. For the species $\cal S$, the type generating series is $\dots$, whereas for the substitution $E\triangleleft \cal C$ the type generating series is $\dots$.
+
+The formula for the type generating series of a substitution $F\triangleleft G$ involves the *cycle index series*...
 
 In lesson 1 we have seen how the category $[{\bf Fin}, {\bf Set}]$ inherits a (non strict) monoidal structure, called the *substitution product*: the substitution of a pair of functors $M,N : {\bf Fin}\to{\bf Set}$ is the functor
 

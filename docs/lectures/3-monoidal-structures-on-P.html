@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-07T18:10:54+02:00" />
+<meta property="article:published_time" content="2021-11-11T13:50:29+01:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Monoidal Structures on P" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html","@type":"BlogPosting","headline":"Monoidal Structures on P","dateModified":"2021-11-07T18:10:54+02:00","datePublished":"2021-11-07T18:10:54+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"},"description":"A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html","@type":"BlogPosting","headline":"Monoidal Structures on P","dateModified":"2021-11-11T13:50:29+01:00","datePublished":"2021-11-11T13:50:29+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"},"description":"A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -107,13 +107,17 @@ $$</div>
 
 <p>The last and more important monoidal structure with which the category of species is endowed is called the <em>substitution</em> monoidal structure, and its definition resembles the one given for $[{\bf Fin},{\bf Set}]$ in <a href="">lecture 1</a>.</p>
 
-<p>On generating series, this operation coincides with <em>functional substitution</em>: given two formal power series $f = \sum a_n t^n,g = \sum b_m t^m \in K\llbracket t\rrbracket$, define the series $f<a href="t">g</a>$ to be the one obtained by formally unwinding the expression</p>
+<p>On generating series, this operation should correspond to <em>functional substitution</em>: the operation that given two formal power series $f = \sum a_n t^n,g = \sum b_m t^m \in K\llbracket t\rrbracket$, defines the series $f[g](t)$ as the one obtained by formally unwinding the expression</p>
 
 <div class="kdmath">$$
 a_0 + a_1 g(t) + a_2 (g(t) \cdot g(t)) + \dots
 $$</div>
 
 <p>(<em>Exercise</em>. Find an explicit expression for $[t^n](f[g])$ in terms of the $a_n, b_m$’s.)</p>
+
+<p>But one must be careful, as this relation is true for generating species but <em>not</em> for type generating species. For example, this is true for the species of permutation $\cal S$, which is equal to the substitution of the species $\cal C$ of cycles into the species $E$ of sets. For the species $\cal S$, the type generating series is $\dots$, whereas for the substitution $E\triangleleft \cal C$ the type generating series is $\dots$.</p>
+
+<p>The formula for the type generating series of a substitution $F\triangleleft G$ involves the <em>cycle index series</em>…</p>
 
 <p>In lesson 1 we have seen how the category $[{\bf Fin}, {\bf Set}]$ inherits a (non strict) monoidal structure, called the <em>substitution product</em>: the substitution of a pair of functors $M,N : {\bf Fin}\to{\bf Set}$ is the functor</p>
 
