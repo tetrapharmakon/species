@@ -78,10 +78,16 @@ E_o[n] = \begin{cases} \{\bullet\} & n = 2k+1 \\ \varnothing & n = 2k \end{cases
 
 so it is clear that $E = E_e + E_o$. Now, the relation $Z_E = Z_{E_e} + Z_{E_o}$ holds true, and from this we can derive the desired identity by observing that
 
-$$ Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2,-x_3,\dots\right) $$
+$$ Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2,-x_3,\dots)\right) \tag{$\star^1$}$$
 
 and
 
-$$ Z_{E_o} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) - Z_E(-x_1,x_2,-x_3,\dots\right). $$
+$$ Z_{E_o} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) - Z_E(-x_1,x_2,-x_3,\dots)\right). \tag{$\star^2$}$$
 
 A brute-force computation now shows that the LHS of $Z_E = Z_{E_e} + Z_{E_o}$ is precisely $e^a = \exp\left(a_1 + \frac{a_2}2 + \frac{a_3}3 + \dots\right)$ and the RHS simplifies to $e^{a_0}(\cosh a_1 + \sinh a_1)$.
+
+We will see in the [next lecture]() that every species $F$ can be written as the sum of its "even" part and its "odd" part, thanks to the fact that every species $F$ admits a canonical decomposition as a coproduct
+
+$$ F = F_0 + F_1 + F_2 + \dots $$
+
+So, $F_e := F_0 + F_2 + F_4 +\dots$ and $F_o := F_1 + F_3 + F_5 + \dots$. A relation similar to $(\star^1, \star^2)$ holds for the cycle index series of $F$.

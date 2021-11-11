@@ -2,19 +2,19 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/species/lectures/1-finset-and-its-up.html</loc>
-<lastmod>2021-11-11T21:22:33+02:00</lastmod>
+<lastmod>2021-11-11T21:31:36+02:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/species/lectures/2-p-and-its-up-and-species.html</loc>
-<lastmod>2021-11-11T21:22:33+02:00</lastmod>
+<lastmod>2021-11-11T21:31:36+02:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html</loc>
-<lastmod>2021-11-11T21:22:33+02:00</lastmod>
+<lastmod>2021-11-11T21:31:36+02:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/species/lectures/4-computations.html</loc>
-<lastmod>2021-11-11T21:22:33+02:00</lastmod>
+<lastmod>2021-11-11T21:31:36+02:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/species/about/</loc>

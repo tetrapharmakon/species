@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/4-computations.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-11T21:22:33+02:00" />
+<meta property="article:published_time" content="2021-11-11T21:31:36+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Some explicit combinatorial identities" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/4-computations.html","@type":"BlogPosting","headline":"Some explicit combinatorial identities","dateModified":"2021-11-11T21:22:33+02:00","datePublished":"2021-11-11T21:22:33+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/4-computations.html"},"description":"We have seen that to a combinatorial species we can associate at least two important invariants “quantities”, i.e. two formal power series from which we can deduce properties of the species. If $|X_n|$ denotes the cardinality of a set, and $F : {\\bf P} \\to {\\bf Set}$ is a combinatorial species,","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/4-computations.html","@type":"BlogPosting","headline":"Some explicit combinatorial identities","dateModified":"2021-11-11T21:31:36+02:00","datePublished":"2021-11-11T21:31:36+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/4-computations.html"},"description":"We have seen that to a combinatorial species we can associate at least two important invariants “quantities”, i.e. two formal power series from which we can deduce properties of the species. If $|X_n|$ denotes the cardinality of a set, and $F : {\\bf P} \\to {\\bf Set}$ is a combinatorial species,","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -99,7 +99,7 @@ $$</div>
 <p>Cycle index series are however an unavoidable tool in the calculus of combinatorial species; in fact, they play a fundamental role in expressing the formula for the type generating series of a substitution of species:</p>
 
 <div class="kdmath">$$
-\widetilde{F \triangleleft G}(x) = Z_F(\tilde G(x), \tilde G(x^2), \tilde G(x^3),\dots)
+\tilde{g}_{F \triangleleft G}(t) = Z_F(\tilde G(t), \tilde G(t^2), \tilde G(t^3),\dots)
 $$</div>
 
 <p>This formula can be used in order to obtain the expression of $Z_{\cal S}$ in terms of $Z_E$ and $Z_{\cal C}$, and the formula for the cycle index series yields the identity</p>
@@ -111,7 +111,7 @@ $$</div>
 <p>or the remarkable explicit expression for the type generating series of ${\cal C}\times \wp$ above:</p>
 
 <div class="kdmath">$$
-\widetilde{\cal C \times \wp}(t) = \sum_{n\ge 1} \left( \frac 1n \sum_{d | n} \varphi(d) 2^{n/d} \right) t^n
+\tilde{g}_{\cal C \times \wp}(t) = \sum_{n\ge 1} \left( \frac 1n \sum_{d | n} \varphi(d) 2^{n/d} \right) t^n
 $$</div>
 
 <p>where $\varphi(-)$ is the Euler function, and the inner sum is extended over all divisors of $n$.</p>
@@ -136,16 +136,24 @@ $$</div>
 <p>so it is clear that $E = E_e + E_o$. Now, the relation $Z_E = Z_{E_e} + Z_{E_o}$ holds true, and from this we can derive the desired identity by observing that</p>
 
 <div class="kdmath">$$
-Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2,-x_3,\dots\right)
+Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2,-x_3,\dots)\right) \tag{$\star^1$}
 $$</div>
 
 <p>and</p>
 
 <div class="kdmath">$$
-Z_{E_o} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) - Z_E(-x_1,x_2,-x_3,\dots\right).
+Z_{E_o} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) - Z_E(-x_1,x_2,-x_3,\dots)\right). \tag{$\star^2$}
 $$</div>
 
 <p>A brute-force computation now shows that the LHS of $Z_E = Z_{E_e} + Z_{E_o}$ is precisely $e^a = \exp\left(a_1 + \frac{a_2}2 + \frac{a_3}3 + \dots\right)$ and the RHS simplifies to $e^{a_0}(\cosh a_1 + \sinh a_1)$.</p>
+
+<p>We will see in the <a href="">next lecture</a> that every species $F$ can be written as the sum of its “even” part and its “odd” part, thanks to the fact that every species $F$ admits a canonical decomposition as a coproduct</p>
+
+<div class="kdmath">$$
+F = F_0 + F_1 + F_2 + \dots
+$$</div>
+
+<p>So, $F_e := F_0 + F_2 + F_4 +\dots$ and $F_o := F_1 + F_3 + F_5 + \dots$. A relation similar to $(\star^1, \star^2)$ holds for the cycle index series of $F$.</p>
 
 </article>
     </main>
