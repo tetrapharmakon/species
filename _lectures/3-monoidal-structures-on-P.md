@@ -80,7 +80,9 @@ $$ a_0 + a_1 g(t) + a_2 (g(t) \cdot g(t)) + \dots $$
 
 But one must be careful, as this relation is true for generating species but *not* for type generating species. For example, this is true for the species of permutation $\cal S$, which is equal to the substitution of the species $\cal C$ of cycles into the species $E$ of sets. For the species $\cal S$, the type generating series is $\dots$, whereas for the substitution $E\triangleleft \cal C$ the type generating series is $\dots$.
 
-The formula for the type generating series of a substitution $F\triangleleft G$ involves the *cycle index series*...
+The formula for the type generating series of a substitution $F\triangleleft G$ involves the *cycle index series* of the substituting species:
+
+$$ Z_{F \triangleleft G} = Z_F(\tilde G(x), \tilde G(x^2), \tilde G(x^3)) $$
 
 In lesson 1 we have seen how the category $[{\bf Fin}, {\bf Set}]$ inherits a (non strict) monoidal structure, called the *substitution product*: the substitution of a pair of functors $M,N : {\bf Fin}\to{\bf Set}$ is the functor
 
