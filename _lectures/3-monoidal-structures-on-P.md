@@ -55,9 +55,11 @@ In order to introduce the next construction, we need the following definition: l
 We define the *equivariant product* $X\otimes_G Y$ of $X$ and $Y$ to be the set obtained as the coequaliser of the pair of maps
 
 {% tex classes: [antex, display] %}
-\xymatrix{
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
   X \times G \times Y \ar@<.5em>[r]^{X \times \beta} \ar@<-.5em>[r]_{\alpha \times Y} & X \times Y \ar[r] & X\otimes_G Y
-}
+}}
 {% endtex %}
 
 where $\alpha : X \times G \to X$ and $\beta : G \times Y \to Y$ are the actions.
@@ -112,10 +114,12 @@ Somewhat surprisingly, the class of categories embodying such a powerful languag
 Unwinding axiom 3, it means the following: there exists a unique monomorphism $\tau : 1 \to \Omega$ with the property that *every* monomorphism $m : U \to A$ into *every* object $A\in \cal E$ appears in a pullback square
 
 {% tex classes: [antex, display] %}
-\xymatrix{
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
   U\ar[r]\ar[d]_m  & 1 \ar[d]^\tau  \\
   A \ar[r] & \Omega
-}
+}}
 {% endtex %}
 
 of $\tau$ along a unique $\chi_A : A \to \Omega$.

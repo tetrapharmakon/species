@@ -93,7 +93,15 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 
 **Example** (The species of rooted trees).
 
-**Example** (The species of...).
+One can also cook up more abstract examples of combinatorial species:
+
+* The species *centered* in $n\in\mathbb N$
+* The *representable* species as a particular case
+* The tautological species $n\mapsto S_n$
+* The sym-representable species $n\mapsto S_n/H_n$
+<!-- The terminal species is the species of singleton described above -->
+
+These species will be the building blocks for our next lecture.
 
 
 ### Contact of order $n$ between species

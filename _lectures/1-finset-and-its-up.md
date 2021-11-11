@@ -42,10 +42,12 @@ $$ \text{Lan}_J : [{\bf Fin}, {\bf Set}] \leftrightarrows [{\bf Set}, {\bf Set}]
 where $J^*$ is the "precomposition with $J$" functor and $\text{Lan}_J$ its left adjoint. Such a left adjoint is fully faithful because $J$ is fully faithful, and this last condition entails that in the diagram
 
 {% tex classes: [antex, display] %}
-\xymatrix{
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
   A \drtwocell<\omit>{\eta} \ar[r]^F\ar[d]_J & B \\
   C\ar@/_1pc/[ur]_{\text{Lan}_J} &
-}
+}}
 {% endtex %}
 
 The 2-cell $\eta : F \Rightarrow (\text{Lan}_J F)\circ J $ is invertible; $\eta$ is precisely the unit of the adjunction $\text{Lan}_J \dashv J^*$, and this, in turn, entails that the left adjoint in the adjunction is fully faithful.
@@ -58,10 +60,12 @@ It only remains to characterise the essential image of $\text{Lan}_J$ as the ful
 The equivalence is easily seen: assume $T$ is finitary, and unwind the counit using the universal property; given $A\in \bf Set$, the left Kan extension of $TJ$ along $J$, computed in $A$, is just the [weighted colimit]() of $TJ$ with weight $P={\bf Set}(J-, A)$, and this is, in turn, the colimit of $TJ$ over the (opposite of the) [category of elements]() of $P$, i.e the colimit of the composition $T \circ \Sigma^\text{op}$, where the category of elements and the canonical projection $\Sigma$ appear in the upper left corner in the pullback
 
 {% tex classes: [antex, display] %}
-\xymatrix{
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
   \mathcal{E}_A^J\ar[r]\ar[d]_\Sigma & {\bf Set}_* \ar[d]\\
   {\bf Fin}^\text{op} \ar[r]_{P} & \bf Set
-}
+}}
 {% endtex %}
 
 This category is filtered, so in the end $\lambda A.\text{Lan}_J(TJ)A\cong \lambda A.T((\text{Lan}_J J)A)\cong \lambda A.TA$, naturally in $A$ (because $\text{Lan}_JJ$ is isomorphic to the identity functor). $\blacksquare$
@@ -109,10 +113,12 @@ The last introductory remark is about the so-called *convolution product* of fun
 Let $F,G : {\cal A}^\text{op} \to {\bf Set}$ be functors; define their *Day convolution* as the functor $F * G : {\cal A}^\text{op} \to {\bf Set}$ obtained as left Kan extension of $F\times G$ along $\otimes$, i.e. as the curved arrow in the following diagram
 
 {% tex classes: [antex, display] %}
-\xymatrix{
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
   \mathcal{A}^\text{op} \times \mathcal{A}^\text{op} \ar[d]_{\otimes^\text{op}} \ar[r]^-{F\times G} & {\bf Set} \times {\bf Set} \ar[r]^-\times & {\bf Set} \\
   \mathcal{A}^\text{op} \ar@/_1pc/[urr]_{F * G}
-}
+}}
 {% endtex %}
 
 More explicitly, $F * G$ acts on objects as the [integral]()
