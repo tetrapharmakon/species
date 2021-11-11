@@ -26,7 +26,7 @@ In particular, there are three distinct *monoidal structures* on the category of
 **Definition** (The "sum and shuffle" product on $\bf P$). The "sum and shuffle" monoidal structure $\oplus$ on $\bf P$ is the bifunctor $\\_\oplus\_ : {\bf P} \times {\bf P} \to \bf P$ defined as follows:
 
 - on objects, $[n]\oplus [m]$ is just the set $[n+m]$;
-- on morphisms, let's say $\sigma : [n] \to [n]$ and $\eta [m] \to [m]$ are two bijections, the bijection $∑ \oplus \eta$ is defined as a "shuffle permutation", namely
+- on morphisms, let's say $\sigma : [n] \to [n]$ and $\eta : [m] \to [m]$ are two bijections, the bijection $\sigma\oplus \eta$ is defined as a "shuffle permutation", namely
 
 $$ \sigma \oplus \eta : i \mapsto \begin{cases} \sigma i & \text{ if } 1 \le i \le  n \\ \eta(i-n) & \text{ if } n+1 \le i \le n+m \end{cases} $$
 
@@ -82,7 +82,7 @@ But one must be careful, as this relation is true for generating species but *no
 
 The formula for the type generating series of a substitution $F\triangleleft G$ involves the *cycle index series* of the substituting species:
 
-$$ Z_{F \triangleleft G} = Z_F(\tilde G(x), \tilde G(x^2), \tilde G(x^3)) $$
+$$ \widetilde{F \triangleleft G}(x) = Z_F(\tilde G(x), \tilde G(x^2), \tilde G(x^3),\dots) $$
 
 In lesson 1 we have seen how the category $[{\bf Fin}, {\bf Set}]$ inherits a (non strict) monoidal structure, called the *substitution product*: the substitution of a pair of functors $M,N : {\bf Fin}\to{\bf Set}$ is the functor
 
