@@ -68,11 +68,11 @@ where $\alpha : X \times G \to X$ and $\beta : G \times Y \to Y$ are the actions
 
 $$ (X \cdot Y)_\bullet : [n] \mapsto \sum_{p+q=n} X[p] \otimes Y[q] $$
 
-where the sum is indexed over all tuples $p,q$ such that $p+q=n$. It can be shown that the Cauchy product $(X\cdot Y)_\bullet$ of two combinatorial species is the [Day convolution]() inherited by the "sum and shuffle" monoidal structure on $\bf P$.
+where the sum is indexed over all tuples $p,q$ such that $p+q=n$. It can be shown that the Cauchy product $(X\cdot Y)_\bullet$ of two combinatorial species is the [Day convolution](https://ncatlab.org/nlab/show/Day+convolution) inherited by the "sum and shuffle" monoidal structure on $\bf P$.
 
 (Exercise: how do you use the sum and shuffle product and the equivariant product to interpret the $\otimes$ sign?)
 
-The last and more important monoidal structure with which the category of species is endowed is called the *substitution* monoidal structure, and its definition resembles the one given for $[{\bf Fin},{\bf Set}]$ in [lecture 1]().
+The last and more important monoidal structure with which the category of species is endowed is called the *substitution* monoidal structure, and its definition resembles the one given for $[{\bf Fin},{\bf Set}]$ in [lecture 1](1-finset-and-its-up.html).
 
 On generating series, this operation should correspond to *functional substitution*: the operation that given two formal power series $f = \sum a_n t^n,g = \sum b_m t^m \in K\llbracket t\rrbracket$, defines the series $f\[g\](t)$ as the one obtained by formally unwinding the expression
 

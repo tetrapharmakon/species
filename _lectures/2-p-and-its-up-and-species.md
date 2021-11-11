@@ -79,7 +79,7 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 
 **Example** (The species of singletons).
 
-**Example** (The species of elements).
+**Example** (The species of sets).
 
 **Example** (The terminal species).
 
@@ -87,11 +87,7 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 
 **Example** (The species of linear orders).
 
-**Example** (The species of graphs).
-
-**Example** (The species of trees).
-
-**Example** (The species of rooted trees).
+**Example** (The species of oriented cycles).
 
 One can also cook up more abstract examples of combinatorial species:
 

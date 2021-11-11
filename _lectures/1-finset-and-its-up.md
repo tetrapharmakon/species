@@ -26,14 +26,14 @@ The category $\bf Fin$ has objects the finite sets and morphisms all functions; 
 
 $$ F([n]) = \coprod_{i=1}^n F([1]) = \coprod_{i=1}^n X = [n] \otimes X $$
 
-(if $ \\_ \otimes \\_ $ denotes the [tensor]() of $X\in\mathcal{C}$ with the set $[n]$). $\blacksquare$
+(if $ \\_ \otimes \\_ $ denotes the [tensor](https://ncatlab.org/nlab/show/tensor) of $X\in\mathcal{C}$ with the set $[n]$). $\blacksquare$
 
 As an immediate corollary, the opposite category ${\bf Fin}^\text{op}$ is the free finite *product* completion of the singleton $\bullet$.
 
 **Theorem.** There is an equivalence of categories between
 
 1. The category of all functors ${\bf Fin} \to {\bf Set}$, and natural transformations;
-2. The category of *finitary* endofunctors of $\bf Set$, i.e. those $T : {\bf Set} \to {\bf Set}$ that preserve [filtered colimits]().
+2. The category of *finitary* endofunctors of $\bf Set$, i.e. those $T : {\bf Set} \to {\bf Set}$ that preserve [filtered colimits](https://ncatlab.org/nlab/show/filtered+limit).
 
 *Proof.* Let's first build an adjunction between the two categories; the "tautological" inclusion functor $J : {\bf Fin} \to {\bf Set}$ induces an adjunction
 
@@ -57,7 +57,7 @@ It only remains to characterise the essential image of $\text{Lan}_J$ as the ful
 1. $T : {\bf Set} \to {\bf Set}$ is finitary;
 2. The counit $\epsilon_T : \text{Lan}_J(TJ) \Rightarrow T$ is a natural isomorphism.
 
-The equivalence is easily seen: assume $T$ is finitary, and unwind the counit using the universal property; given $A\in \bf Set$, the left Kan extension of $TJ$ along $J$, computed in $A$, is just the [weighted colimit]() of $TJ$ with weight $P={\bf Set}(J-, A)$, and this is, in turn, the colimit of $TJ$ over the (opposite of the) [category of elements]() of $P$, i.e the colimit of the composition $T \circ \Sigma^\text{op}$, where the category of elements and the canonical projection $\Sigma$ appear in the upper left corner in the pullback
+The equivalence is easily seen: assume $T$ is finitary, and unwind the counit using the universal property; given $A\in \bf Set$, the left Kan extension of $TJ$ along $J$, computed in $A$, is just the [weighted colimit](https://ncatlab.org/nlab/show/weighted+colimit) of $TJ$ with weight $P={\bf Set}(J-, A)$, and this is, in turn, the colimit of $TJ$ over the (opposite of the) [category of elements](https://ncatlab.org/nlab/show/category+of+elements) of $P$, i.e the colimit of the composition $T \circ \Sigma^\text{op}$, where the category of elements and the canonical projection $\Sigma$ appear in the upper left corner in the pullback
 
 {% tex classes: [antex, display] %}
 \setlength{\fboxrule}{1sp}
@@ -77,7 +77,7 @@ This category is filtered, so in the end $\lambda A.\text{Lan}_J(TJ)A\cong \lamb
 
 where $F_\mathcal{D}(\bullet)$ is the free completion of the point under $\mathcal{D}$-shaped limits.
 
-**Fact.** Given an equivalence of categories $F :{\cal V} \leftrightarrows {\cal W} : G$, where $\cal V$ is (symmetric) monoidal, there is an essentially unique way to give $\cal W$ a monoidal structure, so that $F,G$ become [strong monoidal functors]().
+**Fact.** Given an equivalence of categories $F :{\cal V} \leftrightarrows {\cal W} : G$, where $\cal V$ is (symmetric) monoidal, there is an essentially unique way to give $\cal W$ a monoidal structure, so that $F,G$ become [strong monoidal functors](https://ncatlab.org/nlab/show/monoidal+functor).
 
 *Sketch of proof.* Let's say $(\otimes, I)$ is a monoidal structure on $\cal V$. Define a tensor product on $\cal W$ using $F,G$: $(X,Y)\mapsto X\odot Y= F(GX \otimes GY)$. Define a monoidal unit $K:= GI$. Straightforward from here. $\blacksquare$
 
@@ -121,7 +121,7 @@ Let $F,G : {\cal A}^\text{op} \to {\bf Set}$ be functors; define their *Day conv
 }}
 {% endtex %}
 
-More explicitly, $F * G$ acts on objects as the [integral]()
+More explicitly, $F * G$ acts on objects as the [integral](https://en.wikipedia.org/wiki/Brazilian_porcupine)
 
 $$\lambda A. \int^{U,V \in \cal A} FU \times GV \times {\cal A}(A,U\otimes V) $$
 

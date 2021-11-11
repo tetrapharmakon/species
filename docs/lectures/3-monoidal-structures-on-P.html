@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-11T15:22:26+01:00" />
+<meta property="article:published_time" content="2021-11-11T21:22:33+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Monoidal Structures on P" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html","@type":"BlogPosting","headline":"Monoidal Structures on P","dateModified":"2021-11-11T15:22:26+01:00","datePublished":"2021-11-11T15:22:26+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"},"description":"A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html","@type":"BlogPosting","headline":"Monoidal Structures on P","dateModified":"2021-11-11T21:22:33+02:00","datePublished":"2021-11-11T21:22:33+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"},"description":"A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -91,7 +91,7 @@ $$</div>
 
 <p>We define the <em>equivariant product</em> $X\otimes_G Y$ of $X$ and $Y$ to be the set obtained as the coequaliser of the pair of maps</p>
 
-<p><span class="antex display"><img style='margin: -0.021ex 0.115ex -3.658ex 0.0ex; height: 7.679ex; width: 49.225ex;' src="/species/antex/f3efa0c778769de945df615a078313c2.svg" /></span></p>
+<p><span class="antex display"><img style='margin: 0.0ex 0.0ex -3.859ex 0.0ex; height: 7.859ex; width: 41.985ex;' src="/species/antex/f9f8238f50c52d8b04d83b2149003dfb.svg" /></span></p>
 
 <p>where $\alpha : X \times G \to X$ and $\beta : G \times Y \to Y$ are the actions.</p>
 
@@ -101,11 +101,11 @@ $$</div>
 (X \cdot Y)_\bullet : [n] \mapsto \sum_{p+q=n} X[p] \otimes Y[q]
 $$</div>
 
-<p>where the sum is indexed over all tuples $p,q$ such that $p+q=n$. It can be shown that the Cauchy product $(X\cdot Y)_\bullet$ of two combinatorial species is the <a href="">Day convolution</a> inherited by the “sum and shuffle” monoidal structure on $\bf P$.</p>
+<p>where the sum is indexed over all tuples $p,q$ such that $p+q=n$. It can be shown that the Cauchy product $(X\cdot Y)_\bullet$ of two combinatorial species is the <a href="https://ncatlab.org/nlab/show/Day+convolution">Day convolution</a> inherited by the “sum and shuffle” monoidal structure on $\bf P$.</p>
 
 <p>(Exercise: how do you use the sum and shuffle product and the equivariant product to interpret the $\otimes$ sign?)</p>
 
-<p>The last and more important monoidal structure with which the category of species is endowed is called the <em>substitution</em> monoidal structure, and its definition resembles the one given for $[{\bf Fin},{\bf Set}]$ in <a href="">lecture 1</a>.</p>
+<p>The last and more important monoidal structure with which the category of species is endowed is called the <em>substitution</em> monoidal structure, and its definition resembles the one given for $[{\bf Fin},{\bf Set}]$ in <a href="1-finset-and-its-up.html">lecture 1</a>.</p>
 
 <p>On generating series, this operation should correspond to <em>functional substitution</em>: the operation that given two formal power series $f = \sum a_n t^n,g = \sum b_m t^m \in K\llbracket t\rrbracket$, defines the series $f[g](t)$ as the one obtained by formally unwinding the expression</p>
 
@@ -164,7 +164,7 @@ for every three objects $A,B,C$</li>
 
 <p>Unwinding axiom 3, it means the following: there exists a unique monomorphism $\tau : 1 \to \Omega$ with the property that <em>every</em> monomorphism $m : U \to A$ into <em>every</em> object $A\in \cal E$ appears in a pullback square</p>
 
-<p><span class="antex display"><img style='margin: 0.001ex 0.112ex -9.832ex 0.0ex; height: 11.535ex; width: 14.461ex;' src="/species/antex/c816bb5f08d4a167f3b11e500e003aee.svg" /></span></p>
+<p><span class="antex display"><img style='margin: 0.0ex 0.0ex -9.832ex 0.0ex; height: 11.536ex; width: 14.206ex;' src="/species/antex/a9bf9b034c56f7ac41726a901c3dd81e.svg" /></span></p>
 
 <p>of $\tau$ along a unique $\chi_A : A \to \Omega$.</p>
 

@@ -7,17 +7,17 @@
 <meta name="generator" content="Jekyll v3.9.1" />
 <meta property="og:title" content="Some explicit combinatorial identities" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="We have seen that to a combinatorial species we can associate" />
-<meta property="og:description" content="We have seen that to a combinatorial species we can associate" />
+<meta name="description" content="We have seen that to a combinatorial species we can associate at least two important invariants “quantities”, i.e. two formal power series from which we can deduce properties of the species. If $|X_n|$ denotes the cardinality of a set, and $F : {\bf P} \to {\bf Set}$ is a combinatorial species," />
+<meta property="og:description" content="We have seen that to a combinatorial species we can associate at least two important invariants “quantities”, i.e. two formal power series from which we can deduce properties of the species. If $|X_n|$ denotes the cardinality of a set, and $F : {\bf P} \to {\bf Set}$ is a combinatorial species," />
 <link rel="canonical" href="http://localhost:4000/species/lectures/4-computations.html" />
 <meta property="og:url" content="http://localhost:4000/species/lectures/4-computations.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-11T15:22:26+01:00" />
+<meta property="article:published_time" content="2021-11-11T21:22:33+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Some explicit combinatorial identities" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/4-computations.html","@type":"BlogPosting","headline":"Some explicit combinatorial identities","dateModified":"2021-11-11T15:22:26+01:00","datePublished":"2021-11-11T15:22:26+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/4-computations.html"},"description":"We have seen that to a combinatorial species we can associate","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/4-computations.html","@type":"BlogPosting","headline":"Some explicit combinatorial identities","dateModified":"2021-11-11T21:22:33+02:00","datePublished":"2021-11-11T21:22:33+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/4-computations.html"},"description":"We have seen that to a combinatorial species we can associate at least two important invariants “quantities”, i.e. two formal power series from which we can deduce properties of the species. If $|X_n|$ denotes the cardinality of a set, and $F : {\\bf P} \\to {\\bf Set}$ is a combinatorial species,","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,23 +44,25 @@
       <article>
     <!-- &bull;  &bull; -->
     <h1>Some explicit combinatorial identities</h1>
-    <p>We have seen that to a combinatorial species we can associate</p>
+    <p>We have seen that to a combinatorial species we can associate at least two important invariants “quantities”, i.e. two formal power series from which we can deduce properties of the species. If $|X_n|$ denotes the cardinality of a set, and $F : {\bf P} \to {\bf Set}$ is a combinatorial species,</p>
 
 <ul>
-  <li>its generating series, defined as the formal power series</li>
+  <li>the <em>generating series</em> of $F$ is defined as the formal power series in $t$</li>
 </ul>
 
 <div class="kdmath">$$
-foo
+\sum_{k\ge 1} \frac{|F[n]|}{n!} t^n
 $$</div>
 
 <ul>
-  <li>its <em>type</em> generating series</li>
+  <li>its <em>type</em> generating series, instead, is defined as</li>
 </ul>
 
 <div class="kdmath">$$
-bar
+\sum_{k\ge 1} |\pi_0 F[n]| t^n
 $$</div>
+
+<p>where the notation $\pi_0 F[n]$ denotes the quotient set $F[n]/S_n$ under the action of the symmetric group $S_n$ over $F[n]$. (This is no more and no less than the space of orbits of the action $S_n \curvearrowright F[n]$.)</p>
 
 <p>For example: if $\cal C$ is the species of oriented cycles on finite sets, and $\wp$ is the species of subsets, we have that</p>
 
@@ -80,10 +82,10 @@ $$</div>
 g_{\cal S}(t) = ∑_{n=0}^\infty t^n = \frac1{1-t} = g_{\cal L}(t).
 $$</div>
 
-<p>The type generating series of $\cal S$ and $\cal L$ are, however, different, because the sets of orbits $|{\cal S}[n]| / S_n$ and $| {\cal L}[n] | / S_n$ have different cardinalities:</p>
+<p>The type generating series of $\cal S$ and $\cal L$ are, however, different, because the sets of orbits $|{\cal S}[n]| / S_n$ and $| {\cal L}[n] | / S_n$ have different cardinalities (the action of $S_n$ on linear orderings is transitive):</p>
 
 <div class="kdmath">$$
-\tilde{g}_{\cal S}(t) = \dots \qquad \qquad  \tilde{g}_{\cal L}(t) = \dots
+\tilde{g}_{\cal S}(t) = \exp \sum_{k\ge 1} \frac1k \frac{t^k}{1-t^k} \qquad \qquad  \tilde{g}_{\cal L}(t) = \frac1{1-t}
 $$</div>
 
 <p>In order to gain a deeper understanding of the combinatorial species $F$ through an algebraic gadget, we have to introduce the <em>cycle index series</em> of $F$:</p>
@@ -124,7 +126,26 @@ $$</div>
 e^a = \exp\left(a_1 + \frac{a_2}2 + \frac{a_3}3 + \dots\right) = e^{a_0}(\cosh a_1 + \sinh a_1).
 $$</div>
 
-<p><em>Proof.</em> …</p>
+<p><em>Proof.</em> The terminal species $E$ splits as the sum of two species $E_e, E_o$, of <em>even sets</em> and <em>odd sets</em> respectively: formally,</p>
+
+<div class="kdmath">$$
+E_e[n] = \begin{cases} \{\bullet\} & n = 2k \\ \varnothing & n = 2k+1 \end{cases} \qquad \qquad
+E_o[n] = \begin{cases} \{\bullet\} & n = 2k+1 \\ \varnothing & n = 2k \end{cases}
+$$</div>
+
+<p>so it is clear that $E = E_e + E_o$. Now, the relation $Z_E = Z_{E_e} + Z_{E_o}$ holds true, and from this we can derive the desired identity by observing that</p>
+
+<div class="kdmath">$$
+Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2,-x_3,\dots\right)
+$$</div>
+
+<p>and</p>
+
+<div class="kdmath">$$
+Z_{E_o} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) - Z_E(-x_1,x_2,-x_3,\dots\right).
+$$</div>
+
+<p>A brute-force computation now shows that the LHS of $Z_E = Z_{E_e} + Z_{E_o}$ is precisely $e^a = \exp\left(a_1 + \frac{a_2}2 + \frac{a_3}3 + \dots\right)$ and the RHS simplifies to $e^{a_0}(\cosh a_1 + \sinh a_1)$.</p>
 
 </article>
     </main>
