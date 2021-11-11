@@ -51,7 +51,7 @@ Computations of a few simple $Z$'s; for $E$ an $\cal C$. In general, computation
 
 Cycle index series are however an unavoidable tool in the calculus of combinatorial species; in fact, they play a fundamental role in expressing the formula for the type generating series of a substitution of species:
 
-$$ \widetilde{F \triangleleft G}(x) = Z_F(\tilde G(x), \tilde G(x^2), \tilde G(x^3),\dots) $$
+$$ \tilde{g}_{F \triangleleft G}(t) = Z_F(\tilde G(t), \tilde G(t^2), \tilde G(t^3),\dots) $$
 
 This formula can be used in order to obtain the expression of $Z_{\cal S}$ in terms of $Z_E$ and $Z_{\cal C}$, and the formula for the cycle index series yields the identity
 
@@ -59,7 +59,7 @@ $$ \prod_{k\ge 1} \frac1{1-t^k} = \exp \sum_{k\ge 1} \frac1k \frac{t^k}{1-t^k} $
 
 or the remarkable explicit expression for the type generating series of ${\cal C}\times \wp$ above:
 
-$$ \widetilde{\cal C \times \wp}(t) = \sum_{n\ge 1} \left( \frac 1n \sum_{d | n} \varphi(d) 2^{n/d} \right) t^n $$
+$$ \tilde{g}_{\cal C \times \wp}(t) = \sum_{n\ge 1} \left( \frac 1n \sum_{d | n} \varphi(d) 2^{n/d} \right) t^n $$
 
 where $\varphi(-)$ is the Euler function, and the inner sum is extended over all divisors of $n$.
 
