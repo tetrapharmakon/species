@@ -7,12 +7,13 @@ katex:
 antex:
     preamble:
         \usepackage{tikz,tikz-cd}
-        \usetikzlibrary{calc,positioning}
+        \usetikzlibrary{calc,positioning, fit}
         \usepackage[all]{xy}
         \usepackage{commutative-diagrams}
         \usepackage{amsmath,amsfonts}
         \usepackage{xcolor}
         \usepackage{tikz}
+
 ---
 
 
@@ -77,17 +78,90 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 
 ### A few examples of species
 
-**Example** (The species of singletons).
+**Example** (The species of singletons). The species $U$ of singletons ($U$ stands for "*un seul élément*", a single element in French) sends a finite set $A$ into a one-point set $\{\bullet\}$ if $A$ is itself a one-point set, and in the empty set otherwise. The action of the symmetric group on each $U[n]$ is the only possible one.
 
-**Example** (The species of sets).
+**Example** (The species of subsets). The species of subsets sends a finite set $[n]$ into the set $\wp[n]$ of all possible subsets of $[n]$; so, $\wp[n]$ has exactly $2^n$ elements, and the action of the symmetric group is defined as post-composition, identifying $\wp[n]$ with the set ${\bf Set}(n,2)$; in simple words, $\sigma \in S_n$ acts on $\wp[n]$ sending the set $\{n_1,\dots, n_k}$ to the set $\{\sigma n_1,\dots, \sigma n_k\}$.
 
-**Example** (The terminal species).
+{% tex classes: [antex, display] %}
+\def\yes{\bullet}
+\def\no{\circ}
+\def\bloc#1#2#3{\draw (0,0) rectangle (3,1);\node at (.5,.5) {$#1$};\node at (1.5,.5) {$#2$};\node at (2.5,.5) {$#3$};}
+\begin{tikzpicture}[scale=.5]
+\draw (0,0) rectangle (3,1);
+\node at (.5,.5) {$1$};
+\node at (1.5,.5) {$2$};
+\node at (2.5,.5) {$3$};
+\begin{scope}[xshift=4cm]
+\bloc{\yes}{\no}{\no}
+\begin{scope}[yshift=-1.25cm] \bloc{\no}{\yes}{\yes} \end{scope}
+\begin{scope}[xshift=3.25cm]
+\bloc{\yes}{\no}{\yes}
+\begin{scope}[yshift=-1.25cm] \bloc{\no}{\yes}{\no} \end{scope}
+\begin{scope}[xshift=3.25cm]
+\bloc{\no}{\no}{\no}
+\begin{scope}[yshift=-1.25cm] \bloc{\yes}{\yes}{\yes} \end{scope}
+\begin{scope}[xshift=3.25cm]
+\bloc{\no}{\yes}{\yes}
+\begin{scope}[yshift=-1.25cm] \bloc{\yes}{\no}{\no} \end{scope}
+\end{scope}\end{scope}\end{scope}\end{scope}
+\end{tikzpicture}
+{% endtex %}
 
-**Example** (The species of permutations).
+**Example** (The terminal species). The species $E$ of sets ($E$ stands for "*ensemble*", set in French) is the terminal object of the category $\bf Spc$; it is the constant functor on the singleton $\{\bullet\}$. The species $E$ has two sub-species: the species $E_e$ of *even sets*, and the species $E_o$ of *odd sets*.
 
-**Example** (The species of linear orders).
+**Example** (The species of permutations). The species $S$ of permutations sends each finite set $[n]$ into the (carrier of the) symmetric group on $n$ letters, $S_n$. The symmetric group acts on itself by left translation: if $\tau \in S_n$, $\sigma : S_n \to S_n$ is the map sending $\tau\mapsto \sigma\tau$.
 
-**Example** (The species of oriented cycles).
+{% tex classes: [antex, display] %}
+\begin{tikzpicture}
+\node (1) at (0,0) {$\left(\begin{smallmatrix} 1&2&3\\1&2&3 \end{smallmatrix}\right)$};
+\node (2) at (1.25,-.1325) {$\underset{\sigma}{\left(\begin{smallmatrix} 1&2&3\\1&3&2 \end{smallmatrix}\right)}$};
+\node (3) at (2.5,0) {$\left(\begin{smallmatrix} 1&2&3\\2&1&3 \end{smallmatrix}\right)$};
+\node (4) at (0,.75) {$\left(\begin{smallmatrix} 1&2&3\\3&1&2 \end{smallmatrix}\right)$};
+\node (5) at (1.25,.75) {$\left(\begin{smallmatrix} 1&2&3\\3&2&1 \end{smallmatrix}\right)$};
+\node (6) at (2.5,.75) {$\left(\begin{smallmatrix} 1&2&3\\2&3&1 \end{smallmatrix}\right)$};
+\node[gray!40,draw,densely dotted,fit=(1) (2) (3) (4) (5) (6)] (box) {$S_3$};
+\draw[|->] ($(box.east)+(.15,0)$) -- +(1.325cm,0) node[above, pos=.5] {$\sigma \cdot\_$};
+\begin{scope}[xshift=5.5cm]
+\node (1) at (0,0) {$\left(\begin{smallmatrix} 1&2&3\\1&3&2 \end{smallmatrix}\right)$};
+\node (2) at (1.25,0) {$\left(\begin{smallmatrix} 1&2&3\\1&2&3 \end{smallmatrix}\right)$};
+\node (3) at (2.5,0) {$\left(\begin{smallmatrix} 1&2&3\\3&1&2 \end{smallmatrix}\right)$};
+\node (4) at (0,.75) {$\left(\begin{smallmatrix} 1&2&3\\2&1&3 \end{smallmatrix}\right)$};
+\node (5) at (1.25,.75) {$\left(\begin{smallmatrix} 1&2&3\\2&3&1 \end{smallmatrix}\right)$};
+\node (6) at (2.5,.75) {$\left(\begin{smallmatrix} 1&2&3\\3&2&1 \end{smallmatrix}\right)$};
+% \node[draw,densely dotted,fit=(1) (2) (3) (4) (5) (6)] (box) {};
+\end{scope}
+\end{tikzpicture}
+{% endtex %}
+
+**Example** (The species of linear orders). The species $L$ of linear orders sends each finite set $[n]$ to the set of all possible linear orderings of $[n]$; the set $L[n]$ has exactly $n!$ elements, because each linear ordering $\{x_1 <\dots < x_n\}$ of an $n$-element set can be thought as induced under transport of structure by the ordering $\{1 < 2 < \dots < n\}$ on $[n]$.
+
+**Example** (The species of oriented cycles). The species $\cal C$ of *oriented cycles* sends a finite set $[n]$ in the set of possible inequivalent ways to sit $n$ people at a round table, or more formally, in the set of cylic orderings of $\{x_1,\dots,x_n\}$, where the ordering $x_1,\dots,x_n$ is indistinguishable from $x_2,x_3\dots,x_n, x_1$, from $x_3, x_4\dots,x_n, x_1, x_2$, and frome very other cyclic permutation of its members. It can be shown by induction (or using simple arguments from group actions and orbits) that $\|{\cal C}[n]\| = (n-1)!$.
+
+
+{% tex classes: [antex, display] %}
+\begin{tikzpicture}
+\draw (0,0) circle (1cm);
+\draw[->] (70:1.15cm) arc (70:35:1.15cm);
+\foreach[count=\j] \i in {4,3,2,1,0}{
+  \node[draw, fill=white, circle, inner sep=1pt] at (\i*360/5+90+72:1cm) {\footnotesize $x_{\j}$};
+  }
+\begin{scope}[xshift=3cm]
+\draw (0,0) circle (1cm);
+\draw[->] (70:1.15cm) arc (70:35:1.15cm);
+\foreach[count=\j] \i in {4,3,2,1,0}{
+  \node[draw, fill=white, circle, inner sep=1pt] at (\i*360/5+90:1cm) {\footnotesize $x_{\j}$};
+  }
+\end{scope}
+\begin{scope}[xshift=7cm]
+\draw (0,0) circle (1cm);
+% \draw[->] (70:1.15cm) arc (70:35:1.15cm);
+\foreach[count=\j] \i in {0,1,2,3,4}{
+  \node[draw, fill=white, circle, inner sep=1pt] at (\i*360/5+90:1cm) {\footnotesize $x_{\j}$};
+  }
+\end{scope}
+\end{tikzpicture}
+{% endtex %}
+
 
 One can also cook up more abstract examples of combinatorial species:
 

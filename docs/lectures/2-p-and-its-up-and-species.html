@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/2-p-and-its-up-and-species.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-11T21:35:56+02:00" />
+<meta property="article:published_time" content="2021-11-13T00:50:35+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The category P and species" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/2-p-and-its-up-and-species.html","@type":"BlogPosting","headline":"The category P and species","dateModified":"2021-11-11T21:35:56+02:00","datePublished":"2021-11-11T21:35:56+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/2-p-and-its-up-and-species.html"},"description":"The fundamental object of study of the theory of combinatorial species is the category $\\bf P$ of finite sets and bijections, and its presheaf category $[{\\bf P}^\\text{op}, {\\bf Set}]$. (Note: since a groupoid is a self-dual category, there is not much difference between $[{\\bf P}^\\text{op}, {\\bf Set}]$ and $[{\\bf P}, {\\bf Set}]$, but we will usually speak about the second category.)","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/2-p-and-its-up-and-species.html","@type":"BlogPosting","headline":"The category P and species","dateModified":"2021-11-13T00:50:35+02:00","datePublished":"2021-11-13T00:50:35+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/2-p-and-its-up-and-species.html"},"description":"The fundamental object of study of the theory of combinatorial species is the category $\\bf P$ of finite sets and bijections, and its presheaf category $[{\\bf P}^\\text{op}, {\\bf Set}]$. (Note: since a groupoid is a self-dual category, there is not much difference between $[{\\bf P}^\\text{op}, {\\bf Set}]$ and $[{\\bf P}, {\\bf Set}]$, but we will usually speak about the second category.)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -114,17 +114,23 @@ $$</div>
 
 <h3 id="a-few-examples-of-species">A few examples of species</h3>
 
-<p><strong>Example</strong> (The species of singletons).</p>
+<p><strong>Example</strong> (The species of singletons). The species $U$ of singletons ($U$ stands for “<em>un seul élément</em>”, a single element in French) sends a finite set $A$ into a one-point set ${\bullet}$ if $A$ is itself a one-point set, and in the empty set otherwise. The action of the symmetric group on each $U[n]$ is the only possible one.</p>
 
-<p><strong>Example</strong> (The species of sets).</p>
+<p><strong>Example</strong> (The species of subsets). The species of subsets sends a finite set $[n]$ into the set $\wp[n]$ of all possible subsets of $[n]$; so, $\wp[n]$ has exactly $2^n$ elements, and the action of the symmetric group is defined as post-composition, identifying $\wp[n]$ with the set ${\bf Set}(n,2)$; in simple words, $\sigma \in S_n$ acts on $\wp[n]$ sending the set ${n_1,\dots, n_k}$ to the set ${\sigma n_1,\dots, \sigma n_k}$.</p>
 
-<p><strong>Example</strong> (The terminal species).</p>
+<p><span class="antex display"><img style='margin: 0.0ex 0.0ex 0.0ex 0.0ex; height: 7.527ex; width: 55.437ex;' src="/species/antex/1517dd69db7acb93cdc44824c3e40cb7.svg" /></span></p>
 
-<p><strong>Example</strong> (The species of permutations).</p>
+<p><strong>Example</strong> (The terminal species). The species $E$ of sets ($E$ stands for “<em>ensemble</em>”, set in French) is the terminal object of the category $\bf Spc$; it is the constant functor on the singleton ${\bullet}$. The species $E$ has two sub-species: the species $E_e$ of <em>even sets</em>, and the species $E_o$ of <em>odd sets</em>.</p>
 
-<p><strong>Example</strong> (The species of linear orders).</p>
+<p><strong>Example</strong> (The species of permutations). The species $S$ of permutations sends each finite set $[n]$ into the (carrier of the) symmetric group on $n$ letters, $S_n$. The symmetric group acts on itself by left translation: if $\tau \in S_n$, $\sigma : S_n \to S_n$ is the map sending $\tau\mapsto \sigma\tau$.</p>
 
-<p><strong>Example</strong> (The species of oriented cycles).</p>
+<p><span class="antex display"><img style='margin: 0.0ex 0.232ex 0.0ex 0.0ex; height: 12.371ex; width: 60.923ex;' src="/species/antex/e7419bf594cf3a923f16929affb9acaf.svg" /></span></p>
+
+<p><strong>Example</strong> (The species of linear orders). The species $L$ of linear orders sends each finite set $[n]$ to the set of all possible linear orderings of $[n]$; the set $L[n]$ has exactly $n!$ elements, because each linear ordering ${x_1 &lt;\dots &lt; x_n}$ of an $n$-element set can be thought as induced under transport of structure by the ordering ${1 &lt; 2 &lt; \dots &lt; n}$ on $[n]$.</p>
+
+<p><strong>Example</strong> (The species of oriented cycles). The species $\cal C$ of <em>oriented cycles</em> sends a finite set $[n]$ in the set of possible inequivalent ways to sit $n$ people at a round table, or more formally, in the set of cylic orderings of ${x_1,\dots,x_n}$, where the ordering $x_1,\dots,x_n$ is indistinguishable from $x_2,x_3\dots,x_n, x_1$, from $x_3, x_4\dots,x_n, x_1, x_2$, and frome very other cyclic permutation of its members. It can be shown by induction (or using simple arguments from group actions and orbits) that $|{\cal C}[n]| = (n-1)!$.</p>
+
+<p><span class="antex display"><img style='margin: 0.0ex 0.0ex 0.0ex 0.0ex; height: 15.007ex; width: 61.881ex;' src="/species/antex/7946a4b0f51191318ace8a2bb68078a8.svg" /></span></p>
 
 <p>One can also cook up more abstract examples of combinatorial species:</p>
 
