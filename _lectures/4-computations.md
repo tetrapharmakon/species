@@ -52,7 +52,7 @@ so that their product ${\cal C} \times \wp$ sends $n\ge 1$ to $(n-1)! \cdot 2^n$
 
 $$ \sum_{n=1}^\infty \big((n-1)! \cdot 2^n\big) \frac{t^n}{n!} = \sum_{n=1}^\infty \frac{2^n t^n}{n} = \log\left( \frac1{1-2t}\right)$$
 
-The generating series of a combinatorial species is a powerful, but rather coarse, invariant of the species: for example, the species $S$ of permutations and the species $L$ of linear orders have the same generating species, because $\|{S}[n]\| = n! = \| {L}[n] \|$, so that
+The generating series of a combinatorial species is a powerful, but relatively coarse, invariant of the species: for example, the species $S$ of permutations and the species $L$ of linear orders have the same generating species because $\|{S}[n]\| = n! = \| {L}[n] \|$, so that
 
 $$ g_{S}(t) = ∑_{n=0}^\infty t^n = \frac1{1-t} = g_{L}(t). $$
 
@@ -64,13 +64,13 @@ In order to gain a deeper understanding of the combinatorial species $F$ through
 
 $$ \dots $$
 
-Computations of a few simple $Z$'s; for $E$ an $\cal C$. In general, computations of $Z_F$'s that do not use sophisticated techniques of infinite series' summing are near to impossible. More than often, an explicit formula for $Z_F$ relies on mysterious combinatorial identities (through which a clever manipulation of $Z_F$'s can shed light on *even more mysterious* combinatorial identities).
+Computations of a few simple $Z$'s; for $E$ an $\cal C$. In general, computations of $Z_F$'s that do not use sophisticated infinite series' summing techniques are rare or even impossible. More than often, an explicit formula for $Z_F$ relies on mysterious combinatorial identities (through which a clever manipulation of $Z_F$'s can shed light on *even more mysterious* combinatorial identities).
 
-Cycle index series are however an unavoidable tool in the calculus of combinatorial species; in fact, they play a fundamental role in expressing the formula for the type generating series of a substitution of species:
+Cycle index series are, however, an unavoidable tool in the calculus of combinatorial species; in fact, they play a fundamental role in expressing the formula for the type generating series of substitution of a species into another:
 
 $$ \tilde{g}_{F \triangleleft G}(t) = Z_F(\tilde G(t), \tilde G(t^2), \tilde G(t^3),\dots) $$
 
-This formula can be used in order to obtain the expression of $Z_{S}$ in terms of $Z_E$ and $Z_{\cal C}$, and the formula for the cycle index series yields the identity
+This formula can be used in order to obtain the expression of $Z_{S}$ in terms of $Z_E$, and $Z_{\cal C}$, and the formula for the cycle index series yields the identity
 
 $$ \prod_{k\ge 1} \frac1{1-t^k} = \exp \sum_{k\ge 1} \frac1k \frac{t^k}{1-t^k} $$
 
@@ -80,9 +80,9 @@ $$ \tilde{g}_{\cal C \times \wp}(t) = \sum_{n\ge 1} \left( \frac 1n \sum_{d | n}
 
 where $\varphi(-)$ is the Euler function, and the inner sum is extended over all divisors of $n$.
 
-As fascinating as it certainly looks, the accent of this exposition is however not on the bare combinatorics, but on the category theory! So let's not delve into the details of how the former identities have been derived.
+As fascinating as it certainly looks, this exposition's accent is not on the bare combinatorics, but instead on the category theory! So let us not delve into the details of how the former identities have been derived.
 
-Let's instead review one motivating example of a combinatorial identity *derived* from a couple black boxes, but whose combinatorial interpretation is elucidated by the language of combinatorial species.
+Instead, let us review one motivating example of a combinatorial identity *derived* from a couple of black boxes but whose combinatorial interpretation is elucidated by the language of combinatorial species.
 
 **Theorem.** Let $a = \sum_{k\ge 1} \frac{a_k}{k}$, $a_0 = \sum_{k\ge 1} \frac{a_{2k}}{2k}$ and $a_1 = \sum_{k\ge 0} \frac{a_{2k+1}}{2k+1}$ be three formal power series in the ring $\mathbb{Q}\llbracket a_1, a_2, a_3,\dots\rrbracket$. Then,
 
@@ -103,7 +103,7 @@ $$ Z_{E_o} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) - Z_E(-x_1,x_2,-x_3,\dots)\r
 
 A brute-force computation now shows that the LHS of $Z_E = Z_{E_e} + Z_{E_o}$ is precisely $e^a = \exp\left(a_1 + \frac{a_2}2 + \frac{a_3}3 + \dots\right)$ and the RHS simplifies to $e^{a_0}(\cosh a_1 + \sinh a_1)$.
 
-We will see in the [next lecture]() that every species $F$ can be written as the sum of its "even" part and its "odd" part, thanks to the fact that every species $F$ admits a canonical decomposition as a coproduct
+We will see in the [following lecture]() that every species $F$ can be written as the sum of its "even" part and its "odd" part, thanks to the fact that every species $F$ admits a canonical decomposition as a coproduct
 
 $$ F = F_0 + F_1 + F_2 + \dots $$
 

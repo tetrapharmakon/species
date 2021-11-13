@@ -15,7 +15,7 @@ antex:
         \usepackage{tikz}
 ---
 
-This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$ and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a "Taylor expansion". Such functors are called *analytic*, and they can be characterised intrisically as the finitary endofunctors of $\bf Set$ satisfying a weak exactness property.
+This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$ and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a "Taylor expansion". Such functors are called *analytic*, and they can be characterised intrinsically as the finitary endofunctors of $\bf Set$ satisfying a weak exactness property.
 
 ### Analytic functors, wide pullbacks
 
@@ -34,7 +34,7 @@ and for $X\in\bf Set$ the set $FX$ can be computed pointwise as the coend
 
 $$\int^n f(n)\times X^n =: \left(\coprod_{n\ge 1} f(n)\times X^n\right)/\left\langle \begin{smallmatrix}\sigma.e; x_1,\dots,x_n) \sim (e, x_{\sigma 1},\dots, x_{\sigma n}) \\ \sigma \in S_n, n\ge 1\end{smallmatrix} \right\rangle \tag{$\star$} $$
 
-such a functor is called *analytic*, and in fact we call in this way every functor that lies in the image of the functor $\text{Lan}_J$, where $J : {\bf P} \hookrightarrow {\bf Set}$ is the (nonfull) inclusion functor.
+Such a functor is called *analytic*, and we call similarly every functor that lies in the image of the functor $\text{Lan}_J$, where $J : {\bf P} \hookrightarrow {\bf Set}$ is the (nonfull) inclusion functor.
 
 **Definition** (Analytic functor). An endofunctor $F$ of $\bf Set$ is called *analytic* if it lies in the essential image of $\text{Lan}_J$, or in other words, if it arises as the left Kan extension along $J : {\bf P} \hookrightarrow {\bf Set}$ of a combinatorial species $f : {\bf P} \to {\bf Set}$. Such a species will be called the *generating species* of $F$.
 
@@ -51,7 +51,7 @@ With a little bit more effort, we can however characterise such an essential ima
 1. $F$ is finitary;
 2. $F$ weakly preserves wide pullbacks.
 
-The second condition deserves more explanation.
+The second condition deserves a bite more explanation.
 
 **Definition.** An endofunctor $F : {\bf Set} \to {\bf Set}$ is said to *weakly preserve pullbacks* if for every pullback square
 
@@ -70,15 +70,17 @@ the canonical map $F(A\times_C B) \to FA \times_{FC} FB$ is surjective.
 
 In simple terms, a wide pullback is a pullback having possibly more than two arrows pointing to the same object.
 
-In more obscure terms, let $E$ be a set, and let $E^\rhd$ be the category where a distinguished new object $\infty$ has be forcefully rendered a terminal object; a $E$-ary wide pullback in $\cal C$ is a limit of a diagram $E^\rhd \to \cal C$.
+In more obscure terms, let $E$ be a set, and let $E^\rhd$ be the category where a distinguished new object $\infty$ has been forcefully rendered a terminal object; a $E$-ary wide pullback in $\cal C$ is a limit of a diagram $E^\rhd \to \cal C$.
 
-The characterisation of analytic functors in terms of weak preservation of wide pullbacks was first showed by Joyal in his "*Foncteurs analytiques*"; the proof of the equivalence will occupy the entire lecture, and it comes from a more modern presentation of this idea in Adamek-Velebil that is purely elementary, in the sense that it relies on elementary category theory and it is quite straightforward.
+The characterisation of analytic functors in terms of weak preservation of wide pullbacks was first shown by Joyal in his "*Foncteurs analytiques*".
+
+The proof will occupy the entire lecture, and it comes from a more modern presentation of this idea in Adamek-Velebil that is purely elementary, in the sense that it relies on elementary category theory and is pretty straightforward.
 
 ### Canonical decomposition and examples
 
 Since $\text{Lan}_J$ is a left adjoint, it is evident that $\text{Lan}_J(f \sqcup g) \cong \text{Lan}_J f \sqcup \text{Lan}_J g$, so that the class of analytic functors is close under finite (and in fact, arbitrarily large) coproducts. More importantly, the analytic functor associated to $f\sqcup g$ is just the coproduct of the analytic functors $F=\text{Lan}_Jf$ and $G=\text{Lan}_Jg$.
 
-Thus, in order to completely understand analytic functors, it is enough to understand the $\sqcup$-indecomposable objects of $\bf Spc$. Such indecomposable objects can be characterised.
+Thus, to completely understand analytic functors, it is enough to understand the $\sqcup$-indecomposable objects of $\bf Spc$. Such indecomposable objects can be characterised.
 
 **Proposition** (Canonical decomposition of a species). Every combinatorial species $f : {\bf P} \to {\bf Set}$ splits into a countable sequence of $\sqcup$-indecomposable objects, unique up to reordering: the *canonical decomposition* of $f$.
 
@@ -102,11 +104,11 @@ $$ FX = \sum_{n\ge 1} \frac{f(n)\times X^n}{n!}. $$
 
 **Example** (The AF of a representable species).
 
-**Example** (The AF of the species of the species of sets).
+**Example** (The AF of the species of sets).
 
-**Example** (The AF of the species of the species of permutations).
+**Example** (The AF of the species of permutations).
 
-**Example** (The AF of the species of the species of oriented cycles).
+**Example** (The AF of the species of oriented cycles).
 
 We now embark on the proof of the characterisation theorem for analytic functors. We provide an elementary proof in two parts.
 
@@ -122,7 +124,7 @@ We now embark on the proof of the characterisation theorem for analytic functors
 
 
 1. $F$ is analytic;
-2. $F$ is a coproduct of symmetrized representables;
+2. $F$ is a coproduct of symmetrised representables;
 3. $F$ weakly preserves *countable* wide pullbacks;
 4. $F$ weakly preserves wide pullbacks (of all cardinality).
 
@@ -130,4 +132,4 @@ We now embark on the proof of the characterisation theorem for analytic functors
 
 ...
 
-The proof of the second theorem, which was the one originally proved by Joyal, follows from a similar argument; in particular, the implication $3\Rightarrow 2$ follows from the fact that each $F$ that weakly preserves countable wide pullbacks is superfinitary (prove this by contradiction as an exercise). All other implications are trivial or follow clearly from what we already know.
+The proof of the second theorem, which was the one initially proved by Joyal, follows from a similar argument; in particular, the implication $3\Rightarrow 2$ follows from the fact that each $F$ that weakly preserves countable wide pullbacks is superfinitary (prove this by contradiction as an exercise). All other implications are trivial or follow clearly from what we already know.
