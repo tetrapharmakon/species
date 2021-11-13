@@ -7,17 +7,17 @@
 <meta name="generator" content="Jekyll v3.9.1" />
 <meta property="og:title" content="Species and analytic functors" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$ and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a “Taylor expansion”. Such functors are called analytic, and they can be characterised intrisically as the finitary endofunctors of $\bf Set$ satisfying a weak exactness property." />
-<meta property="og:description" content="This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$ and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a “Taylor expansion”. Such functors are called analytic, and they can be characterised intrisically as the finitary endofunctors of $\bf Set$ satisfying a weak exactness property." />
+<meta name="description" content="This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$ and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a “Taylor expansion”. Such functors are called analytic, and they can be characterised intrinsically as the finitary endofunctors of $\bf Set$ satisfying a weak exactness property." />
+<meta property="og:description" content="This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$ and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a “Taylor expansion”. Such functors are called analytic, and they can be characterised intrinsically as the finitary endofunctors of $\bf Set$ satisfying a weak exactness property." />
 <link rel="canonical" href="http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html" />
 <meta property="og:url" content="http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-13T12:22:30+02:00" />
+<meta property="article:published_time" content="2021-11-13T15:29:51+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Species and analytic functors" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html","@type":"BlogPosting","headline":"Species and analytic functors","dateModified":"2021-11-13T12:22:30+02:00","datePublished":"2021-11-13T12:22:30+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html"},"description":"This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \\dots$ and it gives rise to an endofunctor $\\bar F $ of $\\bf Set$ that admits a “Taylor expansion”. Such functors are called analytic, and they can be characterised intrisically as the finitary endofunctors of $\\bf Set$ satisfying a weak exactness property.","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html","@type":"BlogPosting","headline":"Species and analytic functors","dateModified":"2021-11-13T15:29:51+02:00","datePublished":"2021-11-13T15:29:51+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html"},"description":"This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \\dots$ and it gives rise to an endofunctor $\\bar F $ of $\\bf Set$ that admits a “Taylor expansion”. Such functors are called analytic, and they can be characterised intrinsically as the finitary endofunctors of $\\bf Set$ satisfying a weak exactness property.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,7 +44,7 @@
       <article>
     <!-- &bull;  &bull; -->
     <h1>Species and analytic functors</h1>
-    <p>This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$ and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a “Taylor expansion”. Such functors are called <em>analytic</em>, and they can be characterised intrisically as the finitary endofunctors of $\bf Set$ satisfying a weak exactness property.</p>
+    <p>This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$ and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a “Taylor expansion”. Such functors are called <em>analytic</em>, and they can be characterised intrinsically as the finitary endofunctors of $\bf Set$ satisfying a weak exactness property.</p>
 
 <h3 id="analytic-functors-wide-pullbacks">Analytic functors, wide pullbacks</h3>
 
@@ -58,7 +58,7 @@
 \int^n f(n)\times X^n =: \left(\coprod_{n\ge 1} f(n)\times X^n\right)/\left\langle \begin{smallmatrix}\sigma.e; x_1,\dots,x_n) \sim (e, x_{\sigma 1},\dots, x_{\sigma n}) \\ \sigma \in S_n, n\ge 1\end{smallmatrix} \right\rangle \tag{$\star$}
 $$</div>
 
-<p>such a functor is called <em>analytic</em>, and in fact we call in this way every functor that lies in the image of the functor $\text{Lan}_J$, where $J : {\bf P} \hookrightarrow {\bf Set}$ is the (nonfull) inclusion functor.</p>
+<p>Such a functor is called <em>analytic</em>, and we call similarly every functor that lies in the image of the functor $\text{Lan}_J$, where $J : {\bf P} \hookrightarrow {\bf Set}$ is the (nonfull) inclusion functor.</p>
 
 <p><strong>Definition</strong> (Analytic functor). An endofunctor $F$ of $\bf Set$ is called <em>analytic</em> if it lies in the essential image of $\text{Lan}_J$, or in other words, if it arises as the left Kan extension along $J : {\bf P} \hookrightarrow {\bf Set}$ of a combinatorial species $f : {\bf P} \to {\bf Set}$. Such a species will be called the <em>generating species</em> of $F$.</p>
 
@@ -79,7 +79,7 @@ $$</div>
   <li>$F$ weakly preserves wide pullbacks.</li>
 </ol>
 
-<p>The second condition deserves more explanation.</p>
+<p>The second condition deserves a bite more explanation.</p>
 
 <p><strong>Definition.</strong> An endofunctor $F : {\bf Set} \to {\bf Set}$ is said to <em>weakly preserve pullbacks</em> if for every pullback square</p>
 
@@ -91,15 +91,17 @@ $$</div>
 
 <p>In simple terms, a wide pullback is a pullback having possibly more than two arrows pointing to the same object.</p>
 
-<p>In more obscure terms, let $E$ be a set, and let $E^\rhd$ be the category where a distinguished new object $\infty$ has be forcefully rendered a terminal object; a $E$-ary wide pullback in $\cal C$ is a limit of a diagram $E^\rhd \to \cal C$.</p>
+<p>In more obscure terms, let $E$ be a set, and let $E^\rhd$ be the category where a distinguished new object $\infty$ has been forcefully rendered a terminal object; a $E$-ary wide pullback in $\cal C$ is a limit of a diagram $E^\rhd \to \cal C$.</p>
 
-<p>The characterisation of analytic functors in terms of weak preservation of wide pullbacks was first showed by Joyal in his “<em>Foncteurs analytiques</em>”; the proof of the equivalence will occupy the entire lecture, and it comes from a more modern presentation of this idea in Adamek-Velebil that is purely elementary, in the sense that it relies on elementary category theory and it is quite straightforward.</p>
+<p>The characterisation of analytic functors in terms of weak preservation of wide pullbacks was first shown by Joyal in his “<em>Foncteurs analytiques</em>”.</p>
+
+<p>The proof will occupy the entire lecture, and it comes from a more modern presentation of this idea in Adamek-Velebil that is purely elementary, in the sense that it relies on elementary category theory and is pretty straightforward.</p>
 
 <h3 id="canonical-decomposition-and-examples">Canonical decomposition and examples</h3>
 
 <p>Since $\text{Lan}_J$ is a left adjoint, it is evident that $\text{Lan}_J(f \sqcup g) \cong \text{Lan}_J f \sqcup \text{Lan}_J g$, so that the class of analytic functors is close under finite (and in fact, arbitrarily large) coproducts. More importantly, the analytic functor associated to $f\sqcup g$ is just the coproduct of the analytic functors $F=\text{Lan}_Jf$ and $G=\text{Lan}_Jg$.</p>
 
-<p>Thus, in order to completely understand analytic functors, it is enough to understand the $\sqcup$-indecomposable objects of $\bf Spc$. Such indecomposable objects can be characterised.</p>
+<p>Thus, to completely understand analytic functors, it is enough to understand the $\sqcup$-indecomposable objects of $\bf Spc$. Such indecomposable objects can be characterised.</p>
 
 <p><strong>Proposition</strong> (Canonical decomposition of a species). Every combinatorial species $f : {\bf P} \to {\bf Set}$ splits into a countable sequence of $\sqcup$-indecomposable objects, unique up to reordering: the <em>canonical decomposition</em> of $f$.</p>
 
@@ -110,6 +112,19 @@ $$</div>
 $$</div>
 
 <p>keeping in mind that the category $[S_n, {\bf Set}]$ is just the category of sets equipped with a left $S_n$-action. Thus, the action of $f$ on objects and morphisms is determined as the sum $f_1 + f_2 + f_3 + \dots$</p>
+
+<p><strong>Corollary.</strong> Since the decomposition of a species $f$ as a sum $f_1 + f_2 + f_3 + \dots$ is uniquely determined, the following concepts are well defined:</p>
+
+<ul>
+  <li>the <em>odd part</em> $f_o$ of a species $f : {\bf P} \to {\bf Set}$ consisting of the sum $\sum_{k\ge 0} f_{2k+1}=f_1+f_3+\dots$;</li>
+  <li>the <em>even part</em> $f_o$ of a species $f : {\bf P} \to {\bf Set}$ consisting of the sum $\sum_{k\ge 1} f_{2k}=f_2+f_4+\dots$.</li>
+</ul>
+
+<p>The following <em>splitting formula</em> for the cycle index series of the even and odd part of a species $f$ holds true:</p>
+
+<div class="kdmath">$$
+\begin{cases} Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2,-x_3,\dots)\right) \\ Z_{E_o} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) - Z_E(-x_1,x_2,-x_3,\dots)\right). \end{cases}
+$$</div>
 
 <p><strong>Example.</strong> Let $f : {\bf P} \to {\bf Set}$ be the sym-representable species sending $[n]\mapsto S_n/H$; the associated analytic functor sends a set $X$ to the set $X^n/H$, where the tuples of elements of $X$ are identified iff they differ by a permutation in $H$.</p>
 
@@ -127,11 +142,11 @@ $$</div>
 
 <p><strong>Example</strong> (The AF of a representable species).</p>
 
-<p><strong>Example</strong> (The AF of the species of the species of sets).</p>
+<p><strong>Example</strong> (The AF of the species of sets).</p>
 
-<p><strong>Example</strong> (The AF of the species of the species of permutations).</p>
+<p><strong>Example</strong> (The AF of the species of permutations).</p>
 
-<p><strong>Example</strong> (The AF of the species of the species of oriented cycles).</p>
+<p><strong>Example</strong> (The AF of the species of oriented cycles).</p>
 
 <p>We now embark on the proof of the characterisation theorem for analytic functors. We provide an elementary proof in two parts.</p>
 
@@ -149,7 +164,7 @@ $$</div>
 
 <ol>
   <li>$F$ is analytic;</li>
-  <li>$F$ is a coproduct of symmetrized representables;</li>
+  <li>$F$ is a coproduct of symmetrised representables;</li>
   <li>$F$ weakly preserves <em>countable</em> wide pullbacks;</li>
   <li>$F$ weakly preserves wide pullbacks (of all cardinality).</li>
 </ol>
@@ -158,7 +173,7 @@ $$</div>
 
 <p>…</p>
 
-<p>The proof of the second theorem, which was the one originally proved by Joyal, follows from a similar argument; in particular, the implication $3\Rightarrow 2$ follows from the fact that each $F$ that weakly preserves countable wide pullbacks is superfinitary (prove this by contradiction as an exercise). All other implications are trivial or follow clearly from what we already know.</p>
+<p>The proof of the second theorem, which was the one initially proved by Joyal, follows from a similar argument; in particular, the implication $3\Rightarrow 2$ follows from the fact that each $F$ that weakly preserves countable wide pullbacks is superfinitary (prove this by contradiction as an exercise). All other implications are trivial or follow clearly from what we already know.</p>
 
 </article>
     </main>

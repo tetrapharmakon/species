@@ -90,6 +90,17 @@ $$\textstyle {\bf Spc} = [{\bf P}, {\bf Set}] \cong \left[ \coprod_{n\ge 1} S_n 
 
 keeping in mind that the category $[S_n, {\bf Set}]$ is just the category of sets equipped with a left $S_n$-action. Thus, the action of $f$ on objects and morphisms is determined as the sum $f_1 + f_2 + f_3 + \dots$
 
+**Corollary.** Since the decomposition of a species $f$ as a sum $f_1 + f_2 + f_3 + \dots$ is uniquely determined, the following concepts are well defined:
+
+- the *odd part* $f_o$ of a species $f : {\bf P} \to {\bf Set}$ consisting of the sum $\sum_{k\ge 0} f_{2k+1}=f_1+f_3+\dots$;
+- the *even part* $f_o$ of a species $f : {\bf P} \to {\bf Set}$ consisting of the sum $\sum_{k\ge 1} f_{2k}=f_2+f_4+\dots$.
+
+The following *splitting formula* for the cycle index series of the even and odd part of a species $f$ holds true:
+
+$$ \begin{cases} Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2,-x_3,\dots)\right) \\ Z_{E_o} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) - Z_E(-x_1,x_2,-x_3,\dots)\right). \end{cases} $$
+
+
+
 **Example.** Let $f : {\bf P} \to {\bf Set}$ be the sym-representable species sending $[n]\mapsto S_n/H$; the associated analytic functor sends a set $X$ to the set $X^n/H$, where the tuples of elements of $X$ are identified iff they differ by a permutation in $H$.
 
 The functor $X\mapsto X^n/H$ is called *sym-representable analytic*.
