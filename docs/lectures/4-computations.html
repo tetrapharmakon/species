@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/4-computations.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-13T12:08:25+02:00" />
+<meta property="article:published_time" content="2021-11-13T12:22:30+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Some explicit combinatorial identities" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/4-computations.html","@type":"BlogPosting","headline":"Some explicit combinatorial identities","dateModified":"2021-11-13T12:08:25+02:00","datePublished":"2021-11-13T12:08:25+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/4-computations.html"},"description":"We have seen that to a combinatorial species we can associate at least two important invariants “quantities”, i.e. two formal power series from which we can deduce properties of the species. If $|X_n|$ denotes the cardinality of a set, and $F : {\\bf P} \\to {\\bf Set}$ is a combinatorial species,","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/4-computations.html","@type":"BlogPosting","headline":"Some explicit combinatorial identities","dateModified":"2021-11-13T12:22:30+02:00","datePublished":"2021-11-13T12:22:30+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/4-computations.html"},"description":"We have seen that to a combinatorial species we can associate at least two important invariants “quantities”, i.e. two formal power series from which we can deduce properties of the species. If $|X_n|$ denotes the cardinality of a set, and $F : {\\bf P} \\to {\\bf Set}$ is a combinatorial species,","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,7 +64,11 @@ $$</div>
 
 <p>where the notation $\pi_0 F[n]$ denotes the quotient set $F[n]/S_n$ under the action of the symmetric group $S_n$ over $F[n]$. (This is no more and no less than the space of orbits of the action $S_n \curvearrowright F[n]$.)</p>
 
-<p>For example: if $\cal C$ is the species of oriented cycles on finite sets, and $\wp$ is the species of subsets, we have that</p>
+<p>For example: if $\cal C$ is the species of oriented cycles on finite sets, and $\wp$ is the species of subsets, we can consider the product species $C\times \wp$ that sends a finite set into a cyclic order of its elements, <em>on top of which</em> there is the choice of a subset $U\subseteq[n]$: the elements $(12345,\{2,3,5\})$ and $(12345,\{1,2,5\})$ of $C\times \wp[5]$ are respectively given by</p>
+
+<p><span class="antex display"><img style='margin: 0.0ex 0.0ex 0.0ex 0.0ex; height: 15.007ex; width: 42.056ex;' src="/species/antex/4e82819a37dbbd034390dcb9f6fba70a.svg" /></span></p>
+
+<p>We have that</p>
 
 <div class="kdmath">$$
 {\cal C}[n] =(n-1)! \quad(\text{for } n\ge 1)\qquad \qquad \wp[n] = 2^n
@@ -76,16 +80,16 @@ $$</div>
 \sum_{n=1}^\infty \big((n-1)! \cdot 2^n\big) \frac{t^n}{n!} = \sum_{n=1}^\infty \frac{2^n t^n}{n} = \log\left( \frac1{1-2t}\right)
 $$</div>
 
-<p>The generating series of a combinatorial species is a powerful, but rather coarse, invariant of the species: for example, the species $\cal S$ of permutations and the species $\cal L$ of linear orders have the same generating species, because $|{\cal S}[n]| = n! = | {\cal L}[n] |$, so that</p>
+<p>The generating series of a combinatorial species is a powerful, but rather coarse, invariant of the species: for example, the species $S$ of permutations and the species $L$ of linear orders have the same generating species, because $|{S}[n]| = n! = | {L}[n] |$, so that</p>
 
 <div class="kdmath">$$
-g_{\cal S}(t) = ∑_{n=0}^\infty t^n = \frac1{1-t} = g_{\cal L}(t).
+g_{S}(t) = ∑_{n=0}^\infty t^n = \frac1{1-t} = g_{L}(t).
 $$</div>
 
-<p>The type generating series of $\cal S$ and $\cal L$ are, however, different, because the sets of orbits $|{\cal S}[n]| / S_n$ and $| {\cal L}[n] | / S_n$ have different cardinalities (the action of $S_n$ on linear orderings is transitive):</p>
+<p>The type generating series of $S$ and $L$ are, however, different, because the sets of orbits $|{S}[n]| / S_n$ and $| {L}[n] | / S_n$ have different cardinalities (the action of $S_n$ on linear orderings is transitive):</p>
 
 <div class="kdmath">$$
-\tilde{g}_{\cal S}(t) = \exp \sum_{k\ge 1} \frac1k \frac{t^k}{1-t^k} \qquad \qquad  \tilde{g}_{\cal L}(t) = \frac1{1-t}
+\tilde{g}_{S}(t) = \exp \sum_{k\ge 1} \frac1k \frac{t^k}{1-t^k} \qquad \qquad  \tilde{g}_{L}(t) = \frac1{1-t}
 $$</div>
 
 <p>In order to gain a deeper understanding of the combinatorial species $F$ through an algebraic gadget, we have to introduce the <em>cycle index series</em> of $F$:</p>
@@ -102,7 +106,7 @@ $$</div>
 \tilde{g}_{F \triangleleft G}(t) = Z_F(\tilde G(t), \tilde G(t^2), \tilde G(t^3),\dots)
 $$</div>
 
-<p>This formula can be used in order to obtain the expression of $Z_{\cal S}$ in terms of $Z_E$ and $Z_{\cal C}$, and the formula for the cycle index series yields the identity</p>
+<p>This formula can be used in order to obtain the expression of $Z_{S}$ in terms of $Z_E$ and $Z_{\cal C}$, and the formula for the cycle index series yields the identity</p>
 
 <div class="kdmath">$$
 \prod_{k\ge 1} \frac1{1-t^k} = \exp \sum_{k\ge 1} \frac1k \frac{t^k}{1-t^k}
