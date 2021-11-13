@@ -19,6 +19,7 @@ This chapter embarks on a more category-theoretic study of species. Every specie
 
 ### Analytic functors, wide pullbacks
 
+<div id="label-1"></div>
 **Construction.** Given a combinatorial species $f : {\bf P} \to \bf Set$, we can consider the left Kan extension
 
 {% tex classes: [antex, display] %}
@@ -36,6 +37,7 @@ $$\int^n f(n)\times X^n =: \left(\coprod_{n\ge 1} f(n)\times X^n\right)/\left\la
 
 Such a functor is called *analytic*, and we call similarly every functor that lies in the image of the functor $\text{Lan}_J$, where $J : {\bf P} \hookrightarrow {\bf Set}$ is the (nonfull) inclusion functor.
 
+<div id="label-2"></div>
 **Definition** (Analytic functor). An endofunctor $F$ of $\bf Set$ is called *analytic* if it lies in the essential image of $\text{Lan}_J$, or in other words, if it arises as the left Kan extension along $J : {\bf P} \hookrightarrow {\bf Set}$ of a combinatorial species $f : {\bf P} \to {\bf Set}$. Such a species will be called the *generating species* of $F$.
 
 It is then evident that $\text{Lan}_J$ is the left adjoint in a pair
@@ -53,6 +55,7 @@ With a little bit more effort, we can however characterise such an essential ima
 
 The second condition deserves a bite more explanation.
 
+<div id="label-3"></div>
 **Definition.** An endofunctor $F : {\bf Set} \to {\bf Set}$ is said to *weakly preserve pullbacks* if for every pullback square
 
 {% tex classes: [antex, display] %}
@@ -66,6 +69,7 @@ B \ar[r]& C
 
 the canonical map $F(A\times_C B) \to FA \times_{FC} FB$ is surjective.
 
+<div id="label-4"></div>
 **Definition.** Let $E$ be a set and $\cal C$ a category; a *($E$-ary) wide pullback* with sink $X \in \cal C$ is the limit of a diagram $E \to {\cal C}/X$ where $E$ is regarded as a discrete category and ${\cal C}/X$ is the slice of $\cal C$ over $X$.
 
 In simple terms, a wide pullback is a pullback having possibly more than two arrows pointing to the same object.
@@ -82,6 +86,7 @@ Since $\text{Lan}_J$ is a left adjoint, it is evident that $\text{Lan}_J(f \sqcu
 
 Thus, to completely understand analytic functors, it is enough to understand the $\sqcup$-indecomposable objects of $\bf Spc$. Such indecomposable objects can be characterised.
 
+<div id="label-5"></div>
 **Proposition** (Canonical decomposition of a species). Every combinatorial species $f : {\bf P} \to {\bf Set}$ splits into a countable sequence of $\sqcup$-indecomposable objects, unique up to reordering: the *canonical decomposition* of $f$.
 
 *Proof.* The category ${\bf P}$ splits as a coproduct of groups, namely ${\bf P} = \coprod_{n\ge 1} S_n$, so that a functor $f : {\bf P} \to {\bf Set}$ is in fact determined by a countable family of (left) $S_n$-sets $f_n : S_n \times X_n \to X_n$ under the isomorphism
@@ -90,6 +95,7 @@ $$\textstyle {\bf Spc} = [{\bf P}, {\bf Set}] \cong \left[ \coprod_{n\ge 1} S_n 
 
 keeping in mind that the category $[S_n, {\bf Set}]$ is just the category of sets equipped with a left $S_n$-action. Thus, the action of $f$ on objects and morphisms is determined as the sum $f_1 + f_2 + f_3 + \dots$
 
+<div id="label-6"></div>
 **Corollary.** Since the decomposition of a species $f$ as a sum $f_1 + f_2 + f_3 + \dots$ is uniquely determined, the following concepts are well defined:
 
 - the *odd part* $f_o$ of a species $f : {\bf P} \to {\bf Set}$ consisting of the sum $\sum_{k\ge 0} f_{2k+1}=f_1+f_3+\dots$;
@@ -101,6 +107,7 @@ $$ \begin{cases} Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2
 
 
 
+<div id="label-7"></div>
 **Example.** Let $f : {\bf P} \to {\bf Set}$ be the sym-representable species sending $[n]\mapsto S_n/H$; the associated analytic functor sends a set $X$ to the set $X^n/H$, where the tuples of elements of $X$ are identified iff they differ by a permutation in $H$.
 
 The functor $X\mapsto X^n/H$ is called *sym-representable analytic*.
@@ -111,26 +118,34 @@ Writing the above coproduct as a sum and interpreting the quotient as a "fractio
 
 $$ FX = \sum_{n\ge 1} \frac{f(n)\times X^n}{n!}. $$
 
+<div id="label-8"></div>
 **Example** (The AF of the species of singletons).
 
+<div id="label-9"></div>
 **Example** (The AF of a representable species).
 
+<div id="label-10"></div>
 **Example** (The AF of the species of sets).
 
+<div id="label-11"></div>
 **Example** (The AF of the species of permutations).
 
+<div id="label-12"></div>
 **Example** (The AF of the species of oriented cycles).
 
 We now embark on the proof of the characterisation theorem for analytic functors. We provide an elementary proof in two parts.
 
+<div id="label-13"></div>
 **Definition.** Superfinitary functor.
 
+<div id="label-14"></div>
 **Theorem** (Characterisation of analytic functors, I). For a superfinitary functor $F : {\bf Set} \to {\bf Set}$ the following conditions are equivalent:
 
 1. $F$ weakly preserves pullbacks;
 2. $F$ is analytic;
 3. $F$ splits as a coproduct of sym-representables.
 
+<div id="label-15"></div>
 **Theorem** (Characterisation of analytic functors, II). For a finitary functor $F : {\bf Set} \to {\bf Set}$ the following conditions are equivalent:
 
 

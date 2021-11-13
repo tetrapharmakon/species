@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-13T15:29:51+02:00" />
+<meta property="article:published_time" content="2021-11-13T22:39:15+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Monoidal Structures on P" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html","@type":"BlogPosting","headline":"Monoidal Structures on P","dateModified":"2021-11-13T15:29:51+02:00","datePublished":"2021-11-13T15:29:51+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"},"description":"A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html","@type":"BlogPosting","headline":"Monoidal Structures on P","dateModified":"2021-11-13T22:39:15+02:00","datePublished":"2021-11-13T22:39:15+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"},"description":"A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,6 +50,7 @@
 
 <p>In particular, there are three distinct <em>monoidal structures</em> on the category of species, all of which have a quite natural combinatorial interpretation. One of them is the most important for us because it is induced on $\bf Spc$ by a natural choice of a monoidal product on $\bf P$. The monoidal structure on $\bf P$ is essentially determined by the disjoint sum of finite set: in a skeleton for $\bf P$, $[n]\cup [m] = [n+m]$. This operation induces a <em>convolution</em> operation on $\bf Spc$.</p>
 
+<div id="defi-1"></div>
 <p><strong>Definition</strong> (The “sum and shuffle” product on $\bf P$). The “sum and shuffle” monoidal structure $\oplus$ on $\bf P$ is the bifunctor $\_\oplus_ : {\bf P} \times {\bf P} \to \bf P$ defined as follows:</p>
 
 <ul>
@@ -63,6 +64,7 @@ $$</div>
 
 <p>In simple terms, this means that a permutation of $n$ elements and a permutation of $m$ elements act “in parallel” on a set with $n+m$ elements. (Exercise: write $\sigma \oplus \eta : [6] \to [6]$ when $n=m=3$, $\sigma = \left( \begin{smallmatrix} 1 &amp; 2 &amp; 3 \\ 3 &amp; 1 &amp; 2 \end{smallmatrix}\right)$ and $\eta = \left( \begin{smallmatrix} 1 &amp; 2 &amp; 3 \\ 2 &amp; 1 &amp; 3 \end{smallmatrix}\right)$.)</p>
 
+<div id="defi-2"></div>
 <p><strong>Definition</strong> (The Cartesian monoidal structure). Given two species $X_\bullet,Y_\bullet$, their <em>Cartesian product</em> is the species</p>
 
 <div class="kdmath">$$
@@ -77,6 +79,7 @@ $$</div>
 \sum_{n=0}^\infty (f_ng_n) t^n.
 $$</div>
 
+<div id="defi-3"></div>
 <p><strong>Definition</strong> (The coCartesian structure). Given two species $X_\bullet,Y_\bullet$, their <em>coproduct</em> is the species</p>
 
 <div class="kdmath">$$
@@ -95,6 +98,7 @@ $$</div>
 
 <p>where $\alpha : X \times G \to X$ and $\beta : G \times Y \to Y$ are the actions.</p>
 
+<div id="defi-4"></div>
 <p><strong>Definition</strong> (The Cauchy monoidal structure). Given two species $X_\bullet,Y_\bullet$, their <em>Cauchy product</em> is the species</p>
 
 <div class="kdmath">$$
@@ -129,6 +133,7 @@ $$</div>
 [n] \mapsto M \triangleleft N := (\text{Lan}_J M \circ \text{Lan}_J N) \circ J = \text{Lan}_J M \circ N
 $$</div>
 
+<div id="defi-5"></div>
 <p><strong>Definition</strong> (The substitution monoidal structure). Given two combinatorial species we can define their substitution product as follows:</p>
 
 <div class="kdmath">$$

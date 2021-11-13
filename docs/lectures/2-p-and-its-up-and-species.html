@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/2-p-and-its-up-and-species.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-13T15:29:51+02:00" />
+<meta property="article:published_time" content="2021-11-13T22:39:15+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The category P and species" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/2-p-and-its-up-and-species.html","@type":"BlogPosting","headline":"The category P and species","dateModified":"2021-11-13T15:29:51+02:00","datePublished":"2021-11-13T15:29:51+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/2-p-and-its-up-and-species.html"},"description":"The fundamental object of study of the theory of combinatorial species is the category $\\bf P$ of finite sets and bijections, and its presheaf category $[{\\bf P}^\\text{op}, {\\bf Set}]$. (Note: since a groupoid is a self-dual category, there is not much difference between $[{\\bf P}^\\text{op}, {\\bf Set}]$ and $[{\\bf P}, {\\bf Set}]$, but we will usually speak about the second category.)","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/2-p-and-its-up-and-species.html","@type":"BlogPosting","headline":"The category P and species","dateModified":"2021-11-13T22:39:15+02:00","datePublished":"2021-11-13T22:39:15+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/2-p-and-its-up-and-species.html"},"description":"The fundamental object of study of the theory of combinatorial species is the category $\\bf P$ of finite sets and bijections, and its presheaf category $[{\\bf P}^\\text{op}, {\\bf Set}]$. (Note: since a groupoid is a self-dual category, there is not much difference between $[{\\bf P}^\\text{op}, {\\bf Set}]$ and $[{\\bf P}, {\\bf Set}]$, but we will usually speak about the second category.)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,6 +48,7 @@
 
 <h3 id="the-groupoid-of-natural-numbers">The groupoid of natural numbers</h3>
 
+<div id="defi-1"></div>
 <p><strong>Definition</strong> (The category $\bf P$). The category $\bf P$, also called the <em>groupoid of natural numbers</em>, has</p>
 
 <ol>
@@ -57,6 +58,7 @@
 
 <p>A skeleton of $\bf P$ consists of the category having objects the natural numbers $[n]={1,\dots, n}$ (with the convention that $[0]$ is empty), and hom-sets $\hom(n,n)$ the symmetric groups $S_n$ for each $n\ge 0$.</p>
 
+<div id="label-1"></div>
 <p><strong>Remark</strong> (On the structure of $\bf P$). Every groupoid splits as a disjoint union of connected groupoids (each of which is equivalent to a group); the (skeleton of the) category $\bf P$ splits as a disjoint union of the symmetric groups $S_n$, with $n\ge 0$.</p>
 
 <p>So the <em>canonical decomposition</em> of $\bf P$ is the equivalence of categories</p>
@@ -68,6 +70,7 @@ $$</div>
 <p>An immediate corollary of this decomposition is that a functor $X : {\bf P} \to {\bf Set}$ is uniquely determined by a “symmetric sequence”:
 <!-- of sets $(X_n \mid n\ge 0)$ each of which has a left action of the symmetric group on $n$ elements. --></p>
 
+<div id="label-2"></div>
 <p><strong>Corollary.</strong> A functor $X : {\bf P} \to {\bf Set}$ is completely determined by the following data:</p>
 
 <ol>
@@ -77,6 +80,7 @@ $$</div>
 
 <p><em>Proof.</em> It is evident that the actions $a^X_n$ are precisely the action on morphisms of a functor $X_\bullet : {\bf P} \to {\bf Set}$ (vice versa, every hom-set ${\bf P}(n,m)$ is empty for $n\neq m$, so the datum of the actions is enough to “glue” a functor $X$).</p>
 
+<div id="defi-2"></div>
 <p><strong>Definition</strong> (Category of species). A functor $X_\bullet : {\bf P} \to {\bf Set}$ is called a <em>combinatorial species</em>. The <em>category</em> $\bf Spc$ of combinatorial species has objects the functors $X_\bullet : {\bf P} \to {\bf Set}$, and morphisms the natural transformations $\alpha : X_\bullet \Rightarrow Y_\bullet$.</p>
 
 <p>So, a combinatorial species is entirely described by a sequence of sets $(X_n\mid n\ge 0)$, each of which has an action of the symmetric group on $n$ letters.</p>
@@ -97,6 +101,7 @@ $$</div>
 
 <p>The category $\bf P$ and $\bf Spc$ have two important universal properties:</p>
 
+<div id="theorem-1"></div>
 <p><strong>Theorem.</strong> The category $\bf P$ is the free symmetric monoidal category on a singleton.</p>
 
 <p><em>Proof.</em> Proving this claim amounts to show that given a symmetric monoidal category $\cal A$ there is an equivalence of categories between</p>
@@ -110,41 +115,51 @@ $$</div>
 
 <p>Similarly, with the additional request of cocompleteness, one proves the following.</p>
 
+<div id="theorem-2"></div>
 <p><strong>Theorem.</strong> The category $\bf Spc$ is the free cocomplete symmetric monoidal category on a singleton.</p>
 
 <h3 id="a-few-examples-of-species">A few examples of species</h3>
 
+<div id="label-3"></div>
 <p><strong>Example</strong> (The species of singletons). The species $U$ of singletons ($U$ stands for “<em>un seul élément</em>”, a single element in French) sends a finite set $A$ into a one-point set ${\bullet}$ if $A$ is itself a one-point set, and in the empty set otherwise. The action of the symmetric group on each $U[n]$ is the only possible one.</p>
 
+<div id="label-4"></div>
 <p><strong>Example</strong> (The species of subsets). The species of subsets sends a finite set $[n]$ into the set $\wp[n]$ of all possible subsets of $[n]$; so, $\wp[n]$ has exactly $2^n$ elements, and the action of the symmetric group is defined as post-composition, identifying $\wp[n]$ with the set ${\bf Set}(n,2)$; in simple words, $\sigma \in S_n$ acts on $\wp[n]$ sending the set ${n_1,\dots, n_k}$ to the set ${\sigma n_1,\dots, \sigma n_k}$.</p>
 
 <p><span class="antex display"><img style='margin: 0.0ex 0.0ex 0.0ex 0.0ex; height: 7.527ex; width: 55.437ex;' src="/species/antex/0a485602db9a9d782eded92bf1242a01.svg" /></span></p>
 
+<div id="label-5"></div>
 <p><strong>Example</strong> (The terminal species). The species $E$ of sets ($E$ stands for “<em>ensemble</em>”, set in French) is the terminal object of the category $\bf Spc$; it is the constant functor on the singleton ${\bullet}$. The species $E$ has two sub-species: the species $E_e$ of <em>even sets</em>, and the species $E_o$ of <em>odd sets</em>.</p>
 
+<div id="label-6"></div>
 <p><strong>Example</strong> (The species of permutations). The species $S$ of permutations sends each finite set $[n]$ into the (carrier of the) symmetric group on $n$ letters, $S_n$. The symmetric group acts on itself by left translation: if $\tau \in S_n$, $\sigma : S_n \to S_n$ is the map sending $\tau\mapsto \sigma\tau$.</p>
 
 <p><span class="antex display"><img style='margin: 0.0ex 0.232ex 0.0ex 0.0ex; height: 12.371ex; width: 60.923ex;' src="/species/antex/79ab119c49f90ceef3d7b4975d2f8609.svg" /></span></p>
 
+<div id="label-7"></div>
 <p><strong>Example</strong> (The species of linear orders). The species $L$ of linear orders sends each finite set $[n]$ to the set of all possible linear orderings of $[n]$; the set $L[n]$ has exactly $n!$ elements, because each linear ordering ${x_1 &lt;\dots &lt; x_n}$ of an $n$-element set can be thought as induced under transport of structure by the ordering ${1 &lt; 2 &lt; \dots &lt; n}$ on $[n]$.</p>
 
 <p><span class="antex display"><img style='margin: 0.0ex 0.0ex 0.0ex 0.0ex; height: 11.658ex; width: 33.959ex;' src="/species/antex/a08f5743d68f7b6ea8472098d6cb99bd.svg" /></span></p>
 
+<div id="label-8"></div>
 <p><strong>Example</strong> (The species of oriented cycles). The species $\cal C$ of <em>oriented cycles</em> sends a finite set $[n]$ in the set of possible inequivalent ways to sit $n$ people at a round table, or more formally, in the set of cylic orderings of ${x_1,\dots,x_n}$, where the ordering $x_1,\dots,x_n$ is indistinguishable from $x_2,x_3\dots,x_n, x_1$, from $x_3, x_4\dots,x_n, x_1, x_2$, and frome very other cyclic permutation of its members. It can be shown by induction (or using simple arguments from group actions and orbits) that $|{\cal C}[n]| = (n-1)!$.</p>
 
 <p><span class="antex display"><img style='margin: 0.0ex 0.0ex 0.0ex 0.0ex; height: 15.007ex; width: 61.881ex;' src="/species/antex/33e1bb98a485777871bba8af956e9507.svg" /></span></p>
 
 <p>One can also cook up more abstract examples of combinatorial species:</p>
 
+<div id="label-9"></div>
 <p><strong>Example</strong> (The species <em>centered</em> in $n\in\mathbb N$).
 Let $n\ge 1$ be a natural number. The species $c_n : {\bf P} \to {\bf Set}$, “concentrated” or “centered” in $n$ is defined as the functor sending $[n] \in \bf P$ to a singleton set $\bullet$, and every other set to the empty set. Clearly, $c_1 = U$ above, and $c_n$ can legitimately be called the species of <em>$n$-element sets</em>. More generally we can talk about the species $c_n^E$, concentrated in $n$, and such that $c_n^E([n]) = E$, and empty otherwise.</p>
 
+<div id="label-10"></div>
 <p><strong>Example</strong> (The <em>representable</em> species as a particular case). Each representable functor $\text{よ}[n] : {\bf P} \to \bf Set$ is a combinatorial species acting as follows: $\text{よ}[n][k] := {\bf P}(n,k)$ is empty if $n\ne k$, so the species is centered in $n$, and $\text{よ}[n][n] = S_n$ is the (underlying set of the) symmetric group on $n$ elements. The action on morphisms is the same as in the species of permutations, and in fact the species of permutation arises as the infinite sum</p>
 
 <div class="kdmath">$$
 S = \text{よ}[1] + \text{よ}[2] + \text{よ}[3] + \dots
 $$</div>
 
+<div id="label-11"></div>
 <p><strong>Example</strong> (The sym-representable species $n\mapsto S_n/H_n$).
 Generalising from the preceding example we can fix $n\ge 1$ and a subgroup $H \le S_n$; we can restrict the left regular representation of $S_n$ on iteslf to $H$. This defines a species $f_H$ sending $[n]$ to the space of orbits of $H \curvearrowright S_n$ and every other $[k]\neq [n]$ to the emptyset.</p>
 
@@ -159,6 +174,7 @@ $$</div>
 
 <p>As it is well-known, in the ring of formal power series $K\llbracket t\rrbracket$ ($K$ any commutative unital ring), one can define a binary relation $\sim_n$ of <em>contact of order n</em> between elements $f,g$: two series have contact of order $n$ if they are congruent modulo $t^n$ (more formally: $f\mathrel{\sim_n}g$ if the difference $f-g$ is in the kernel of the canonical map $K\llbracket t\rrbracket \to K[t]/(t^n)$ from the inverse limit).</p>
 
+<div id="defi-3"></div>
 <p><strong>Definition.</strong> For every $n\ge 0$, we denote $\iota_n : {\bf P}_{\le n} \hookrightarrow {\bf P}$ the inclusion of the full subcategory of $\bf P$ on the objects ${[0],[1],\dots, [n]}$.</p>
 
 <p>Precomposition with $\iota_n$ determines a <em>truncation</em> functor</p>
@@ -184,6 +200,7 @@ $$</div>
 
 <p>It is clear that when $F$ has contact of order $n$ with $G$, their associated series stand in the same relation.</p>
 
+<div id="defi-4"></div>
 <p><strong>Definition.</strong> A <em>sequence</em> of species is an ordered family of species $(F_0,F_1,\dots)$. The sequence $(F_0,F_1,\dots)$ is said to <em>converge</em> to the species $F_\infty$ if the following “Cauchy” condition is satisfied:</p>
 
 <blockquote>

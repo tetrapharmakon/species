@@ -23,6 +23,7 @@ A fundamental tenet of categorical combinatorics is that the richness of the obj
 
 In particular, there are three distinct *monoidal structures* on the category of species, all of which have a quite natural combinatorial interpretation. One of them is the most important for us because it is induced on $\bf Spc$ by a natural choice of a monoidal product on $\bf P$. The monoidal structure on $\bf P$ is essentially determined by the disjoint sum of finite set: in a skeleton for $\bf P$, $[n]\cup [m] = [n+m]$. This operation induces a *convolution* operation on $\bf Spc$.
 
+<div id="defi-1"></div>
 **Definition** (The "sum and shuffle" product on $\bf P$). The "sum and shuffle" monoidal structure $\oplus$ on $\bf P$ is the bifunctor $\\_\oplus\_ : {\bf P} \times {\bf P} \to \bf P$ defined as follows:
 
 - on objects, $[n]\oplus [m]$ is just the set $[n+m]$;
@@ -32,6 +33,7 @@ $$ \sigma \oplus \eta : i \mapsto \begin{cases} \sigma i & \text{ if } 1 \le i \
 
 In simple terms, this means that a permutation of $n$ elements and a permutation of $m$ elements act "in parallel" on a set with $n+m$ elements. (Exercise: write $\sigma \oplus \eta : [6] \to [6]$ when $n=m=3$, $\sigma = \left( \begin{smallmatrix} 1 & 2 & 3 \\\\ 3 & 1 & 2 \end{smallmatrix}\right)$ and $\eta = \left( \begin{smallmatrix} 1 & 2 & 3 \\\\ 2 & 1 & 3 \end{smallmatrix}\right)$.)
 
+<div id="defi-2"></div>
 **Definition** (The Cartesian monoidal structure). Given two species $X_\bullet,Y_\bullet$, their *Cartesian product* is the species
 
 $$ (X \times Y)_\bullet : [n] \mapsto X[n] \times Y[n] $$
@@ -42,6 +44,7 @@ In terms of their formal power series representation, the product corresponds to
 
 $$ \sum_{n=0}^\infty (f_ng_n) t^n.$$
 
+<div id="defi-3"></div>
 **Definition** (The coCartesian structure). Given two species $X_\bullet,Y_\bullet$, their *coproduct* is the species
 
 $$ (X \cup Y)_\bullet : [n] \mapsto X[n] \cup Y[n] $$
@@ -64,6 +67,7 @@ We define the *equivariant product* $X\otimes_G Y$ of $X$ and $Y$ to be the set 
 
 where $\alpha : X \times G \to X$ and $\beta : G \times Y \to Y$ are the actions.
 
+<div id="defi-4"></div>
 **Definition** (The Cauchy monoidal structure). Given two species $X_\bullet,Y_\bullet$, their *Cauchy product* is the species
 
 $$ (X \cdot Y)_\bullet : [n] \mapsto \sum_{p+q=n} X[p] \otimes Y[q] $$
@@ -90,6 +94,7 @@ In lesson 1 we have seen how the category $[{\bf Fin}, {\bf Set}]$ inherits a (n
 
 $$ [n] \mapsto M \triangleleft N := (\text{Lan}_J M \circ \text{Lan}_J N) \circ J = \text{Lan}_J M \circ N$$
 
+<div id="defi-5"></div>
 **Definition** (The substitution monoidal structure). Given two combinatorial species we can define their substitution product as follows:
 
 $$ F \triangleleft G := \lambda m . \int^{n,k_1,\dots,k_n} F(n) \times Gk_1\times \dots \times Gk_n \times {\bf P}(m, k_1+\dots+k_n). $$

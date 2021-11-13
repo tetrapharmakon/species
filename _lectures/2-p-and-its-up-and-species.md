@@ -22,6 +22,7 @@ The fundamental object of study of the theory of combinatorial species is the ca
 
 ### The groupoid of natural numbers
 
+<div id="defi-1"></div>
 **Definition** (The category $\bf P$). The category $\bf P$, also called the *groupoid of natural numbers*, has
 
 1. Objects the finite sets $A,B,\dots$;
@@ -29,6 +30,7 @@ The fundamental object of study of the theory of combinatorial species is the ca
 
 A skeleton of $\bf P$ consists of the category having objects the natural numbers $[n]=\{1,\dots, n\}$ (with the convention that $[0]$ is empty), and hom-sets $\hom(n,n)$ the symmetric groups $S_n$ for each $n\ge 0$.
 
+<div id="label-1"></div>
 **Remark** (On the structure of $\bf P$). Every groupoid splits as a disjoint union of connected groupoids (each of which is equivalent to a group); the (skeleton of the) category $\bf P$ splits as a disjoint union of the symmetric groups $S_n$, with $n\ge 0$.
 
 So the *canonical decomposition* of $\bf P$ is the equivalence of categories
@@ -38,6 +40,7 @@ $$ {\bf P} \cong \coprod_{n=0}^\infty S_n. $$
 An immediate corollary of this decomposition is that a functor $X : {\bf P} \to {\bf Set}$ is uniquely determined by a "symmetric sequence":
 <!-- of sets $(X_n \mid n\ge 0)$ each of which has a left action of the symmetric group on $n$ elements. -->
 
+<div id="label-2"></div>
 **Corollary.** A functor $X : {\bf P} \to {\bf Set}$ is completely determined by the following data:
 
 1. A sequence of sets $(X_n \mid n\ge 0)$;
@@ -45,6 +48,7 @@ An immediate corollary of this decomposition is that a functor $X : {\bf P} \to 
 
 *Proof.* It is evident that the actions $a^X_n$ are precisely the action on morphisms of a functor $X_\bullet : {\bf P} \to {\bf Set}$ (vice versa, every hom-set ${\bf P}(n,m)$ is empty for $n\neq m$, so the datum of the actions is enough to "glue" a functor $X$).
 
+<div id="defi-2"></div>
 **Definition** (Category of species). A functor $X_\bullet : {\bf P} \to {\bf Set}$ is called a *combinatorial species*. The *category* $\bf Spc$ of combinatorial species has objects the functors $X_\bullet : {\bf P} \to {\bf Set}$, and morphisms the natural transformations $\alpha : X_\bullet \Rightarrow Y_\bullet$.
 
 So, a combinatorial species is entirely described by a sequence of sets $(X_n\mid n\ge 0)$, each of which has an action of the symmetric group on $n$ letters.
@@ -64,6 +68,7 @@ The reader shall however be warned that, while a quite intuitive invariant of th
 
 The category $\bf P$ and $\bf Spc$ have two important universal properties:
 
+<div id="theorem-1"></div>
 **Theorem.** The category $\bf P$ is the free symmetric monoidal category on a singleton.
 
 *Proof.* Proving this claim amounts to show that given a symmetric monoidal category $\cal A$ there is an equivalence of categories between
@@ -75,12 +80,15 @@ In simple terms, a strong monoidal functor $F$ as above is determined by its val
 
 Similarly, with the additional request of cocompleteness, one proves the following.
 
+<div id="theorem-2"></div>
 **Theorem.** The category $\bf Spc$ is the free cocomplete symmetric monoidal category on a singleton.
 
 ### A few examples of species
 
+<div id="label-3"></div>
 **Example** (The species of singletons). The species $U$ of singletons ($U$ stands for "*un seul élément*", a single element in French) sends a finite set $A$ into a one-point set $\{\bullet\}$ if $A$ is itself a one-point set, and in the empty set otherwise. The action of the symmetric group on each $U[n]$ is the only possible one.
 
+<div id="label-4"></div>
 **Example** (The species of subsets). The species of subsets sends a finite set $[n]$ into the set $\wp[n]$ of all possible subsets of $[n]$; so, $\wp[n]$ has exactly $2^n$ elements, and the action of the symmetric group is defined as post-composition, identifying $\wp[n]$ with the set ${\bf Set}(n,2)$; in simple words, $\sigma \in S_n$ acts on $\wp[n]$ sending the set $\{n_1,\dots, n_k}$ to the set $\{\sigma n_1,\dots, \sigma n_k\}$.
 
 {% tex classes: [antex, display] %}
@@ -108,8 +116,10 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 \end{tikzpicture}
 {% endtex %}
 
+<div id="label-5"></div>
 **Example** (The terminal species). The species $E$ of sets ($E$ stands for "*ensemble*", set in French) is the terminal object of the category $\bf Spc$; it is the constant functor on the singleton $\{\bullet\}$. The species $E$ has two sub-species: the species $E_e$ of *even sets*, and the species $E_o$ of *odd sets*.
 
+<div id="label-6"></div>
 **Example** (The species of permutations). The species $S$ of permutations sends each finite set $[n]$ into the (carrier of the) symmetric group on $n$ letters, $S_n$. The symmetric group acts on itself by left translation: if $\tau \in S_n$, $\sigma : S_n \to S_n$ is the map sending $\tau\mapsto \sigma\tau$.
 
 {% tex classes: [antex, display] %}
@@ -134,6 +144,7 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 \end{tikzpicture}
 {% endtex %}
 
+<div id="label-7"></div>
 **Example** (The species of linear orders). The species $L$ of linear orders sends each finite set $[n]$ to the set of all possible linear orderings of $[n]$; the set $L[n]$ has exactly $n!$ elements, because each linear ordering $\{x_1 <\dots < x_n\}$ of an $n$-element set can be thought as induced under transport of structure by the ordering $\{1 < 2 < \dots < n\}$ on $[n]$.
 
 {% tex classes: [antex, display] %}
@@ -158,6 +169,7 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 \end{tikzpicture}
 {% endtex %}
 
+<div id="label-8"></div>
 **Example** (The species of oriented cycles). The species $\cal C$ of *oriented cycles* sends a finite set $[n]$ in the set of possible inequivalent ways to sit $n$ people at a round table, or more formally, in the set of cylic orderings of $\{x_1,\dots,x_n\}$, where the ordering $x_1,\dots,x_n$ is indistinguishable from $x_2,x_3\dots,x_n, x_1$, from $x_3, x_4\dots,x_n, x_1, x_2$, and frome very other cyclic permutation of its members. It can be shown by induction (or using simple arguments from group actions and orbits) that $\|{\cal C}[n]\| = (n-1)!$.
 
 
@@ -188,13 +200,16 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 
 One can also cook up more abstract examples of combinatorial species:
 
+<div id="label-9"></div>
 **Example** (The species *centered* in $n\in\mathbb N$).
 Let $n\ge 1$ be a natural number. The species $c_n : {\bf P} \to {\bf Set}$, "concentrated" or "centered" in $n$ is defined as the functor sending $[n] \in \bf P$ to a singleton set $\bullet$, and every other set to the empty set. Clearly, $c_1 = U$ above, and $c_n$ can legitimately be called the species of *$n$-element sets*. More generally we can talk about the species $c_n^E$, concentrated in $n$, and such that $c_n^E([n]) = E$, and empty otherwise.
 
+<div id="label-10"></div>
 **Example** (The *representable* species as a particular case). Each representable functor $\text{よ}[n] : {\bf P} \to \bf Set$ is a combinatorial species acting as follows: $\text{よ}[n][k] := {\bf P}(n,k)$ is empty if $n\ne k$, so the species is centered in $n$, and $\text{よ}[n][n] = S_n$ is the (underlying set of the) symmetric group on $n$ elements. The action on morphisms is the same as in the species of permutations, and in fact the species of permutation arises as the infinite sum
 
 $$ S = \text{よ}[1] + \text{よ}[2] + \text{よ}[3] + \dots $$
 
+<div id="label-11"></div>
 **Example** (The sym-representable species $n\mapsto S_n/H_n$).
 Generalising from the preceding example we can fix $n\ge 1$ and a subgroup $H \le S_n$; we can restrict the left regular representation of $S_n$ on iteslf to $H$. This defines a species $f_H$ sending $[n]$ to the space of orbits of $H \curvearrowright S_n$ and every other $[k]\neq [n]$ to the emptyset.
 
@@ -207,6 +222,7 @@ where the quotient by $n!$ ihas to be interpreted as the quotient of the numerat
 
 As it is well-known, in the ring of formal power series $K\llbracket t\rrbracket$ ($K$ any commutative unital ring), one can define a binary relation $\sim_n$ of *contact of order n* between elements $f,g$: two series have contact of order $n$ if they are congruent modulo $t^n$ (more formally: $f\mathrel{\sim_n}g$ if the difference $f-g$ is in the kernel of the canonical map $K\llbracket t\rrbracket \to K[t]/(t^n)$ from the inverse limit).
 
+<div id="defi-3"></div>
 **Definition.** For every $n\ge 0$, we denote $\iota_n : {\bf P}_{\le n} \hookrightarrow {\bf P}$ the inclusion of the full subcategory of $\bf P$ on the objects $\{[0],[1],\dots, [n]\}$.
 
 Precomposition with $\iota_n$ determines a *truncation* functor
@@ -226,6 +242,7 @@ We will say that a species $F$ has a contact of order $n$ with a species $G$ if 
 
 It is clear that when $F$ has contact of order $n$ with $G$, their associated series stand in the same relation.
 
+<div id="defi-4"></div>
 **Definition.** A *sequence* of species is an ordered family of species $(F_0,F_1,\dots)$. The sequence $(F_0,F_1,\dots)$ is said to *converge* to the species $F_\infty$ if the following "Cauchy" condition is satisfied:
 
 > for every $N\ge 0$ there exists an index $\bar n$ such that for every $n\ge \bar n$, $F_n \mathrel{\sim_N} F_\infty$.
