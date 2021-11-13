@@ -13,6 +13,7 @@ antex:
         \usepackage{amsmath,amsfonts}
         \usepackage{xcolor}
         \usepackage{tikz}
+        \def\yo{\text{よ}}
 
 ---
 
@@ -135,6 +136,28 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 
 **Example** (The species of linear orders). The species $L$ of linear orders sends each finite set $[n]$ to the set of all possible linear orderings of $[n]$; the set $L[n]$ has exactly $n!$ elements, because each linear ordering $\{x_1 <\dots < x_n\}$ of an $n$-element set can be thought as induced under transport of structure by the ordering $\{1 < 2 < \dots < n\}$ on $[n]$.
 
+{% tex classes: [antex, display] %}
+\def\ordBloc#1#2#3{\draw (0,0) rectangle (3,1);\node (1) at (.5,.5) {$#1$};\node (2) at (1.5,.5) {$#2$};\node (3) at (2.5,.5) {$#3$};
+\node at ($(1)!.5!(2)$) {\tiny $<$};
+\node at ($(2)!.5!(3)$) {\tiny $<$};
+}
+\begin{tikzpicture}[scale=.5]
+  \draw (0,0) rectangle (3,1);
+  \node at (.5,.5) {$1$};
+  \node at (1.5,.5) {$2$};
+  \node at (2.5,.5) {$3$};
+  \begin{scope}[xshift=4cm]
+  \ordBloc{1}{2}{3}
+  \begin{scope}[yshift=-1.25cm] \ordBloc{1}{3}{2} \end{scope}
+  \begin{scope}[yshift=-2.5cm] \ordBloc{2}{1}{3} \end{scope}
+  \begin{scope}[xshift=3.25cm]
+  \ordBloc{2}{3}{1}
+  \begin{scope}[yshift=-1.25cm] \ordBloc{3}{1}{2} \end{scope}
+  \begin{scope}[yshift=-2.5cm] \ordBloc{3}{2}{1} \end{scope}
+  \end{scope}\end{scope}
+\end{tikzpicture}
+{% endtex %}
+
 **Example** (The species of oriented cycles). The species $\cal C$ of *oriented cycles* sends a finite set $[n]$ in the set of possible inequivalent ways to sit $n$ people at a round table, or more formally, in the set of cylic orderings of $\{x_1,\dots,x_n\}$, where the ordering $x_1,\dots,x_n$ is indistinguishable from $x_2,x_3\dots,x_n, x_1$, from $x_3, x_4\dots,x_n, x_1, x_2$, and frome very other cyclic permutation of its members. It can be shown by induction (or using simple arguments from group actions and orbits) that $\|{\cal C}[n]\| = (n-1)!$.
 
 
@@ -165,15 +188,21 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 
 One can also cook up more abstract examples of combinatorial species:
 
-* The species *centered* in $n\in\mathbb N$
-* The *representable* species as a particular case
-* The tautological species $n\mapsto S_n$
-* The sym-representable species $n\mapsto S_n/H_n$
-<!-- The terminal species is the species of singleton described above -->
+**Example** (The species *centered* in $n\in\mathbb N$).
+Let $n\ge 1$ be a natural number. The species $c_n : {\bf P} \to {\bf Set}$, "concentrated" or "centered" in $n$ is defined as the functor sending $[n] \in \bf P$ to a singleton set $\bullet$, and every other set to the empty set. Clearly, $c_1 = U$ above, and $c_n$ can legitimately be called the species of *$n$-element sets*. More generally we can talk about the species $c_n^E$, concentrated in $n$, and such that $c_n^E([n]) = E$, and empty otherwise.
 
-These species will be the building blocks for our next lecture.
+**Example** (The *representable* species as a particular case). Each representable functor $\text{よ}[n] : {\bf P} \to \bf Set$ is a combinatorial species acting as follows: $\text{よ}[n][k] := {\bf P}(n,k)$ is empty if $n\ne k$, so the species is centered in $n$, and $\text{よ}[n][n] = S_n$ is the (underlying set of the) symmetric group on $n$ elements. The action on morphisms is the same as in the species of permutations, and in fact the species of permutation arises as the infinite sum
 
+$$ S = \text{よ}[1] + \text{よ}[2] + \text{よ}[3] + \dots $$
 
+**Example** (The sym-representable species $n\mapsto S_n/H_n$).
+Generalising from the preceding example we can fix $n\ge 1$ and a subgroup $H \le S_n$; we can restrict the left regular representation of $S_n$ on iteslf to $H$. This defines a species $f_H$ sending $[n]$ to the space of orbits of $H \curvearrowright S_n$ and every other $[k]\neq [n]$ to the emptyset.
+
+These species will be the building blocks for our next lecture on analytic functors: we will show that every species can be thought of a categorification of the coefficients of a formal power series, because it defines a functor
+
+$$\tilde F : {\bf Set} \to {\bf Set} : X\mapsto \sum_{n\ge 1} \frac{f(n) \times X^n}{n!} $$
+
+where the quotient by $n!$ ihas to be interpreted as the quotient of the numerator by an action of the symmetric group.
 ### Contact of order $n$ between species
 
 As it is well-known, in the ring of formal power series $K\llbracket t\rrbracket$ ($K$ any commutative unital ring), one can define a binary relation $\sim_n$ of *contact of order n* between elements $f,g$: two series have contact of order $n$ if they are congruent modulo $t^n$ (more formally: $f\mathrel{\sim_n}g$ if the difference $f-g$ is in the kernel of the canonical map $K\llbracket t\rrbracket \to K[t]/(t^n)$ from the inverse limit).
@@ -197,7 +226,9 @@ We will say that a species $F$ has a contact of order $n$ with a species $G$ if 
 
 It is clear that when $F$ has contact of order $n$ with $G$, their associated series stand in the same relation.
 
-**Definition.** A *sequence* of species is an ordered family of species $(F_0,F_1,\dots)$. The sequence $(F_0,F_1,\dots)$ is said to *converge* to the species $F_\infty$ if the following "Cauchy" condition is satisfied: for every $N\ge 0$ there exists an index $\bar n$ such that for every $n\ge \bar n$, $F_n \mathrel{\sim_N} F_\infty$.
+**Definition.** A *sequence* of species is an ordered family of species $(F_0,F_1,\dots)$. The sequence $(F_0,F_1,\dots)$ is said to *converge* to the species $F_\infty$ if the following "Cauchy" condition is satisfied:
+
+> for every $N\ge 0$ there exists an index $\bar n$ such that for every $n\ge \bar n$, $F_n \mathrel{\sim_N} F_\infty$.
 
 In simple terms, $(F_0,F_1,\dots)$ converges to $F_\infty$ if for every $N\ge 0$, all but a finite number of terms of the sequence have contact of order $N$ with $F_\infty$. If this is the case, we write $F_n \overset{n\to\infty}\rightharpoondown F_\infty$.
 
