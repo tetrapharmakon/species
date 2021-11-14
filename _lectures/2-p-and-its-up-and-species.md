@@ -117,7 +117,7 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 {% endtex %}
 
 <div id="label-5"></div>
-**Example** (The terminal species). The species $E$ of sets ($E$ stands for "*ensemble*", set in French) is the terminal object of the category $\bf Spc$; it is the constant functor on the singleton $\{\bullet\}$. The species $E$ has two sub-species: the species $E_e$ of *even sets*, and the species $E_o$ of *odd sets*.
+**Example** (The terminal species). The species $E$ of sets ($E$ stands for "*ensemble*", set in French) is the terminal object of the category $\bf Spc$; it is the constant functor on the singleton $\{\bullet\}$. The species $E$ has two important sub-species that we will meet again later: the species $E_e$ of *even sets*, and the species $E_o$ of *odd sets*. Note that thinking of a species $F$ as a rule assigning to a finite set "the set of all structures of type $F$ on $[n]$", the terminal species can be thought as the species of sets: for each finite set $[n]$, $E[n]$ is the set of all possible set structures on $[n]$: there is just one such structure.
 
 <div id="label-6"></div>
 **Example** (The species of permutations). The species $S$ of permutations sends each finite set $[n]$ into the (carrier of the) symmetric group on $n$ letters, $S_n$. The symmetric group acts on itself by left translation: if $\tau \in S_n$, $\sigma : S_n \to S_n$ is the map sending $\tau\mapsto \sigma\tau$.
@@ -196,7 +196,6 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 \end{scope}
 \end{tikzpicture}
 {% endtex %}
-
 
 One can also cook up more abstract examples of combinatorial species:
 
