@@ -108,3 +108,23 @@ We will see in the [following lecture]() that every species $F$ can be written a
 $$ F = F_0 + F_1 + F_2 + \dots $$
 
 So, $F_e := F_0 + F_2 + F_4 +\dots$ and $F_o := F_1 + F_3 + F_5 + \dots$. A relation similar to $(\star^1, \star^2)$ holds for the cycle index series of $F$.
+
+For example, we can split the species of permutations in its even and odd part as follows:
+
+$$ Z_{S_e} = \frac12\left( \prod_{k\ge 1} \frac1{1-x_k} + \prod_{k\ge 1} \frac1{1-(-1)^k x_k} \right) $$
+
+and
+
+$$ Z_{S_o} = \frac12\left( \prod_{k\ge 1} \frac1{1-x_k} - \prod_{k\ge 1} \frac1{1-(-1)^k x_k} \right) $$
+
+I do not know of any meaningful simplification for these formal power series in $x_1,x_2,\dots$; from this, however we can obtain the (type) generating series of $S_e, S_o$ as follows:
+
+$$ g_{S_e}(t) = \frac12\left( \frac1{1-t} + \frac1{1 + t} \right)\qquad\qquad
+g_{S_o}(t) = \frac12\left( \frac1{1-t} - \frac1{1 + t} \right)
+$$
+
+and
+
+$$ \tilde g_{S_e}(t) = \frac12\left( \prod_{k\ge 1} \frac1{1-t^k} + \prod_{k\ge 1} \frac1{1-(-1)^k t^k} \right)\qquad
+\tilde g_{S_o}(t) = \frac12\left( \prod_{k\ge 1} \frac1{1-t^k} - \prod_{k\ge 1} \frac1{1-(-1)^k t^k} \right).
+$$
