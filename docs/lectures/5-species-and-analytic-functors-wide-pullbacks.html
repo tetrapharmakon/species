@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-13T22:39:15+02:00" />
+<meta property="article:published_time" content="2021-11-14T12:13:21+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Species and analytic functors" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html","@type":"BlogPosting","headline":"Species and analytic functors","dateModified":"2021-11-13T22:39:15+02:00","datePublished":"2021-11-13T22:39:15+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html"},"description":"This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \\dots$ and it gives rise to an endofunctor $\\bar F $ of $\\bf Set$ that admits a “Taylor expansion”. Such functors are called analytic, and they can be characterised intrinsically as the finitary endofunctors of $\\bf Set$ satisfying a weak exactness property.","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html","@type":"BlogPosting","headline":"Species and analytic functors","dateModified":"2021-11-14T12:13:21+02:00","datePublished":"2021-11-14T12:13:21+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html"},"description":"This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \\dots$ and it gives rise to an endofunctor $\\bar F $ of $\\bf Set$ that admits a “Taylor expansion”. Such functors are called analytic, and they can be characterised intrinsically as the finitary endofunctors of $\\bf Set$ satisfying a weak exactness property.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -146,24 +146,46 @@ FX = \sum_{n\ge 1} \frac{f(n)\times X^n}{n!}.
 $$</div>
 
 <div id="label-8"></div>
-<p><strong>Example</strong> (The AF of the species of singletons).</p>
+<p><strong>Example</strong> (The AF of the species of singletons). Recall that the species $U$ of singletons is defined as the species centered in $1$, with value a one-element set. So, the colimit that computes $\text{Lan}_J U$ reduces to be the identity functor ${\bf Set} \to {\bf Set}$.</p>
 
 <div id="label-9"></div>
-<p><strong>Example</strong> (The AF of a representable species).</p>
+<p><strong>Example</strong> (The AF of a representable species). The species <a href="2-p-and-its-up-and-species.html#label-3">concentrated</a> in $n\ge 1$ over the set $S_n$ gives rise to the functor $X\mapsto {\bf Set}(Jn, X)=X^n$ raising $X$ to the $n$th power.</p>
 
 <div id="label-10"></div>
-<p><strong>Example</strong> (The AF of the species of sets).</p>
+<p><strong>Example</strong> (The AF of the species of sets). The <a href="2-p-and-its-up-and-species.html#label-5">species of sets</a> $E$ gives rise to the analytic functor sending a set $X$ to the set of <em>finite multisets</em> on $X$, i.e. finite $\mathbb N$-linear combinations of elements of $X$ like $3x+y+z$ or $x+2y+11w+t$…</p>
+
+<p>From the colimit formula for $\text{Lan}_JE$ we derive that $\tilde E$ sends $X$ to $\sum_n X^n/S_n$ (quotient sets), and this means that in an $n$-tuple of elements of $X$, the order of the coordinates does not matter, but the number of repetitions does.</p>
 
 <div id="label-11"></div>
-<p><strong>Example</strong> (The AF of the species of permutations).</p>
+<p><strong>Example</strong> (The AF of the species of permutations). The species of <a href="2-p-and-its-up-and-species.html#label-6">permutations</a> gives rise to the analytic functor sending $X$ to $\sum_n X^n$. This functor builds the free monoid (if the sum starts from 0) or the free semigroup (if the sum starts from 1) on the set $X$.</p>
 
 <div id="label-12"></div>
 <p><strong>Example</strong> (The AF of the species of oriented cycles).</p>
 
+<div id="label-12-bis"></div>
+<p><strong>Example</strong> (The AF of the species of subsets).</p>
+
 <p>We now embark on the proof of the characterisation theorem for analytic functors. We provide an elementary proof in two parts.</p>
 
 <div id="label-13"></div>
-<p><strong>Definition.</strong> Superfinitary functor.</p>
+<p><strong>Definition.</strong> An endofunctor of $\bf Set$ is called <em>superfinitary</em> if there exists a finite set $[n] = \{1,dots,n\}$ with the property that for each $X \in \bf Set$, the set $FX$ is the union of the images of $Fh$’s, with $h : [n] \to X$. In simple words, $F$ is superfinitary if, there exists an $n\ge 0$ such that for every set $X$, $FX$ is generated by the set $X^n$. Note that in this definition, $n$ is <em>the same</em> for all $X$’s.</p>
+
+<p>Observe that if $F$ is superfinitary,</p>
+
+<ol>
+  <li>we can choose a <em>minimal</em> $n$ with the property that $X^n$ generates $FX$; say this minimal $n$ is called $n_0$. Then,</li>
+  <li>there exists $x_0 \in Fn_0$ which is minimal, i.e. such that $x_0$ does not lie in the image of any $F(f : [k] \hookrightarrow [n])$ for $[k]$ a proper subobject of $[n]$ (this would violate minimality).</li>
+</ol>
+
+<p><strong>Lemma.</strong> Every endofunctor $F$ of $\bf Set$ is the coproduct (in the category $[{\bf Set}, {\bf Set}]$) of functors $F_i$ that preserve the terminal object.</p>
+
+<p><em>Proof.</em> The coproduct will be indexed by the set $F1$; given $x\in F1$, define the functor $F_x : {\bf Set} \to {\bf Set}$ sending $A$ to the fiber of $Ft_A$ over $x$, if $t_A : A \to 1$ is the terminal map. On morphisms, a map $A\to B$ defines a function $(Ft_A)^\leftarrow(x) \to (Ft_B)^\leftarrow(x)$. Clearly, this is a functor, and each $F_x$ sends $1$ to $F(\text{id}_1)(x)=\{x\}$, so it preserves the terminal object.</p>
+
+<p>It is equally clear that $F$ results as the coproduct $\sum_{x\in F1} F_x$, because each $FA$ is isomorphic to the sum $\sum_{x\in F1} (Ft_A)^\leftarrow x$ (we are secretly using the equivalence of categories ${\bf Set}/F1 \cong {\bf Set}^{F1}$).</p>
+
+<p>This apparently simple lemma has powerful consequences: when we want to prove a statement for a certain class ${\cal A}$ of endofunctors of $\bf Set$, and $\cal A$ is stable under coproducts, we can assume that an endofunctor in $\cal A$ preserves the terminal object.</p>
+
+<p>A particular case of such an $\cal A$ is the class of analytic functors.</p>
 
 <div id="label-14"></div>
 <p><strong>Theorem</strong> (Characterisation of analytic functors, I). For a superfinitary functor $F : {\bf Set} \to {\bf Set}$ the following conditions are equivalent:</p>
@@ -173,6 +195,8 @@ $$</div>
   <li>$F$ is analytic;</li>
   <li>$F$ splits as a coproduct of sym-representables.</li>
 </ol>
+
+<p>When this is proved, the assumption of superfinitariness (is that even a name…?) can be removed obtaining Joyal’s characterisation of $\cal A$.</p>
 
 <div id="label-15"></div>
 <p><strong>Theorem</strong> (Characterisation of analytic functors, II). For a finitary functor $F : {\bf Set} \to {\bf Set}$ the following conditions are equivalent:</p>
@@ -186,9 +210,29 @@ $$</div>
 
 <h3 id="proof-of-the-first-theorem">Proof of the first theorem</h3>
 
-<p>…</p>
+<p>Let’s prove that $(1 \Rightarrow 3)$. First of all, we can assume that $F1\cong 1$. Note that as a consequence $F$ weakly preserve products, because it weakly preserves the pullback</p>
 
-<p>The proof of the second theorem, which was the one initially proved by Joyal, follows from a similar argument; in particular, the implication $3\Rightarrow 2$ follows from the fact that each $F$ that weakly preserves countable wide pullbacks is superfinitary (prove this by contradiction as an exercise). All other implications are trivial or follow clearly from what we already know.</p>
+<p><span class="antex display"><img style='margin: 0.0ex 0.0ex -9.929ex 0.0ex; height: 11.632ex; width: 16.562ex;' src="/species/antex/067fe882a34c3544bb2b4477cd12165b.svg" /></span></p>
+
+<p>This means that provided we choose a minimal $n_0, x_0$ as in <a href="">the previous remark</a>, every $f : X \to [n]$ such that $x_0$ lies in the image of $Ff$ must be an epimorphism.</p>
+
+<p>In particular, all elements in the set</p>
+
+<div class="kdmath">$$
+\text{Fix}(F|x_0) := \{ f : [n] \to [n] \mid Ff(x_0)=x_0 \}
+$$</div>
+
+<p>are epimorphisms, and since $[n]$ is finite, they must be bijection as well. This determines a subgroup $H_F \le S_n$.</p>
+
+<p>We shall show that there exists an isomorphism of functors $\tilde{\xi}_{x_0} : {\bf P}(n,-)/H_F \cong F$, where ${\xi}_{x_0}$ is the unique natural transformation corresponding to $x_0$ via Yoneda.</p>
+
+<p>First of all, $\xi_{x_0}$ descends to the quotient “exactly”, in the sense that $\xi_{x_0}u=\xi_{x_0}v$ if and only if $u,v$ lie in the same $H_F$-orbit (if: obvious; only if: the pullback of $u$ against $v$ must be weakly preserved by $F$), and thus defines an injective function $\tilde{\xi}_{x_0} : {\bf P}(n,-)/H_F \hookrightarrow F$; using that $F$ weakly preserves pullbacks, we can show that $\tilde{\xi}_{x_0}$ is also surjective: given $y\in Fn$, there exist $f : n\times n \to n$ and $z\in Fn$ such that $F\pi_1 z=x_0$ and $F\pi_2 z = y$. But then $\pi_1f\in \text{Fix}(F|x_0)$, so it is invertible. Then, $\xi_{x_0}u=y$ if we fix $u=\pi_2 f (\pi_1 f)^{-1}$.</p>
+
+<p>The implication that $(3 \Rightarrow 2)$ is evident from the fact that each sym-representable is analytic, and $\cal A$ is closed under coproducts.</p>
+
+<p>Finally, let’s prove that $(2 \Rightarrow 1)$.</p>
+
+<p><strong>Remark.</strong> The proof of the second theorem, which was the one initially proved by Joyal, follows from a similar argument; in particular, the implication $3\Rightarrow 2$ follows from the fact that each $F$ that weakly preserves countable wide pullbacks is superfinitary (prove this by contradiction as an exercise). All other implications are trivial or follow clearly from what we already know.</p>
 
 </article>
     </main>

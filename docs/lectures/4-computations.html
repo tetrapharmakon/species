@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/4-computations.html" />
 <meta property="og:site_name" content="Combinatorial species in TTU" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-13T22:39:15+02:00" />
+<meta property="article:published_time" content="2021-11-14T12:13:21+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Some explicit combinatorial identities" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/4-computations.html","@type":"BlogPosting","headline":"Some explicit combinatorial identities","dateModified":"2021-11-13T22:39:15+02:00","datePublished":"2021-11-13T22:39:15+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/4-computations.html"},"description":"We have seen that to a combinatorial species we can associate at least two important invariants “quantities”, i.e. two formal power series from which we can deduce properties of the species. If $|X_n|$ denotes the cardinality of a set, and $F : {\\bf P} \\to {\\bf Set}$ is a combinatorial species,","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/species/lectures/4-computations.html","@type":"BlogPosting","headline":"Some explicit combinatorial identities","dateModified":"2021-11-14T12:13:21+02:00","datePublished":"2021-11-14T12:13:21+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/4-computations.html"},"description":"We have seen that to a combinatorial species we can associate at least two important invariants “quantities”, i.e. two formal power series from which we can deduce properties of the species. If $|X_n|$ denotes the cardinality of a set, and $F : {\\bf P} \\to {\\bf Set}$ is a combinatorial species,","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -158,6 +158,32 @@ F = F_0 + F_1 + F_2 + \dots
 $$</div>
 
 <p>So, $F_e := F_0 + F_2 + F_4 +\dots$ and $F_o := F_1 + F_3 + F_5 + \dots$. A relation similar to $(\star^1, \star^2)$ holds for the cycle index series of $F$.</p>
+
+<p>For example, we can split the species of permutations in its even and odd part as follows:</p>
+
+<div class="kdmath">$$
+Z_{S_e} = \frac12\left( \prod_{k\ge 1} \frac1{1-x_k} + \prod_{k\ge 1} \frac1{1-(-1)^k x_k} \right)
+$$</div>
+
+<p>and</p>
+
+<div class="kdmath">$$
+Z_{S_o} = \frac12\left( \prod_{k\ge 1} \frac1{1-x_k} - \prod_{k\ge 1} \frac1{1-(-1)^k x_k} \right)
+$$</div>
+
+<p>I do not know of any meaningful simplification for these formal power series in $x_1,x_2,\dots$; from this, however we can obtain the (type) generating series of $S_e, S_o$ as follows:</p>
+
+<div class="kdmath">$$
+g_{S_e}(t) = \frac12\left( \frac1{1-t} + \frac1{1 + t} \right)\qquad\qquad
+g_{S_o}(t) = \frac12\left( \frac1{1-t} - \frac1{1 + t} \right)
+$$</div>
+
+<p>and</p>
+
+<div class="kdmath">$$
+\tilde g_{S_e}(t) = \frac12\left( \prod_{k\ge 1} \frac1{1-t^k} + \prod_{k\ge 1} \frac1{1-(-1)^k t^k} \right)\qquad
+\tilde g_{S_o}(t) = \frac12\left( \prod_{k\ge 1} \frac1{1-t^k} - \prod_{k\ge 1} \frac1{1-(-1)^k t^k} \right).
+$$</div>
 
 </article>
     </main>
