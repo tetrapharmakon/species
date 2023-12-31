@@ -120,7 +120,7 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 **Example** (The terminal species). The species $E$ of sets ($E$ stands for "*ensemble*", set in French) is the terminal object of the category $\bf Spc$; it is the constant functor on the singleton $\{\bullet\}$. The species $E$ has two important sub-species that we will meet again later: the species $E_e$ of *even sets*, and the species $E_o$ of *odd sets*. Note that thinking of a species $F$ as a rule assigning to a finite set "the set of all structures of type $F$ on $[n]$", the terminal species can be thought as the species of sets: for each finite set $[n]$, $E[n]$ is the set of all possible set structures on $[n]$: there is just one such structure.
 
 <div id="label-6"></div>
-**Example** (The species of permutations). The species $S$ of permutations sends each finite set $[n]$ into the (carrier of the) symmetric group on $n$ letters, $S_n$. The symmetric group acts on itself by left translation: if $\tau \in S_n$, $\sigma : S_n \to S_n$ is the map sending $\tau\mapsto \sigma\tau$.
+**Example** (The species of permutations). The species $S$ of permutations sends each finite set $[n]$ into the (carrier of the) symmetric group on $n$ letters, $S_n$. The symmetric group acts on itself by conjugation: if $\tau \in S_n$, $\sigma : S_n \to S_n$ is the map sending $\tau\mapsto \sigma\tau\sigma^{-1}$.
 
 {% tex classes: [antex, display] %}
 \begin{tikzpicture}
@@ -145,7 +145,7 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 {% endtex %}
 
 <div id="label-7"></div>
-**Example** (The species of linear orders). The species $L$ of linear orders sends each finite set $[n]$ to the set of all possible linear orderings of $[n]$; the set $L[n]$ has exactly $n!$ elements, because each linear ordering $\{x_1 <\dots < x_n\}$ of an $n$-element set can be thought as induced under transport of structure by the ordering $\{1 < 2 < \dots < n\}$ on $[n]$.
+**Example** (The species of linear orders). The species $L$ of linear orders sends each finite set $[n]$ to the set of all possible linear orderings of $[n]$; the set $L[n]$ has exactly $n!$ elements, because each linear ordering $\{x_1 \le \dots \le x_n\}$ of an $n$-element set can be thought as a permutation of $(12\dots n)$; so, each $L[n]$ possesses a certain bijection into $S[n]$ (the image of $[n]$ under the species of permutations), which however is not natural (two objects of $\bf Spc$ regarded as sequences of left $S_n$-sets must be isomorphic *together with their action* in order to be isomorphic as species).
 
 {% tex classes: [antex, display] %}
 \def\ordBloc#1#2#3{\draw (0,0) rectangle (3,1);\node (1) at (.5,.5) {$#1$};\node (2) at (1.5,.5) {$#2$};\node (3) at (2.5,.5) {$#3$};
