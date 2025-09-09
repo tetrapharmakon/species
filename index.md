@@ -26,6 +26,8 @@ After that, entire books have been written on the topic: among these, we will of
 
 This website is the logbook of a reading seminar that I would like to start at [taltech](https://compose.ioc.ee) during Fall 2021. Its focus is not on rigor or completeness. Its style is idiosyncratic. Its purpose is to collect pointers to the -quite vast- literature on species (while tickling my nitpickery). My hope is not to drop the project midway (hysterical-laughter.mp3).
 
+Let's try to rehaul this, four years after.
+
 {% for lecture in site.lectures %}
   <article>
     <header>
