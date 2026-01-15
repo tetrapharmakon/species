@@ -10,8 +10,9 @@ antex:
         \usetikzlibrary{calc,positioning}
         \usepackage[all,2cell]{xy}\UseAllTwocells
         \usepackage{commutative-diagrams}
-        \usepackage{amsmath,amsfonts}
+        \usepackage{amsmath,amsfonts,amssymb}
         \usepackage{xcolor}
+        \usepackage{stmaryrd}
         \usepackage{tikz}
 ---
 
@@ -54,7 +55,7 @@ $$ \sum_{n=1}^\infty \big((n-1)! \cdot 2^n\big) \frac{t^n}{n!} = \sum_{n=1}^\inf
 
 The generating series of a combinatorial species is a powerful, but relatively coarse, invariant of the species: for example, the species $S$ of permutations and the species $L$ of linear orders have the same generating species because $\|{S}[n]\| = n! = \| {L}[n] \|$, so that
 
-$$ g_{S}(t) = ∑_{n=0}^\infty t^n = \frac1{1-t} = g_{L}(t). $$
+$$ g_{S}(t) = \sum_{n=0}^\infty t^n = \frac1{1-t} = g_{L}(t). $$
 
 The type generating series of $S$ and $L$ are, however, different, because the sets of orbits $\|{S}[n]\| / S_n$ and $\| {L}[n] \| / S_n$ have different cardinalities (the action of $S_n$ on linear orderings is transitive):
 
@@ -95,11 +96,11 @@ E_o[n] = \begin{cases} \{\bullet\} & n = 2k+1 \\ \varnothing & n = 2k \end{cases
 
 so it is clear that $E = E_e + E_o$. Now, the relation $Z_E = Z_{E_e} + Z_{E_o}$ holds true, and from this we can derive the desired identity by observing that
 
-$$ Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2,-x_3,\dots)\right) \tag{$\star^1$}$$
+$$ Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2,-x_3,\dots)\right) \tag{$\star^1$} $$
 
 and
 
-$$ Z_{E_o} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) - Z_E(-x_1,x_2,-x_3,\dots)\right). \tag{$\star^2$}$$
+$$ Z_{E_o} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) - Z_E(-x_1,x_2,-x_3,\dots)\right). \tag{$\star^2$} $$
 
 A brute-force computation now shows that the LHS of $Z_E = Z_{E_e} + Z_{E_o}$ is precisely $e^a = \exp\left(a_1 + \frac{a_2}2 + \frac{a_3}3 + \dots\right)$ and the RHS simplifies to $e^{a_0}(\cosh a_1 + \sinh a_1)$.
 

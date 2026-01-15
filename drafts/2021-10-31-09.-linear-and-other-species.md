@@ -10,7 +10,7 @@ antex:
         \usetikzlibrary{calc,positioning}
         \usepackage[all,2cell]{xy}\UseAllTwocells
         \usepackage{commutative-diagrams}
-        \usepackage{amsmath,amsfonts}
+        \usepackage{amsmath,amsfonts,amssymb}
         \usepackage{xcolor}
         \usepackage{tikz}
 ---

@@ -10,7 +10,7 @@ antex:
         \usetikzlibrary{calc,positioning}
         \usepackage[all,2cell]{xy}\UseAllTwocells
         \usepackage{commutative-diagrams}
-        \usepackage{amsmath,amsfonts}
+        \usepackage{amsmath,amsfonts,amssymb}
         \usepackage{xcolor}
         \usepackage{tikz}
 ---
@@ -27,7 +27,7 @@ The category $\bf Fin$ has objects the finite sets and morphisms all functions; 
 
 $$ F([n]) = \coprod_{i=1}^n F([1]) = \coprod_{i=1}^n X = [n] \otimes X $$
 
-(if $ \\_ \otimes \\_ $ denotes the [tensor](https://ncatlab.org/nlab/show/tensor) of $X\in\mathcal{C}$ with the set $[n]$). $\blacksquare$
+(if $\_ \otimes \_$ denotes the [tensor](https://ncatlab.org/nlab/show/tensor) of $X\in\mathcal{C}$ with the set $[n]$). $\blacksquare$
 
 As an immediate corollary, the opposite category ${\bf Fin}^\text{op}$ is the free finite *product* completion of the singleton $\bullet$.
 
@@ -115,7 +115,7 @@ The equivalence is induced by the functor "precomposition with the Yoneda embedd
 
 $$ {\sf Cat}([{\cal C}^\text{op}, {\bf Set}], {\cal D}) \to {\sf Cat}({\cal C}, \cal D).$$
 
-The last introductory remark is about the so-called *convolution product* of functors. Given a monoidal category $({\cal A}, \otimes, I)$ we can endow the presheaf category $[{\cal A}^\text{op}, {\bf Set}]$ with a monoidal structure such that the Yoneda embedding $\text{よ} : {\cal A} \to [{\cal A}^\text{op}, {\bf Set}]$ is a strong monoidal functor (in fact, the operation built in this way is universal with respect to this property).
+The last introductory remark is about the so-called *convolution product* of functors. Given a monoidal category $({\cal A}, \otimes, I)$ we can endow the presheaf category $[{\cal A}^\text{op}, {\bf Set}]$ with a monoidal structure such that the Yoneda embedding $y : {\cal A} \to [{\cal A}^\text{op}, {\bf Set}]$ is a strong monoidal functor (in fact, the operation built in this way is universal with respect to this property).
 
 Let $F,G : {\cal A}^\text{op} \to {\bf Set}$ be functors; define their *Day convolution* as the functor $F * G : {\cal A}^\text{op} \to {\bf Set}$ obtained as left Kan extension of $F\times G$ along $\otimes$, i.e. as the curved arrow in the following diagram
 
@@ -134,7 +134,7 @@ $$\lambda A. \int^{U,V \in \cal A} FU \times GV \times {\cal A}(A,U\otimes V) $$
 
 and on morphism (natural transformations of presheaves) by the evident functoriality of this construction.
 
-(*Exercise*: Prove that if $\cal A$ is a cartesian category (i.e., $\otimes = \times$) then $F * G \cong F\times G$; prove that the monoidal unit of $*$ is the representable presheaf $\text{よ}(I)$ on the monoidal unit of $({\cal A}, \otimes)$.)
+(*Exercise*: Prove that if $\cal A$ is a cartesian category (i.e., $\otimes = \times$) then $F * G \cong F\times G$; prove that the monoidal unit of $*$ is the representable presheaf $y(I)$ on the monoidal unit of $({\cal A}, \otimes)$.)
 
 Refer to [???,???] for more information.
 

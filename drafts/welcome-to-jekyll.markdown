@@ -14,7 +14,7 @@ antex:
         \usetikzlibrary{calc,positioning}
         \usepackage[all]{xy}
         \usepackage{commutative-diagrams}
-        \usepackage{amsmath,amsfonts}
+        \usepackage{amsmath,amsfonts,amssymb}
         \usepackage{xcolor}
         \usepackage{tikz}
 ---

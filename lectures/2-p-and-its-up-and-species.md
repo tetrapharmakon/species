@@ -10,10 +10,11 @@ antex:
         \usetikzlibrary{calc,positioning, fit}
         \usepackage[all]{xy}
         \usepackage{commutative-diagrams}
-        \usepackage{amsmath,amsfonts}
+        \usepackage{amsmath,amsfonts,amssymb}
         \usepackage{xcolor}
+        \usepackage{stmaryrd}
         \usepackage{tikz}
-        \def\yo{\text{よ}}
+        \def\yo{y}
 
 ---
 
@@ -89,7 +90,7 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 **Example** (The species of singletons). The species $U$ of singletons ($U$ stands for "*un seul élément*", a single element in French) sends a finite set $A$ into a one-point set $\{\bullet\}$ if $A$ is itself a one-point set, and in the empty set otherwise. The action of the symmetric group on each $U[n]$ is the only possible one.
 
 <div id="label-4"></div>
-**Example** (The species of subsets). The species of subsets sends a finite set $[n]$ into the set $\wp[n]$ of all possible subsets of $[n]$; so, $\wp[n]$ has exactly $2^n$ elements, and the action of the symmetric group is defined as post-composition, identifying $\wp[n]$ with the set ${\bf Set}(n,2)$; in simple words, $\sigma \in S_n$ acts on $\wp[n]$ sending the set $\{n_1,\dots, n_k}$ to the set $\{\sigma n_1,\dots, \sigma n_k\}$.
+**Example** (The species of subsets). The species of subsets sends a finite set $[n]$ into the set $\wp[n]$ of all possible subsets of $[n]$; so, $\wp[n]$ has exactly $2^n$ elements, and the action of the symmetric group is defined as post-composition, identifying $\wp[n]$ with the set ${\bf Set}(n,2)$; in simple words, $\sigma \in S_n$ acts on $\wp[n]$ sending the set $\{n_1,\dots, n_k\}$ to the set $\{\sigma n_1,\dots, \sigma n_k\}$.
 
 {% tex classes: [antex, display] %}
 \def\yes{\bullet}
@@ -204,9 +205,9 @@ One can also cook up more abstract examples of combinatorial species:
 Let $n\ge 1$ be a natural number. The species $c_n : {\bf P} \to {\bf Set}$, "concentrated" or "centered" in $n$ is defined as the functor sending $[n] \in \bf P$ to a singleton set $\bullet$, and every other set to the empty set. Clearly, $c_1 = U$ above, and $c_n$ can legitimately be called the species of *$n$-element sets*. More generally we can talk about the species $c_n^E$, concentrated in $n$, and such that $c_n^E([n]) = E$, and empty otherwise.
 
 <div id="label-10"></div>
-**Example** (The *representable* species as a particular case). Each representable functor $\text{よ}[n] : {\bf P} \to \bf Set$ is a combinatorial species acting as follows: $\text{よ}[n][k] := {\bf P}(n,k)$ is empty if $n\ne k$, so the species is centered in $n$, and $\text{よ}[n][n] = S_n$ is the (underlying set of the) symmetric group on $n$ elements. The action on morphisms is the same as in the species of permutations, and in fact the species of permutation arises as the infinite sum
+**Example** (The *representable* species as a particular case). Each representable functor $y[n] : {\bf P} \to \bf Set$ is a combinatorial species acting as follows: $y[n][k] := {\bf P}(n,k)$ is empty if $n\ne k$, so the species is centered in $n$, and $y[n][n] = S_n$ is the (underlying set of the) symmetric group on $n$ elements. The action on morphisms is the same as in the species of permutations, and in fact the species of permutation arises as the infinite sum
 
-$$ S = \text{よ}[1] + \text{よ}[2] + \text{よ}[3] + \dots $$
+$$ S = y[1] + y[2] + y[3] + \dots $$
 
 <div id="label-11"></div>
 **Example** (The sym-representable species $n\mapsto S_n/H_n$).
