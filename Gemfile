@@ -11,6 +11,6 @@ group :jekyll_plugins do
     gem 'jekyll-default-layout'
     gem 'jekyll-optional-front-matter'
     gem 'jekyll-titles-from-headings'
-    gem 'jekyll-antex', '~> 0.6.0'
+    gem 'jekyll-antex', '~> 0.9.0'
     gem 'jekyll-sitemap'
 end
