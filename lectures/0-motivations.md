@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Preliminaries; finite sets, convolution
+title: Motivations; the tension between algebraic and bijective proofs
 latex: katex
 katex:
   macros:
