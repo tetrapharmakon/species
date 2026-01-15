@@ -37,19 +37,3 @@ $${\bf Set}^A \times {\bf Set}^B\cong {\bf Set}/A\times {\bf Set}/B\cong {\bf Se
 1. The cartesian closure can be derived as a corollary from a stronger result:
 
 $$[{\bf Set}^A,{\bf Set}^B]_N \cong {\bf Set}^{\exp A\times B}$$
-
-    If this is true, then
-
-$$\begin{align*} [{\bf Set}^{X+Y}, {\bf Set}^B]_N & \cong {\bf Set}^{\exp(X+Y)\times B}\\ &\cong {\bf Set}^{(\exp X \times \exp Y)\times B}\\ &\cong {\bf Set}^{\exp X \times \exp Y\times B} \\&\cong [{\bf Set}^X, {\bf Set}^{\exp Y\times B}]_N\end{align*}$$
-
-Finally, given the definition of what is a normal functor ${\bf Set}^A \to {\bf Set}^B$, we can further restrict our attention to the isomorphism
-
-$$[{\bf Set}^A, {\bf Set}]_N\cong {\bf Set}^{\exp A}$$
-
-obtained when $B=1$ is the terminal category. We shall prove this formally: let
-
-$$\exp A \to {\bf Set}^A$$
-
-be the functor that regards a multiset in $A$ as an $A$-indexed family of objects; this means that the multiset $\sum_{a\in A} n_a  a$ defines a function $A \to {\bf Set}$ sending $a$ to the finite set $n_a := \{1,\dots,n_a\}$. We keep this functor nameless.
-
-Questa dimostrazione purtroppo è bruttissima

@@ -33,7 +33,7 @@ This chapter embarks on a more category-theoretic study of species. Every specie
 
 and for $X\in\bf Set$ the set $FX$ can be computed pointwise as the coend
 
-$$\int^n f(n)\times X^n =: \left(\coprod_{n\ge 1} f(n)\times X^n\right)/\left\langle \begin{smallmatrix}\sigma.e; x_1,\dots,x_n) \sim (e, x_{\sigma 1},\dots, x_{\sigma n}) \\ \sigma \in S_n, n\ge 1\end{smallmatrix} \right\rangle \tag{$\star$} $$
+$$ \int^n f(n)\times X^n =: \left(\coprod_{n\ge 1} f(n)\times X^n\right)/\left\langle \begin{smallmatrix}\sigma.e; x_1,\dots,x_n) \sim (e, x_{\sigma 1},\dots, x_{\sigma n}) \\ \sigma \in S_n, n\ge 1\end{smallmatrix} \right\rangle \qquad(\star) $$
 
 Such a functor is called *analytic*, and we call similarly every functor that lies in the image of the functor $\text{Lan}_J$, where $J : {\bf P} \hookrightarrow {\bf Set}$ is the (nonfull) inclusion functor.
 
