@@ -42,6 +42,8 @@ Regarding species as formal power series, the category $\mathbf{Cat}({\bf B}[S],
 
 **Exercise.** ($\star$) I have had for quite some time in the back of my head the idea that it is interesting to study species when $\cal V$ is compact closed, or star-autonomous; see for example [here](https://arxiv.org/abs/math/0612496), where some work is done in this direction; if this sounds like an interesting project for you, please let's do it together.
 
+---
+
 ### Vector species
 
 Let $k$ be a field. The category of $k$-vector species (it would be more natural to call them *$k$-linear*, however this might cause confusion with the concept of linear species below, which doesn't pertain vector spaces) is the category $(1,k\text{-}{\bf Vect})\text{-}\mathbf{Spc}$ of functors ${\bf B} \to k\text{-}{\bf Vect}$.
@@ -68,7 +70,7 @@ which views a positive species as a positive comonoid with zero coproduct:
 
 $$
 \mathbf{Spc}_+
-\;\;\underset{\mathcal{P}}{\overset{\iota}{\rightleftarrows}}\;\;
+\underset{\mathcal{P}}{\overset{\iota}{\rightleftarrows}}
 \mathbf{Comon}(\mathbf{Spc}_+).
 $$
 
@@ -132,6 +134,8 @@ Another reason why $k$-vector species are important is the presence of an adjunc
 
 The category of $k$-vector species is now equipped with the Day, Hadamard and substitution monoidal products, and $P\mapsto k[P]$ turns out to be a strong monoidal functor with respect to all three products. Moreover, a $\bf Set$-species is connected or positive if and only if its $k$-linearization is such.
 
+---
+
 ### Linear species
 
 The category $\mathbf{Lin}$ is defined as the category of totally
@@ -185,6 +189,7 @@ differential equations in $\mathbf{LSpc}$ have unique solutions, following more 
 Usually one compensates for the extreme rigidity of the domain category of
 an $\mathbb{L}$-species fixing a commutative ring $R$ and `enriching' the
 codomain of species in the category of *$R$-weighted sets*.
+---
 
 ### Weighted species
 
@@ -258,7 +263,7 @@ $$
 
 **Definition.** The *cone of sums of squares* of $R$ is the subset
 $$
-\Sigma R^2 := \left\{ \sum_{i=1}^n r_i^2 \;\middle|\; r_i \in R,\ n \in \mathbb{N} \right\} \subseteq R.
+\Sigma R^2 := \left\{ \sum_{i=1}^n r_i^2 \middle| r_i \in R,\ n \in \mathbb{N} \right\} \subseteq R.
 $$
 
 The set $\Sigma R^2$ satisfies the following properties:
@@ -277,10 +282,111 @@ $$
 Thus, for a formally real ring $R$, the cone of sums of squares induces a canonical preorder reflecting the ring’s algebraic notion of positivity, even though it does not necessarily define a partial order.
 
 
+---
 
 ### Moebius species
-...
+
+**Definition.** Let $\bf Set$ be the category of sets, equipped with the tautological functor $J \colon \mathbf{Set} \to \mathbf{Cat}$ regarding each set as a discrete category; let $\mathbf{Pos}^{\top\\!\bot}$ be the category of posets with top and bottom, where morphisms are top- and bottom-preserving monotone maps; consider the comma category
+
+$$
+(J / \mathbf{Pos}^{\top\!\bot})
+$$
+
+defined by the diagram
+
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+(J / \mathbf{Pos}^{\top\!\bot}) \ar[r] \ar[d] &
+{*} \ar[d]^{\mathbf{Pos}^{\top\!\bot}} \\
+\mathbf{Set} \ar[r]_{J} &
+\mathbf{Cat}
+}}
+{% endtex %}
+
+Unwinding the definition, $(J / \mathbf{Pos}^{\top\\!\bot})$ is the category having
+
+- objects the pairs $(X, P \colon X \to \mathbf{Pos}^{\top\\!\bot})$, where $X$ is a set and $P$ is a functor; note that this means $P = \{ P_x \mid x \in X \}$ is an $X$-parametric family of posets with top and bottom;
+
+- morphisms $(X, P) \to (Y, Q)$ are the functions $h \colon X \to Y$ such that $Q \circ h = P$. Each such $h$ splits into a family of monotone maps $P_x \to Q_{h(x)}$.
+
+
+**Remark.** The category $(J / \mathbf{Pos}^{\top\\!\bot})$ is a complete and cocomplete (in fact, locally presentable), monoidal closed category.
+
+**Proof.** Colimits are computed in $(J / \mathbf{Pos}^{\top\\!\bot})$ as in **Set** (created by the vertical left functor in Equation (6.15)); the category is accessible, as it arises as a limit in accessible categories and accessible functors; thus it is locally presentable, hence also complete (limits are, however, not straightforward to describe—even characterizing a terminal object is a bit convoluted).
+
+As for its monoidal closed structure, call a map $P \times Q \to R$ in $\mathbf{Pos}^{\top\\!\bot}$ *balanced* if all $f(p,-) \colon Q \to R$ and $f(-,q) \colon P \to R$ preserve top and bottom elements, and call $\mathbf{BPos}(P \times Q, R)$ the set of all such balanced maps.
+
+Then, the existence of a symmetric tensor product $\otimes$ such that
+
+$$
+\mathbf{BPos}(P \times Q, R)
+\cong
+\mathbf{Pos}^{\top\!\bot}(P \otimes Q, R)
+$$
+
+*representing balanced maps* follows from a standard argument on lifting monoidal structures to categories of algebras. Thus $\mathbf{Pos}^{\top\\!\bot}$ is the category of algebras for the simultaneous completion under initial and terminal object, regarding $\mathbf{Pos} \subset \mathbf{Cat}$.
+
+This gives a monoidal (closed) structure to $(J / \mathbf{Pos}^{\top\\!\bot})$ where tensor and exponentials are defined as
+
+$$
+X \times Y
+\xrightarrow{ P \times Q }
+\mathbf{Pos}^{\top\!\bot} \times \mathbf{Pos}^{\top\!\bot}
+\xrightarrow{ \widehat{\otimes} }
+\mathbf{Pos}^{\top\!\bot},
+$$
+
+$$
+X \times Y
+\xrightarrow{ P \times Q }
+(\mathbf{Pos}^{\top\!\bot})^{\mathrm{op}} \times \mathbf{Pos}^{\top\!\bot}
+\xrightarrow{ [-,-] }
+\mathbf{Pos}^{\top\!\bot}.
+\qquad \square
+$$
+
+Thus, $\bigl( (J / \mathbf{Pos}^{\top\\!\bot}), \widehat{\otimes} \bigr)$
+works as a Bénabou cosmos, and we can define
+
+**Definition.** The category $\bf MSpc$ of *Moebius species* is the category of functors
+
+$$
+P \to (J / \mathbf{Pos}^{\top\!\bot}),
+$$
+
+i.e. the category of $( \mathbf{1}, (J / \mathbf{Pos}^{\top\\!\bot}) )$-species.
+
+Since $P$ is a groupoid, each functor  $P \to (J / \mathbf{Pos}^{\top\!\bot})$ must factor through the core of   $(J / \mathbf{Pos}^{\top\!\bot})$; calling **Int** such core we obtain Definition 2.1 of 
+
+Méndez, Miguel, and Julia Yang. _Möbius species._ Advances in Mathematics 85.1 (1991): 83-128
+
+where $h$ is assumed to be a bijection (and the indexing sets are finite, hence   $h \colon [n] \to [n]$ is just a permutation), inducing order-isomorphisms
+
+$$
+P_i \cong Q_{\sigma i}
+\qquad \text{for each } i = 1, \ldots, n.
+$$
+
+---
 
 ### Nominal sets
 
-...
+**Definition.** Consider the chain of inclusions
+
+$$
+S_1 \subset S_2 \subset \cdots \subset S_n \subset \cdots
+$$
+
+each identifying a group $S_n$ as the subgroup of $S_{n+1}$ spanned by the elements fixing $n+1$; the colimit $S_\infty$ of this chain in the category of groups is called the *infinite symmetric group* and consists of all bijections of   $\mathbb{N} = \{0,1,2,\ldots\}$ that fix all but finitely many elements (call these *finitely supported permutations*).
+
+The group-theoretic properties of $S_\infty$ are the subject of intense study in connection with representation theory, the theory of Von Neumann algebras, ergodic theory and descriptive set theory (due to the nature of Polish group of $S_\infty$). For us, the connection with computer science, set theory and topos theory are an additional source of intuition: we define
+
+
+**Definition.** The category $\bf Nom$ of *nominal sets* is the category of (set-theoretic) left
+actions of $S_\infty$, or in other words the category of functors
+
+$$
+F \colon S_\infty \to \mathbf{Set}.
+$$
