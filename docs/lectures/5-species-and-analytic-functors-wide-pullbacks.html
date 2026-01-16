@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <!-- Begin Jekyll SEO tag v2.7.1 -->
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Species and analytic functors | Combinatorial species in TTU</title>
-<meta name="generator" content="Jekyll v3.9.1" />
-<meta property="og:title" content="Species and analytic functors" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$ and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a “Taylor expansion”. Such functors are called analytic, and they can be characterised intrinsically as the finitary endofunctors of $\bf Set$ satisfying a weak exactness property." />
-<meta property="og:description" content="This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$ and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a “Taylor expansion”. Such functors are called analytic, and they can be characterised intrinsically as the finitary endofunctors of $\bf Set$ satisfying a weak exactness property." />
-<link rel="canonical" href="http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html" />
-<meta property="og:url" content="http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html" />
-<meta property="og:site_name" content="Combinatorial species in TTU" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-12-02T15:33:08+02:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Species and analytic functors" />
+<meta name="generator" content="Jekyll v3.9.5">
+<meta property="og:title" content="Species and analytic functors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="A reading seminar on Joyal’s combinatorial species">
+<meta property="og:description" content="A reading seminar on Joyal’s combinatorial species">
+<link rel="canonical" href="/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html">
+<meta property="og:url" content="/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html">
+<meta property="og:site_name" content="Combinatorial species in TTU">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Species and analytic functors">
 <script type="application/ld+json">
-{"url":"http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html","@type":"BlogPosting","headline":"Species and analytic functors","dateModified":"2021-12-02T15:33:08+02:00","datePublished":"2021-12-02T15:33:08+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html"},"description":"This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \\dots$ and it gives rise to an endofunctor $\\bar F $ of $\\bf Set$ that admits a “Taylor expansion”. Such functors are called analytic, and they can be characterised intrinsically as the finitary endofunctors of $\\bf Set$ satisfying a weak exactness property.","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"A reading seminar on Joyal’s combinatorial species","headline":"Species and analytic functors","url":"/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,8 +28,7 @@
     <!-- The loading of KaTeX is deferred to speed up page rendering -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
     <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
-        onload="renderMathInElement(document.body,{macros:{ '':'', },delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body,{macros:{ '':'', },delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
 
       </head>
       <body>
@@ -51,12 +50,14 @@
 <div id="label-1"></div>
 <p><strong>Construction.</strong> Given a combinatorial species $f : {\bf P} \to \bf Set$, we can consider the left Kan extension</p>
 
-<p><span class="antex display"><img style='margin: 0.0ex 0.0ex -9.839ex 0.0ex; height: 12.677ex; width: 15.859ex;' src="/species/antex/493ab13ad796e7ba75fb7eae3990ae74.svg" /></span></p>
+<p><span class="antex display"><img src="/species/antex/7534092a3e5d1604085b612f44c39b9f.svg" style="margin: 0.0ex 0.0ex -9.839ex 0.0ex;
+height: 12.677ex;
+width: 15.859ex;"></span></p>
 
 <p>and for $X\in\bf Set$ the set $FX$ can be computed pointwise as the coend</p>
 
 <div class="kdmath">$$
-\int^n f(n)\times X^n =: \left(\coprod_{n\ge 1} f(n)\times X^n\right)/\left\langle \begin{smallmatrix}\sigma.e; x_1,\dots,x_n) \sim (e, x_{\sigma 1},\dots, x_{\sigma n}) \\ \sigma \in S_n, n\ge 1\end{smallmatrix} \right\rangle \tag{$\star$}
+\int^n f(n)\times X^n =: \left(\coprod_{n\ge 1} f(n)\times X^n\right)/\left\langle \begin{smallmatrix}\sigma.e; x_1,\dots,x_n) \sim (e, x_{\sigma 1},\dots, x_{\sigma n}) \\ \sigma \in S_n, n\ge 1\end{smallmatrix} \right\rangle \qquad(\star)
 $$</div>
 
 <p>Such a functor is called <em>analytic</em>, and we call similarly every functor that lies in the image of the functor $\text{Lan}_J$, where $J : {\bf P} \hookrightarrow {\bf Set}$ is the (nonfull) inclusion functor.</p>
@@ -86,7 +87,9 @@ $$</div>
 <div id="label-3"></div>
 <p><strong>Definition.</strong> An endofunctor $F : {\bf Set} \to {\bf Set}$ is said to <em>weakly preserve pullbacks</em> if for every pullback square</p>
 
-<p><span class="antex display"><img style='margin: 0.0ex 0.0ex -10.006ex 0.0ex; height: 11.71ex; width: 18.209ex;' src="/species/antex/f142a101a99d3035944e76a7087e5ffc.svg" /></span></p>
+<p><span class="antex display"><img src="/species/antex/d60b49e270f16c9b4cadb26d4081e873.svg" style="margin: 0.0ex 0.0ex -10.006ex 0.0ex;
+height: 11.71ex;
+width: 18.209ex;"></span></p>
 
 <p>the canonical map $F(A\times_C B) \to FA \times_{FC} FB$ is surjective.</p>
 
@@ -212,7 +215,9 @@ $$</div>
 
 <p>Let’s prove that $(1 \Rightarrow 3)$. First of all, we can assume that $F1\cong 1$. Note that as a consequence $F$ weakly preserve products, because it weakly preserves the pullback</p>
 
-<p><span class="antex display"><img style='margin: 0.0ex 0.0ex -9.929ex 0.0ex; height: 11.632ex; width: 16.562ex;' src="/species/antex/067fe882a34c3544bb2b4477cd12165b.svg" /></span></p>
+<p><span class="antex display"><img src="/species/antex/09f911b14dba0aa65abe468630339039.svg" style="margin: 0.0ex 0.0ex -9.929ex 0.0ex;
+height: 11.632ex;
+width: 16.562ex;"></span></p>
 
 <p>This means that provided we choose a minimal $n_0, x_0$ as in <a href="">the previous remark</a>, every $f : X \to [n]$ such that $x_0$ lies in the image of $Ff$ must be an epimorphism.</p>
 
@@ -235,6 +240,7 @@ $$</div>
 <p><strong>Remark.</strong> The proof of the second theorem, which was the one initially proved by Joyal, follows from a similar argument; in particular, the implication $3\Rightarrow 2$ follows from the fact that each $F$ that weakly preserves countable wide pullbacks is superfinitary (prove this by contradiction as an exercise). All other implications are trivial or follow clearly from what we already know.</p>
 
 </article>
+
     </main>
 
     <footer id="footer">

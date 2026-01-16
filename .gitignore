@@ -5,3 +5,4 @@ _site
 *.pdf
 bibfiles/theorie-combinatoire-series-formelles.pdf
 docs/bibfiles/theorie-combinatoire-series-formelles.pdf
+vendor/

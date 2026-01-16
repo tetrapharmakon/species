@@ -8,7 +8,7 @@ antex:
     preamble:
         \usepackage{tikz,tikz-cd}
         \usetikzlibrary{calc,positioning, fit}
-        \usepackage[all]{xy}
+        \usepackage[all,2cell]{xy}\UseAllTwocells
         \usepackage{commutative-diagrams}
         \usepackage{amsmath,amsfonts,amssymb}
         \usepackage{xcolor}
