@@ -218,6 +218,7 @@ These species will be the building blocks for our next lecture on analytic funct
 $$\tilde F : {\bf Set} \to {\bf Set} : X\mapsto \sum_{n\ge 1} \frac{f(n) \times X^n}{n!} $$
 
 where the quotient by $n!$ ihas to be interpreted as the quotient of the numerator by an action of the symmetric group.
+
 ### Contact of order $n$ between species
 
 As it is well-known, in the ring of formal power series $K\llbracket t\rrbracket$ ($K$ any commutative unital ring), one can define a binary relation $\sim_n$ of *contact of order n* between elements $f,g$: two series have contact of order $n$ if they are congruent modulo $t^n$ (more formally: $f\mathrel{\sim_n}g$ if the difference $f-g$ is in the kernel of the canonical map $K\llbracket t\rrbracket \to K[t]/(t^n)$ from the inverse limit).

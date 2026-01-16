@@ -24,7 +24,7 @@ In this sense, a certain subcategory of the category of analytic functors (the c
 
 **Definition** (Analytic functor in more than one variable). Let $A$ be a set and $F : \mathbf{Set}^A \to \mathbf{Set}$ a functor ($\mathbf{Set}^A$ is equivalently the product category $\prod_{a\in A}\mathbf{Set}$ and the slice category $\mathbf{Set}/A$; we will make constant use of this equivalence).
 
-We define an *analytic functor in $A$ variables* as a functor $F$ that results from the left Kan extension of a *species in $A$ variables* along the obvious functor $\mathbf{P}^A =\prod_{a\in A}\mathbf{P}\to \mathbf{Set}^A$;
+We define an *analytic functor in $A$ variables* as a functor $F$ that results from the left Kan extension of a *species in $A$ variables* along the obvious functor $\mathbf{B}^A =\prod_{a\in A}\mathbf{B}\to \mathbf{Set}^A$;
 
 [diag]
 
