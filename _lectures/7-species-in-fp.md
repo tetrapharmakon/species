@@ -1,6 +1,6 @@
 ---
 layout: post
-title: An application of species to functional programming
+title: "Application: species in functional programming"
 latex: katex
 katex:
   macros:

@@ -4,9 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>An application of species to functional programming | Combinatorial species in TTU</title>
+<title>Application: species in functional programming | Combinatorial species in TTU</title>
 <meta name="generator" content="Jekyll v3.9.5">
-<meta property="og:title" content="An application of species to functional programming">
+<meta property="og:title" content="Application: species in functional programming">
 <meta property="og:locale" content="en_US">
 <meta name="description" content="One of the many ways of formally describing a programming language is via denotational semantics, in which a term $T$ of type $\tau$ is represented by a mathematical object $\llbracket T \rrbracket \in \llbracket\tau\rrbracket$ (its denotation), where $\llbracket\tau\rrbracket$ is a domain, a certain kind of structured set. Terms of type $\sigma\to\tau$ are then interpreted as suitable functions $\llbracket\sigma\rrbracket\to\llbracket\tau\rrbracket$ between domains.1 As it’s common in set theoretical foundations of mathematics, functions enjoy an extensionality principle (i.e. are considered equal when they agree on all arguments). Therefore unlike its operational counterpart, denotational semantics is more concerned with the statics of a program, rather than its dynamics. ↩">
 <meta property="og:description" content="One of the many ways of formally describing a programming language is via denotational semantics, in which a term $T$ of type $\tau$ is represented by a mathematical object $\llbracket T \rrbracket \in \llbracket\tau\rrbracket$ (its denotation), where $\llbracket\tau\rrbracket$ is a domain, a certain kind of structured set. Terms of type $\sigma\to\tau$ are then interpreted as suitable functions $\llbracket\sigma\rrbracket\to\llbracket\tau\rrbracket$ between domains.1 As it’s common in set theoretical foundations of mathematics, functions enjoy an extensionality principle (i.e. are considered equal when they agree on all arguments). Therefore unlike its operational counterpart, denotational semantics is more concerned with the statics of a program, rather than its dynamics. ↩">
@@ -14,11 +14,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/7-species-in-fp.html">
 <meta property="og:site_name" content="Combinatorial species in TTU">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2026-01-16T14:15:24+02:00">
+<meta property="article:published_time" content="2026-01-16T15:59:14+02:00">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="An application of species to functional programming">
+<meta property="twitter:title" content="Application: species in functional programming">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-16T14:15:24+02:00","datePublished":"2026-01-16T14:15:24+02:00","description":"One of the many ways of formally describing a programming language is via denotational semantics, in which a term $T$ of type $\\tau$ is represented by a mathematical object $\\llbracket T \\rrbracket \\in \\llbracket\\tau\\rrbracket$ (its denotation), where $\\llbracket\\tau\\rrbracket$ is a domain, a certain kind of structured set. Terms of type $\\sigma\\to\\tau$ are then interpreted as suitable functions $\\llbracket\\sigma\\rrbracket\\to\\llbracket\\tau\\rrbracket$ between domains.1 As it’s common in set theoretical foundations of mathematics, functions enjoy an extensionality principle (i.e. are considered equal when they agree on all arguments). Therefore unlike its operational counterpart, denotational semantics is more concerned with the statics of a program, rather than its dynamics. &#8617;","headline":"An application of species to functional programming","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/7-species-in-fp.html"},"url":"http://localhost:4000/species/lectures/7-species-in-fp.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-16T15:59:14+02:00","datePublished":"2026-01-16T15:59:14+02:00","description":"One of the many ways of formally describing a programming language is via denotational semantics, in which a term $T$ of type $\\tau$ is represented by a mathematical object $\\llbracket T \\rrbracket \\in \\llbracket\\tau\\rrbracket$ (its denotation), where $\\llbracket\\tau\\rrbracket$ is a domain, a certain kind of structured set. Terms of type $\\sigma\\to\\tau$ are then interpreted as suitable functions $\\llbracket\\sigma\\rrbracket\\to\\llbracket\\tau\\rrbracket$ between domains.1 As it’s common in set theoretical foundations of mathematics, functions enjoy an extensionality principle (i.e. are considered equal when they agree on all arguments). Therefore unlike its operational counterpart, denotational semantics is more concerned with the statics of a program, rather than its dynamics. &#8617;","headline":"Application: species in functional programming","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/7-species-in-fp.html"},"url":"http://localhost:4000/species/lectures/7-species-in-fp.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,7 +43,7 @@
     <main>
       <article>
     <!-- &bull;  &bull; -->
-    <h1>An application of species to functional programming</h1>
+    <h1>Application: species in functional programming</h1>
     <p>One of the many ways of formally describing a programming language is via <em>denotational semantics</em>, in which a term $T$ of type $\tau$ is represented by a mathematical object $\llbracket T \rrbracket \in \llbracket\tau\rrbracket$ (its <em>denotation</em>), where $\llbracket\tau\rrbracket$ is a <em>domain</em>, a certain kind of structured set. Terms of type $\sigma\to\tau$ are then interpreted as suitable functions $\llbracket\sigma\rrbracket\to\llbracket\tau\rrbracket$ between domains.<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
 
 <p>(Thanks to <a href="">dpl0a</a> for having written this introduction replacing my lazy fat fingers.)</p>

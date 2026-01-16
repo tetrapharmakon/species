@@ -63,14 +63,15 @@
 
 <p>(Yes, I will refer them as “red” and “big” in the following).</p>
 
-<p>This website is the logbook of a reading seminar that I would like to start at <a href="https://compose.ioc.ee">taltech</a> during Fall 2021. Its focus is not on rigor or completeness. Its style is idiosyncratic. Its purpose is to collect pointers to the -quite vast- literature on species (while tickling my nitpickery). My hope is not to drop the project midway (hysterical-laughter.mp3).</p>
+<p>This website is the logbook of a reading seminar running at <a href="https://compose.ioc.ee">taltech</a>. Its focus is not on rigor or completeness. Its style is idiosyncratic. Its purpose is to collect pointers to the -quite vast- literature on species (while tickling my nitpickery).</p>
 
 <article>
     <header>
-      <h3>Motivations; the tension between algebraic and bijective proofs</h3>
+      <h3>Motivation: on the tension between algebraic and bijective proofs</h3>
     </header>
     <p>In the words of R. Stanley, the basic problem of enumerative combinatorics is that of counting the number of elements
 of a finite set.
+
 </p>
     <footer>
       <a href="/species/lectures/0-motivations.html">Read more...</a>
@@ -79,7 +80,7 @@ of a finite set.
 
 <article>
     <header>
-      <h3>Preliminaries; finite sets, convolution</h3>
+      <h3>Preliminaries: finite sets, convolution</h3>
     </header>
     <p>The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$.
 
@@ -91,7 +92,7 @@ of a finite set.
 
 <article>
     <header>
-      <h3>The category P and species</h3>
+      <h3>Introduction: The category P and species</h3>
     </header>
     <p>The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: since a groupoid is a self-dual category, there is not much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second...</p>
     <footer>
@@ -101,7 +102,7 @@ of a finite set.
 
 <article>
     <header>
-      <h3>Monoidal Structures on P</h3>
+      <h3>Multiplication: Monoidal Structures on P</h3>
     </header>
     <p>A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.
 
@@ -113,7 +114,7 @@ of a finite set.
 
 <article>
     <header>
-      <h3>Some explicit combinatorial identities</h3>
+      <h3>Computation: some explicit combinatorial identities</h3>
     </header>
     <p>We have seen that to a combinatorial species we can associate at least two important invariants “quantities”, i.e. two formal power series from which we can deduce properties of the species. If $|X_n|$ denotes the cardinality of a set, and $F : {\bf P} \to {\bf Set}$ is a combinatorial species,
 
@@ -125,7 +126,7 @@ of a finite set.
 
 <article>
     <header>
-      <h3>Species and analytic functors</h3>
+      <h3>Representation: species and analytic functors</h3>
     </header>
     <p>This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$ and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a “Taylor expansion”. Such functors are called analytic, and they can be characterised intrinsically as the finitary endofunctors...</p>
     <footer>
@@ -135,7 +136,7 @@ of a finite set.
 
 <article>
     <header>
-      <h3>A theorem on trees</h3>
+      <h3>Application: a theorem on trees</h3>
     </header>
     <p>Cayley, Arthur. “A theorem on trees.” Quart. J. Math. 23 (1889): 376-378.
 
@@ -147,11 +148,23 @@ of a finite set.
 
 <article>
     <header>
-      <h3>An application of species to functional programming</h3>
+      <h3>Application: species in functional programming</h3>
     </header>
     <p>One of the many ways of formally describing a programming language is via denotational semantics, in which a term $T$ of type $\tau$ is represented by a mathematical object $\llbracket T \rrbracket \in \llbracket\tau\rrbracket$ (its denotation), where $\llbracket\tau\rrbracket$ is a domain, a certain kind of structured set. Terms of type $\sigma\to\tau$ are then interpreted as suitable functions $\llbracket\sigma\rrbracket\to\llbracket\tau\rrbracket$ between domains.1...</p>
     <footer>
       <a href="/species/lectures/7-species-in-fp.html">Read more...</a>
+    </footer>
+  </article>
+
+<article>
+    <header>
+      <h3>Generalization: species-like structures</h3>
+    </header>
+    <p>There is a vast array of generalizations of the concept of species, that we now survey. Most of the theory developed so far applies to these general contexts as well, with due care about details (for example, it is not very easy to define the substitution product for colored species).
+
+</p>
+    <footer>
+      <a href="/species/lectures/8-species-like-categories.html">Read more...</a>
     </footer>
   </article>
 

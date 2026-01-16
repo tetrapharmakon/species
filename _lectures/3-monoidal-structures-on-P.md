@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Monoidal Structures on P
+title: "Multiplication: Monoidal Structures on P"
 latex: katex
 katex:
   macros:
@@ -79,11 +79,11 @@ where the sum is indexed over all tuples $p,q$ such that $p+q=n$. It can be show
 
 The last and more important monoidal structure with which the category of species is endowed is called the *substitution* monoidal structure, and its definition resembles the one given for $[{\bf Fin},{\bf Set}]$ in [lecture 1](1-finset-and-its-up.html).
 
-On generating series, this operation should correspond to *functional substitution*: the operation that given two formal power series $f = \sum a_n t^n,g = \sum b_m t^m \in K\llbracket t\rrbracket$, defines the series $f[g](t)$ as the one obtained by formally unwinding the expression
+On generating series, this operation should correspond to *functional substitution*: the operation that given two formal power series $f = \sum a_n t^n,g = \sum b_m t^m \in K\llbracket t\rrbracket$, defines the series $(f\circ g)(t)$ as the one obtained by formally unwinding the expression
 
 $$ a_0 + a_1 g(t) + a_2 (g(t) \cdot g(t)) + \dots $$
 
-(*Exercise*. Find an explicit expression for $[t^n](f[g])$ in terms of the $a_n, b_m$'s.)
+(*Exercise*. Find an explicit expression for $\[t^n\](f\circ g)$ in terms of the $a_n, b_m$'s.)
 
 But one must be careful, as this relation is true for generating species but *not* for type generating species. For example, this is true for the species of permutation $\cal S$, which is equal to the substitution of the species $\cal C$ of cycles into the species $E$ of sets. For the species $\cal S$, the type generating series is $\dots$, whereas for the substitution $E\triangleleft \cal C$ the type generating series is $\dots$.
 
@@ -106,7 +106,7 @@ The structure exists for a similar reason than the case of $\bf Fin$: the left K
 
 $$ F\triangleleft G := \lambda m.\int^n Fn \times G^{\ast n}(m) $$
 
-*Exercise.* Given two formal power series $f,g \in K\llbracket t\rrbracket$, find an explicit formula for the coefficient $c_n$ of degree $n$ in the series $f[g](t)$. (Is it possible to "decategorify" the above expression for $F\triangleleft G$, given that if $f,g$ are the generating series of $F,G$ respectively, then $c_n$ is the cardinality of $F\triangleleft G$?)
+*Exercise.* Given two formal power series $f,g \in K\llbracket t\rrbracket$, find an explicit formula for the coefficient $c_n$ of degree $n$ in the series $f\circ g(t)$. (Is it possible to "decategorify" the above expression for $F\triangleleft G$, given that if $f,g$ are the generating series of $F,G$ respectively, then $c_n$ is the cardinality of $F\triangleleft G$?)
 ### On the structure of $\bf Spc$ as a topos
 
 The following subsection is of no particular interest for us, but the category of species happens to be a (Grothendieck) topos, and I haven't been able to find any source investigating the consequences of this fact (or even describing this structure, at least to some extent). Thus I find a nice exercise in style to fill the gap.

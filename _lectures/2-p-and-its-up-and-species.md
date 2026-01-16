@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The category P and species
+title: "Introduction: The category P and species"
 latex: katex
 katex:
   macros:

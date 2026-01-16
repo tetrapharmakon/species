@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Species and analytic functors
+title: "Representation: species and analytic functors"
 latex: katex
 katex:
   macros:

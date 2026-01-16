@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Some explicit combinatorial identities
+title: "Computation: some explicit combinatorial identities"
 latex: katex
 katex:
   macros:

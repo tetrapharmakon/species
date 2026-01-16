@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Preliminaries; finite sets, convolution
+title: "Preliminaries: finite sets, convolution"
 latex: katex
 katex:
   macros:
