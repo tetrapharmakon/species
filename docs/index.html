@@ -10,14 +10,14 @@
 <meta property="og:locale" content="en_US">
 <meta name="description" content="A reading seminar on Joyal’s combinatorial species">
 <meta property="og:description" content="A reading seminar on Joyal’s combinatorial species">
-<link rel="canonical" href="/species/">
-<meta property="og:url" content="/species/">
+<link rel="canonical" href="http://localhost:4000/species/">
+<meta property="og:url" content="http://localhost:4000/species/">
 <meta property="og:site_name" content="Combinatorial species in TTU">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="A course on combinatorial species">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"A reading seminar on Joyal’s combinatorial species","headline":"A course on combinatorial species","name":"Combinatorial species in TTU","url":"/species/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"A reading seminar on Joyal’s combinatorial species","headline":"A course on combinatorial species","name":"Combinatorial species in TTU","url":"http://localhost:4000/species/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,7 +65,95 @@
 
 <p>This website is the logbook of a reading seminar that I would like to start at <a href="https://compose.ioc.ee">taltech</a> during Fall 2021. Its focus is not on rigor or completeness. Its style is idiosyncratic. Its purpose is to collect pointers to the -quite vast- literature on species (while tickling my nitpickery). My hope is not to drop the project midway (hysterical-laughter.mp3).</p>
 
-<p>Let’s try to rehaul this, four years after.</p>
+<article>
+    <header>
+      <h3>Motivations; the tension between algebraic and bijective proofs</h3>
+    </header>
+    <p>In the words of R. Stanley, the basic problem of enumerative combinatorics is that of counting the number of elements
+of a finite set.
+</p>
+    <footer>
+      <a href="/species/lectures/0-motivations.html">Read more...</a>
+    </footer>
+  </article>
+
+<article>
+    <header>
+      <h3>Preliminaries; finite sets, convolution</h3>
+    </header>
+    <p>The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$.
+
+</p>
+    <footer>
+      <a href="/species/lectures/1-finset-and-its-up.html">Read more...</a>
+    </footer>
+  </article>
+
+<article>
+    <header>
+      <h3>The category P and species</h3>
+    </header>
+    <p>The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: since a groupoid is a self-dual category, there is not much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second...</p>
+    <footer>
+      <a href="/species/lectures/2-p-and-its-up-and-species.html">Read more...</a>
+    </footer>
+  </article>
+
+<article>
+    <header>
+      <h3>Monoidal Structures on P</h3>
+    </header>
+    <p>A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.
+
+</p>
+    <footer>
+      <a href="/species/lectures/3-monoidal-structures-on-P.html">Read more...</a>
+    </footer>
+  </article>
+
+<article>
+    <header>
+      <h3>Some explicit combinatorial identities</h3>
+    </header>
+    <p>We have seen that to a combinatorial species we can associate at least two important invariants “quantities”, i.e. two formal power series from which we can deduce properties of the species. If $|X_n|$ denotes the cardinality of a set, and $F : {\bf P} \to {\bf Set}$ is a combinatorial species,
+
+</p>
+    <footer>
+      <a href="/species/lectures/4-computations.html">Read more...</a>
+    </footer>
+  </article>
+
+<article>
+    <header>
+      <h3>Species and analytic functors</h3>
+    </header>
+    <p>This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$ and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a “Taylor expansion”. Such functors are called analytic, and they can be characterised intrinsically as the finitary endofunctors...</p>
+    <footer>
+      <a href="/species/lectures/5-species-and-analytic-functors-wide-pullbacks.html">Read more...</a>
+    </footer>
+  </article>
+
+<article>
+    <header>
+      <h3>A theorem on trees</h3>
+    </header>
+    <p>Cayley, Arthur. “A theorem on trees.” Quart. J. Math. 23 (1889): 376-378.
+
+</p>
+    <footer>
+      <a href="/species/lectures/6.-cayleys-theorem-from-joyal-paper.html">Read more...</a>
+    </footer>
+  </article>
+
+<article>
+    <header>
+      <h3>An application of species to functional programming</h3>
+    </header>
+    <p>One of the many ways of formally describing a programming language is via denotational semantics, in which a term $T$ of type $\tau$ is represented by a mathematical object $\llbracket T \rrbracket \in \llbracket\tau\rrbracket$ (its denotation), where $\llbracket\tau\rrbracket$ is a domain, a certain kind of structured set. Terms of type $\sigma\to\tau$ are then interpreted as suitable functions $\llbracket\sigma\rrbracket\to\llbracket\tau\rrbracket$ between domains.1...</p>
+    <footer>
+      <a href="/species/lectures/7-species-in-fp.html">Read more...</a>
+    </footer>
+  </article>
 
 
 </article>
