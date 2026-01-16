@@ -188,7 +188,7 @@ codomain of species in the category of *$R$-weighted sets*.
 
 ### Weighted species
 
-Fix a commutative, unitary ring $R$. The category of*{*eighted sets} is defined as the following comma category construction:
+Fix a commutative, unitary ring $R$. The category of *weighted sets* is defined as the following comma category construction:
 
 {% tex classes: [antex, display] %}
 \setlength{\fboxrule}{1sp}
@@ -201,8 +201,17 @@ Fix a commutative, unitary ring $R$. The category of*{*eighted sets} is defined 
 
   where $UR$ is the underlying set of the ring $R$. Explicitly, $\mathbf{wSet}$ has 
 
-  - objects... 
-  - arrows... 
+  - objects the pairs $(X,w : X \to R)$, where $X$ is a set and $w$ a weight function, associating to each element $x\in X$ a *weight* $w(x)\in R$;
+  - arrows $f : (X,w) \to (Y,u')$ the functions $f : X \to Y$ that are weight preserving, i.e. $w^\prime\circ f = w$: they are the $f$ that make this triangle commutative.
+
+  {% tex classes: [antex, display] %}
+  \setlength{\fboxrule}{1sp}
+  \setlength{\fboxsep}{0sp}
+  \fbox{\xymatrix{
+        X \ar[rr]^-f \ar[dr]_w && Y \ar[dl]^-{w'}\\ 
+        &R&
+  }}
+  {% endtex %}
 
 One can define a canonical functor $\zeta : \mathbf{Set} \to\mathbf{wSet}_{/R}$ sending a set $A$ to its *zero-weighting* $(X,w_0 : X \to R)$ with $w_0$ constant at $0_R$; observe that $\zeta$ has a left adjoint: it is defined sending a set $A$ to the trivial weighted set $w : A \to R$ which has the constant zero function as weight. 
 
@@ -215,6 +224,59 @@ As an immediate consequence, $\zeta$ preserve all colimits that exist in $\mathb
 **Remark.** In fact, $\mathbf{wSet}_{/R}$ is locally finitely presentable, by Proposition 1.57 in [LPAC].
 
 Does $\zeta$ have a right adjoint?
+
+Observe also that a slightly less rigid category can be obtained replacing the comma construction above with the analog *lax* comma (or slice):
+
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+      \mathbf{wSet}_{/\!\!/R} \ar[d]\ar[r] & 1 \ar[d]^{UR}\\ 
+      \mathbf{Set} \ar@{=}[r] & \ultwocell<\omit>{lax\kern1em}\mathbf{Set}
+}}
+{% endtex %}
+
+provided $R$ has some preorder structure defined over it: there, arrows will become inequalities filling the triangle 
+
+  {% tex classes: [antex, display] %}
+  \setlength{\fboxrule}{1sp}
+  \setlength{\fboxsep}{0sp}
+  \fbox{\xymatrix{
+        X \ar[rr]^-f \ar[dr]_w &\ar@{}[d]|(.4)\ge& Y \ar[dl]^-{w'}\\ 
+        &R&
+  }}
+  {% endtex %}
+
+This can't of course be done in a canonical way uniformly for all rings, so one has to restrict to a subclass of $\bf Ring$.
+
+Let $R$ be a commutative unital ring.
+
+**Definition.** The ring $R$ is called *formally real* if $-1$ cannot be written as a finite sum of squares in $R$, that is,
+$$
+-1 \notin \left\{ \sum_{i=1}^n r_i^2 \mid r_i \in R,\ n \in \mathbb{N} \right\}.
+$$
+
+**Definition.** The *cone of sums of squares* of $R$ is the subset
+$$
+\Sigma R^2 := \left\{ \sum_{i=1}^n r_i^2 \;\middle|\; r_i \in R,\ n \in \mathbb{N} \right\} \subseteq R.
+$$
+
+The set $\Sigma R^2$ satisfies the following properties:
+- $\Sigma R^2 + \Sigma R^2 \subseteq \Sigma R^2$,
+- $\Sigma R^2 \cdot \Sigma R^2 \subseteq \Sigma R^2$,
+- $1 \in \Sigma R^2$,
+- $\Sigma R^2 \cap (-\Sigma R^2) = \{0\}$ if and only if $R$ is formally real.
+
+**Definition.** Define a binary relation $\preceq$ on $R$ by
+$$
+a \preceq b \quad \Longleftrightarrow \quad b - a \in \Sigma R^2.
+$$
+
+**Proposition.** The relation $\preceq$ is a preorder on $R$ (i.e. reflexive and transitive) that is compatible with addition and multiplication. In general, $\preceq$ need not be antisymmetric.
+
+Thus, for a formally real ring $R$, the cone of sums of squares induces a canonical preorder reflecting the ring’s algebraic notion of positivity, even though it does not necessarily define a partial order.
+
+
 
 ### Moebius species
 ...

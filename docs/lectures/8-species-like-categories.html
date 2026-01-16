@@ -14,11 +14,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/8-species-like-categories.html">
 <meta property="og:site_name" content="Combinatorial species in TTU">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2026-01-16T17:34:24+02:00">
+<meta property="article:published_time" content="2026-01-16T17:50:08+02:00">
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="Generalization: species-like structures">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-16T17:34:24+02:00","datePublished":"2026-01-16T17:34:24+02:00","description":"There is a vast array of generalizations of the concept of species, that we now survey. Most of the theory developed so far applies to these general contexts as well, with due care about details (for example, it is not very easy to define the substitution product for colored species).","headline":"Generalization: species-like structures","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/8-species-like-categories.html"},"url":"http://localhost:4000/species/lectures/8-species-like-categories.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-16T17:50:08+02:00","datePublished":"2026-01-16T17:50:08+02:00","description":"There is a vast array of generalizations of the concept of species, that we now survey. Most of the theory developed so far applies to these general contexts as well, with due care about details (for example, it is not very easy to define the substitution product for colored species).","headline":"Generalization: species-like structures","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/8-species-like-categories.html"},"url":"http://localhost:4000/species/lectures/8-species-like-categories.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -200,7 +200,7 @@ codomain of species in the category of <em>$R$-weighted sets</em>.</p>
 
 <h3 id="weighted-species">Weighted species</h3>
 
-<p>Fix a commutative, unitary ring $R$. The category of<em>{</em>eighted sets} is defined as the following comma category construction:</p>
+<p>Fix a commutative, unitary ring $R$. The category of <em>weighted sets</em> is defined as the following comma category construction:</p>
 
 <p><span class="antex display"><img src="/species/antex/5a6dbaece40215d91edbc53ac308bb2a.svg" style="margin: 0.0ex 0.0ex -10.252ex 0.0ex;
 height: 11.961ex;
@@ -209,9 +209,13 @@ width: 21.93ex;"></span></p>
 <p>where $UR$ is the underlying set of the ring $R$. Explicitly, $\mathbf{wSet}$ has</p>
 
 <ul>
-  <li>objects…</li>
-  <li>arrows…</li>
+  <li>objects the pairs $(X,w : X \to R)$, where $X$ is a set and $w$ a weight function, associating to each element $x\in X$ a <em>weight</em> $w(x)\in R$;</li>
+  <li>arrows $f : (X,w) \to (Y,u’)$ the functions $f : X \to Y$ that are weight preserving, i.e. $w^\prime\circ f = w$: they are the $f$ that make this triangle commutative.</li>
 </ul>
+
+<p><span class="antex display"><img src="/species/antex/675cf5c3950547cc4b8cf34ca7b77abb.svg" style="margin: 0.0ex 0.0ex -9.832ex 0.0ex;
+height: 12.671ex;
+width: 21.082ex;"></span></p>
 
 <p>One can define a canonical functor $\zeta : \mathbf{Set} \to\mathbf{wSet}_{/R}$ sending a set $A$ to its <em>zero-weighting</em> $(X,w_0 : X \to R)$ with $w_0$ constant at $0_R$; observe that $\zeta$ has a left adjoint: it is defined sending a set $A$ to the trivial weighted set $w : A \to R$ which has the constant zero function as weight.</p>
 
@@ -226,6 +230,43 @@ $$</div>
 <p><strong>Remark.</strong> In fact, $\mathbf{wSet}_{/R}$ is locally finitely presentable, by Proposition 1.57 in [LPAC].</p>
 
 <p>Does $\zeta$ have a right adjoint?</p>
+
+<p>Observe also that a slightly less rigid category can be obtained replacing the comma construction above with the analog <em>lax</em> comma (or slice):</p>
+
+<p><span class="antex display"><img src="/species/antex/06d60c8600bd886f8ee05c6690f2b624.svg" style="margin: 0.0ex 0.0ex -10.252ex 0.0ex;
+height: 11.961ex;
+width: 22.247ex;"></span></p>
+
+<p>provided $R$ has some preorder structure defined over it: there, arrows will become inequalities filling the triangle</p>
+
+<p><span class="antex display"><img src="/species/antex/3feed9878c71f663bb5a3d9875f9c8c0.svg" style="margin: 0.0ex 0.0ex -9.832ex 0.0ex;
+height: 12.671ex;
+width: 21.082ex;"></span></p>
+
+<p>This can’t of course be done in a canonical way uniformly for all rings, so one has to restrict to a subclass of $\bf Ring$.</p>
+
+<p>Let $R$ be a commutative unital ring.</p>
+
+<p><strong>Definition.</strong> The ring $R$ is called <em>formally real</em> if $-1$ cannot be written as a finite sum of squares in $R$, that is,
+<span class="kdmath">$-1 \notin \left\{ \sum_{i=1}^n r_i^2 \mid r_i \in R,\ n \in \mathbb{N} \right\}.$</span></p>
+
+<p><strong>Definition.</strong> The <em>cone of sums of squares</em> of $R$ is the subset
+<span class="kdmath">$\Sigma R^2 := \left\{ \sum_{i=1}^n r_i^2 \;\middle|\; r_i \in R,\ n \in \mathbb{N} \right\} \subseteq R.$</span></p>
+
+<p>The set $\Sigma R^2$ satisfies the following properties:</p>
+<ul>
+  <li>$\Sigma R^2 + \Sigma R^2 \subseteq \Sigma R^2$,</li>
+  <li>$\Sigma R^2 \cdot \Sigma R^2 \subseteq \Sigma R^2$,</li>
+  <li>$1 \in \Sigma R^2$,</li>
+  <li>$\Sigma R^2 \cap (-\Sigma R^2) = {0}$ if and only if $R$ is formally real.</li>
+</ul>
+
+<p><strong>Definition.</strong> Define a binary relation $\preceq$ on $R$ by
+<span class="kdmath">$a \preceq b \quad \Longleftrightarrow \quad b - a \in \Sigma R^2.$</span></p>
+
+<p><strong>Proposition.</strong> The relation $\preceq$ is a preorder on $R$ (i.e. reflexive and transitive) that is compatible with addition and multiplication. In general, $\preceq$ need not be antisymmetric.</p>
+
+<p>Thus, for a formally real ring $R$, the cone of sums of squares induces a canonical preorder reflecting the ring’s algebraic notion of positivity, even though it does not necessarily define a partial order.</p>
 
 <h3 id="moebius-species">Moebius species</h3>
 <p>…</p>
