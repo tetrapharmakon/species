@@ -38,7 +38,7 @@ $$
 
 the claim now follows from comparing coefficients.
 
-There is however another way to argue: the *number* $\binom pk$ is nothing but the cardinality of the *set* of injections $N \hookrightarrow P$ if $N$ is a $n$-set and $P$ is a $P$-set. Thus, the question we have is: why is the cardinality of the set of injections $N \hookrightarrow P+Q$ equal to the product of the cardinalities of the sets $\text{Inj}(K,P)$ and $\text{Inj}(N\setminus K,Q)$? In the category $\bf Set$ coproducts and monomorphisms are pullback-stable, so to determine an injection $f:N\hookrightarrow P+Q$ it is sufficient to determine the sets $I,J$ in the pullbacks 
+There is however another way to argue, the **bijective** way: the *number* $\binom pk$ is nothing but the cardinality of the *set* of injections $N \hookrightarrow P$ if $N$ is a $n$-set and $P$ is a $P$-set. Thus, the question we have is: why is the cardinality of the set of injections $N \hookrightarrow P+Q$ equal to the product of the cardinalities of the sets $\text{Inj}(K,P)$ and $\text{Inj}(N\setminus K,Q)$? In the category $\bf Set$ coproducts and monomorphisms are pullback-stable, so to determine an injection $f:N\hookrightarrow P+Q$ it is sufficient to determine the sets $I,J$ in the pullbacks 
 
 {% tex classes: [antex, display] %}
 \setlength{\fboxrule}{1sp}
