@@ -18,7 +18,7 @@ antex:
 
 One of the many ways of formally describing a programming language is via *denotational semantics*, in which a term $T$ of type $\tau$ is represented by a mathematical object $\llbracket T \rrbracket \in \llbracket\tau\rrbracket$ (its *denotation*), where $\llbracket\tau\rrbracket$ is a *domain*, a certain kind of structured set. Terms of type $\sigma\to\tau$ are then interpreted as suitable functions $\llbracket\sigma\rrbracket\to\llbracket\tau\rrbracket$ between domains.[^1]
 
-(Thanks to [dpl0a]() for having written this introduction replacing my lazy fat fingers.)
+(Thanks to [dpl0a](https://dpl0a.github.io) for having written this introduction replacing my lazy fat fingers.)
 
 In this sense, a certain subcategory of the category of analytic functors (the category of normal functors) is a denotational semantics for a certain flavour of $\lambda$-calculus.
 

@@ -32,7 +32,7 @@ Evidently, the "category of species" studied so far is the category $(1,{\bf Set
 
 This definition is very pliable: the formal properties of $(S,{\cal V})\text{-}\mathbf{Spc}$ are not much dependent on $\cal V$, which can be chosen to be the category $\bf Top$ of topological spaces, or vector spaces, or simplicial sets,... but also the category $(T,{\cal W})\text{-}\mathbf{Spc}$ for a different pair $(T,\cal W)$ (what happens in that case)?
 
-Leaving the base of enrichment $\cal V$ equal to $\bf Set$ and raising the cardinality of $S$ one obtains the so-called *multicolored* species (the terminology dates back to homotopy theory, where the set $S$ is regarded as a set of "colours" for an "operad" -we will get there). Observe that since ${\bf B}[-]$ is a club in the sense of [Kelly](), among many other properties that this doctrine has there is the fact that 
+Leaving the base of enrichment $\cal V$ equal to $\bf Set$ and raising the cardinality of $S$ one obtains the so-called *multicolored* species (the terminology dates back to homotopy theory, where the set $S$ is regarded as a set of "colours" for an "operad" -we will get there). Observe that since ${\bf B}[-]$ is a club in the sense of [Kelly](https://ncatlab.org/nlab/show/club), among many other properties that this doctrine has there is the fact that 
 
 $$ {\bf B}[S] \cong {\bf B}[1]\wr S \cong \prod_{s\in S}{\bf B}[1] $$
 
@@ -143,7 +143,7 @@ Let's give a more intrinsic presentation for it.
 Let $S_n$ be the symmetric group of an $n$-set $[n]$. Let
 $r : BS_n \to \mathbf{Set}$ be the (functor associated to the) left regular
 representation of $S_n$, i.e. the action $S_n \to S_n$ given by left
-multiplication; denote $[S_n/S_n]$ the associated [action groupoid](), i.e. the strict pullback
+multiplication; denote $[S_n/S_n]$ the associated [action groupoid](https://ncatlab.org/nlab/show/action+groupoid), i.e. the strict pullback
 
 
 {% tex classes: [antex, display] %}

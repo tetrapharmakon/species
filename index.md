@@ -24,7 +24,9 @@ After that, entire books have been written on the topic: among these, we will of
 
 (Yes, I will refer them as "red" and "big" in the following).
 
-This website is the logbook of a reading seminar running at [taltech](https://compose.ioc.ee). Its focus is not on rigor or completeness. Its style is idiosyncratic. Its purpose is to collect pointers to the -quite vast- literature on species (while tickling my nitpickery).
+This website is the logbook of a reading seminar running at [taltech](https://compose.ioc.ee). Its focus is not on rigor or completeness. Its style is idiosyncratic. Its purpose is to collect pointers to the -quite vast- literature on species (while tickling my nitpickery). I started drafting this roadmap during the Fall semester of 2021; since then, taltech became an even bigger hub for young category theorists, so time it ripe to popularize the beautiful, beautiful theory of species and operads!
+
+Feel free to [reach out](mailto:fosco.loregian@gmail.com) with questions or point out references that I might have missed. 
 
 {% for lecture in site.lectures %}
   <article>
