@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Introduction: The category P and species"
+title: "Introduction: The category B and species"
 latex: katex
 katex:
   macros:
@@ -19,38 +19,38 @@ antex:
 ---
 
 
-The fundamental object of study of the theory of combinatorial species is the category $\bf P$ of finite sets and bijections, and its presheaf category $[{\bf P}^\text{op}, {\bf Set}]$. (Note: since a groupoid is a self-dual category, there is not much difference between $[{\bf P}^\text{op}, {\bf Set}]$ and $[{\bf P}, {\bf Set}]$, but we will usually speak about the second category.)
+The fundamental object of study of the theory of combinatorial species is the category $\bf B$ of finite sets and bijections, and its presheaf category $[{\bf B}^\text{op}, {\bf Set}]$. (Note: since a groupoid is a self-dual category, there is not much difference between $[{\bf B}^\text{op}, {\bf Set}]$ and $[{\bf B}, {\bf Set}]$, but we will usually speak about the second category.)
 
 ### The groupoid of natural numbers
 
 <div id="defi-1"></div>
-**Definition** (The category $\bf P$). The category $\bf P$, also called the *groupoid of natural numbers*, has
+**Definition** (The category $\bf B$). The category $\bf B$, also called the *groupoid of natural numbers*, has
 
 1. Objects the finite sets $A,B,\dots$;
 2. Hom sets $\hom(A,B)$ the set of bijective functions $\sigma : A \to B$ if $\text{card}(A) = \text{card}(B)$, and the empty set otherwise.
 
-A skeleton of $\bf P$ consists of the category having objects the natural numbers $[n]=\{1,\dots, n\}$ (with the convention that $[0]$ is empty), and hom-sets $\hom(n,n)$ the symmetric groups $S_n$ for each $n\ge 0$.
+A skeleton of $\bf B$ consists of the category having objects the natural numbers $[n]=\{1,\dots, n\}$ (with the convention that $[0]$ is empty), and hom-sets $\hom(n,n)$ the symmetric groups $S_n$ for each $n\ge 0$.
 
 <div id="label-1"></div>
-**Remark** (On the structure of $\bf P$). Every groupoid splits as a disjoint union of connected groupoids (each of which is equivalent to a group); the (skeleton of the) category $\bf P$ splits as a disjoint union of the symmetric groups $S_n$, with $n\ge 0$.
+**Remark** (On the structure of $\bf B$). Every groupoid splits as a disjoint union of connected groupoids (each of which is equivalent to a group); the (skeleton of the) category $\bf B$ splits as a disjoint union of the symmetric groups $S_n$, with $n\ge 0$.
 
-So the *canonical decomposition* of $\bf P$ is the equivalence of categories
+So the *canonical decomposition* of $\bf B$ is the equivalence of categories
 
-$$ {\bf P} \cong \coprod_{n=0}^\infty S_n. $$
+$$ {\bf B} \cong \coprod_{n=0}^\infty S_n. $$
 
-An immediate corollary of this decomposition is that a functor $X : {\bf P} \to {\bf Set}$ is uniquely determined by a "symmetric sequence":
+An immediate corollary of this decomposition is that a functor $X : {\bf B} \to {\bf Set}$ is uniquely determined by a "symmetric sequence":
 <!-- of sets $(X_n \mid n\ge 0)$ each of which has a left action of the symmetric group on $n$ elements. -->
 
 <div id="label-2"></div>
-**Corollary.** A functor $X : {\bf P} \to {\bf Set}$ is completely determined by the following data:
+**Corollary.** A functor $X : {\bf B} \to {\bf Set}$ is completely determined by the following data:
 
 1. A sequence of sets $(X_n \mid n\ge 0)$;
 2. A sequence of functions $(a^X_n : S_n \times X_n \to X_n)$, each of which is a left action of $S_n$ on the set $X_n$.
 
-*Proof.* It is evident that the actions $a^X_n$ are precisely the action on morphisms of a functor $X_\bullet : {\bf P} \to {\bf Set}$ (vice versa, every hom-set ${\bf P}(n,m)$ is empty for $n\neq m$, so the datum of the actions is enough to "glue" a functor $X$).
+*Proof.* It is evident that the actions $a^X_n$ are precisely the action on morphisms of a functor $X_\bullet : {\bf B} \to {\bf Set}$ (vice versa, every hom-set ${\bf B}(n,m)$ is empty for $n\neq m$, so the datum of the actions is enough to "glue" a functor $X$).
 
 <div id="defi-2"></div>
-**Definition** (Category of species). A functor $X_\bullet : {\bf P} \to {\bf Set}$ is called a *combinatorial species*. The *category* $\bf Spc$ of combinatorial species has objects the functors $X_\bullet : {\bf P} \to {\bf Set}$, and morphisms the natural transformations $\alpha : X_\bullet \Rightarrow Y_\bullet$.
+**Definition** (Category of species). A functor $X_\bullet : {\bf B} \to {\bf Set}$ is called a *combinatorial species*. The *category* $\bf Spc$ of combinatorial species has objects the functors $X_\bullet : {\bf B} \to {\bf Set}$, and morphisms the natural transformations $\alpha : X_\bullet \Rightarrow Y_\bullet$.
 
 So, a combinatorial species is entirely described by a sequence of sets $(X_n\mid n\ge 0)$, each of which has an action of the symmetric group on $n$ letters.
 
@@ -65,19 +65,19 @@ We will soon substantiate this idea showing that most of the operations that mak
 
 The reader shall however be warned that, while a quite intuitive invariant of the combinatorial species $X_\bullet$, its generating series is also a quite coarse one. For example, the correspondence that sends $X_\bullet$ into $g_X$ is not injective: there is plenty of species for which $\forall n.\|X_n\| = \|Y_n\|$ (and thus $g_X=g_Y$) without them being isomorphic. (For example, the species $S$ of permutations and the species $L$ of linear orders: in that case, $\forall n.\|S_n\| = \|L_n\| = n!$, and $g_S=g_L=\sum_{n=0}^\infty t^n = \frac1{1-t}$.)
 
-*Remark.* (A remark on the generality of this definition). Originally, Joyal defined a "finitary species" (*espèce finitaire*) as an endofunctor of $\bf P$; the red book also concentrates on species having finite values. These two definitions are equivalent, because a functor ${\bf P} \to {\bf Fin}$ factors along the inclusion ${\bf P} \hookrightarrow {\bf Fin}$; but the category of all $\bf Set$-valued functors ${\bf P} \to {\bf Set}$ has way nicer categorical properties.
+*Remark.* (A remark on the generality of this definition). Originally, Joyal defined a "finitary species" (*espèce finitaire*) as an endofunctor of $\bf B$; the red book also concentrates on species having finite values. These two definitions are equivalent, because a functor ${\bf B} \to {\bf Fin}$ factors along the inclusion ${\bf B} \hookrightarrow {\bf Fin}$; but the category of all $\bf Set$-valued functors ${\bf B} \to {\bf Set}$ has way nicer categorical properties.
 
-The category $\bf P$ and $\bf Spc$ have two important universal properties:
+The category $\bf B$ and $\bf Spc$ have two important universal properties:
 
 <div id="theorem-1"></div>
-**Theorem.** The category $\bf P$ is the free symmetric monoidal category on a singleton.
+**Theorem.** The category $\bf B$ is the free symmetric monoidal category on a singleton.
 
 *Proof.* Proving this claim amounts to show that given a symmetric monoidal category $\cal A$ there is an equivalence of categories between
 
 1. the category $\cal A$, and
-2. The category of strong monoidal functors $F : {\bf P} \to {\cal A}$.
+2. The category of strong monoidal functors $F : {\bf B} \to {\cal A}$.
 
-In simple terms, a strong monoidal functor $F$ as above is determined by its value on the point. This is evident in light of the definition of the "sum and shuffle" monoidal product: the generic object of $\bf P$ is $[n] = [1] \oplus \dots \oplus [1]$, so that a strong monoidal functor $F$ must send $[n]$ to $F[1]^{\otimes n}$.
+In simple terms, a strong monoidal functor $F$ as above is determined by its value on the point. This is evident in light of the definition of the "sum and shuffle" monoidal product: the generic object of $\bf B$ is $[n] = [1] \oplus \dots \oplus [1]$, so that a strong monoidal functor $F$ must send $[n]$ to $F[1]^{\otimes n}$.
 
 Similarly, with the additional request of cocompleteness, one proves the following.
 
@@ -202,10 +202,10 @@ One can also cook up more abstract examples of combinatorial species:
 
 <div id="label-9"></div>
 **Example** (The species *centered* in $n\in\mathbb N$).
-Let $n\ge 1$ be a natural number. The species $c_n : {\bf P} \to {\bf Set}$, "concentrated" or "centered" in $n$ is defined as the functor sending $[n] \in \bf P$ to a singleton set $\bullet$, and every other set to the empty set. Clearly, $c_1 = U$ above, and $c_n$ can legitimately be called the species of *$n$-element sets*. More generally we can talk about the species $c_n^E$, concentrated in $n$, and such that $c_n^E([n]) = E$, and empty otherwise.
+Let $n\ge 1$ be a natural number. The species $c_n : {\bf B} \to {\bf Set}$, "concentrated" or "centered" in $n$ is defined as the functor sending $[n] \in \bf B$ to a singleton set $\bullet$, and every other set to the empty set. Clearly, $c_1 = U$ above, and $c_n$ can legitimately be called the species of *$n$-element sets*. More generally we can talk about the species $c_n^E$, concentrated in $n$, and such that $c_n^E([n]) = E$, and empty otherwise.
 
 <div id="label-10"></div>
-**Example** (The *representable* species as a particular case). Each representable functor $y[n] : {\bf P} \to \bf Set$ is a combinatorial species acting as follows: $y[n][k] := {\bf P}(n,k)$ is empty if $n\ne k$, so the species is centered in $n$, and $y[n][n] = S_n$ is the (underlying set of the) symmetric group on $n$ elements. The action on morphisms is the same as in the species of permutations, and in fact the species of permutation arises as the infinite sum
+**Example** (The *representable* species as a particular case). Each representable functor $y[n] : {\bf B} \to \bf Set$ is a combinatorial species acting as follows: $y[n][k] := {\bf B}(n,k)$ is empty if $n\ne k$, so the species is centered in $n$, and $y[n][n] = S_n$ is the (underlying set of the) symmetric group on $n$ elements. The action on morphisms is the same as in the species of permutations, and in fact the species of permutation arises as the infinite sum
 
 $$ S = y[1] + y[2] + y[3] + \dots $$
 
@@ -224,17 +224,17 @@ where the quotient by $n!$ ihas to be interpreted as the quotient of the numerat
 As it is well-known, in the ring of formal power series $K\llbracket t\rrbracket$ ($K$ any commutative unital ring), one can define a binary relation $\sim_n$ of *contact of order n* between elements $f,g$: two series have contact of order $n$ if they are congruent modulo $t^n$ (more formally: $f\mathrel{\sim_n}g$ if the difference $f-g$ is in the kernel of the canonical map $K\llbracket t\rrbracket \to K[t]/(t^n)$ from the inverse limit).
 
 <div id="defi-3"></div>
-**Definition.** For every $n\ge 0$, we denote $\iota_n : {\bf P}_{\le n} \hookrightarrow {\bf P}$ the inclusion of the full subcategory of $\bf P$ on the objects $\{[0],[1],\dots, [n]\}$.
+**Definition.** For every $n\ge 0$, we denote $\iota_n : {\bf B}_{\le n} \hookrightarrow {\bf B}$ the inclusion of the full subcategory of $\bf B$ on the objects $\{[0],[1],\dots, [n]\}$.
 
 Precomposition with $\iota_n$ determines a *truncation* functor
 
-$$ \iota^*_n := \tau_n : {\bf Spc} = [{\bf P}, {\bf Set}]\to [{\bf P}_{\le n}, {\bf Set}] $$
+$$ \iota^*_n := \tau_n : {\bf Spc} = [{\bf B}, {\bf Set}]\to [{\bf B}_{\le n}, {\bf Set}] $$
 
 and left and right Kan extensions along $\iota_n$ put $\tau_n$ in the middle of a triple of adjoint functors
 
 $$ l_n \dashv \tau_n \dashv r_n $$
 
-Formally, $l_n$ (resp., $r_n$) is the left (resp., right) Kan extension of a functor $H \in [{\bf P}\_{\le n}, {\bf Set}]$ along the functor
+Formally, $l_n$ (resp., $r_n$) is the left (resp., right) Kan extension of a functor $H \in [{\bf B}\_{\le n}, {\bf Set}]$ along the functor
 $\iota_{\le n}$; as an exercise, prove that these functors can be described explicitly as
 
 $$ l_nF : m \mapsto \begin{cases} Fm & m \le n \\ \varnothing & m > n \end{cases} \qquad \qquad r_nF : m \mapsto \begin{cases} Fm & m \le n \\ * & m > n \end{cases} $$

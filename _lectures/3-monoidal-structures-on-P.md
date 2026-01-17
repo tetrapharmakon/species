@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Multiplication: Monoidal Structures on P"
+title: "Multiplication: Monoidal Structures on B"
 latex: katex
 katex:
   macros:
@@ -20,12 +20,12 @@ antex:
 
 A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study ("combinatorial objects", broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.
 
-### Monoidal structure on $\bf P$ and $\bf Spc$
+### Monoidal structure on $\bf B$ and $\bf Spc$
 
-In particular, there are three distinct *monoidal structures* on the category of species, all of which have a quite natural combinatorial interpretation. One of them is the most important for us because it is induced on $\bf Spc$ by a natural choice of a monoidal product on $\bf P$. The monoidal structure on $\bf P$ is essentially determined by the disjoint sum of finite set: in a skeleton for $\bf P$, $[n]\cup [m] = [n+m]$. This operation induces a *convolution* operation on $\bf Spc$.
+In particular, there are three distinct *monoidal structures* on the category of species, all of which have a quite natural combinatorial interpretation. One of them is the most important for us because it is induced on $\bf Spc$ by a natural choice of a monoidal product on $\bf B$. The monoidal structure on $\bf B$ is essentially determined by the disjoint sum of finite set: in a skeleton for $\bf B$, $[n]\cup [m] = [n+m]$. This operation induces a *convolution* operation on $\bf Spc$.
 
 <div id="defi-1"></div>
-**Definition** (The "sum and shuffle" product on $\bf P$). The "sum and shuffle" monoidal structure $\oplus$ on $\bf P$ is the bifunctor $\\_\oplus\_ : {\bf P} \times {\bf P} \to \bf P$ defined as follows:
+**Definition** (The "sum and shuffle" product on $\bf B$). The "sum and shuffle" monoidal structure $\oplus$ on $\bf B$ is the bifunctor $\\_\oplus\_ : {\bf B} \times {\bf B} \to \bf B$ defined as follows:
 
 - on objects, $[n]\oplus [m]$ is just the set $[n+m]$;
 - on morphisms, let's say $\sigma : [n] \to [n]$ and $\eta : [m] \to [m]$ are two bijections, the bijection $\sigma\oplus \eta$ is defined as a "shuffle permutation", namely
@@ -73,7 +73,7 @@ where $\alpha : X \times G \to X$ and $\beta : G \times Y \to Y$ are the actions
 
 $$ (X \cdot Y)_\bullet : [n] \mapsto \sum_{p+q=n} X[p] \otimes Y[q] $$
 
-where the sum is indexed over all tuples $p,q$ such that $p+q=n$. It can be shown that the Cauchy product $(X\cdot Y)_\bullet$ of two combinatorial species is the [Day convolution](https://ncatlab.org/nlab/show/Day+convolution) inherited by the "sum and shuffle" monoidal structure on $\bf P$.
+where the sum is indexed over all tuples $p,q$ such that $p+q=n$. It can be shown that the Cauchy product $(X\cdot Y)_\bullet$ of two combinatorial species is the [Day convolution](https://ncatlab.org/nlab/show/Day+convolution) inherited by the "sum and shuffle" monoidal structure on $\bf B$.
 
 (Exercise: how do you use the sum and shuffle product and the equivariant product to interpret the $\otimes$ sign?)
 
@@ -98,9 +98,9 @@ $$ [n] \mapsto M \triangleleft N := (\text{Lan}_J M \circ \text{Lan}_J N) \circ 
 <div id="defi-5"></div>
 **Definition** (The substitution monoidal structure). Given two combinatorial species we can define their substitution product as follows:
 
-$$ F \triangleleft G := \lambda m . \int^{n,k_1,\dots,k_n} F(n) \times Gk_1\times \dots \times Gk_n \times {\bf P}(m, k_1+\dots+k_n). $$
+$$ F \triangleleft G := \lambda m . \int^{n,k_1,\dots,k_n} F(n) \times Gk_1\times \dots \times Gk_n \times {\bf B}(m, k_1+\dots+k_n). $$
 
-The structure exists for a similar reason than the case of $\bf Fin$: the left Kan extension of a functor $X : {\bf P} \to {\bf Set}$ along the (nonfull) inclusion $j : {\bf P} \to {\bf Set}$ yields an equivalence between $\bf Spc$ and a monoidal subcategory of $[{\bf Set},{\bf Set}]$ (it is not immediate how to characterise it because in this case the inclusion functor $j : {\bf P} \to {\bf Set}$ is not full).
+The structure exists for a similar reason than the case of $\bf Fin$: the left Kan extension of a functor $X : {\bf B} \to {\bf Set}$ along the (nonfull) inclusion $j : {\bf B} \to {\bf Set}$ yields an equivalence between $\bf Spc$ and a monoidal subcategory of $[{\bf Set},{\bf Set}]$ (it is not immediate how to characterise it because in this case the inclusion functor $j : {\bf B} \to {\bf Set}$ is not full).
 
 *Exercise.* Given a combinatorial species $G$, define $G^{\ast 1}:=G$ and $G^{\ast (n+1)} := G \ast G^{\ast n}$. Find an explicit formula for the functor $G^{\ast n}$ using a suitable coend, and show that the substitution product admits the more concise formula
 
@@ -111,7 +111,7 @@ $$ F\triangleleft G := \lambda m.\int^n Fn \times G^{\ast n}(m) $$
 
 The following subsection is of no particular interest for us, but the category of species happens to be a (Grothendieck) topos, and I haven't been able to find any source investigating the consequences of this fact (or even describing this structure, at least to some extent). Thus I find a nice exercise in style to fill the gap.
 
-This said: on top of all of the structure mentioned above, the category of species, i.e. functors ${\bf P}^\text{op} \to {\bf Set}$ has very nice properties of a completely different kind; it is a *Grothendieck topos* (or shortly, just a *topos*).
+This said: on top of all of the structure mentioned above, the category of species, i.e. functors ${\bf B}^\text{op} \to {\bf Set}$ has very nice properties of a completely different kind; it is a *Grothendieck topos* (or shortly, just a *topos*).
 
 In short, a Grothendieck topos is a category $\cal E$ where "the usual kind of Mathematics can be enacted" (at the price of doing so *constructively*).
 
@@ -158,5 +158,5 @@ $$ \Omega : C\mapsto \text{Sub}_{\cal C}(yC) = \{R \hookrightarrow yC \} $$
 
 (in simple words: $C$ goes to the set of isomorphism classes of monics with codomain $yC$, the representable functor on $C$).
 
-1. Characterise $y(n)={\bf P}(n, -)$ in the case of species;
-2. Specialise the above definition to $\mathcal C = \bf P$: who is $\Omega$ in this case (remember that the map $R \to y(n)$ muts be a *natural transformation*, not just a collection of components: what constraint does this condition pose on $R$?)
+1. Characterise $y(n)={\bf B}(n, -)$ in the case of species;
+2. Specialise the above definition to $\mathcal C = \bf B$: who is $\Omega$ in this case (remember that the map $R \to y(n)$ muts be a *natural transformation*, not just a collection of components: what constraint does this condition pose on $R$?)

@@ -4,9 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Multiplication: Monoidal Structures on P | Combinatorial species in TTU</title>
+<title>Multiplication: Monoidal Structures on B | Combinatorial species in TTU</title>
 <meta name="generator" content="Jekyll v3.9.5">
-<meta property="og:title" content="Multiplication: Monoidal Structures on P">
+<meta property="og:title" content="Multiplication: Monoidal Structures on B">
 <meta property="og:locale" content="en_US">
 <meta name="description" content="A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.">
 <meta property="og:description" content="A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.">
@@ -14,11 +14,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html">
 <meta property="og:site_name" content="Combinatorial species in TTU">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2026-01-16T18:14:02+02:00">
+<meta property="article:published_time" content="2026-01-17T14:05:41+02:00">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="Multiplication: Monoidal Structures on P">
+<meta property="twitter:title" content="Multiplication: Monoidal Structures on B">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-16T18:14:02+02:00","datePublished":"2026-01-16T18:14:02+02:00","description":"A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.","headline":"Multiplication: Monoidal Structures on P","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"},"url":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-17T14:05:41+02:00","datePublished":"2026-01-17T14:05:41+02:00","description":"A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.","headline":"Multiplication: Monoidal Structures on B","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"},"url":"http://localhost:4000/species/lectures/3-monoidal-structures-on-P.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,15 +43,15 @@
     <main>
       <article>
     <!-- &bull;  &bull; -->
-    <h1>Multiplication: Monoidal Structures on P</h1>
+    <h1>Multiplication: Monoidal Structures on B</h1>
     <p>A fundamental tenet of categorical combinatorics is that the richness of the objects it tries to study (“combinatorial objects”, broadly intended) comes from the synergy between many different structures one can equip the categories meant to describe said combinatorial objects.</p>
 
-<h3 id="monoidal-structure-on-bf-p-and-bf-spc">Monoidal structure on $\bf P$ and $\bf Spc$</h3>
+<h3 id="monoidal-structure-on-bf-b-and-bf-spc">Monoidal structure on $\bf B$ and $\bf Spc$</h3>
 
-<p>In particular, there are three distinct <em>monoidal structures</em> on the category of species, all of which have a quite natural combinatorial interpretation. One of them is the most important for us because it is induced on $\bf Spc$ by a natural choice of a monoidal product on $\bf P$. The monoidal structure on $\bf P$ is essentially determined by the disjoint sum of finite set: in a skeleton for $\bf P$, $[n]\cup [m] = [n+m]$. This operation induces a <em>convolution</em> operation on $\bf Spc$.</p>
+<p>In particular, there are three distinct <em>monoidal structures</em> on the category of species, all of which have a quite natural combinatorial interpretation. One of them is the most important for us because it is induced on $\bf Spc$ by a natural choice of a monoidal product on $\bf B$. The monoidal structure on $\bf B$ is essentially determined by the disjoint sum of finite set: in a skeleton for $\bf B$, $[n]\cup [m] = [n+m]$. This operation induces a <em>convolution</em> operation on $\bf Spc$.</p>
 
 <div id="defi-1"></div>
-<p><strong>Definition</strong> (The “sum and shuffle” product on $\bf P$). The “sum and shuffle” monoidal structure $\oplus$ on $\bf P$ is the bifunctor $\_\oplus_ : {\bf P} \times {\bf P} \to \bf P$ defined as follows:</p>
+<p><strong>Definition</strong> (The “sum and shuffle” product on $\bf B$). The “sum and shuffle” monoidal structure $\oplus$ on $\bf B$ is the bifunctor $\_\oplus_ : {\bf B} \times {\bf B} \to \bf B$ defined as follows:</p>
 
 <ul>
   <li>on objects, $[n]\oplus [m]$ is just the set $[n+m]$;</li>
@@ -107,7 +107,7 @@ width: 41.985ex;"></span></p>
 (X \cdot Y)_\bullet : [n] \mapsto \sum_{p+q=n} X[p] \otimes Y[q]
 $$</div>
 
-<p>where the sum is indexed over all tuples $p,q$ such that $p+q=n$. It can be shown that the Cauchy product $(X\cdot Y)_\bullet$ of two combinatorial species is the <a href="https://ncatlab.org/nlab/show/Day+convolution">Day convolution</a> inherited by the “sum and shuffle” monoidal structure on $\bf P$.</p>
+<p>where the sum is indexed over all tuples $p,q$ such that $p+q=n$. It can be shown that the Cauchy product $(X\cdot Y)_\bullet$ of two combinatorial species is the <a href="https://ncatlab.org/nlab/show/Day+convolution">Day convolution</a> inherited by the “sum and shuffle” monoidal structure on $\bf B$.</p>
 
 <p>(Exercise: how do you use the sum and shuffle product and the equivariant product to interpret the $\otimes$ sign?)</p>
 
@@ -139,10 +139,10 @@ $$</div>
 <p><strong>Definition</strong> (The substitution monoidal structure). Given two combinatorial species we can define their substitution product as follows:</p>
 
 <div class="kdmath">$$
-F \triangleleft G := \lambda m . \int^{n,k_1,\dots,k_n} F(n) \times Gk_1\times \dots \times Gk_n \times {\bf P}(m, k_1+\dots+k_n).
+F \triangleleft G := \lambda m . \int^{n,k_1,\dots,k_n} F(n) \times Gk_1\times \dots \times Gk_n \times {\bf B}(m, k_1+\dots+k_n).
 $$</div>
 
-<p>The structure exists for a similar reason than the case of $\bf Fin$: the left Kan extension of a functor $X : {\bf P} \to {\bf Set}$ along the (nonfull) inclusion $j : {\bf P} \to {\bf Set}$ yields an equivalence between $\bf Spc$ and a monoidal subcategory of $[{\bf Set},{\bf Set}]$ (it is not immediate how to characterise it because in this case the inclusion functor $j : {\bf P} \to {\bf Set}$ is not full).</p>
+<p>The structure exists for a similar reason than the case of $\bf Fin$: the left Kan extension of a functor $X : {\bf B} \to {\bf Set}$ along the (nonfull) inclusion $j : {\bf B} \to {\bf Set}$ yields an equivalence between $\bf Spc$ and a monoidal subcategory of $[{\bf Set},{\bf Set}]$ (it is not immediate how to characterise it because in this case the inclusion functor $j : {\bf B} \to {\bf Set}$ is not full).</p>
 
 <p><em>Exercise.</em> Given a combinatorial species $G$, define $G^{\ast 1}:=G$ and $G^{\ast (n+1)} := G \ast G^{\ast n}$. Find an explicit formula for the functor $G^{\ast n}$ using a suitable coend, and show that the substitution product admits the more concise formula</p>
 
@@ -155,7 +155,7 @@ $$</div>
 
 <p>The following subsection is of no particular interest for us, but the category of species happens to be a (Grothendieck) topos, and I haven’t been able to find any source investigating the consequences of this fact (or even describing this structure, at least to some extent). Thus I find a nice exercise in style to fill the gap.</p>
 
-<p>This said: on top of all of the structure mentioned above, the category of species, i.e. functors ${\bf P}^\text{op} \to {\bf Set}$ has very nice properties of a completely different kind; it is a <em>Grothendieck topos</em> (or shortly, just a <em>topos</em>).</p>
+<p>This said: on top of all of the structure mentioned above, the category of species, i.e. functors ${\bf B}^\text{op} \to {\bf Set}$ has very nice properties of a completely different kind; it is a <em>Grothendieck topos</em> (or shortly, just a <em>topos</em>).</p>
 
 <p>In short, a Grothendieck topos is a category $\cal E$ where “the usual kind of Mathematics can be enacted” (at the price of doing so <em>constructively</em>).</p>
 
@@ -204,8 +204,8 @@ $$</div>
 <p>(in simple words: $C$ goes to the set of isomorphism classes of monics with codomain $yC$, the representable functor on $C$).</p>
 
 <ol>
-  <li>Characterise $y(n)={\bf P}(n, -)$ in the case of species;</li>
-  <li>Specialise the above definition to $\mathcal C = \bf P$: who is $\Omega$ in this case (remember that the map $R \to y(n)$ muts be a <em>natural transformation</em>, not just a collection of components: what constraint does this condition pose on $R$?)</li>
+  <li>Characterise $y(n)={\bf B}(n, -)$ in the case of species;</li>
+  <li>Specialise the above definition to $\mathcal C = \bf B$: who is $\Omega$ in this case (remember that the map $R \to y(n)$ muts be a <em>natural transformation</em>, not just a collection of components: what constraint does this condition pose on $R$?)</li>
 </ol>
 
 </article>

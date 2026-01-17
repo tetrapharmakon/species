@@ -16,7 +16,7 @@ antex:
         \usepackage{tikz}
 ---
 
-We have seen that to a combinatorial species we can associate at least two important invariants "quantities", i.e. two formal power series from which we can deduce properties of the species. If $\|X_n\|$ denotes the cardinality of a set, and $F : {\bf P} \to {\bf Set}$ is a combinatorial species,
+We have seen that to a combinatorial species we can associate at least two important invariants "quantities", i.e. two formal power series from which we can deduce properties of the species. If $\|X_n\|$ denotes the cardinality of a set, and $F : {\bf B} \to {\bf Set}$ is a combinatorial species,
 
 - the *generating series* of $F$ is defined as the formal power series in $t$
 
