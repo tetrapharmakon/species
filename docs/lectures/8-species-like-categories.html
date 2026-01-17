@@ -14,11 +14,11 @@
 <meta property="og:url" content="http://localhost:4000/species/lectures/8-species-like-categories.html">
 <meta property="og:site_name" content="Combinatorial species in TTU">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2026-01-17T16:56:56+02:00">
+<meta property="article:published_time" content="2026-01-17T18:01:22+02:00">
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="Generalization: species-like structures">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-17T16:56:56+02:00","datePublished":"2026-01-17T16:56:56+02:00","description":"There is a vast array of generalizations of the concept of species, that we now survey. Most of the theory developed so far applies to these general contexts as well, with due care about details (for example, it is not very easy to define the substitution product for colored species).","headline":"Generalization: species-like structures","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/8-species-like-categories.html"},"url":"http://localhost:4000/species/lectures/8-species-like-categories.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-17T18:01:22+02:00","datePublished":"2026-01-17T18:01:22+02:00","description":"There is a vast array of generalizations of the concept of species, that we now survey. Most of the theory developed so far applies to these general contexts as well, with due care about details (for example, it is not very easy to define the substitution product for colored species).","headline":"Generalization: species-like structures","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/8-species-like-categories.html"},"url":"http://localhost:4000/species/lectures/8-species-like-categories.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,10 +50,12 @@
 
 <p>If $S$ is a set regarded as a discrete category, and $\cal V$ a <em>Bénabou cosmos</em> (i.e. a complete, cocomplete, symmonclosed category), we give the following definition encompassing various (but not all) examples of this section.</p>
 
+<div id="label-1"></div>
 <p><strong>Definition.</strong> The category $(S,{\cal V})\text{-}\mathbf{Spc}$ of <em>$(S,{\cal V})$-species</em> is defined as the functor category $\mathbf{Cat}({\bf B}[S],{\cal V})$ where ${\bf B}[S]$ is the free symmoncat on the set $S$.</p>
 
 <p>Evidently, the “category of species” studied so far is the category $(1,{\bf Set})\text{-}\mathsf{Spc}$ if $1$ is a singleton set.</p>
 
+<div id="label-2"></div>
 <p><strong>Remark.</strong> One could have defined a category $({\cal A},{\cal V})\text{-}\mathsf{Spc}$ as the functor category $\mathbf{Cat}({\bf B}[{\cal A}],{\cal V})$ (the free symmoncat construction makes sense for every category, not just the discrete ones). This is however a different kind of gadget, which would deserve the name of <em>free (cocomplete) 2-rig on $\cal A$</em>; species, in this perspective, occupy a special role as they are free <em>on a set</em>, much like a polynomial ring is free on a set of generators (for its multiplication) regarded as variables.</p>
 
 <p>This definition is very pliable: the formal properties of $(S,{\cal V})\text{-}\mathbf{Spc}$ are not much dependent on $\cal V$, which can be chosen to be the category $\bf Top$ of topological spaces, or vector spaces, or simplicial sets,… but also the category $(T,{\cal W})\text{-}\mathbf{Spc}$ for a different pair $(T,\cal W)$ (what happens in that case)?</p>
@@ -68,11 +70,135 @@ $$</div>
 
 <p>Regarding species as formal power series, the category $\mathbf{Cat}({\bf B}[S],{\cal V}) = \mathbf{Cat}({\bf B}^S,{\cal V})$ should be regarded as the category of polynomials in $\# S$ variables, and coefficients in $\cal V$.</p>
 
+<div id="label-3"></div>
 <p><strong>Exercise.</strong> ($\star$) I have had for quite some time in the back of my head the idea that it is interesting to study species when $\cal V$ is compact closed, or star-autonomous; see for example <a href="https://arxiv.org/abs/math/0612496">here</a>, where some work is done in this direction; if this sounds like an interesting project for you, please let’s do it together.</p>
 
 <h4 id="substitution-product-of-colored-species">Substitution product of colored species</h4>
 
-<p>…</p>
+<p>An explicit description of the $n$-fold convolution of presheaves $M_1,\ldots,M_n : \mathbb{P}/I \to \mathbf{Set}$ is given in [Mé96, 2.1]: the coend in Equation (5) splits as the sum</p>
+
+<div class="kdmath">$$
+\sum_{p \in n\text{-}\mathrm{Dec}(m)} M_{p_1}(m_1) \times \cdots \times M_{p_n}(m_n)
+$$</div>
+
+<p>where $n$-$\mathrm{Dec}(m)$ denotes the set of $n$-decompositions (= decompositions in $n$ pieces) $p = (p_1,\ldots,p_n)$ of $m$, by virtue of the way in which $\mathbb{P}/I$ splits as a coproduct of groups.</p>
+
+<p>We can endow the category of colored species with a substitution product; 
+to motivate the construction, we review the most general form that the substitution operation acquires; 
+let $I,J$ be two sets, $f \in k[J]$ a power series in $|J|$ indeterminates, 
+with coefficients in the ring $k$ and $g = (g_j \mid j \in J)$ a $J$-family 
+of elements of $k[I]$; then one defines the substitution of $g$ into $f$ as
+the following power series in $k[I]$:</p>
+
+<div class="kdmath">$$
+f \circ g = \sum_{n \in \mathbb{N}^J} a_n \prod_{j \in J} g_j^{n_j}
+$$</div>
+
+<p>(The ring operations in $k[I]$ say how to expand the power $g_j^{n_j}$ into a sum of monomials.)</p>
+
+<p>In perfect analogy, this operation translates to coloured species, where the substitution of a $J$-family of $I$-coloured species $M = (M_j \mid j \in J)$ inside a $J$-species is defined as follows: the $J$-family $M$ can be understood as a functor</p>
+
+<div class="kdmath">$$
+M : J \to [\mathbb{P}/I, \mathbf{Set}]
+$$</div>
+
+<p>which, by virtue of the universal property of $\mathbb{P}/J$, extends uniquely to a functor $\widehat{M} : \mathbb{P}/J \to [\mathbb{P}/I, \mathbf{Set}]$, strong monoidal with respect to Day convolution on the codomain.</p>
+
+<p>The functor sends an object $w = j_1 \cdots j_n$ to the convolution of the tuple
+$M_{j_1} = M(j_1), \ldots, M_{j_n} = M(j_n)$, i.e. we have an action on objects</p>
+
+<div class="kdmath">$$
+(j_1 \cdots j_n) \mapsto M_{j_1} * \cdots * M_{j_n}
+$$</div>
+
+<p>and on morphisms (colour-preserving bijections) it is defined accordingly. We
+shortly denote $\widetilde{M}(w)$ as $\widetilde{M}_w$.</p>
+
+<p>Now, given a $J$-coloured species $N$ and a $J$-family
+$M = (M_j \mid j \in J)$ of $I$-species, we define the substitution
+$N { M }$ to be the $I$-species</p>
+
+<div class="kdmath">$$
+u \mapsto \int^{w \in \mathbb{P}/J} N[w] \times \widetilde{M}_w[u]
+$$</div>
+
+<p>as $w$ ranges over all objects of $\mathbb{P}/J$, i.e. over all tuples
+$(j_1 \cdots j_r)$ of various lengths. Thus, the coend above splits into the sum
+of coends</p>
+
+<div class="kdmath">$$
+\sum_{r = 0}^{\infty}
+\int^{(j_1 \cdots j_r) \in \mathbb{P}/J}
+N[(j_1 \cdots j_r)] \times \widetilde{M}_{(j_1 \cdots j_r)}[u].
+$$</div>
+
+<p><strong>Proposition.</strong> Equation above defines a bifunctor</p>
+
+<div class="kdmath">$$
+-\circ- : \mathbb{P}/J \times [\mathbb{P}/I, \mathbf{Set}]^J \to [\mathbb{P}/I, \mathbf{Set}]
+$$</div>
+
+<p>which is associative and unital in the sense that</p>
+
+<ul>
+  <li>
+    <p>given a single $K$-species $F$, $\boldsymbol G = (G_k \mid k \in K)$ a $K$-family of
+$J$-species, and $\boldsymbol H = (H_j \mid j \in J)$ a $J$-family of $I$-species, then
+$F \circ (\boldsymbol G \circ\boldsymbol H )$ (where $\boldsymbol G \circ\boldsymbol H$ is the $K$-family of $J$-species defined as $k\mapsto G_k \circ\boldsymbol H$) is a single $I$-species, as well as
+$(F \circ\boldsymbol G)\circ \boldsymbol H$, and the two are canonically isomorphic;</p>
+  </li>
+  <li>
+    <p>there exist a $J$-family of $J$-species with the property that
+$N \circ \boldsymbol y(o) \cong N$, naturally in $N \in [\mathbb{P}/J, \mathbf{Set}]$, and
+a $J$-species $y(j^\prime)$ with the property that for every $J$-family of
+$I$-species $M = (M_j \mid j \in J)$ one has $y(j^\prime) \circ \boldsymbol M \cong M_{j^\prime}$.</p>
+  </li>
+</ul>
+
+<p><em>Proof.</em> Once the notation is settled, the proof is a painstaking coend computation: let $w = (k_1,\ldots,k_r)$ be a tuple of elements of $K$, $u_1,\ldots,u_r$ a tuple of elements of $J^\ast$ so an $r$-tuple of tuples $u_s = (u^1_s,\ldots,u^{\ell_s}_s)$, and $(x_1,\ldots,x_r)$ an $r$-decomposition of $n \in I^*$, i.e. an $r$-tuple of elements such that $x_1 \oplus \cdots \oplus x_r = n$ in $\mathbb{P}/I$. Then,</p>
+
+<div class="kdmath">$$
+\begin{aligned}
+F \circ(\boldsymbol G \circ\boldsymbol H)  [n]
+&amp;\cong \int^{w} F_w \times \widetilde{(G \circ\boldsymbol H )}_w[n] \\
+&amp;\cong \int^{w} F_w \times \Bigl( \int^{u_1} G_{k_1}[u_1] \times \widetilde{H}_{u_1}(x_1) \Bigr) \times \cdots \\
+&amp;\qquad\qquad\cdots \times \Bigl( \int^{u_{\ell(w)}} G_{k_{\ell(w)}}[u_{\ell(w)}] \times \widetilde{H}_{u_{\ell(w)}}(x_{\ell(w)}) \Bigr) \\
+&amp;\cong \int^{w,u_1,\ldots,u_{\ell(w)}}
+F_w \times G_{k_1}[u_1] \times \cdots \times G_{k_{\ell(w)}}[u_{\ell(w)}] \\
+&amp;\qquad\qquad\times \widetilde{H}_{u_1}(x_1) \times \cdots \times \widetilde{H}_{u_{\ell(w)}}(x_{\ell(w)})
+\times \mathbb{P}/I\Bigl(\sum_{t=1}^{\ell(w)} x_t, n\Bigr)\\ 
+&amp;\cong \int^{w,u_1,\ldots,u_{\ell(w)}}
+F_w \times \widetilde{G}_w(u_1,\ldots,u_{\ell(w)}) \times \widetilde{H}_{\oplus_s u_s}[n] \\
+(\oplus_s u_s = u)
+&amp;\cong \int^{w,u}
+F_w \times \widetilde{G}_w[u] \times \widetilde{H}_u[n] \\
+&amp;\cong \int^{u} \Bigl( \int^{w} F_w \times \widetilde{G}_w[u] \Bigr) \times \widetilde{H}_u[n] \\
+&amp;\cong \int^{u} (F \circ \boldsymbol G )[u] \times \widetilde{H}_u[n] \\
+&amp;\cong (F \circ \boldsymbol G ) \circ \boldsymbol H .
+\end{aligned}
+$$</div>
+
+<p>This concludes the proof of associativity; from here, it is almost all downhill: the left and right unitor are the isomorphisms</p>
+
+<div class="kdmath">$$
+N \circ\boldsymbol y(o) 
+= \int^{w} N[w] \times \mathbb{P}/I(o,-)_w[n]
+\cong \int^{w} N[w] \times \mathbb{P}/I(w,n)
+\cong N[n]
+$$</div>
+
+<p>($y(o)$ is the $J$-family of $I$-species constant at the representable
+$\mathbb{P}/I(o,-)$), and</p>
+
+<div class="kdmath">$$
+y(j) \circ \boldsymbol M
+= \int^{w} \mathbb{P}/I(j,w) \times \widetilde{M}_w[n]
+\cong M_j[n]
+$$</div>
+
+<p>for every $J$-family $M$ of $I$-species, where $y(j)$ is the representable
+$J$-species at a singleton $j = \{ j \} \in \mathbb{P}/J$. The Yoneda lemma
+picks out the component at $j$ of the $J$-family $M : J \to \mathbb{P}/I$.</p>
 
 <hr>
 
@@ -123,6 +249,7 @@ $Q$.</p>
 
 <p>From coassociativity and positivity it follows:</p>
 
+<div id="label-4"></div>
 <p><strong>Proposition.</strong>
 For any positive comonoid $Q$, we have the following:</p>
 
@@ -134,6 +261,7 @@ For any positive comonoid $Q$, we have the following:</p>
 
 <p>All comonoid homomorphisms are compatible with the coradical filtration</p>
 
+<div id="label-5"></div>
 <p><strong>Proposition.</strong>
 Let $f : Q \to P$ be a morphism of positive comonoids.
 Then
@@ -147,6 +275,7 @@ is injective, then $f : Q \to P$ is injective.</p>
 
 <p>Another reason why $k$-vector species are important is the presence of an adjunction between species and $k$-vector species, induced by the free-forgetful adjunction over $\bf Set$, having nice properties of preservation of <em>all</em> the relevant monoidal structures on $\bf Spc$:</p>
 
+<div id="label-6"></div>
 <p><strong>Proposition.</strong> Let $k[-]\dashv U$ be the free-forgetful adjunction between sets and vector spaces; then every $\bf Set$-species $P$ has a <em>$k$-linearization</em> (resorting to the word “linear” in this context feels unavoidable, but we maintain the prefix $k$ to avoid confusion) given by post-composition</p>
 
 <p><span class="antex display"><img src="/species/antex/4b02dcf44df8c79c8f4d15a40237d4d8.svg" style="margin: 0.0ex 0.0ex -1.277ex 0.0ex;
@@ -164,6 +293,7 @@ ordered finite sets $\langle n \rangle := {1 &lt; \cdots &lt; n}$ and
 order-preserving bijections $\sigma : \langle n \rangle \to \langle n \rangle$.
 Let’s give a more intrinsic presentation for it.</p>
 
+<div id="label-7"></div>
 <p><strong>Definition.</strong>
 Let $S_n$ be the symmetric group of an $n$-set $[n]$. Let
 $r : BS_n \to \mathbf{Set}$ be the (functor associated to the) left regular
@@ -174,11 +304,13 @@ multiplication; denote $[S_n/S_n]$ the associated <a href="https://ncatlab.org/n
 height: 13.052ex;
 width: 21.004ex;"></span></p>
 
+<div id="label-8"></div>
 <p><strong>Remark.</strong>
 Notice that since the action is strictly transitive, $[S_n/S_n]$ consists of
 the maximally connected groupoid on the underlying set of $S_n$. As such,
 the unique functor $[S_n/S_n] \to \mathbf{1}$ is an equivalence of categories.</p>
 
+<div id="label-9"></div>
 <p><strong>Definition.</strong>
 We define the category $\mathbb{L}$ as the coproduct (in the category of
 groupoids) $\coprod_{n \ge 0} [S_n/S_n]$; if $\mathcal{V}$ is a Bénabou
@@ -236,6 +368,7 @@ $$</div>
 
 <p>As an immediate consequence, $\zeta$ preserve all colimits that exist in $\mathbf{wSet}_{/R}$.</p>
 
+<div id="label-10"></div>
 <p><strong>Remark.</strong> In fact, $\mathbf{wSet}_{/R}$ is locally finitely presentable, by Proposition 1.57 in [LPAC].</p>
 
 <p>Does $\zeta$ have a right adjoint?</p>
@@ -256,9 +389,11 @@ width: 21.082ex;"></span></p>
 
 <p>Let $R$ be a commutative unital ring.</p>
 
+<div id="label-11"></div>
 <p><strong>Definition.</strong> The ring $R$ is called <em>formally real</em> if $-1$ cannot be written as a finite sum of squares in $R$, that is,
 <span class="kdmath">$-1 \notin \left\{ \sum_{i=1}^n r_i^2 \mid r_i \in R,\ n \in \mathbb{N} \right\}.$</span></p>
 
+<div id="label-12"></div>
 <p><strong>Definition.</strong> The <em>cone of sums of squares</em> of $R$ is the subset
 <span class="kdmath">$\Sigma R^2 := \left\{ \sum_{i=1}^n r_i^2 \middle| r_i \in R,\ n \in \mathbb{N} \right\} \subseteq R.$</span></p>
 
@@ -270,9 +405,11 @@ width: 21.082ex;"></span></p>
   <li>$\Sigma R^2 \cap (-\Sigma R^2) = {0}$ if and only if $R$ is formally real.</li>
 </ul>
 
+<div id="label-13"></div>
 <p><strong>Definition.</strong> Define a binary relation $\preceq$ on $R$ by
 <span class="kdmath">$a \preceq b \quad \Longleftrightarrow \quad b - a \in \Sigma R^2.$</span></p>
 
+<div id="label-14"></div>
 <p><strong>Proposition.</strong> The relation $\preceq$ is a preorder on $R$ (i.e. reflexive and transitive) that is compatible with addition and multiplication. In general, $\preceq$ need not be antisymmetric.</p>
 
 <p>Thus, for a formally real ring $R$, the cone of sums of squares induces a canonical preorder reflecting the ring’s algebraic notion of positivity, even though it does not necessarily define a partial order.</p>
@@ -281,6 +418,7 @@ width: 21.082ex;"></span></p>
 
 <h3 id="moebius-species">Moebius species</h3>
 
+<div id="label-15"></div>
 <p><strong>Definition.</strong> Let $\bf Set$ be the category of sets, equipped with the tautological functor $J \colon \mathbf{Set} \to \mathbf{Cat}$ regarding each set as a discrete category; let $\mathbf{Pos}^{\top\!\bot}$ be the category of posets with top and bottom, where morphisms are top- and bottom-preserving monotone maps; consider the comma category</p>
 
 <div class="kdmath">$$
@@ -304,8 +442,10 @@ width: 27.987ex;"></span></p>
   </li>
 </ul>
 
+<div id="label-16"></div>
 <p><strong>Remark.</strong> The category $(J / \mathbf{Pos}^{\top\!\bot})$ is a complete and cocomplete (in fact, locally presentable), monoidal closed category.</p>
 
+<div id="label-17"></div>
 <p><strong>Proof.</strong> Colimits are computed in $(J / \mathbf{Pos}^{\top\!\bot})$ as in <strong>Set</strong> (created by the vertical left functor in Equation (6.15)); the category is accessible, as it arises as a limit in accessible categories and accessible functors; thus it is locally presentable, hence also complete (limits are, however, not straightforward to describe—even characterizing a terminal object is a bit convoluted).</p>
 
 <p>As for its monoidal closed structure, call a map $P \times Q \to R$ in $\mathbf{Pos}^{\top\!\bot}$ <em>balanced</em> if all $f(p,-) \colon Q \to R$ and $f(-,q) \colon P \to R$ preserve top and bottom elements, and call $\mathbf{BPos}(P \times Q, R)$ the set of all such balanced maps.</p>
@@ -342,6 +482,7 @@ $$</div>
 <p>Thus, $\bigl( (J / \mathbf{Pos}^{\top\!\bot}), \widehat{\otimes} \bigr)$
 works as a Bénabou cosmos, and we can define</p>
 
+<div id="label-18"></div>
 <p><strong>Definition.</strong> The category $\bf MSpc$ of <em>Moebius species</em> is the category of functors</p>
 
 <div class="kdmath">$$
@@ -365,6 +506,7 @@ $$</div>
 
 <h3 id="nominal-sets">Nominal sets</h3>
 
+<div id="label-19"></div>
 <p><strong>Definition.</strong> Consider the chain of inclusions</p>
 
 <div class="kdmath">$$
@@ -375,6 +517,7 @@ $$</div>
 
 <p>The group-theoretic properties of $S_\infty$ are the subject of intense study in connection with representation theory, the theory of Von Neumann algebras, ergodic theory and descriptive set theory (due to the nature of Polish group of $S_\infty$). For us, the connection with computer science, set theory and topos theory are an additional source of intuition: we define</p>
 
+<div id="label-20"></div>
 <p><strong>Definition.</strong> The category $\bf Nom$ of <em>nominal sets</em> is the category of (set-theoretic) left
 actions of $S_\infty$, or in other words the category of functors</p>
 
