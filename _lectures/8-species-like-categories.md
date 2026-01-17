@@ -42,6 +42,10 @@ Regarding species as formal power series, the category $\mathbf{Cat}({\bf B}[S],
 
 **Exercise.** ($\star$) I have had for quite some time in the back of my head the idea that it is interesting to study species when $\cal V$ is compact closed, or star-autonomous; see for example [here](https://arxiv.org/abs/math/0612496), where some work is done in this direction; if this sounds like an interesting project for you, please let's do it together.
 
+#### Substitution product of colored species
+
+...
+
 ---
 
 ### Vector species
