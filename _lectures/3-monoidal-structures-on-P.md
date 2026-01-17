@@ -98,20 +98,36 @@ $$ [n] \mapsto M \triangleleft N := (\text{Lan}_J M \circ \text{Lan}_J N) \circ 
 <div id="defi-5"></div>
 **Definition** (The substitution monoidal structure). Given two combinatorial species we can define their substitution product as follows:
 
-$$ F \triangleleft G := \lambda m . \int^{n,k_1,\dots,k_n} F(n) \times Gk_1\times \dots \times Gk_n \times {\bf B}(m, k_1+\dots+k_n). $$
+$$ F \circ G := \lambda m . \int^{n,k_1,\dots,k_n} F(n) \times Gk_1\times \dots \times Gk_n \times {\bf B}(m, k_1+\dots+k_n). $$
 
-The structure exists for a similar reason than the case of $\bf Fin$: the left Kan extension of a functor $X : {\bf B} \to {\bf Set}$ along the (nonfull) inclusion $j : {\bf B} \to {\bf Set}$ yields an equivalence between $\bf Spc$ and a monoidal subcategory of $[{\bf Set},{\bf Set}]$ (it is not immediate how to characterise it because in this case the inclusion functor $j : {\bf B} \to {\bf Set}$ is not full).
-
-*Exercise.* Given a combinatorial species $G$, define $G^{\ast 1}:=G$ and $G^{\ast (n+1)} := G \ast G^{\ast n}$. Find an explicit formula for the functor $G^{\ast n}$ using a suitable coend, and show that the substitution product admits the more concise formula
+or more concisely
 
 $$ F\circ G := \lambda m.\int^n Fn \times G^{\ast n}(m) $$
 
-*Exercise.* Given two formal power series $f,g \in K\llbracket t\rrbracket$, find an explicit formula for the coefficient $c_n$ of degree $n$ in the series $f\circ g(t)$. (Is it possible to "decategorify" the above expression for $F\circ G$, given that if $f,g$ are the generating series of $F,G$ respectively, then $c_n$ is the cardinality of $F\circ G$?)
+Observe that the structure exists for a similar reason than the case of $\bf Fin$: the left Kan extension of a functor $X : {\bf B} \to {\bf Set}$ along the (nonfull) inclusion $j : {\bf B} \to {\bf Set}$ yields an equivalence between $\bf Spc$ and a monoidal subcategory of $[{\bf Set},{\bf Set}]$ (it is not immediate how to characterise it because in this case the inclusion functor $j : {\bf B} \to {\bf Set}$ is not full). We will disclose what's going on in [lecture 5](./5-species-and-analytic-functors-wide-pullbacks.md), but in any case one can argue that there exists an adjunction
+
+$$ {\bf Spc} \leftrightarrows ([{\bf Set},{\bf Set}],\circ) $$
+
+that restricts to an equivalence of categories ${\bf Spc}\cong {\bf AnF}\subseteq [{\bf Set},{\bf Set}]$; the image category $\bf AnF$, the subcategory of *analytic functors* is closed under composition (=the monoidal product on $[{\bf Set},{\bf Set}]$) and thus, by transport of structure, we obtain a monoidal equivalence 
+
+$$ ({\bf Spc},\circ) \leftrightarrows ({\bf AnF},\circ) $$
+
+*Exercise.* (Disregarded in commutative algebra courses.) Given two formal power series $f,g \in K\llbracket t\rrbracket$, find an explicit formula for the coefficient $c_n$ of degree $n$ in the series $f\circ g(t)$. (Is it possible to "decategorify" the above expression for $F\circ G$, given that if $f,g$ are the generating series of $F,G$ respectively, then $c_n$ is the cardinality of $F\circ G$?)
+
+---
 
 As it is a bit convoluted to argue on the existence of the substitution monoidal structure, we give a sketch of an argument, based on having established the Day convolution (closed) monoidal structure. The full story is surveyed in [Coends, Chapter 6] and in turn, it comes from Kelly's paper "On the Operads of JP May".
 
-**Definition.** Iterated Day convolution. [...]
+<div id="label-8"></div>
+**Definition.** Iterated Day convolution in the category of species takes the following form:
 
+$$ F_1 * \cdots * F_n = \int^{k_1,\ldots,k_n} \mathcal{P}\!\left(\sum k_i, -\right) \cdot F_1 k_1 \otimes \cdots \otimes F_n k_n. $$
+
+and in particular if $F_1=\dots = F_n = F$ one has 
+
+$$ F * \cdots * F = \int^{k_1,\ldots,k_n} \mathcal{P}\!\left(\sum k_i, -\right) \cdot F k_1\otimes \cdots \otimes F k_n. $$
+
+<div id="label-9"></div>
 **Theorem.** The operation $-\circ-$ above defines a monoidal structure on $\bf Spc$, with unit given by the representable at $1$.
 
 *Proof.* Start observing that the assignment $(n,F)\mapsto F^{*n}$ is a bifunctor ${\bf B}\times{\bf Spc} \to \bf Spc$. This fact will be used throughout. Then, the key observation in order to prove associativity is the presence of an isomorphism of functors 
