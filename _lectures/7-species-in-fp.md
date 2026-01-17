@@ -151,3 +151,7 @@ Finally, the fixpoint operation $\text{fix}$ is interpreted as an initial algebr
 #### Notes
 
 [^1]: As it's common in set theoretical foundations of mathematics, functions enjoy an *extensionality principle* (i.e. are considered equal when they agree on all arguments). Therefore unlike its *operational* counterpart, denotational semantics is more concerned with the *statics* of a program, rather than its *dynamics*.
+
+#### Reading list
+
+...

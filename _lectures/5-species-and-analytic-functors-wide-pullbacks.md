@@ -203,3 +203,7 @@ The implication that $(3 \Rightarrow 2)$ is evident from the fact that each sym-
 Finally, let's prove that $(2 \Rightarrow 1)$.
 
 **Remark.** The proof of the second theorem, which was the one initially proved by Joyal, follows from a similar argument; in particular, the implication $3\Rightarrow 2$ follows from the fact that each $F$ that weakly preserves countable wide pullbacks is superfinitary (prove this by contradiction as an exercise). All other implications are trivial or follow clearly from what we already know.
+
+#### Reading list
+
+...

@@ -129,3 +129,7 @@ and
 $$ \tilde g_{S_e}(t) = \frac12\left( \prod_{k\ge 1} \frac1{1-t^k} + \prod_{k\ge 1} \frac1{1-(-1)^k t^k} \right)\qquad
 \tilde g_{S_o}(t) = \frac12\left( \prod_{k\ge 1} \frac1{1-t^k} - \prod_{k\ge 1} \frac1{1-(-1)^k t^k} \right).
 $$
+
+#### Reading list
+
+...

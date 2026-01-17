@@ -271,3 +271,7 @@ $$ \Omega : C\mapsto \text{Sub}_{\cal C}(yC) = \{R \hookrightarrow yC \} $$
 2. Specialise the above definition to $\mathcal C = \bf B$: who is $\Omega$ in this case (remember that the map $R \to y(n)$ muts be a *natural transformation*, not just a collection of components: what constraint does this condition pose on $R$?)
 
 For those who know, $\bf Spc$ happens to be the *classifying topos* for $\bf B$-torsors; although this is not a particularly deep finding when species are valued in $\bf Set$ (as opposed to a different base of enrichment, see [lesson 8](8-species-like-categories.html#label-1)), it acquires more depth when species are considered in -say- a category of bundles over a fixed space; in that case, torsors are principal bundles with group(oid) $\bf B$.
+
+#### Reading list
+
+...

@@ -534,3 +534,7 @@ actions of $S_\infty$, or in other words the category of functors
 $$
 F \colon S_\infty \to \mathbf{Set}.
 $$
+
+#### Reading list
+
+...
