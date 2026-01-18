@@ -36,8 +36,6 @@ antex:
     inline_math: false
     inline_macro: false
 
-markdown: kramdown
-
 kramdown:
   input: GFM
   syntax_highlighter: rouge
