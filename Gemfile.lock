@@ -62,11 +62,13 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
-    nokogiri (1.17.2-x86_64-linux)
+    mini_portile2 (2.8.9)
+    nokogiri (1.19.0)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    public_suffix (6.0.2)
+    public_suffix (7.0.2)
     racc (1.8.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
@@ -79,10 +81,9 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    webrick (1.9.2)
 
 PLATFORMS
-  x86_64-linux
+  ruby
 
 DEPENDENCIES
   jekyll (~> 3.9.1)
@@ -95,7 +96,6 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-titles-from-headings
   kramdown-parser-gfm
-  webrick (~> 1.7)
 
 BUNDLED WITH
-   2.3.25
+   2.7.2
