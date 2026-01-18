@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Preliminaries: finite sets, convolution | Combinatorial species in TTU</title>
-<meta name="generator" content="Jekyll v3.9.5">
-<meta property="og:title" content="Preliminaries: finite sets, convolution">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$.">
-<meta property="og:description" content="The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$.">
-<link rel="canonical" href="http://localhost:4000/species/lectures/1-finset-and-its-up.html">
-<meta property="og:url" content="http://localhost:4000/species/lectures/1-finset-and-its-up.html">
-<meta property="og:site_name" content="Combinatorial species in TTU">
-<meta property="og:type" content="article">
-<meta property="article:published_time" content="2026-01-17T18:16:16+02:00">
-<meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="Preliminaries: finite sets, convolution">
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Preliminaries; finite sets, convolution | Combinatorial species in TTU</title>
+<meta name="generator" content="Jekyll v3.9.1" />
+<meta property="og:title" content="Preliminaries; finite sets, convolution" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$." />
+<meta property="og:description" content="The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$." />
+<link rel="canonical" href="http://localhost:4000/species/lectures/1-finset-and-its-up.html" />
+<meta property="og:url" content="http://localhost:4000/species/lectures/1-finset-and-its-up.html" />
+<meta property="og:site_name" content="Combinatorial species in TTU" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-02T15:33:08+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Preliminaries; finite sets, convolution" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-17T18:16:16+02:00","datePublished":"2026-01-17T18:16:16+02:00","description":"The category $\\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\\bf Fin$ is the category whose objects are sets $[n]={1,\\dots,n}$ for $n\\ge 0$ (with the convention that $[0]=\\varnothing$), and morphisms are functions $f : [n] \\to [m]$.","headline":"Preliminaries: finite sets, convolution","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/1-finset-and-its-up.html"},"url":"http://localhost:4000/species/lectures/1-finset-and-its-up.html"}</script>
+{"url":"http://localhost:4000/species/lectures/1-finset-and-its-up.html","@type":"BlogPosting","headline":"Preliminaries; finite sets, convolution","dateModified":"2021-12-02T15:33:08+02:00","datePublished":"2021-12-02T15:33:08+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/1-finset-and-its-up.html"},"description":"The category $\\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\\bf Fin$ is the category whose objects are sets $[n]={1,\\dots,n}$ for $n\\ge 0$ (with the convention that $[0]=\\varnothing$), and morphisms are functions $f : [n] \\to [m]$.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +28,8 @@
     <!-- The loading of KaTeX is deferred to speed up page rendering -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
     <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body,{macros:{ '':'', },delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body,{macros:{ '':'', },delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
 
       </head>
       <body>
@@ -43,7 +43,7 @@
     <main>
       <article>
     <!-- &bull;  &bull; -->
-    <h1>Preliminaries: finite sets, convolution</h1>
+    <h1>Preliminaries; finite sets, convolution</h1>
     <p>The category $\bf Fin$ has objects the finite sets and morphisms all functions; a skeleton of $\bf Fin$ is the category whose objects are sets $[n]={1,\dots,n}$ for $n\ge 0$ (with the convention that $[0]=\varnothing$), and morphisms are functions $f : [n] \to [m]$.</p>
 
 <h2 id="the-universal-property-of-bf-fin-and-bf-finbf-set">The universal property of $\bf Fin$ and $[{\bf Fin},{\bf Set}]$</h2>
@@ -57,7 +57,7 @@
 F([n]) = \coprod_{i=1}^n F([1]) = \coprod_{i=1}^n X = [n] \otimes X
 $$</div>
 
-<p>(if $_ \otimes _$ denotes the <a href="https://ncatlab.org/nlab/show/tensor">tensor</a> of $X\in\mathcal{C}$ with the set $[n]$). $\blacksquare$</p>
+<p>(if $ \_ \otimes \_ $ denotes the <a href="https://ncatlab.org/nlab/show/tensor">tensor</a> of $X\in\mathcal{C}$ with the set $[n]$). $\blacksquare$</p>
 
 <p>As an immediate corollary, the opposite category ${\bf Fin}^\text{op}$ is the free finite <em>product</em> completion of the singleton $\bullet$.</p>
 
@@ -77,9 +77,7 @@ $$</div>
 
 <p>where $J^*$ is the “precomposition with $J$” functor and $\text{Lan}_J$ its left adjoint. Such a left adjoint is fully faithful because $J$ is fully faithful, and this last condition entails that in the diagram</p>
 
-<p><span class="antex display"><img src="/species/antex/dcc9e53033fcbae7037ee73f60071036.svg" style="margin: 0.0ex 0.0ex -9.832ex 0.0ex;
-height: 12.337ex;
-width: 14.454ex;"></span></p>
+<p><span class="antex display"><img style='margin: 0.0ex 0.0ex -9.832ex 0.0ex; height: 12.337ex; width: 14.454ex;' src="/species/antex/8b842252015fc77c796b6474e4d5c09b.svg" /></span></p>
 
 <p>The 2-cell $\eta : F \Rightarrow (\text{Lan}_J F)\circ J $ is invertible; $\eta$ is precisely the unit of the adjunction $\text{Lan}_J \dashv J^*$, and this, in turn, entails that the left adjoint in the adjunction is fully faithful.</p>
 
@@ -92,9 +90,7 @@ width: 14.454ex;"></span></p>
 
 <p>The equivalence is easily seen: assume $T$ is finitary, and unwind the counit using the universal property; given $A\in \bf Set$, the left Kan extension of $TJ$ along $J$, computed in $A$, is just the <a href="https://ncatlab.org/nlab/show/weighted+colimit">weighted colimit</a> of $TJ$ with weight $P={\bf Set}(J-, A)$, and this is, in turn, the colimit of $TJ$ over the (opposite of the) <a href="https://ncatlab.org/nlab/show/category+of+elements">category of elements</a> of $P$, i.e the colimit of the composition $T \circ \Sigma^\text{op}$, where the category of elements and the canonical projection $\Sigma$ appear in the upper left corner in the pullback</p>
 
-<p><span class="antex display"><img src="/species/antex/c0d8023af752a3f55460f7b6e565ca0c.svg" style="margin: 0.0ex 0.0ex -11.638ex 0.0ex;
-height: 13.708ex;
-width: 19.15ex;"></span></p>
+<p><span class="antex display"><img style='margin: 0.0ex 0.0ex -11.638ex 0.0ex; height: 13.708ex; width: 19.15ex;' src="/species/antex/7126bd6dd0457a47eea89ced6a825646.svg" /></span></p>
 
 <p>This category is filtered, so in the end $\lambda A.\text{Lan}_J(TJ)A\cong \lambda A.T((\text{Lan}_J J)A)\cong \lambda A.TA$, naturally in $A$ (because $\text{Lan}_JJ$ is isomorphic to the identity functor). $\blacksquare$</p>
 
@@ -151,13 +147,11 @@ $$</div>
 {\sf Cat}([{\cal C}^\text{op}, {\bf Set}], {\cal D}) \to {\sf Cat}({\cal C}, \cal D).
 $$</div>
 
-<p>The last introductory remark is about the so-called <em>convolution product</em> of functors. Given a monoidal category $({\cal A}, \otimes, I)$ we can endow the presheaf category $[{\cal A}^\text{op}, {\bf Set}]$ with a monoidal structure such that the Yoneda embedding $y : {\cal A} \to [{\cal A}^\text{op}, {\bf Set}]$ is a strong monoidal functor (in fact, the operation built in this way is universal with respect to this property).</p>
+<p>The last introductory remark is about the so-called <em>convolution product</em> of functors. Given a monoidal category $({\cal A}, \otimes, I)$ we can endow the presheaf category $[{\cal A}^\text{op}, {\bf Set}]$ with a monoidal structure such that the Yoneda embedding $\text{よ} : {\cal A} \to [{\cal A}^\text{op}, {\bf Set}]$ is a strong monoidal functor (in fact, the operation built in this way is universal with respect to this property).</p>
 
 <p>Let $F,G : {\cal A}^\text{op} \to {\bf Set}$ be functors; define their <em>Day convolution</em> as the functor $F * G : {\cal A}^\text{op} \to {\bf Set}$ obtained as left Kan extension of $F\times G$ along $\otimes$, i.e. as the curved arrow in the following diagram</p>
 
-<p><span class="antex display"><img src="/species/antex/e5660ce5f417b6b7c48f979e61974e56.svg" style="margin: 0.0ex 0.0ex -9.932ex 0.0ex;
-height: 12.63ex;
-width: 40.091ex;"></span></p>
+<p><span class="antex display"><img style='margin: 0.0ex 0.0ex -9.932ex 0.0ex; height: 12.63ex; width: 40.091ex;' src="/species/antex/43ede8d3d81ef82309183c7455dbb343.svg" /></span></p>
 
 <p>More explicitly, $F * G$ acts on objects as the <a href="https://en.wikipedia.org/wiki/Brazilian_porcupine">integral</a></p>
 
@@ -167,7 +161,7 @@ $$</div>
 
 <p>and on morphism (natural transformations of presheaves) by the evident functoriality of this construction.</p>
 
-<p>(<em>Exercise</em>: Prove that if $\cal A$ is a cartesian category (i.e., $\otimes = \times$) then $F * G \cong F\times G$; prove that the monoidal unit of $*$ is the representable presheaf $y(I)$ on the monoidal unit of $({\cal A}, \otimes)$.)</p>
+<p>(<em>Exercise</em>: Prove that if $\cal A$ is a cartesian category (i.e., $\otimes = \times$) then $F * G \cong F\times G$; prove that the monoidal unit of $*$ is the representable presheaf $\text{よ}(I)$ on the monoidal unit of $({\cal A}, \otimes)$.)</p>
 
 <p>Refer to [???,???] for more information.</p>
 
@@ -176,7 +170,6 @@ $$</div>
 <p>…</p>
 
 </article>
-
     </main>
 
     <footer id="footer">

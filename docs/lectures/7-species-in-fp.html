@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Application: species in functional programming | Combinatorial species in TTU</title>
-<meta name="generator" content="Jekyll v3.9.5">
-<meta property="og:title" content="Application: species in functional programming">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="One of the many ways of formally describing a programming language is via denotational semantics, in which a term $T$ of type $\tau$ is represented by a mathematical object $\llbracket T \rrbracket \in \llbracket\tau\rrbracket$ (its denotation), where $\llbracket\tau\rrbracket$ is a domain, a certain kind of structured set. Terms of type $\sigma\to\tau$ are then interpreted as suitable functions $\llbracket\sigma\rrbracket\to\llbracket\tau\rrbracket$ between domains.1 As it’s common in set theoretical foundations of mathematics, functions enjoy an extensionality principle (i.e. are considered equal when they agree on all arguments). Therefore unlike its operational counterpart, denotational semantics is more concerned with the statics of a program, rather than its dynamics. ↩">
-<meta property="og:description" content="One of the many ways of formally describing a programming language is via denotational semantics, in which a term $T$ of type $\tau$ is represented by a mathematical object $\llbracket T \rrbracket \in \llbracket\tau\rrbracket$ (its denotation), where $\llbracket\tau\rrbracket$ is a domain, a certain kind of structured set. Terms of type $\sigma\to\tau$ are then interpreted as suitable functions $\llbracket\sigma\rrbracket\to\llbracket\tau\rrbracket$ between domains.1 As it’s common in set theoretical foundations of mathematics, functions enjoy an extensionality principle (i.e. are considered equal when they agree on all arguments). Therefore unlike its operational counterpart, denotational semantics is more concerned with the statics of a program, rather than its dynamics. ↩">
-<link rel="canonical" href="http://localhost:4000/species/lectures/7-species-in-fp.html">
-<meta property="og:url" content="http://localhost:4000/species/lectures/7-species-in-fp.html">
-<meta property="og:site_name" content="Combinatorial species in TTU">
-<meta property="og:type" content="article">
-<meta property="article:published_time" content="2026-01-17T18:16:16+02:00">
-<meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="Application: species in functional programming">
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>An application of species to functional programming | Combinatorial species in TTU</title>
+<meta name="generator" content="Jekyll v3.9.1" />
+<meta property="og:title" content="An application of species to functional programming" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="One of the many ways of formally describing a programming language is via denotational semantics, in which a term $T$ of type $\tau$ is represented by a mathematical object $\llbracket T \rrbracket \in \llbracket\tau\rrbracket$ (its denotation), where $\llbracket\tau\rrbracket$ is a domain, a certain kind of structured set. Terms of type $\sigma\to\tau$ are then interpreted as suitable functions $\llbracket\sigma\rrbracket\to\llbracket\tau\rrbracket$ between domains.1 As it’s common in set theoretical foundations of mathematics, functions enjoy an extensionality principle (i.e. are considered equal when they agree on all arguments). Therefore unlike its operational counterpart, denotational semantics is more concerned with the statics of a program, rather than its dynamics. &#8617;" />
+<meta property="og:description" content="One of the many ways of formally describing a programming language is via denotational semantics, in which a term $T$ of type $\tau$ is represented by a mathematical object $\llbracket T \rrbracket \in \llbracket\tau\rrbracket$ (its denotation), where $\llbracket\tau\rrbracket$ is a domain, a certain kind of structured set. Terms of type $\sigma\to\tau$ are then interpreted as suitable functions $\llbracket\sigma\rrbracket\to\llbracket\tau\rrbracket$ between domains.1 As it’s common in set theoretical foundations of mathematics, functions enjoy an extensionality principle (i.e. are considered equal when they agree on all arguments). Therefore unlike its operational counterpart, denotational semantics is more concerned with the statics of a program, rather than its dynamics. &#8617;" />
+<link rel="canonical" href="http://localhost:4000/species/lectures/7-species-in-fp.html" />
+<meta property="og:url" content="http://localhost:4000/species/lectures/7-species-in-fp.html" />
+<meta property="og:site_name" content="Combinatorial species in TTU" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-02T15:33:08+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="An application of species to functional programming" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-17T18:16:16+02:00","datePublished":"2026-01-17T18:16:16+02:00","description":"One of the many ways of formally describing a programming language is via denotational semantics, in which a term $T$ of type $\\tau$ is represented by a mathematical object $\\llbracket T \\rrbracket \\in \\llbracket\\tau\\rrbracket$ (its denotation), where $\\llbracket\\tau\\rrbracket$ is a domain, a certain kind of structured set. Terms of type $\\sigma\\to\\tau$ are then interpreted as suitable functions $\\llbracket\\sigma\\rrbracket\\to\\llbracket\\tau\\rrbracket$ between domains.1 As it’s common in set theoretical foundations of mathematics, functions enjoy an extensionality principle (i.e. are considered equal when they agree on all arguments). Therefore unlike its operational counterpart, denotational semantics is more concerned with the statics of a program, rather than its dynamics. &#8617;","headline":"Application: species in functional programming","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/7-species-in-fp.html"},"url":"http://localhost:4000/species/lectures/7-species-in-fp.html"}</script>
+{"url":"http://localhost:4000/species/lectures/7-species-in-fp.html","@type":"BlogPosting","headline":"An application of species to functional programming","dateModified":"2021-12-02T15:33:08+02:00","datePublished":"2021-12-02T15:33:08+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/species/lectures/7-species-in-fp.html"},"description":"One of the many ways of formally describing a programming language is via denotational semantics, in which a term $T$ of type $\\tau$ is represented by a mathematical object $\\llbracket T \\rrbracket \\in \\llbracket\\tau\\rrbracket$ (its denotation), where $\\llbracket\\tau\\rrbracket$ is a domain, a certain kind of structured set. Terms of type $\\sigma\\to\\tau$ are then interpreted as suitable functions $\\llbracket\\sigma\\rrbracket\\to\\llbracket\\tau\\rrbracket$ between domains.1 As it’s common in set theoretical foundations of mathematics, functions enjoy an extensionality principle (i.e. are considered equal when they agree on all arguments). Therefore unlike its operational counterpart, denotational semantics is more concerned with the statics of a program, rather than its dynamics. &#8617;","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +28,8 @@
     <!-- The loading of KaTeX is deferred to speed up page rendering -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
     <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body,{macros:{ '':'', },delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body,{macros:{ '':'', },delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
 
       </head>
       <body>
@@ -43,16 +43,16 @@
     <main>
       <article>
     <!-- &bull;  &bull; -->
-    <h1>Application: species in functional programming</h1>
-    <p>One of the many ways of formally describing a programming language is via <em>denotational semantics</em>, in which a term $T$ of type $\tau$ is represented by a mathematical object $\llbracket T \rrbracket \in \llbracket\tau\rrbracket$ (its <em>denotation</em>), where $\llbracket\tau\rrbracket$ is a <em>domain</em>, a certain kind of structured set. Terms of type $\sigma\to\tau$ are then interpreted as suitable functions $\llbracket\sigma\rrbracket\to\llbracket\tau\rrbracket$ between domains.<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+    <h1>An application of species to functional programming</h1>
+    <p>One of the many ways of formally describing a programming language is via <em>denotational semantics</em>, in which a term $T$ of type $\tau$ is represented by a mathematical object $\llbracket T \rrbracket \in \llbracket\tau\rrbracket$ (its <em>denotation</em>), where $\llbracket\tau\rrbracket$ is a <em>domain</em>, a certain kind of structured set. Terms of type $\sigma\to\tau$ are then interpreted as suitable functions $\llbracket\sigma\rrbracket\to\llbracket\tau\rrbracket$ between domains.<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></p>
 
-<p>(Thanks to <a href="https://dpl0a.github.io">dpl0a</a> for having written this introduction replacing my lazy fat fingers.)</p>
+<p>(Thanks to <a href="">dpl0a</a> for having written this introduction replacing my lazy fat fingers.)</p>
 
 <p>In this sense, a certain subcategory of the category of analytic functors (the category of normal functors) is a denotational semantics for a certain flavour of $\lambda$-calculus.</p>
 
 <p><strong>Definition</strong> (Analytic functor in more than one variable). Let $A$ be a set and $F : \mathbf{Set}^A \to \mathbf{Set}$ a functor ($\mathbf{Set}^A$ is equivalently the product category $\prod_{a\in A}\mathbf{Set}$ and the slice category $\mathbf{Set}/A$; we will make constant use of this equivalence).</p>
 
-<p>We define an <em>analytic functor in $A$ variables</em> as a functor $F$ that results from the left Kan extension of a <em>species in $A$ variables</em> along the obvious functor $\mathbf{B}^A =\prod_{a\in A}\mathbf{B}\to \mathbf{Set}^A$;</p>
+<p>We define an <em>analytic functor in $A$ variables</em> as a functor $F$ that results from the left Kan extension of a <em>species in $A$ variables</em> along the obvious functor $\mathbf{P}^A =\prod_{a\in A}\mathbf{P}\to \mathbf{Set}^A$;</p>
 
 <p>[diag]</p>
 
@@ -113,17 +113,17 @@ $$</div>
 <p>where $\iota$ is regarded as the type of natural numbers, and $o$ as a type of Boolean values. For what concerns terms,</p>
 
 <div class="kdmath">$$
-\begin{array}{rcl} M &amp; ::= &amp; x \\
-   &amp;&amp; \mid M\, M \\
-   &amp;&amp; \mid \lambda x^\sigma.M \\
-   &amp;&amp; \mid \text{fix } M \\
-   &amp;&amp; \mid \text{suc } M \\
-   &amp;&amp; \mid \text{pred } M \\
-   &amp;&amp; \mid \text{zero? } M \\
-   &amp;&amp; \mid \text{if } M \text{ then } M \text{ else } M \\
-   &amp;&amp; \mid t \\
-   &amp;&amp; \mid f \\
-   &amp;&amp; \mid n
+\begin{array}{rcl} M & ::= & x \\
+   && \mid M\, M \\
+   && \mid \lambda x^\sigma.M \\
+   && \mid \text{fix } M \\
+   && \mid \text{suc } M \\
+   && \mid \text{pred } M \\
+   && \mid \text{zero? } M \\
+   && \mid \text{if } M \text{ then } M \text{ else } M \\
+   && \mid t \\
+   && \mid f \\
+   && \mid n
    \end{array}
 $$</div>
 
@@ -200,23 +200,19 @@ $$</div>
 
 <p>Finally, the fixpoint operation $\text{fix}$ is interpreted as an initial algebra construction: …I could transcribe Hasegawa, but what for?</p>
 
-<p><img src="../fixpoint.png" alt="drawing" width="100%"></p>
+<p><img src="../fixpoint.png" alt="drawing" width="100%" /></p>
 
 <h4 id="notes">Notes</h4>
 
-<h4 id="reading-list">Reading list</h4>
-
-<p>…</p>
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p>As it’s common in set theoretical foundations of mathematics, functions enjoy an <em>extensionality principle</em> (i.e. are considered equal when they agree on all arguments). Therefore unlike its <em>operational</em> counterpart, denotational semantics is more concerned with the <em>statics</em> of a program, rather than its <em>dynamics</em>. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>As it’s common in set theoretical foundations of mathematics, functions enjoy an <em>extensionality principle</em> (i.e. are considered equal when they agree on all arguments). Therefore unlike its <em>operational</em> counterpart, denotational semantics is more concerned with the <em>statics</em> of a program, rather than its <em>dynamics</em>. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
 
 </article>
-
     </main>
 
     <footer id="footer">
