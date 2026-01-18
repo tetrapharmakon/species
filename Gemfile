@@ -1,10 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'webrick', '~> 1.7'
-
 gem 'jekyll', '~> 3.9.1'
 
 gem 'kramdown-parser-gfm'
+
+# NOTE: these are dependencies that stopped being default gems for ruby >=3.4.0
+gem 'base64'
+gem 'bigdecimal'
+gem 'csv'
+gem 'webrick'
+
+gem "psych", "~> 3.1"
 
 group :jekyll_plugins do
     gem 'jekyll-seo-tag'

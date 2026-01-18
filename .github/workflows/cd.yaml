@@ -1,0 +1,31 @@
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/cache@v5
+        with:
+          path: .antex-cache
+          key: antex-cache-${{ runner.os }}-
+          restore-keys: |
+            antex-cache-${{ runner.os }}-
+      - uses: DeterminateSystems/nix-installer-action@main
+      - run: nix develop --command bundle exec jekyll build
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: _site }
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
