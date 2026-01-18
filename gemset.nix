@@ -339,6 +339,16 @@
     };
     version = "0.16.2";
   };
+  psych = {
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "186i2hc6sfvg4skhqf82kxaf4mb60g65fsif8w8vg1hc9mbyiaph";
+      type = "gem";
+    };
+    version = "3.3.4";
+  };
   public_suffix = {
     groups = ["default" "jekyll_plugins"];
     platforms = [];
