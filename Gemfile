@@ -4,6 +4,12 @@ gem 'jekyll', '~> 3.9.1'
 
 gem 'kramdown-parser-gfm'
 
+# NOTE: these are dependencies that stopped being default gems for ruby >=3.4.0
+gem 'base64'
+gem 'bigdecimal'
+gem 'csv'
+gem 'webrick'
+
 group :jekyll_plugins do
     gem 'jekyll-seo-tag'
     gem 'jekyll-feed'
