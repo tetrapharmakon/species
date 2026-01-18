@@ -53,6 +53,7 @@ exclude:
   - flake.lock
   - gemset.nix
   - vendor/
+  - drafts
 
 collections:
   lectures:
