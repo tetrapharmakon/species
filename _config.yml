@@ -51,6 +51,7 @@ exclude:
   - gemset.nix
   - vendor/
   - drafts
+  - bibfiles
 
 collections:
   lectures:
