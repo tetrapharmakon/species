@@ -64,6 +64,11 @@ One can define the *free operad* on a combinatorial species, i.e. a left adjoint
 - The Day convolution product is separately cocontinuous in both variables (compare this with the fact that the substitution product commutes with colimits in its left, but not in its right, component: $-\circ G$ is cocontinuous (and thus a left adjoint, given that $\bf Spc$ is a locally finitely presentable category), $F\circ-$ isn't -and thus a right adjoint to it can't exist).
 - In the case of Day convolution, the free-forgetful adjunction is easy to characterize conceptually: the free Day-monoid on a species is $\sum_{n\ge 0} F^{*n}$, which reduces to the species $L\circ F$; two corollaries of this fact are important: first, the action of the forgetful functor $U : {\bf Mon}({\bf Spc},\otimes) \to {\bf Spc}$ coincides with the Day-hom $\{\}$
 
+A not-so-helpful observation is that the free operad on $F$ has to be obtained as the initial algebra for the functor ${\bf Spc} \to {\bf Spc} : P\mapsto y1 + F\circ P$. Adamek's theorem then ensures that such an initial algebra is the colimit of the chain
+
+$$ y1 \to y1 + F \circ y1 = y1 + F \to y1 + F \circ (y1 + F) \to \dots $$
+
+The problem is, we cannot develop such an expression simplifying, since the substitution product is only left cocontinuous.
 
 **Proposition.** Every operad $T : {\bf B} \to {\bf Set}$ defines a monad $\flat T : {\bf Set} \to {\bf Set}$ as follows:
 
@@ -71,7 +76,7 @@ One can define the *free operad* on a combinatorial species, i.e. a left adjoint
   
   $$ (\flat T)X := \int^n X^n \times Tn $$
 
-  evidently, $\flat T$ is the analytic functor associated to $T$, so the construction of this proposition can be summarized as: *the analytic functor associated to an operad is a monad*, and thus an *analytic* monad.
+  evidently, $\flat T$ is the analytic functor associated to $T$, so the construction of this proposition can be summarized as: *the analytic functor associated to an operad* (qua species) *is a monad*, and thus an *analytic* monad.
 - the unit (component) $\eta : X \to (\flat T)X$ is defined through the unit of $T$,
 
   {% tex classes: [antex, display] %}
