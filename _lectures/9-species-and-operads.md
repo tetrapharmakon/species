@@ -100,7 +100,7 @@ It is worth to note explicitly the shape of $\mu,\eta$; those who already know i
 
 given permutations $\alpha, \beta_1,\dots, \beta_m$, where $\bar\beta=\beta_1 \mathbin{ш} \beta_2 \mathbin{ш} \dots \mathbin{ш} \beta_m$ is the shuffle (шафл) of the permutations $\beta_1,\dots, \beta_m$.
 
-Associativity of $\mu$ is better appreciated through a picture:
+Associativity of $\mu$ is better appreciated through a picture: given an an $n$-ary term $f\in Tn$, terms $g_1\in Tp_1,\dots,g_n\in Tp_n$, and moreover terms $h_{1,1},\dots, h_{1,q_{p_1}},\dots, h_{n,1},\dots, h_{n,p_n}$, the two graftings depicted below are equal.
 
 {% tex classes: [antex, display] %}
 \begin{tikzpicture}
