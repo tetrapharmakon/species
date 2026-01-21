@@ -191,7 +191,20 @@ Some of the structure of $\mathbf{Opd}$ can be deduced from the fact that we are
 
 whence we can derive (among other things) that
 
-- the category of operads is complete, and limits are created by the forgetful functor $U$;
+- the category of operads is complete, and limits are created by the forgetful functor $U$; in particular, the Hadamard product of two species who happen to be operads inherits an operad structure (it is a straightforward consequence of a general fact, but it's cool to see the derivation): let $T_* : {\cal J} \to {\bf Opd}$ be a diagram of operads; then the limit $\text{lim}_{\cal J}\, T_J$ computed in species inherits a structure of operad as follows:
+
+  $$ \begin{aligned}
+  (\text{lim}_{\cal J}\, T_J)\circ (\text{lim}_{\cal J}\, T_J) & = \int^m (\text{lim}_{\cal J}\, T_J)m \times (\text{lim}_{\cal J}\, T_J)^{*m} \\ 
+    & = \int^m \text{lim}_{\cal J}\, (T_Jm) \times (\text{lim}_{\cal J}\, T_J)^{*m} \\ 
+    & \cong \int^m \text{lim}_{\cal J}\, (T_Jm) \times \int^{J_1,\dots, J_m} \text{lim}_{J_1}\dots \text{lim}_{J_m} T_{J_1}n_1 \times\dots \times T_{J_m}n_m\times {\bf B}(\sum n_i,-)\\ 
+    & \to \text{lim}_{\cal J}\,\text{lim}_{J_1}\dots \text{lim}_{J_m} \int^m (T_Jm) \times \int^{n_1,\dots, n_m}  T_{J_1}n_1 \times\dots \times T_{J_m}n_m\times {\bf B}(\sum n_i,-)\\ 
+    (\dag)& \to \text{lim}_{\cal J} \int^m (T_Jm) \times \int^{n_1,\dots, n_m}  T_J n_1 \times\dots \times T_J n_m\times {\bf B}(\sum n_i,-)\\ 
+     & = \text{lim}_{\cal J} \int^m (T_Jm) \times T_J^{*m}\\ 
+    (\ddag)& \to \text{lim}_{\cal J} T_J 
+  \end{aligned} $$
+
+  where $(\dag)$ precomposes with the diagonal functor $\Delta : {\cal J} \to {\cal J}^m$, and $(\ddag)$ uses the multiplication of each $T_J$; the unit is way easier to obtain as $\eta_J : y1 \Rightarrow T_J$ is a cone, inducing a unique $\bar\eta : y1 \Rightarrow \text{lim}_{\cal J} T_J$ into the limit.
+
 - colimits are complicated, but still they are reducible to certain reflexive coequalizers of free algebras, via the "Linton trick".
 
 One can define the *free operad* on a combinatorial species, i.e. a left adjoint to the forgetful functor $U$ above; the situation, however, is in stark contrast with the case of *Cauchy* monoids, because
@@ -245,3 +258,59 @@ The problem is, we cannot develop such an expression simplifying, since the subs
     \int^k X^k \times Tk
   }}
   {% endtex %}
+
+## Examples of operads
+
+As it is obvious, on the same set there can be non-isomorphic monoid structures; similarly, even if usually there is just *one* important implicitly understood operad structure on a species, there can be many. One example is the species of linear orders $L$: it is the *associative operad* $As$ operad with respect to a natural composition operation, but it is also an operad $Zinb$, the *Zinbiel* operad, with respect to a different structure.
+
+**Example.** Every species defines an operad, the *endomorphism operad*.
+
+**Example.** The operad $Com$ with carrier $E$
+
+**Example.** The operad $As$ with carrier $L$
+
+**Example.** A different operad structure (the operad $Zinb$) over $L_+$
+
+**Example.** The operad $Perm$ with carrier $El$
+
+**Example.** The $Lie$ operad.
+
+We summarize the situation in a table:
+
+<div align="center">
+
+<table>
+  <thead>
+    <tr>
+      <th>Algebra type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">$Com, Com_+$</td>
+      <td align="center">$E, E_+$</td>
+    </tr>
+    <tr>
+      <td align="center">$As, As_+$</td>
+      <td align="center">$L, L_+$</td>
+    </tr>
+    <tr>
+      <td align="center">$Zinb$</td>
+      <td align="center">$L_+$</td>
+    </tr>
+    <tr>
+      <td align="center">$Perm$</td>
+      <td align="center">species of elements</td>
+    </tr>
+    <tr>
+      <td align="center">$Lie$</td>
+      <td align="center"></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+## Algebras for an operad
+

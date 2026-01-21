@@ -192,29 +192,41 @@ $$
 From this it is possible to define the associator as the chain of isomorphisms
 
 $$
-\begin{array}{rcl}
+\begin{aligned}
 F \circ (G \circ H)
-&= &\displaystyle\lambda k.
+&=  \displaystyle\lambda k.
 \int^{m}
 F_m \otimes (G \circ H)^{*m}k
 \\
-&\cong&\displaystyle \lambda k.
+&\cong \displaystyle \lambda k.
 \int^{m}
 F_m \otimes (G^{*m} \circ H)k
 \\
-&\cong&\displaystyle \lambda k.
+&\cong \displaystyle \lambda k.
 \int^{m,l}
 F_m \otimes G^{*m}l \otimes H^{*l}k
 \\
-&\cong&\displaystyle \lambda k.
+&\cong \displaystyle \lambda k.
 \int^{l}
 (F \circ G)l \otimes H^{*l}k = (F \circ G) \circ H
-\end{array}
+\end{aligned}
 $$
 
 Each step of this chain is natural in all its conceivable arguments; it is a tedious job to verify that this satisfies the pentagon identity.
 
-**Definition-Theorem.** Internal hom for the convolution product. [...]
+**Definition-Theorem.** The substitution monoidal structure is left cocontinuous, and thus left-closed; this makes the existence of the internal (left) hom for the substituion product; to show what shape it has to have, just compute
+
+$$
+\begin{aligned}
+{\bf Spc}(F\circ G,H) &= \int_r {\bf Set}\Big( \int^m Fm\times G^{*m}r,Hr \Big) \\ 
+&\cong \int_r \int_m  {\bf Set}( Fm\times G^{*m}r,Hr ) \\ 
+&\cong \int_r \int_m  {\bf Set}( Fm, {\bf Set}(G^{*m}r,Hr ))\\ 
+&\cong \int_m  {\bf Set}\Big( Fm, \int_r{\bf Set}(G^{*m}r,Hr )\Big)\\ 
+&\cong {\bf Spc}\big( F, \{G,H\}\big)\\ 
+\end{aligned}
+$$
+
+if $\\{G,H\\}m := \int_r{\bf Set}(G^{*m}r,Hr )$.
 
 ### On the structure of $\bf Spc$ as a topos
 
