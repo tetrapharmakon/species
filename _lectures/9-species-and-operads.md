@@ -39,7 +39,7 @@ antex:
 
 An operad is a monoid for the substitution product discussed in [lecture 3](./3-monoidal-structures-on-P.html#defi-5). As such, "the theory of operads" is the study of the category $\mathbf{Opd}={\bf Mon}({\bf Spc},\circ)$; but things are never as simple as they seem...
 
-First, let's flesh out what the definition prescribes. An *operad* consists of a functor $T : {\bf B} \to \bf Set$, equipped with 
+First, let's flesh out what the definition prescribes. An *operad* consists of a functor $T : {\bf B} \to \bf Set$, equipped with
 
 - multiplication, a natural transformation of type $\mu : T \circ T\Rightarrow T$, subject to the associativity axiom (the two compositions are mediated by the associator):
 
@@ -47,20 +47,20 @@ First, let's flesh out what the definition prescribes. An *operad* consists of a
   \setlength{\fboxrule}{1sp}
   \setlength{\fboxsep}{0sp}
   \fbox{\xymatrix{
-    (T\circ T)\circ T\ar[r]^-{\mu\circ T}\ar[d]_-\wr & T\circ T \ar[dd]^-\mu \\
-    T\circ (T\circ T) \ar[d]_-{T\circ\mu}& \\
-    T\circ T \ar[r]_-\mu & T
+  (T\circ T)\circ T\ar[r]^-{\mu\circ T}\ar[d]_-\wr & T\circ T \ar[dd]^-\mu \\
+  T\circ (T\circ T) \ar[d]_-{T\circ\mu}& \\
+  T\circ T \ar[r]_-\mu & T
   }}
   {% endtex %} 
-  
+
 - unit, a natural transformation of type $\eta : J \Rightarrow T$ which satisfies the left and right unit axioms (mediated by the unitors):
-  
+
   {% tex classes: [antex, display] %}
   \setlength{\fboxrule}{1sp}
   \setlength{\fboxsep}{0sp}
   \fbox{\xymatrix{
-    J\ar[dr]_-\sim \circ T\ar[r]^-{\eta\circ T} & \ar[d]_-\mu T\circ T & T\circ J\ar[l]_-{T\circ \eta} \ar[dl]^-\sim\\ 
-    &T&
+  J\ar[dr]_-\sim \circ T\ar[r]^-{\eta\circ T} & \ar[d]_-\mu T\circ T & T\circ J\ar[l]_-{T\circ \eta} \ar[dl]^-\sim\\
+  &T&
   }}
   {% endtex %}
 
@@ -69,32 +69,32 @@ It is worth to note explicitly the shape of $\mu,\eta$; those who already know i
 - $\eta$, as a natural transformation of type $y1 \Rightarrow T$, corresponds by Yoneda to an element $u\in T1$.
 - $\mu$ is a natural transformation in the set
 
-  $$ \begin{aligned}
-  {\bf Spc}\Big(\int^m Tm\times T^{*m}(-) , T\Big) &\cong \int_m {\bf Spc}\big(Tm\times T^{*m}(-) , T\big)\\ 
-  &\cong \int_{mr} {\bf Set}\big(Tm\times T^{*m}r , Tr\big)\\
-  &\cong \int_{mr, \vec n} {\bf Set}\Big(Tm\times Tn_1\times\dots\times Tn_m \times {\bf B}(\textstyle\sum n_i,r) , Tr\Big)\\
-  &\cong \int_{mr, \vec n} {\bf Set}\Big({\bf B}(\textstyle\sum n_i,r), {\bf Set}(Tm\times Tn_1\times\dots\times Tn_m   , Tr)\Big)\\
-  &\cong {\bf Set}(Tm\times Tn_1\times\dots\times Tn_m  , T(\textstyle\sum n_i))
-  \end{aligned} $$
+$$ \begin{aligned}
+  {\bf Spc}\Big(\int^m Tm\times T^{*m}(-) , T\Big) & \cong \int_m {\bf Spc}\big(Tm\times T^{*m}(-) , T\big)                                                                          \\
+                                                   & \cong \int_{mr} {\bf Set}\big(Tm\times T^{*m}r , Tr\big)                                                                        \\
+                                                   & \cong \int_{mr, \vec n} {\bf Set}\Big(Tm\times Tn_1\times\dots\times Tn_m \times {\bf B}(\textstyle\sum n_i,r) , Tr\Big)        \\
+                                                   & \cong \int_{mr, \vec n} {\bf Set}\Big({\bf B}(\textstyle\sum n_i,r), {\bf Set}(Tm\times Tn_1\times\dots\times Tn_m   , Tr)\Big) \\
+                                                   & \cong {\bf Set}(Tm\times Tn_1\times\dots\times Tn_m  , T(\textstyle\sum n_i))
+ \end{aligned} $$
 
-  where the last equality is Yoneda, and thus $\mu$ has components 
-
-  {% tex classes: [antex, display] %}
-  \setlength{\fboxrule}{1sp}
-  \setlength{\fboxsep}{0sp}
-  \fbox{\xymatrix{
-    \mu : Tm\times Tn_1\times\dots\times Tn_m \ar[r] & T(n_1+\dots + n_m)
-  }}
-  {% endtex %}
-
-**Remark.** Naturality for $\eta$ is straightforward; note that naturality for $\mu$ amounts to the commutativity of the diagram 
+where the last equality is Yoneda, and thus $\mu$ has components
 
 {% tex classes: [antex, display] %}
 \setlength{\fboxrule}{1sp}
 \setlength{\fboxsep}{0sp}
 \fbox{\xymatrix{
-  Tm\times Tn_1\times\dots\times Tn_m \ar[r]^-\mu \ar[d]_{T\alpha\times T\beta_1\times\dots\times T\beta_n}& T(n_1+\dots + n_m) \ar[d]^{T\bar\beta}\\
-  Tm\times Tn_1\times\dots\times Tn_m \ar[r]_-\mu & T(n_1+\dots + n_m) 
+ \mu : Tm\times Tn_1\times\dots\times Tn_m \ar[r] & T(n_1+\dots + n_m)
+}}
+{% endtex %}
+
+**Remark.** Naturality for $\eta$ is straightforward; note that naturality for $\mu$ amounts to the commutativity of the diagram
+
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+ Tm\times Tn_1\times\dots\times Tn_m \ar[r]^-\mu \ar[d]_{T\alpha\times T\beta_1\times\dots\times T\beta_n}& T(n_1+\dots + n_m) \ar[d]^{T\bar\beta}\\
+ Tm\times Tn_1\times\dots\times Tn_m \ar[r]_-\mu & T(n_1+\dots + n_m)
 }}
 {% endtex %}
 
@@ -104,76 +104,76 @@ Associativity of $\mu$ is better appreciated through a picture: given an an $n$-
 
 {% tex classes: [antex, display] %}
 \begin{tikzpicture}
-\draw (0,0) pic {vertex={2pt}};
-\draw (.15,0) pic {vertex={2pt}};
-\draw (.39,0) pic {vertex={2pt}};
-\draw (0,-16pt) pic {box={6pt,g_1}};
-\begin{scope}[xshift=1.25cm]
-\draw (0,0) pic {vertex={2pt}};
-\draw (.15,0) pic {vertex={2pt}};
-\draw (.39,0) pic {vertex={2pt}};
-\draw (0,-16pt) pic {box={6pt,g_n}};
-\end{scope}
-\draw (6pt,-.85) -- ++(0,-8pt);
-\draw (41.5pt,-.85) -- ++(0,-8pt);
-\filldraw[fill=white] (0,-1.25) rectangle ++(48pt,8pt) node[pos=.5, font=\tiny] {$f$};
-\begin{scope}[xshift=3cm,yshift=2cm]
-\draw (0.0357,-8.5pt) pic {vertex={2pt}};
-\draw (.105,-8.5pt) pic {vertex={2pt}};
-\draw (.386,-8.5pt) pic {vertex={2pt}};
-\draw (0,-20pt) pic {box={6pt,g_1}};
-\begin{scope}[xshift=1.25cm]
-\draw (0.0357,-8.5pt) pic {vertex={2pt}};
-\draw (.105,-8.5pt) pic {vertex={2pt}};
-\draw (.386,-8.5pt) pic {vertex={2pt}};
-\draw (0,-20pt) pic {box={6pt,g_n}};
-\end{scope}
-\begin{scope}[yshift=-4pt]
-\draw (6pt,-.85) -- ++(0,-8pt);
-\draw (41.5pt,-.85) -- ++(0,-8pt);
-\filldraw[fill=white] (0,-1.25) rectangle ++(48pt,8pt) node[pos=.5, font=\tiny] {$f$};
-\end{scope}
-\end{scope}
-\begin{scope}[xshift=3cm,yshift=-2.5cm]
-\draw (0.0357,-6pt) pic {vertex={2pt}};
-\draw (.105,-6pt) pic {vertex={2pt}};
-\draw (.386,-6pt) pic {vertex={2pt}};
-\draw (0,-20pt) pic {box={6pt,g_1}};
-\begin{scope}[xshift=1.25cm]
-\draw (0.0357,-6pt) pic {vertex={2pt}};
-\draw (.105,-6pt) pic {vertex={2pt}};
-\draw (.386,-6pt) pic {vertex={2pt}};
-\draw (0,-20pt) pic {box={6pt,g_n}};
-\end{scope}
-\draw (6pt,-.85) -- ++(0,-8pt);
-\draw (41.5pt,-.85) -- ++(0,-8pt);
-\filldraw[fill=white] (0,-1.25) rectangle ++(48pt,8pt) node[pos=.5, font=\tiny] {$f$};
-\end{scope}
-\begin{scope}[xshift=6cm]
-\draw (0.0357,-8.5pt) pic {vertex={2pt}};
-\draw (.105,-8.5pt) pic {vertex={2pt}};
-\draw (.386,-8.5pt) pic {vertex={2pt}};
-\draw (0,-20pt) pic {box={6pt,g_1}};
-\begin{scope}[xshift=1.25cm]
-\draw (0.0357,-8.5pt) pic {vertex={2pt}};
-\draw (.105,-8.5pt) pic {vertex={2pt}};
-\draw (.386,-8.5pt) pic {vertex={2pt}};
-\draw (0,-20pt) pic {box={6pt,g_n}};
-\end{scope}
-\draw (6pt,-.85) -- ++(0,-8pt);
-\draw (41.5pt,-.85) -- ++(0,-8pt);
-\filldraw[fill=white] (0,-1.25) rectangle ++(48pt,8pt) node[pos=.5, font=\tiny] {$f$};
-\end{scope}
-\begin{scope}[xshift=3.75cm,yshift=-1cm]
-\node (p1) at ( 0:1cm) {$\bullet$};
-\node (p2) at ( 90:1cm) {$\bullet$};
-\node (p3) at (180:1cm) {$\bullet$};
-\node (p4) at (-90:1cm) {$\bullet$};
-\draw[->] (p2) -- (p1) node[pos=.5, above,font=\tiny] {$\mu$};
-\draw[->] (p3) -- (p2) node[pos=.5, above left=-2mm,font=\tiny] {$\frac{\mu,\dots,\mu}{1}$};
-\draw[->] (p3) -- (p4) node[pos=.5, below left=-2mm,font=\tiny] {$\frac 1\mu$};
-\draw[->] (p4) -- (p1) node[pos=.5, below,font=\tiny] {$\mu$};
-\end{scope}
+ \draw (0,0) pic {vertex={2pt}};
+ \draw (.15,0) pic {vertex={2pt}};
+ \draw (.39,0) pic {vertex={2pt}};
+ \draw (0,-16pt) pic {box={6pt,g_1}};
+ \begin{scope}[xshift=1.25cm]
+  \draw (0,0) pic {vertex={2pt}};
+  \draw (.15,0) pic {vertex={2pt}};
+  \draw (.39,0) pic {vertex={2pt}};
+  \draw (0,-16pt) pic {box={6pt,g_n}};
+ \end{scope}
+ \draw (6pt,-.85) -- ++(0,-8pt);
+ \draw (41.5pt,-.85) -- ++(0,-8pt);
+ \filldraw[fill=white] (0,-1.25) rectangle ++(48pt,8pt) node[pos=.5, font=\tiny] {$f$};
+ \begin{scope}[xshift=3cm,yshift=2cm]
+  \draw (0.0357,-8.5pt) pic {vertex={2pt}};
+  \draw (.105,-8.5pt) pic {vertex={2pt}};
+  \draw (.386,-8.5pt) pic {vertex={2pt}};
+  \draw (0,-20pt) pic {box={6pt,g_1}};
+  \begin{scope}[xshift=1.25cm]
+   \draw (0.0357,-8.5pt) pic {vertex={2pt}};
+   \draw (.105,-8.5pt) pic {vertex={2pt}};
+   \draw (.386,-8.5pt) pic {vertex={2pt}};
+   \draw (0,-20pt) pic {box={6pt,g_n}};
+  \end{scope}
+  \begin{scope}[yshift=-4pt]
+   \draw (6pt,-.85) -- ++(0,-8pt);
+   \draw (41.5pt,-.85) -- ++(0,-8pt);
+   \filldraw[fill=white] (0,-1.25) rectangle ++(48pt,8pt) node[pos=.5, font=\tiny] {$f$};
+  \end{scope}
+ \end{scope}
+ \begin{scope}[xshift=3cm,yshift=-2.5cm]
+  \draw (0.0357,-6pt) pic {vertex={2pt}};
+  \draw (.105,-6pt) pic {vertex={2pt}};
+  \draw (.386,-6pt) pic {vertex={2pt}};
+  \draw (0,-20pt) pic {box={6pt,g_1}};
+  \begin{scope}[xshift=1.25cm]
+   \draw (0.0357,-6pt) pic {vertex={2pt}};
+   \draw (.105,-6pt) pic {vertex={2pt}};
+   \draw (.386,-6pt) pic {vertex={2pt}};
+   \draw (0,-20pt) pic {box={6pt,g_n}};
+  \end{scope}
+  \draw (6pt,-.85) -- ++(0,-8pt);
+  \draw (41.5pt,-.85) -- ++(0,-8pt);
+  \filldraw[fill=white] (0,-1.25) rectangle ++(48pt,8pt) node[pos=.5, font=\tiny] {$f$};
+ \end{scope}
+ \begin{scope}[xshift=6cm]
+  \draw (0.0357,-8.5pt) pic {vertex={2pt}};
+  \draw (.105,-8.5pt) pic {vertex={2pt}};
+  \draw (.386,-8.5pt) pic {vertex={2pt}};
+  \draw (0,-20pt) pic {box={6pt,g_1}};
+  \begin{scope}[xshift=1.25cm]
+   \draw (0.0357,-8.5pt) pic {vertex={2pt}};
+   \draw (.105,-8.5pt) pic {vertex={2pt}};
+   \draw (.386,-8.5pt) pic {vertex={2pt}};
+   \draw (0,-20pt) pic {box={6pt,g_n}};
+  \end{scope}
+  \draw (6pt,-.85) -- ++(0,-8pt);
+  \draw (41.5pt,-.85) -- ++(0,-8pt);
+  \filldraw[fill=white] (0,-1.25) rectangle ++(48pt,8pt) node[pos=.5, font=\tiny] {$f$};
+ \end{scope}
+ \begin{scope}[xshift=3.75cm,yshift=-1cm]
+  \node (p1) at ( 0:1cm) {$\bullet$};
+  \node (p2) at ( 90:1cm) {$\bullet$};
+  \node (p3) at (180:1cm) {$\bullet$};
+  \node (p4) at (-90:1cm) {$\bullet$};
+  \draw[->] (p2) -- (p1) node[pos=.5, above,font=\tiny] {$\mu$};
+  \draw[->] (p3) -- (p2) node[pos=.5, above left=-2mm,font=\tiny] {$\frac{\mu,\dots,\mu}{1}$};
+  \draw[->] (p3) -- (p4) node[pos=.5, below left=-2mm,font=\tiny] {$\frac 1\mu$};
+  \draw[->] (p4) -- (p1) node[pos=.5, below,font=\tiny] {$\mu$};
+ \end{scope}
 \end{tikzpicture}
 {% endtex %}
 
@@ -185,7 +185,7 @@ Some of the structure of $\mathbf{Opd}$ can be deduced from the fact that we are
 \setlength{\fboxrule}{1sp}
 \setlength{\fboxsep}{0sp}
 \fbox{\xymatrix{
-  \Opd \ar@<-.3em>[r]_-U & \ar@<-.3em>[l]_-F ({\bf Spc},\circ)
+ \Opd \ar@<-.3em>[r]_-U & \ar@<-.3em>[l]_-F ({\bf Spc},\circ)
 }}
 {% endtex %}
 
@@ -193,24 +193,36 @@ whence we can derive (among other things) that
 
 - the category of operads is complete, and limits are created by the forgetful functor $U$; in particular, the Hadamard product of two species who happen to be operads inherits an operad structure (it is a straightforward consequence of a general fact, but it's cool to see the derivation): let $T_* : {\cal J} \to {\bf Opd}$ be a diagram of operads; then the limit $\text{lim}_{\cal J}\, T_J$ computed in species inherits a structure of operad as follows:
 
-  $$ \begin{aligned}
-  (\text{lim}_{\cal J}\, T_J)\circ (\text{lim}_{\cal J}\, T_J) & = \int^m (\text{lim}_{\cal J}\, T_J)m \times (\text{lim}_{\cal J}\, T_J)^{*m} \\ 
-    & = \int^m \text{lim}_{\cal J}\, (T_Jm) \times (\text{lim}_{\cal J}\, T_J)^{*m} \\ 
-    & \cong \int^m \text{lim}_{\cal J}\, (T_Jm) \times \int^{J_1,\dots, J_m} \text{lim}_{J_1}\dots \text{lim}_{J_m} T_{J_1}n_1 \times\dots \times T_{J_m}n_m\times {\bf B}(\sum n_i,-)\\ 
-    & \to \text{lim}_{\cal J}\,\text{lim}_{J_1}\dots \text{lim}_{J_m} \int^m (T_Jm) \times \int^{n_1,\dots, n_m}  T_{J_1}n_1 \times\dots \times T_{J_m}n_m\times {\bf B}(\sum n_i,-)\\ 
-    (\dag)& \to \text{lim}_{\cal J} \int^m (T_Jm) \times \int^{n_1,\dots, n_m}  T_J n_1 \times\dots \times T_J n_m\times {\bf B}(\sum n_i,-)\\ 
-     & = \text{lim}_{\cal J} \int^m (T_Jm) \times T_J^{*m}\\ 
-    (\ddag)& \to \text{lim}_{\cal J} T_J 
-  \end{aligned} $$
+$$
+ \begin{aligned}
+  (\text{lim}_{\cal J}\, T_J)\circ (\text{lim}_{\cal J}\, T_J) & = \int^m (\text{lim}_{\cal J}\, T_J)m \times (\text{lim}_{\cal J}\, T_J)^{*m}                                                                                                    \\
+                                                               & = \int^m \text{lim}_{\cal J}\, (T_Jm) \times (\text{lim}_{\cal J}\, T_J)^{*m}                                                                                                    \\
+                                                               & \cong \int^m \text{lim}_{\cal J}\, (T_Jm) \times \\ 
+                                                               &\kern4em\times\int^{J_1,\dots, J_m} \text{lim}_{J_1}\dots \text{lim}_{J_m} T_{J_1}n_1 \times\dots \times T_{J_m}n_m\times {\bf B}(\sum n_i,-) \\
+                                                               & \to \text{lim}_{\cal J}\,\text{lim}_{J_1}\dots \text{lim}_{J_m} \int^m (T_Jm) \times \\
+                                                               &\kern4em\times\int^{n_1,\dots, n_m}  T_{J_1}n_1 \times\dots \times T_{J_m}n_m\times {\bf B}(\sum n_i,-)   \\
+  (\dag)                                                       & \to \text{lim}_{\cal J} \int^m (T_Jm) \times \int^{n_1,\dots, n_m}  T_J n_1 \times\dots \times T_J n_m\times {\bf B}(\sum n_i,-)                                                 \\
+                                                               & = \text{lim}_{\cal J} \int^m (T_Jm) \times T_J^{*m}                                                                                                                              \\
+  (\ddag)                                                      & \to \text{lim}_{\cal J} T_J
+ \end{aligned}
+$$
 
-  where $(\dag)$ precomposes with the diagonal functor $\Delta : {\cal J} \to {\cal J}^m$, and $(\ddag)$ uses the multiplication of each $T_J$; the unit is way easier to obtain as $\eta_J : y1 \Rightarrow T_J$ is a cone, inducing a unique $\bar\eta : y1 \Rightarrow \text{lim}_{\cal J} T_J$ into the limit.
+where $(\dag)$ precomposes with the diagonal functor $\Delta : {\cal J} \to {\cal J}^m$, and $(\ddag)$ uses the multiplication of each $T_J$; the unit is way easier to obtain as $\eta_J : y1 \Rightarrow T_J$ is a cone, inducing a unique $\bar\eta : y1 \Rightarrow \text{lim}_{\cal J} T_J$ into the limit.
 
 - colimits are complicated, but still they are reducible to certain reflexive coequalizers of free algebras, via the "Linton trick".
 
 One can define the *free operad* on a combinatorial species, i.e. a left adjoint to the forgetful functor $U$ above; the situation, however, is in stark contrast with the case of *Cauchy* monoids, because
 
-- The Day convolution product is separately cocontinuous in both variables (compare this with the fact that the substitution product commutes with colimits in its left, but not in its right, component: $-\circ G$ is cocontinuous (and thus a left adjoint, given that $\bf Spc$ is a locally finitely presentable category), $F\circ-$ isn't -and thus a right adjoint to it can't exist).
-- In the case of Day convolution, the free-forgetful adjunction is easy to characterize conceptually: the free Day-monoid on a species is $\sum_{n\ge 0} F^{*n}$, which reduces to the species $L\circ F$; two corollaries of this fact are important: first, the action of the forgetful functor $U : {\bf Mon}({\bf Spc},\otimes) \to {\bf Spc}$ coincides with the Day-hom $\{\}$
+- The Day convolution product is separately cocontinuous in both variables (compare this with the fact that the substitution product commutes with colimits in its left, but not in its right, component: $-\circ G$ is cocontinuous (and thus a left adjoint, given that $\bf Spc$ is a locally finitely presentable category; we proved this in [lecture 3](./3-monoidal-structures-on-P.html#dayhom)), $F\circ-$ isn't -and thus a right adjoint to it can't exist).
+- In the case of Day convolution, the free-forgetful adjunction is easy to characterize conceptually: the free Day-monoid on a species is $\sum_{n\ge 0} F^{*n}$, which reduces to the species $L\circ F$.
+
+In order to prove that $L\circ F\cong \sum_{n\ge 0} F^{\ast n}$, first observe that $L = \sum_{n\ge 0} y(n)$, where $y(n)$ is the representable at $n$; so, since $-\circ F$ is cocontinuous, it is enough to prove that $y(n)\circ F\cong F^{*m}$, which is immediate: $L\circ F\cong \big(\sum_{n\ge 0} y(n)\big)\circ F\cong \sum_{n\ge 0} y(n) \circ F$, and
+
+$$ y(n) \circ F = \int^m {\bf B}(n,m)\times F^{*m} \cong F^{*n} $$
+
+by Yoneda (equivalently, use the observation in the proof of existence of the substitution monoidal structure, $y(n)\circ F\cong y(1)^{\ast n}\circ F\cong (y(1)\circ F)^{\ast n}\cong F^{\ast n}$).
+
+---
 
 A not-so-helpful observation is that the free operad on $F$ has to be obtained as the initial algebra for the functor ${\bf Spc} \to {\bf Spc} : P\mapsto y1 + F\circ P$. Adamek's theorem then ensures that such an initial algebra is the colimit of the chain
 
@@ -220,42 +232,42 @@ The problem is, we cannot develop such an expression simplifying, since the subs
 
 **Proposition.** Every operad $T : {\bf B} \to {\bf Set}$ defines a monad $\flat T : {\bf Set} \to {\bf Set}$ as follows:
 
-- the underlying endofunctor $\flat T$ is 
-  
-  $$ (\flat T)X := \int^n X^n \times Tn $$
+- the underlying endofunctor $\flat T$ is
 
-  evidently, $\flat T$ is the analytic functor associated to $T$, so the construction of this proposition can be summarized as: *the analytic functor associated to an operad* (qua species) *is a monad*, and thus an *analytic* monad.
+$$ (\flat T)X := \int^n X^n \times Tn $$
+
+evidently, $\flat T$ is the analytic functor associated to $T$, so the construction of this proposition can be summarized as: *the analytic functor associated to an operad* (qua species) *is a monad*, and thus an *analytic* monad.
 - the unit (component) $\eta : X \to (\flat T)X$ is defined through the unit of $T$,
 
   {% tex classes: [antex, display] %}
   \setlength{\fboxrule}{1sp}
   \setlength{\fboxsep}{0sp}
   \fbox{\xymatrix{
-    X \cong X\times 1\ar[r]^-{\langle \text{id},\eta\rangle}&
-    X^1 \times T1 \ar[r]^-{\text{in}_1} &
-    \int^n X^n \times Tn
+  X \cong X\times 1\ar[r]^-{\langle \text{id},\eta\rangle}&
+  X^1 \times T1 \ar[r]^-{\text{in}_1} &
+  \int^n X^n \times Tn
   }}
   {% endtex %}
 
 - the multiplication (component) $\mu : (\flat T)((\flat T)X) \to (\flat T)X$ is defined from the composition
 
-  $$ \begin{aligned}
-  \int^{m} (M_T(X))^m \times Tm 
-  &\cong \int^{m} \Bigl[ \int^{n} X^n \times Tn \Bigr]^m \times Tm \\
-  &\cong \int^{m} \left(\int^{\vec n} X^{n_1+\cdots+n_m} \times T{n_1} \times \cdots \times T{n_m} \right) \times Tm  \\
-  &\cong \int^{m,\vec n} X^{n_1+\cdots+n_m} \times T{n_1} \times \cdots \times T{n_m} \times  Tm \\
-  &\to \int^k X^k\times Tk 
-  \end{aligned} $$
-  
-  where the last arrow is obtained, in turn, composing 
+$$ \begin{aligned}
+  \int^{m} (M_T(X))^m \times Tm
+   & \cong \int^{m} \Bigl[ \int^{n} X^n \times Tn \Bigr]^m \times Tm                                                   \\
+   & \cong \int^{m} \left(\int^{\vec n} X^{n_1+\cdots+n_m} \times T{n_1} \times \cdots \times T{n_m} \right) \times Tm \\
+   & \cong \int^{m,\vec n} X^{n_1+\cdots+n_m} \times T{n_1} \times \cdots \times T{n_m} \times  Tm                     \\
+   & \to \int^k X^k\times Tk
+ \end{aligned} $$
+
+where the last arrow is obtained, in turn, composing
 
   {% tex classes: [antex, display] %}
   \setlength{\fboxrule}{1sp}
   \setlength{\fboxsep}{0sp}
   \fbox{\xymatrix{
-    X^{\sum n_i} \times Tm \times T{n_1} \times \cdots \times T{n_m}  \ar[d]_-{\langle\mu,\text{id}\rangle} & \\
-    X^{\sum n_i} \times T\left(\sum n_i\right)  \ar[r]^-{\text{in}_{k=\sum n_i}} &
-    \int^k X^k \times Tk
+  X^{\sum n_i} \times Tm \times T{n_1} \times \cdots \times T{n_m}  \ar[d]_-{\langle\mu,\text{id}\rangle} & \\
+  X^{\sum n_i} \times T\left(\sum n_i\right)  \ar[r]^-{\text{in}_{k=\sum n_i}} &
+  \int^k X^k \times Tk
   }}
   {% endtex %}
 
@@ -280,34 +292,34 @@ We summarize the situation in a table:
 <div align="center">
 
 <table>
-  <thead>
-    <tr>
-      <th>Algebra type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center">$Com, Com_+$</td>
-      <td align="center">$E, E_+$</td>
-    </tr>
-    <tr>
-      <td align="center">$As, As_+$</td>
-      <td align="center">$L, L_+$</td>
-    </tr>
-    <tr>
-      <td align="center">$Zinb$</td>
-      <td align="center">$L_+$</td>
-    </tr>
-    <tr>
-      <td align="center">$Perm$</td>
-      <td align="center">species of elements</td>
-    </tr>
-    <tr>
-      <td align="center">$Lie$</td>
-      <td align="center"></td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>Algebra type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">$Com, Com_+$</td>
+<td align="center">$E, E_+$</td>
+</tr>
+<tr>
+<td align="center">$As, As_+$</td>
+<td align="center">$L, L_+$</td>
+</tr>
+<tr>
+<td align="center">$Zinb$</td>
+<td align="center">$L_+$</td>
+</tr>
+<tr>
+<td align="center">$Perm$</td>
+<td align="center">species of elements</td>
+</tr>
+<tr>
+<td align="center">$Lie$</td>
+<td align="center"></td>
+</tr>
+</tbody>
 </table>
 
 </div>

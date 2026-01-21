@@ -189,6 +189,8 @@ F^{*m} \circ G .
 \end{array}
 $$
 
+Incidental remark: a corollary of this is that $y(n)\circ F\cong y(1)^{\ast n}\circ F\cong (y(1)\circ F)^{\ast n}\cong F^{\ast n}$.
+
 From this it is possible to define the associator as the chain of isomorphisms
 
 $$
@@ -214,6 +216,7 @@ $$
 
 Each step of this chain is natural in all its conceivable arguments; it is a tedious job to verify that this satisfies the pentagon identity.
 
+<div id="dayhom"></div>
 **Definition-Theorem.** The substitution monoidal structure is left cocontinuous, and thus left-closed; this makes the existence of the internal (left) hom for the substituion product; to show what shape it has to have, just compute
 
 $$
