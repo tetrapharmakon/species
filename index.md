@@ -31,7 +31,7 @@ Feel free to [reach out](mailto:fosco.loregian@gmail.com) with questions or poin
 {% for lecture in site.lectures %}
   <article>
     <header>
-      <h3>{{ lecture.title }}</h3>
+      <h3>{{ forloop.index0 }}. {{ lecture.title }}</h3>
     </header>
     <p>{{ lecture.excerpt | strip_html | truncatewords: 60 }}</p>
     <footer>
