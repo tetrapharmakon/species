@@ -20,6 +20,7 @@ antex:
 
 There is a vast array of generalizations of the concept of species, that we now survey. Most of the theory developed so far applies to these general contexts as well, with due care about details (for example, it is not very easy to define the substitution product for colored species).
 
+<div id="sect-1"></div>
 ### Enriched, coloured species
 
 If $S$ is a set regarded as a discrete category, and $\cal V$ a *Bénabou cosmos* (i.e. a complete, cocomplete, symmonclosed category), we give the following definition encompassing various (but not all) examples of this section.
@@ -45,7 +46,8 @@ Regarding species as formal power series, the category $\mathbf{Cat}({\bf B}[S],
 <div id="label-3"></div>
 **Exercise.** ($\star$) I have had for quite some time in the back of my head the idea that it is interesting to study species when $\cal V$ is compact closed, or star-autonomous; see for example [here](https://arxiv.org/abs/math/0612496), where some work is done in this direction; if this sounds like an interesting project for you, please let's do it together.
 
-#### Substitution product of colored species
+<div id="sect-2"></div>#
+### Substitution product of colored species
 
 An explicit description of the $n$-fold convolution of presheaves $M_1,\ldots,M_n : \mathbb{P}/I \to \mathbf{Set}$ is given in [Mé96, 2.1]: the coend in Equation (5) splits as the sum
 
@@ -171,6 +173,7 @@ picks out the component at $j$ of the $J$-family $M : J \to \mathbb{P}/I$.
 
 ---
 
+<div id="sect-3"></div>
 ### Vector species
 
 Let $k$ be a field. The category of $k$-vector species (it would be more natural to call them *$k$-linear*, however this might cause confusion with the concept of linear species below, which doesn't pertain vector spaces) is the category $(1,k\text{-}{\bf Vect})\text{-}\mathbf{Spc}$ of functors ${\bf B} \to k\text{-}{\bf Vect}$.
@@ -266,6 +269,7 @@ The category of $k$-vector species is now equipped with the Day, Hadamard and su
 
 ---
 
+<div id="sect-4"></div>
 ### Linear species
 
 The category $\mathbf{Lin}$ is defined as the category of totally
@@ -324,6 +328,7 @@ an $\mathbb{L}$-species fixing a commutative ring $R$ and `enriching' the
 codomain of species in the category of *$R$-weighted sets*.
 ---
 
+<div id="sect-5"></div>
 ### Weighted species
 
 Fix a commutative, unitary ring $R$. The category of *weighted sets* is defined as the following comma category construction:
@@ -422,6 +427,7 @@ Thus, for a formally real ring $R$, the cone of sums of squares induces a canoni
 
 ---
 
+<div id="sect-6"></div>
 ### Moebius species
 
 <div id="label-15"></div>
@@ -513,6 +519,7 @@ $$
 
 ---
 
+<div id="sect-7"></div>
 ### Nominal sets
 
 <div id="label-19"></div>
@@ -535,6 +542,7 @@ $$
 F \colon S_\infty \to \mathbf{Set}.
 $$
 
-#### Reading list
+<div id="sect-8"></div>#
+### Reading list
 
 ...

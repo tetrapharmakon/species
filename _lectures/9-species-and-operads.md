@@ -261,29 +261,82 @@ $$ \begin{aligned}
 
 where the last arrow is obtained, in turn, composing
 
-  {% tex classes: [antex, display] %}
-  \setlength{\fboxrule}{1sp}
-  \setlength{\fboxsep}{0sp}
-  \fbox{\xymatrix{
-  X^{\sum n_i} \times Tm \times T{n_1} \times \cdots \times T{n_m}  \ar[d]_-{\langle\mu,\text{id}\rangle} & \\
-  X^{\sum n_i} \times T\left(\sum n_i\right)  \ar[r]^-{\text{in}_{k=\sum n_i}} &
-  \int^k X^k \times Tk
-  }}
-  {% endtex %}
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+X^{\sum n_i} \times Tm \times T{n_1} \times \cdots \times T{n_m}  \ar[d]_-{\langle\mu,\text{id}\rangle} & \\
+X^{\sum n_i} \times T\left(\sum n_i\right)  \ar[r]^-{\text{in}_{k=\sum n_i}} &
+\int^k X^k \times Tk
+}}
+{% endtex %}
 
 ## Examples of operads
 
 As it is obvious, on the same set there can be non-isomorphic monoid structures; similarly, even if usually there is just *one* important implicitly understood operad structure on a species, there can be many. One example is the species of linear orders $L$: it is the *associative operad* $As$ operad with respect to a natural composition operation, but it is also an operad $Zinb$, the *Zinbiel* operad, with respect to a different structure.
 
-**Example.** Every species defines an operad, the *endomorphism operad*.
+**Example.** The [species of singletons](./2-p-and-its-up-and-species.html#label-3) defines an operad since its associated analytic functor is the identity (which is a monad, of course!).
 
-**Example.** The operad $Com$ with carrier $E$
+**Example.** The [species of elements](./2-p-and-its-up-and-species.html#label-5bis) $J : {\bf B} \to {\bf Set}$ cosisting of the inclusion defines an operad *and a cooperad* (i.e. a $\circ$-comonoid in $\bf Spc$); I am recording the proof since it is an interesting piece of work I couldn't find in any reference so far. A formal reason why $J$ must be a cooperad is that the associated analytic functor $\text{Lan}_J J$ must be a comonad: the density comonad of $J$. In fact, establishing an explicit form for $\text{Lan}_J J$ will unravel both structures, so we embark in a
 
-**Example.** The operad $As$ with carrier $L$
+**Remark.** An explicit description for $\text{Lan}_J J$. It is well known that in order to compute $\text{Lan}_J J(X)$ for a set $X$, one has to compute the colimit of $J\circ \pi$ in the diagram 
+
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+(J/X) \drtwocell<\omit>{}\ar[r]^-\pi\ar[d]& {\bf B} \drtwocell<\omit>{}\ar[r]^-J\ar[d]_-J & {\bf Set} \\ 
+1\ar[r]_-X  & {\bf Set} \ar@/_1pc/[ur] & 
+}}
+{% endtex %}
+
+where the left square is a comma object; furthermore, the colimit of the composite functor $J\circ\pi$ is isomorphic to the set of connected components of its category of elements $\nabla(J\circ\pi)$, thus we are left to compute the latter object. 
+
+An object of $\nabla(J\circ\pi)$ now is a triple $(n,\varphi : n \to X,i\in n)$ (for all practical purposes, this is a pointed $n$-tuple of elements of $X$: thus, $0=\varnothing$ is not an element of $\nabla(J\circ\pi)$), and an arrow $(n,\varphi,i) \to (m,\psi,j)$ is a bijection $\sigma : n \to n$, such that $\sigma i=j$ and $\varphi = \psi\circ\sigma$. All in all then, two objects of $\nabla(J\circ\pi)$ lie in the same connected component if and only if they define the same nonempty, unordered, pointed list, and $(\text{Lan}\_J J)X$ seems to be isomorphic to the Cartesian product $X\times \mathbb N_+[X]$ where $\mathbb N_+[X]$ is the *free commutative semigroup* on $X$ (its elements are nonempty unordered lists). We know from formal reasons that this has to be a comonad; the structure is given by projection and diagonal maps  $\mathbb N_+[X]$ is clearly a monad, and the functor $X\mapsto X\times \mathbb N_+[X]$ is the product $\text{id}\times \mathbb N_+[-]$ in the category of monads.
+
+**Example.** Every species $P$ defines an operad, the *endomorphism operad*, with carrier $\\{P,P\\}$ (notation as in [the construction of the internal hom for $\circ$](./3-monoidal-structures-on-P.html#dayhom)); the unit is the mate of the left unitor $y(1)\circ P \to P$, and the multiplication is obtained as the mate of the counit of $-\circ P\dashv \\{P,-\\}$:
+
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+\{P,P\}\circ \{P,P\} \circ P \ar[r]^-{\{P,P\}\circ\epsilon} & \{P,P\} \circ P \ar[r]^-\epsilon & P
+}}
+{% endtex %}
+
+Associativity and unitality follow.
+
+**Example.** There is an operad structure on the [terminal object](./2-p-and-its-up-and-species.html#label-5) $E : n\mapsto\{\ast\}$ of set-species $\bf Spc$, but this is not very interesting (the structure is trivially given by the unique map $E\circ E \to E$, $y(1) \to E$ into $E$). Instead, on [$k$-vector species](./8-species-like-categories.html#sect-3), the operad $\boldsymbol k[E] : n\mapsto \boldsymbol k$ constant at the 1-dimensional space carries the structure of an operad as follows: first, observe that $k[E]\circ k[E] = \int^m k[E]m\otimes k[E]^{\ast m} \cong \int^m k\otimes k[E^{\ast m}]$; this (plus the fact that $k[-]$ is strong monoidal) reduces the problem to the computation of the iterated Day convolution of $E$ with itself; a type of $E^{\ast m}(n)$ structure now consists of a *$m$-partition* on $n$ in the terminology of the red book, i.e. an ordered partition of $n$ into $m$ (possibly empty) disjoint subsets (so: $E^{\ast m}\cong {\bf Set}(-,m)$ with the action of a permutation defined as $f\mapsto f\circ \sigma^{-1}$); $E^{\ast m}$ is called the species $\text{Par}^{[m]}$ of $m$-partitions.
+
+The operad structure is once again obtained simply (but not completely trivially) by setting the multiplication as the map
+
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+k[E](m)\times k[E]n_1\times \dots\times k[E]n_m \ar[r] & k[E]\big(\sum n_i\big)
+}}
+{% endtex %}
+
+sending $(\alpha;\beta_1,\dots, \beta_m)$ to $\alpha\beta_1\cdots\beta_m$ (product in $\boldsymbol k$).
+
+The species of *nonempty* sets also carries a structure of (set, and $k$-vector) operad, which in some respect is more interesting; the same reasoning can be repeated, until the characterization of $E_+^{\ast m}$ is due: in the terminology of the red book, a species of $E_+^{\ast m}$-structure on $n$ consists of an $m$-ballot, i.e. an unordered partition in nonempty subsets of $n$. The resulting species is denoted $\text{Bal}^{[k]}$ Here is a picture:
+
+<img src="../ballots.png" alt="drawing" width="80%"/>
+
+**Example.** The operad $As$ with carrier $L$ is obtained as the "natural" operad structure on $L=\sum_{n\ge 0} y(n)$; the unit is given by the first coprojection $\text{in}\_1 : y(1)\hookrightarrow \sum_{n\ge 0} y(n)$, and since $L\circ L\cong \sum_{n\ge 0} L^{\ast n}$, to define a multiplication $L\circ L\to L$ it is enough to define a map of species $L^{\ast n} \to L$; this can be done to the effect that in components, the multiplication $\mu_{As}$ is defined as
+
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+L(m)\times Ln_1\times \dots\times Ln_m \ar[r] & L\big(\sum n_i\big)
+}}
+{% endtex %}
+
+sends $(\sigma ; \tau_1 , \dots, t_m)$ to the shuffle $\tau_{\sigma 1} \mathbin{ш} \dots \mathbin{ш} \tau_{\sigma m}$.
 
 **Example.** A different operad structure (the operad $Zinb$) over $L_+$
-
-**Example.** The operad $Perm$ with carrier $El$
 
 **Example.** The $Lie$ operad.
 

@@ -104,7 +104,7 @@ or more concisely
 
 $$ F\circ G := \lambda m.\int^n Fn \times G^{\ast n}(m) $$
 
-Observe that the structure exists for a similar reason than the case of $\bf Fin$: the left Kan extension of a functor $X : {\bf B} \to {\bf Set}$ along the (nonfull) inclusion $j : {\bf B} \to {\bf Set}$ yields an equivalence between $\bf Spc$ and a monoidal subcategory of $[{\bf Set},{\bf Set}]$ (it is not immediate how to characterise it because in this case the inclusion functor $j : {\bf B} \to {\bf Set}$ is not full). We will disclose what's going on in [lecture 5](./5-species-and-analytic-functors-wide-pullbacks.md), but in any case one can argue that there exists an adjunction
+Observe that the structure exists for a similar reason than the case of $\bf Fin$: the left Kan extension of a functor $X : {\bf B} \to {\bf Set}$ along the (nonfull) inclusion $J : {\bf B} \to {\bf Set}$ yields an equivalence between $\bf Spc$ and a monoidal subcategory of $[{\bf Set},{\bf Set}]$ (it is not immediate how to characterise it because in this case the inclusion functor $J : {\bf B} \to {\bf Set}$ is not full). We will disclose what's going on in [lecture 5](./5-species-and-analytic-functors-wide-pullbacks.md), but in any case one can argue that there exists an adjunction
 
 $$ {\bf Spc} \leftrightarrows ([{\bf Set},{\bf Set}],\circ) $$
 
