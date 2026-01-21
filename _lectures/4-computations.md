@@ -132,4 +132,4 @@ $$
 
 #### Reading list
 
-...
+- Bergeron, François, et al. _Combinatorial species and tree-like structures_. No. 67. Cambridge University Press, 1998.

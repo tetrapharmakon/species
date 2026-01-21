@@ -206,4 +206,4 @@ Finally, let's prove that $(2 \Rightarrow 1)$.
 
 #### Reading list
 
-...
+- Adámek, J., and J. Velebil. _Analytic functors and weak pullbacks._ Theory and Applications of Categories [electronic only] 21 (2008): 191-209.

@@ -55,9 +55,17 @@ Enumerative combinatorics has a tension between these two complementary styles o
 
 Combinatorial species are the coronation of an attempt to unify these two perspectives, recognizing their respective limits and values, offering a unified framework in which the theory of generating functions (à la [Wilf](https://www2.math.upenn.edu/~wilf/gfology2.pdf)) can be framed and understood at a deeper level.
 
-The theory was first put forward in two papers by A. Joyal, 
+The theory was first introduced in two papers by A. Joyal, 
 
 - Joyal, André. _Une théorie combinatoire des séries formelles._ Advances in mathematics 42.1 (1981): 1-82.
 - Joyal, André. _Foncteurs analytiques et especes de structures._ Combinatoire énumérative. Springer, Berlin, Heidelberg, 1986. 126-159.
 
 which promoted for a long time the idea that the category $\bf Spc$ of combinatorial species is a categorified analogue of the semiring $\mathbb N\llbracket T\rrbracket$.
+
+
+#### Reading list
+
+- Stanley, Richard P. _What is enumerative combinatorics?._ Enumerative combinatorics. Boston, MA: Springer US, 1986. 1-63.
+- Aigner, Martin. _A course in enumeration._ Berlin, Heidelberg: Springer Berlin Heidelberg, 2007.
+- Joyal, André. _Une théorie combinatoire des séries formelles._ Advances in mathematics 42.1 (1981): 1-82.
+- Joyal, André. _Foncteurs analytiques et especes de structures._ Combinatoire énumérative. Springer, Berlin, Heidelberg, 1986. 126-159.

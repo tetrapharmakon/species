@@ -536,13 +536,11 @@ The group-theoretic properties of $S_\infty$ are the subject of intense study in
 
 <div id="label-20"></div>
 **Definition.** The category $\bf Nom$ of *nominal sets* is the category of (set-theoretic) left
-actions of $S_\infty$, or in other words the category of functors
+actions of $S_\infty$, or in other words the category of functors $F \colon S_\infty \to \mathbf{Set}$.
 
-$$
-F \colon S_\infty \to \mathbf{Set}.
-$$
+#### Reading list
 
-<div id="sect-8"></div>#
-### Reading list
-
-...
+- Bergeron, François, et al. _Combinatorial species and tree-like structures_. No. 67. Cambridge University Press, 1998.
+- Méndez, Miguel, and Julia Yang. _Möbius species._ Advances in Mathematics 85.1 (1991): 83-128
+- Petrisan, Daniela Luana. Investigations into algebra and topology over nominal sets. Diss. University of Leicester, 2012.
+- Pitts, Andrew M. Nominal sets: Names and symmetry in computer science. Cambridge University Press, 2013.

@@ -154,4 +154,4 @@ Finally, the fixpoint operation $\text{fix}$ is interpreted as an initial algebr
 
 #### Reading list
 
-...
+- Hasegawa, Ryu. _Two applications of analytic functors._ Theoretical Computer Science 272.1-2 (2002): 113-175.

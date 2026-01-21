@@ -136,8 +136,8 @@ and on morphism (natural transformations of presheaves) by the evident functoria
 
 (*Exercise*: Prove that if $\cal A$ is a cartesian category (i.e., $\otimes = \times$) then $F * G \cong F\times G$; prove that the monoidal unit of $*$ is the representable presheaf $y(I)$ on the monoidal unit of $({\cal A}, \otimes)$.)
 
-Refer to [???,???] for more information.
-
 #### Reading list
 
-...
+- Brian Day, _Construction of Biclosed Categories_, PhD thesis. School of Mathematics of the University of New South Wales, September 1970.
+- https://ncatlab.org/toddtrimble/published/multisorted+Lawvere+theories
+- Loregian, Fosco. _(Co)end calculus._ Vol. 468. Cambridge University Press, 2021.

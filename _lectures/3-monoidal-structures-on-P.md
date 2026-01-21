@@ -289,4 +289,5 @@ For those who know, $\bf Spc$ happens to be the *classifying topos* for $\bf B$-
 
 #### Reading list
 
-...
+- Bergeron, François, et al. _Combinatorial species and tree-like structures_. No. 67. Cambridge University Press, 1998.
+- Aguiar, Marcelo, and Swapneel Arvind Mahajan. _Monoidal functors, species and Hopf algebras_. Vol. 29. Providence, RI: American Mathematical Society, 2010.
