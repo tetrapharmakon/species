@@ -18,12 +18,12 @@ antex:
         
 ---
 
-There is a vast array of generalizations of the concept of species, that we now survey. Most of the theory developed so far applies to these general contexts as well, with due care about details (for example, it is not very easy to define the substitution product for colored species).
+There is a vast array of generalizations of the concept of species, which we now survey. Most of the theory developed so far applies in these more general contexts as well, with due care about details (for example, it is not very easy to define the substitution product for colored species).
 
 <div id="sect-1"></div>
 ### Enriched, coloured species
 
-If $S$ is a set regarded as a discrete category, and $\cal V$ a *Bénabou cosmos* (i.e. a complete, cocomplete, symmonclosed category), we give the following definition encompassing various (but not all) examples of this section.
+If $S$ is a set regarded as a discrete category, and $\cal V$ a *Bénabou cosmos* (i.e. a complete, cocomplete, symmetric monoidal closed category), we give the following definition, encompassing various (but not all) examples of this section.
 
 <div id="label-1"></div>
 **Definition.** The category $(S,{\cal V})\text{-}\mathbf{Spc}$ of *$(S,{\cal V})$-species* is defined as the functor category $\mathbf{Cat}({\bf B}[S],{\cal V})$ where ${\bf B}[S]$ is the free symmoncat on the set $S$.
@@ -31,23 +31,23 @@ If $S$ is a set regarded as a discrete category, and $\cal V$ a *Bénabou cosmos
 Evidently, the "category of species" studied so far is the category $(1,{\bf Set})\text{-}\mathsf{Spc}$ if $1$ is a singleton set.
 
 <div id="label-2"></div>
-**Remark.** One could have defined a category $({\cal A},{\cal V})\text{-}\mathsf{Spc}$ as the functor category $\mathbf{Cat}({\bf B}[{\cal A}],{\cal V})$ (the free symmoncat construction makes sense for every category, not just the discrete ones). This is however a different kind of gadget, which would deserve the name of *free (cocomplete) 2-rig on $\cal A$*; species, in this perspective, occupy a special role as they are free *on a set*, much like a polynomial ring is free on a set of generators (for its multiplication) regarded as variables.
+**Remark.** One could have defined a category $({\cal A},{\cal V})\text{-}\mathsf{Spc}$ as the functor category $\mathbf{Cat}({\bf B}[{\cal A}],{\cal V})$ (the free symmoncat construction makes sense for every category, not just the discrete ones). This is, however, a different kind of gadget, which would deserve the name of *free (cocomplete) 2-rig on $\cal A$*; species, in this perspective, occupy a special role as they are free *on a set*, much like a polynomial ring is free on a set of generators (for its multiplication) regarded as variables.
 
-This definition is very pliable: the formal properties of $(S,{\cal V})\text{-}\mathbf{Spc}$ are not much dependent on $\cal V$, which can be chosen to be the category $\bf Top$ of topological spaces, or vector spaces, or simplicial sets,... but also the category $(T,{\cal W})\text{-}\mathbf{Spc}$ for a different pair $(T,\cal W)$ (what happens in that case)?
+This definition is very pliable: the formal properties of $(S,{\cal V})\text{-}\mathbf{Spc}$ are not much dependent on $\cal V$, which can be chosen to be the category $\bf Top$ of topological spaces, or vector spaces, or simplicial sets,... but also the category $(T,{\cal W})\text{-}\mathbf{Spc}$ for a different pair $(T,\cal W)$ (what happens in that case?).
 
-Leaving the base of enrichment $\cal V$ equal to $\bf Set$ and raising the cardinality of $S$ one obtains the so-called *multicolored* species (the terminology dates back to homotopy theory, where the set $S$ is regarded as a set of "colours" for an "operad" -we will get there). Observe that since ${\bf B}[-]$ is a club in the sense of [Kelly](https://ncatlab.org/nlab/show/club), among many other properties that this doctrine has there is the fact that 
+Leaving the base of enrichment $\cal V$ equal to $\bf Set$ and raising the cardinality of $S$ one obtains the so-called *multicolored* species (the terminology dates back to homotopy theory, where the set $S$ is regarded as a set of "colours" for an "operad"—we will get there). Observe that since ${\bf B}[-]$ is a club in the sense of [Kelly](https://ncatlab.org/nlab/show/club), among many other properties that this doctrine has, there is the fact that 
 
 $$ {\bf B}[S] \cong {\bf B}[1]\wr S \cong \prod_{s\in S}{\bf B}[1] $$
 
 can be written as a "wreath product" of ${\bf B}[1]$ with $S$, i.e. as the *power* ${\bf B}[1]^S = {\bf B}^S$.
 
-Regarding species as formal power series, the category $\mathbf{Cat}({\bf B}[S],{\cal V}) = \mathbf{Cat}({\bf B}^S,{\cal V})$ should be regarded as the category of polynomials in $\\# S$ variables, and coefficients in $\cal V$.
+Regarding species as formal power series, the category $\mathbf{Cat}({\bf B}[S],{\cal V}) = \mathbf{Cat}({\bf B}^S,{\cal V})$ should be regarded as the category of polynomials in $\\# S$ variables, with coefficients in $\cal V$.
 
 <div id="label-3"></div>
-**Exercise.** ($\star$) I have had for quite some time in the back of my head the idea that it is interesting to study species when $\cal V$ is compact closed, or star-autonomous; see for example [here](https://arxiv.org/abs/math/0612496), where some work is done in this direction; if this sounds like an interesting project for you, please let's do it together.
+**Exercise.** ($\star$) I have had for quite some time, in the back of my head, the idea that it is interesting to study species when $\cal V$ is compact closed, or star-autonomous; see for example [here](https://arxiv.org/abs/math/0612496), where some work is done in this direction. If this sounds like an interesting project for you, please let's do it together.
 
-<div id="sect-2"></div>#
-### Substitution product of colored species
+<div id="sect-2"></div>
+#### Substitution product of colored species
 
 An explicit description of the $n$-fold convolution of presheaves $M_1,\ldots,M_n : \mathbb{P}/I \to \mathbf{Set}$ is given in [Mé96, 2.1]: the coend in Equation (5) splits as the sum
 
@@ -55,11 +55,11 @@ $$
 \sum_{p \in n\text{-}\mathrm{Dec}(m)} M_{p_1}(m_1) \times \cdots \times M_{p_n}(m_n)
 $$
 
-where $n$-$\mathrm{Dec}(m)$ denotes the set of $n$-decompositions (= decompositions in $n$ pieces) $p = (p_1,\ldots,p_n)$ of $m$, by virtue of the way in which $\mathbb{P}/I$ splits as a coproduct of groups.
+where $n$-$\mathrm{Dec}(m)$ denotes the set of $n$-decompositions (= decompositions into $n$ pieces) $p = (p_1,\ldots,p_n)$ of $m$, by virtue of the way in which $\mathbb{P}/I$ splits as a coproduct of groups.
 
 We can endow the category of colored species with a substitution product; 
-to motivate the construction, we review the most general form that the substitution operation acquires; 
-let $I,J$ be two sets, $f \in k[J]$ a power series in $|J|$ indeterminates, 
+to motivate the construction, we review the most general form that the substitution operation acquires. 
+Let $I,J$ be two sets, $f \in k[J]$ a power series in $|J|$ indeterminates, 
 with coefficients in the ring $k$ and $g = (g_j \mid j \in J)$ a $J$-family 
 of elements of $k[I]$; then one defines the substitution of $g$ into $f$ as
 the following power series in $k[I]$: 
@@ -124,8 +124,7 @@ which is associative and unital in the sense that
   a $J$-species $y(j^\prime)$ with the property that for every $J$-family of
   $I$-species $M = (M_j \mid j \in J)$ one has $y(j^\prime) \circ \boldsymbol M \cong M_{j^\prime}$.
 
-*Proof.* Once the notation is settled, the proof is a painstaking coend computation: let $w = (k_1,\ldots,k_r)$ be a tuple of elements of $K$, $u_1,\ldots,u_r$ a tuple of elements of $J^\ast$ so an $r$-tuple of tuples $u_s = (u^1_s,\ldots,u^{\ell_s}_s)$, and $(x_1,\ldots,x_r)$ an $r$-decomposition of $n \in I^*$, i.e. an $r$-tuple of elements such that $x_1 \oplus \cdots \oplus x_r = n$ in $\mathbb{P}/I$. Then,
-
+*Proof.* Once the notation is settled, the proof is a painstaking coend computation: let $w = (k_1,\ldots,k_r)$ be a tuple of elements of $K$, $u_1,\ldots,u_r$ a tuple of elements of $J^\ast$ (so an $r$-tuple of tuples $u_s = (u^1_s,\ldots,u^{\ell_s}_s)$), and $(x_1,\ldots,x_r)$ an $r$-decomposition of $n \in I^*$, i.e. an $r$-tuple of elements such that $x_1 \oplus \cdots \oplus x_r = n$ in $\mathbb{P}/I$. Then,
 
 $$
 \begin{aligned}
@@ -170,20 +169,19 @@ for every $J$-family $M$ of $I$-species, where $y(j)$ is the representable
 $J$-species at a singleton $j = \\{ j \\} \in \mathbb{P}/J$. The Yoneda lemma
 picks out the component at $j$ of the $J$-family $M : J \to \mathbb{P}/I$.
 
-
 ---
 
 <div id="sect-3"></div>
 ### Vector species
 
-Let $k$ be a field. The category of $k$-vector species (it would be more natural to call them *$k$-linear*, however this might cause confusion with the concept of linear species below, which doesn't pertain vector spaces) is the category $(1,k\text{-}{\bf Vect})\text{-}\mathbf{Spc}$ of functors ${\bf B} \to k\text{-}{\bf Vect}$.
+Let $k$ be a field. The category of $k$-vector species (it would be more natural to call them *$k$-linear*, however this might cause confusion with the concept of linear species below, which doesn't pertain to vector spaces) is the category $(1,k\text{-}{\bf Vect})\text{-}\mathbf{Spc}$ of functors ${\bf B} \to k\text{-}{\bf Vect}$.
 
-The theory of $k$-vector species is huge; the entire big book by Aguiar and Mahajan has been written to study if. In a certain sense, their interest lies in the fact that $k$-vector species have a more interesting and subtle theory of comonoids and bimonoids (hence the title of the big book), whereas a comonoid in $\bf Set$-valued species is a relatively more trivial notion. 
+The theory of $k$-vector species is huge; the entire big book by Aguiar and Mahajan has been written to study it. In a certain sense, their interest lies in the fact that $k$-vector species have a more interesting and subtle theory of comonoids and bimonoids (hence the title of the big book), whereas a comonoid in $\bf Set$-valued species is a relatively more trivial notion. 
 
-*Par contre* many structures can be unraveled from $k$-vector species; among the species, a particularly special role is played by *connected* and *positive* species:
+*Par contre*, many structures can be unraveled from $k$-vector species; among these species, a particularly special role is played by *connected* and *positive* species:
 
-- a species $F :$ is called *positive* if $F[0] = F\varnothing$ is empty. In turn, a $k$-vector species is called *positive* if $F[0]=F\varnothing$ is the null vector space.
-- a species $F :$ is called *connected* if $F[0] = F\varnothing$ is a singleton. In turn, a $k$-vector species is called *connected* if $F[0]=F\varnothing$ is a vector space of dimension 1.
+- a species $F$ is called *positive* if $F[0] = F\varnothing$ is empty. In turn, a $k$-vector species is called *positive* if $F[0]=F\varnothing$ is the null vector space.
+- a species $F$ is called *connected* if $F[0] = F\varnothing$ is a singleton. In turn, a $k$-vector species is called *connected* if $F[0]=F\varnothing$ is a vector space of dimension 1.
 
 Associated to any positive comonoid there is a canonical filtration. *Primitive elements* form the first step in this filtration.
 
@@ -233,7 +231,7 @@ For any positive comonoid $Q$, we have the following:
 - $\bigcup_{k \ge 1} \mathcal{P}^{(k)}(Q)= Q$;
 - $\Delta^{(k-1)}\bigl(\mathcal{P}^{(k)}(Q)\bigr)\subseteq \mathcal{P}(Q)^{\cdot k}$.
 
-All comonoid homomorphisms are compatible with the coradical filtration
+All comonoid homomorphisms are compatible with the coradical filtration.
 
 <div id="label-5"></div>
 **Proposition.**
@@ -251,7 +249,6 @@ f : \mathcal{P}(Q) \to \mathcal{P}(P)
 $$
 is injective, then $f : Q \to P$ is injective.
 
-
 Another reason why $k$-vector species are important is the presence of an adjunction between species and $k$-vector species, induced by the free-forgetful adjunction over $\bf Set$, having nice properties of preservation of *all* the relevant monoidal structures on $\bf Spc$:
 
 <div id="label-6"></div>
@@ -265,12 +262,12 @@ Another reason why $k$-vector species are important is the presence of an adjunc
 }}
 {% endtex %}
 
-The category of $k$-vector species is now equipped with the Day, Hadamard and substitution monoidal products, and $P\mapsto k[P]$ turns out to be a strong monoidal functor with respect to all three products. Moreover, a $\bf Set$-species is connected or positive if and only if its $k$-linearization is such.
+The category of $k$-vector species is now equipped with the Day, Hadamard, and substitution monoidal products, and $P\mapsto k[P]$ turns out to be a strong monoidal functor with respect to all three products. Moreover, a $\bf Set$-species is connected or positive if and only if its $k$-linearization is such.
 
 ---
 
 <div id="sect-4"></div>
-### Linear species
+#### Linear species
 
 The category $\mathbf{Lin}$ is defined as the category of totally
 ordered finite sets $\langle n \rangle := \{1 < \cdots < n\}$ and
@@ -283,7 +280,6 @@ Let $S_n$ be the symmetric group of an $n$-set $[n]$. Let
 $r : BS_n \to \mathbf{Set}$ be the (functor associated to the) left regular
 representation of $S_n$, i.e. the action $S_n \to S_n$ given by left
 multiplication; denote $[S_n/S_n]$ the associated [action groupoid](https://ncatlab.org/nlab/show/action+groupoid), i.e. the strict pullback
-
 
 {% tex classes: [antex, display] %}
 \setlength{\fboxrule}{1sp}
@@ -324,8 +320,9 @@ happens for $(\mathbb{S},\mathbf{Set})$-Spc)
 differential equations in $\mathbf{LSpc}$ have unique solutions, following more closely the properties of formal power series.
 
 Usually one compensates for the extreme rigidity of the domain category of
-an $\mathbb{L}$-species fixing a commutative ring $R$ and `enriching' the
+an $\mathbb{L}$-species by fixing a commutative ring $R$ and `enriching' the
 codomain of species in the category of *$R$-weighted sets*.
+
 ---
 
 <div id="sect-5"></div>
@@ -342,19 +339,19 @@ Fix a commutative, unitary ring $R$. The category of *weighted sets* is defined 
 }}
 {% endtex %}
 
-  where $UR$ is the underlying set of the ring $R$. Explicitly, $\mathbf{wSet}$ has 
+where $UR$ is the underlying set of the ring $R$. Explicitly, $\mathbf{wSet}$ has 
 
-  - objects the pairs $(X,w : X \to R)$, where $X$ is a set and $w$ a weight function, associating to each element $x\in X$ a *weight* $w(x)\in R$;
-  - arrows $f : (X,w) \to (Y,u')$ the functions $f : X \to Y$ that are weight preserving, i.e. $w^\prime\circ f = w$: they are the $f$ that make this triangle commutative.
+- objects the pairs $(X,w : X \to R)$, where $X$ is a set and $w$ a weight function, associating to each element $x\in X$ a *weight* $w(x)\in R$;
+- arrows $f : (X,w) \to (Y,u')$ the functions $f : X \to Y$ that are weight-preserving, i.e. $w^\prime\circ f = w$: they are the $f$ that make this triangle commutative.
 
-  {% tex classes: [antex, display] %}
-  \setlength{\fboxrule}{1sp}
-  \setlength{\fboxsep}{0sp}
-  \fbox{\xymatrix{
-        X \ar[rr]^-f \ar[dr]_w && Y \ar[dl]^-{w'}\\ 
-        &R&
-  }}
-  {% endtex %}
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+      X \ar[rr]^-f \ar[dr]_w && Y \ar[dl]^-{w'}\\ 
+      &R&
+}}
+{% endtex %}
 
 One can define a canonical functor $\zeta : \mathbf{Set} \to\mathbf{wSet}_{/R}$ sending a set $A$ to its *zero-weighting* $(X,w_0 : X \to R)$ with $w_0$ constant at $0_R$; observe that $\zeta$ has a left adjoint: it is defined sending a set $A$ to the trivial weighted set $w : A \to R$ which has the constant zero function as weight. 
 
@@ -362,7 +359,7 @@ A map of weighted sets $\zeta(A) \to Y$ now corresponds to a function $h : A\to 
 
 $$ \textbf{wSet}_{/R}(\zeta A, (Y,w))\cong \textbf{Set}(A,\ker(Y,w)). $$
 
-As an immediate consequence, $\zeta$ preserve all colimits that exist in $\mathbf{wSet}_{/R}$. 
+As an immediate consequence, $\zeta$ preserves all colimits that exist in $\mathbf{wSet}_{/R}$. 
 
 <div id="label-10"></div>
 **Remark.** In fact, $\mathbf{wSet}_{/R}$ is locally finitely presentable, by Proposition 1.57 in [LPAC].
@@ -382,16 +379,16 @@ Observe also that a slightly less rigid category can be obtained replacing the c
 
 provided $R$ has some preorder structure defined over it: there, arrows will become inequalities filling the triangle 
 
-  {% tex classes: [antex, display] %}
-  \setlength{\fboxrule}{1sp}
-  \setlength{\fboxsep}{0sp}
-  \fbox{\xymatrix{
-        X \ar[rr]^-f \ar[dr]_w &\ar@{}[d]|(.4)\ge& Y \ar[dl]^-{w'}\\ 
-        &R&
-  }}
-  {% endtex %}
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+      X \ar[rr]^-f \ar[dr]_w &\ar@{}[d]|(.4)\ge& Y \ar[dl]^-{w'}\\ 
+      &R&
+}}
+{% endtex %}
 
-This can't of course be done in a canonical way uniformly for all rings, so one has to restrict to a subclass of $\bf Ring$.
+This can't, of course, be done in a canonical way uniformly for all rings, so one has to restrict to a subclass of $\bf Ring$.
 
 Let $R$ be a commutative unital ring.
 
@@ -424,11 +421,10 @@ $$
 
 Thus, for a formally real ring $R$, the cone of sums of squares induces a canonical preorder reflecting the ring’s algebraic notion of positivity, even though it does not necessarily define a partial order.
 
-
 ---
 
 <div id="sect-6"></div>
-### Moebius species
+#### Moebius species
 
 <div id="label-15"></div>
 **Definition.** Let $\bf Set$ be the category of sets, equipped with the tautological functor $J \colon \mathbf{Set} \to \mathbf{Cat}$ regarding each set as a discrete category; let $\mathbf{Pos}^{\top\\!\bot}$ be the category of posets with top and bottom, where morphisms are top- and bottom-preserving monotone maps; consider the comma category
@@ -456,9 +452,8 @@ Unwinding the definition, $(J / \mathbf{Pos}^{\top\\!\bot})$ is the category hav
 
 - morphisms $(X, P) \to (Y, Q)$ are the functions $h \colon X \to Y$ such that $Q \circ h = P$. Each such $h$ splits into a family of monotone maps $P_x \to Q_{h(x)}$.
 
-
 <div id="label-16"></div>
-**Remark.** The category $(J / \mathbf{Pos}^{\top\\!\bot})$ is a complete and cocomplete (in fact, locally presentable), monoidal closed category.
+**Remark.** The category $(J / \mathbf{Pos}^{\top\\!\bot})$ is complete and cocomplete (in fact, locally presentable), and monoidal closed.
 
 <div id="label-17"></div>
 **Proof.** Colimits are computed in $(J / \mathbf{Pos}^{\top\\!\bot})$ as in **Set** (created by the vertical left functor in Equation (6.15)); the category is accessible, as it arises as a limit in accessible categories and accessible functors; thus it is locally presentable, hence also complete (limits are, however, not straightforward to describe—even characterizing a terminal object is a bit convoluted).
@@ -506,11 +501,11 @@ $$
 
 i.e. the category of $( \mathbf{1}, (J / \mathbf{Pos}^{\top\\!\bot}) )$-species.
 
-Since $P$ is a groupoid, each functor  $P \to (J / \mathbf{Pos}^{\top\!\bot})$ must factor through the core of   $(J / \mathbf{Pos}^{\top\!\bot})$; calling **Int** such core we obtain Definition 2.1 of 
+Since $P$ is a groupoid, each functor $P \to (J / \mathbf{Pos}^{\top\!\bot})$ must factor through the core of $(J / \mathbf{Pos}^{\top\!\bot})$; calling **Int** such core, we obtain Definition 2.1 of:
 
 Méndez, Miguel, and Julia Yang. _Möbius species._ Advances in Mathematics 85.1 (1991): 83-128
 
-where $h$ is assumed to be a bijection (and the indexing sets are finite, hence   $h \colon [n] \to [n]$ is just a permutation), inducing order-isomorphisms
+where $h$ is assumed to be a bijection (and the indexing sets are finite, hence $h \colon [n] \to [n]$ is just a permutation), inducing order-isomorphisms
 
 $$
 P_i \cong Q_{\sigma i}
@@ -520,7 +515,7 @@ $$
 ---
 
 <div id="sect-7"></div>
-### Nominal sets
+#### Nominal sets
 
 <div id="label-19"></div>
 **Definition.** Consider the chain of inclusions
@@ -529,10 +524,9 @@ $$
 S_1 \subset S_2 \subset \cdots \subset S_n \subset \cdots
 $$
 
-each identifying a group $S_n$ as the subgroup of $S_{n+1}$ spanned by the elements fixing $n+1$; the colimit $S_\infty$ of this chain in the category of groups is called the *infinite symmetric group* and consists of all bijections of   $\mathbb{N} = \{0,1,2,\ldots\}$ that fix all but finitely many elements (call these *finitely supported permutations*).
+each identifying a group $S_n$ as the subgroup of $S_{n+1}$ spanned by the elements fixing $n+1$; the colimit $S_\infty$ of this chain in the category of groups is called the *infinite symmetric group* and consists of all bijections of $\mathbb{N} = \{0,1,2,\ldots\}$ that fix all but finitely many elements (call these *finitely supported permutations*).
 
-The group-theoretic properties of $S_\infty$ are the subject of intense study in connection with representation theory, the theory of Von Neumann algebras, ergodic theory and descriptive set theory (due to the nature of Polish group of $S_\infty$). For us, the connection with computer science, set theory and topos theory are an additional source of intuition: we define
-
+The group-theoretic properties of $S_\infty$ are the subject of intense study in connection with representation theory, the theory of Von Neumann algebras, ergodic theory, and descriptive set theory (due to the nature of Polish group of $S_\infty$). For us, the connection with computer science, set theory, and topos theory is an additional source of intuition: we define
 
 <div id="label-20"></div>
 **Definition.** The category $\bf Nom$ of *nominal sets* is the category of (set-theoretic) left
@@ -544,3 +538,4 @@ actions of $S_\infty$, or in other words the category of functors $F \colon S_\i
 - Méndez, Miguel, and Julia Yang. _Möbius species._ Advances in Mathematics 85.1 (1991): 83-128
 - Petrisan, Daniela Luana. Investigations into algebra and topology over nominal sets. Diss. University of Leicester, 2012.
 - Pitts, Andrew M. Nominal sets: Names and symmetry in computer science. Cambridge University Press, 2013.
+

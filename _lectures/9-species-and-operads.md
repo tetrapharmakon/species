@@ -34,7 +34,6 @@ antex:
               \draw (#1,#1/6) -- ++(0,-#1);
               \filldraw[fill=white] (0,0) rectangle (2*#1,#1) node[pos=.5, font=\tiny] {$#2$};}}}
 
-
 ---
 
 An operad is a monoid for the substitution product discussed in [lecture 3](./3-monoidal-structures-on-P.html#defi-5). As such, "the theory of operads" is the study of the category $\mathbf{Opd}={\bf Mon}({\bf Spc},\circ)$; but things are never as simple as they seem...
@@ -59,12 +58,12 @@ First, let's flesh out what the definition prescribes. An *operad* consists of a
   \setlength{\fboxrule}{1sp}
   \setlength{\fboxsep}{0sp}
   \fbox{\xymatrix{
-  J\ar[dr]_-\sim \circ T\ar[r]^-{\eta\circ T} & \ar[d]_-\mu T\circ T & T\circ J\ar[l]_-{T\circ \eta} \ar[dl]^-\sim\\
+  J \circ T\ar[dr]_-\sim\ar[r]^-{\eta\circ T} & \ar[d]_-\mu T\circ T & T\circ J\ar[l]_-{T\circ \eta} \ar[dl]^-\sim\\
   &T&
   }}
   {% endtex %}
 
-It is worth to note explicitly the shape of $\mu,\eta$; those who already know it will recognize the form of an operad as defined in, say, algebraic topology textbooks.
+It is worth noting explicitly the shape of $\mu,\eta$; those who already know it will recognize the form of an operad as defined in, say, algebraic topology textbooks.
 
 - $\eta$, as a natural transformation of type $y1 \Rightarrow T$, corresponds by Yoneda to an element $u\in T1$.
 - $\mu$ is a natural transformation in the set
@@ -177,7 +176,7 @@ Associativity of $\mu$ is better appreciated through a picture: given an $n$-ary
 \end{tikzpicture}
 {% endtex %}
 
-Some of the structure of $\mathbf{Opd}$ can be deduced from the fact that we are just looking at a particular instance of the category of monoids in a monoidal category:
+Some of the structure of $\mathbf{Opd}$ can be deduced from the fact that we are just looking at a particular instance of the category of monoids in a monoidal category.
 
 **Remark.** There is an adjunction
 
@@ -191,7 +190,7 @@ Some of the structure of $\mathbf{Opd}$ can be deduced from the fact that we are
 
 whence we can derive (among other things) that
 
-- the category of operads is complete, and limits are created by the forgetful functor $U$; in particular, the Hadamard product of two species who happen to be operads inherits an operad structure (it is a straightforward consequence of a general fact, but it's cool to see the derivation): let $T_* : {\cal J} \to {\bf Opd}$ be a diagram of operads; then the limit $\text{lim}_{\cal J}\, T_J$ computed in species inherits a structure of operad as follows:
+- the category of operads is complete, and limits are created by the forgetful functor $U$; in particular, the Hadamard product of two species which happen to be operads inherits an operad structure (it is a straightforward consequence of a general fact, but it's cool to see the derivation). Let $T_* : {\cal J} \to {\bf Opd}$ be a diagram of operads; then the limit $\text{lim}_{\cal J}\, T_J$ computed in species inherits a structure of operad as follows:
 
 $$
  \begin{aligned}
@@ -207,13 +206,13 @@ $$
  \end{aligned}
 $$
 
-where $(\dag)$ precomposes with the diagonal functor $\Delta : {\cal J} \to {\cal J}^m$, and $(\ddag)$ uses the multiplication of each $T_J$; the unit is way easier to obtain as $\eta_J : y1 \Rightarrow T_J$ is a cone, inducing a unique $\bar\eta : y1 \Rightarrow \text{lim}_{\cal J} T_J$ into the limit.
+where $(\dag)$ precomposes with the diagonal functor $\Delta : {\cal J} \to {\cal J}^m$, and $(\ddag)$ uses the multiplication of each $T_J$; the unit is much easier to obtain, since $\eta_J : y1 \Rightarrow T_J$ is a cone, inducing a unique $\bar\eta : y1 \Rightarrow \text{lim}_{\cal J} T_J$ into the limit.
 
 - colimits are complicated, but still they are reducible to certain reflexive coequalizers of free algebras, via the "Linton trick".
 
 One can define the *free operad* on a combinatorial species, i.e. a left adjoint to the forgetful functor $U$ above; the situation, however, is in stark contrast with the case of *Cauchy* monoids, because
 
-- The Day convolution product is separately cocontinuous in both variables (compare this with the fact that the substitution product commutes with colimits in its left, but not in its right, component: $-\circ G$ is cocontinuous (and thus a left adjoint, given that $\bf Spc$ is a locally finitely presentable category; we proved this in [lecture 3](./3-monoidal-structures-on-P.html#dayhom)), $F\circ-$ isn't -and thus a right adjoint to it can't exist).
+- The Day convolution product is separately cocontinuous in both variables (compare this with the fact that the substitution product commutes with colimits in its left, but not in its right, component: $-\circ G$ is cocontinuous (and thus a left adjoint, given that $\bf Spc$ is a locally finitely presentable category; we proved this in [lecture 3](./3-monoidal-structures-on-P.html#dayhom)), while $F\circ-$ is not—and thus a right adjoint to it can't exist).
 - In the case of Day convolution, the free-forgetful adjunction is easy to characterize conceptually: the free Day-monoid on a species is $\sum_{n\ge 0} F^{*n}$, which reduces to the species $L\circ F$.
 
 In order to prove that $L\circ F\cong \sum_{n\ge 0} F^{\ast n}$, first observe that $L = \sum_{n\ge 0} y(n)$, where $y(n)$ is the representable at $n$; so, since $-\circ F$ is cocontinuous, it is enough to prove that $y(n)\circ F\cong F^{*m}$, which is immediate: $L\circ F\cong \big(\sum_{n\ge 0} y(n)\big)\circ F\cong \sum_{n\ge 0} y(n) \circ F$, and
@@ -228,7 +227,7 @@ A not-so-helpful observation is that the free operad on $F$ has to be obtained a
 
 $$ y1 \to y1 + F \circ y1 = y1 + F \to y1 + F \circ (y1 + F) \to \dots $$
 
-The problem is, we cannot develop such an expression simplifying, since the substitution product is only left cocontinuous.
+The problem is, we cannot develop such an expression by simplifying, since the substitution product is only left cocontinuous.
 
 **Proposition.** Every operad $T : {\bf B} \to {\bf Set}$ defines a monad $\flat T : {\bf Set} \to {\bf Set}$ as follows:
 
@@ -273,7 +272,7 @@ X^{\sum n_i} \times T\left(\sum n_i\right)  \ar[r]^-{\text{in}_{k=\sum n_i}} &
 
 ## Examples of operads
 
-As it is obvious, on the same set there can be non-isomorphic monoid structures; similarly, even if usually there is just *one* important implicitly understood operad structure on a species, there can be many. One example is the species of linear orders $L$: it is the *associative operad* $As$ operad with respect to a natural composition operation, but it is also an operad $Zinb$, the *Zinbiel* operad, with respect to a different structure.
+As is obvious, on the same set there can be non-isomorphic monoid structures; similarly, even if usually there is just *one* important implicitly understood operad structure on a species, there can be many. One example is the species of linear orders $L$: it is the *associative operad* $As$ operad with respect to a natural composition operation, but it is also an operad $Zinb$, the *Zinbiel* operad, with respect to a different structure.
 
 **Example.** The [species of singletons](./2-p-and-its-up-and-species.html#label-3) defines an operad since its associated analytic functor is the identity (which is a monad, of course!).
 
@@ -292,7 +291,7 @@ As it is obvious, on the same set there can be non-isomorphic monoid structures;
 
 where the left square is a comma object; furthermore, the colimit of the composite functor $J\circ\pi$ is isomorphic to the set of connected components of its category of elements $\nabla(J\circ\pi)$, thus we are left to compute the latter object. 
 
-An object of $\nabla(J\circ\pi)$ now is a triple $(n,\varphi : n \to X,i\in n)$ (for all practical purposes, this is a pointed $n$-tuple of elements of $X$: thus, $0=\varnothing$ is not an element of $\nabla(J\circ\pi)$), and an arrow $(n,\varphi,i) \to (m,\psi,j)$ is a bijection $\sigma : n \to n$, such that $\sigma i=j$ and $\varphi = \psi\circ\sigma$. All in all then, two objects of $\nabla(J\circ\pi)$ lie in the same connected component if and only if they define the same nonempty, unordered, pointed list, and $(\text{Lan}\_J J)X$ seems to be isomorphic to the Cartesian product $X\times \mathbb N_+[X]$ where $\mathbb N_+[X]$ is the *free commutative semigroup* on $X$ (its elements are nonempty unordered lists). We know from formal reasons that this has to be a comonad; the structure is given by projection and diagonal maps. Moreover, $\mathbb N_+[X]$ is a monad, the functor $X\mapsto X\times \mathbb N_+[X]$ being the product $\text{id}\times \mathbb N_+[-]$ in the category of monads on $\bf Set$.
+An object of $\nabla(J\circ\pi)$ now is a triple $(n,\varphi : n \to X,i\in n)$ (for all practical purposes, this is a pointed $n$-tuple of elements of $X$: thus, $0=\varnothing$ is not an element of $\nabla(J\circ\pi)$), and an arrow $(n,\varphi,i) \to (m,\psi,j)$ is a bijection $\sigma : n \to n$, such that $\sigma i=j$ and $\varphi = \psi\circ\sigma$. All in all, then, two objects of $\nabla(J\circ\pi)$ lie in the same connected component if and only if they define the same nonempty, unordered, pointed list, and $(\text{Lan}\_J J)X$ seems to be isomorphic to the Cartesian product $X\times \mathbb N_+[X]$ where $\mathbb N_+[X]$ is the *free commutative semigroup* on $X$ (its elements are nonempty unordered lists). We know from formal reasons that this has to be a comonad; the structure is given by projection and diagonal maps. Moreover, $\mathbb N_+[X]$ is a monad, the functor $X\mapsto X\times \mathbb N_+[X]$ being the product $\text{id}\times \mathbb N_+[-]$ in the category of monads on $\bf Set$.
 
 **Example.** Every species $P$ defines an operad, the *endomorphism operad*, with carrier $\\{P,P\\}$ (notation as in [the construction of the internal hom for $\circ$](./3-monoidal-structures-on-P.html#dayhom)); the unit is the mate of the left unitor $y(1)\circ P \to P$, and the multiplication is obtained as the mate of the counit of $-\circ P\dashv \\{P,-\\}$:
 
@@ -306,7 +305,7 @@ An object of $\nabla(J\circ\pi)$ now is a triple $(n,\varphi : n \to X,i\in n)$ 
 
 Associativity and unitality follow.
 
-**Example.** There is an operad structure on the [terminal object](./2-p-and-its-up-and-species.html#label-5) $E : n\mapsto\{\ast\}$ of set-species $\bf Spc$, but this is not very interesting (the structure is trivially given by the unique map $E\circ E \to E$, $y(1) \to E$ into $E$). Instead, on [$k$-vector species](./8-species-like-categories.html#sect-3), the operad $\boldsymbol k[E] : n\mapsto \boldsymbol k$ constant at the 1-dimensional space carries the structure of an operad as follows: first, observe that $k[E]\circ k[E] = \int^m k[E]m\otimes k[E]^{\ast m} \cong \int^m k\otimes k[E^{\ast m}]$; this (plus the fact that $k[-]$ is strong monoidal) reduces the problem to the computation of the iterated Day convolution of $E$ with itself; a type of $E^{\ast m}(n)$ structure now consists of a *$m$-partition* on $n$ in the terminology of the red book, i.e. an ordered partition of $n$ into $m$ (possibly empty) disjoint subsets (so: $E^{\ast m}\cong {\bf Set}(-,m)$ with the action of a permutation defined as $f\mapsto f\circ \sigma^{-1}$); $E^{\ast m}$ is called the species $\text{Par}^{[m]}$ of $m$-partitions.
+**Example.** There is an operad structure on the [terminal object](./2-p-and-its-up-and-species.html#label-5) $E : n\mapsto\{\ast\}$ of set-species $\bf Spc$, but this is not very interesting (the structure is trivially given by the unique map $E\circ E \to E$, $y(1) \to E$ into $E$). Instead, on [$k$-vector species](./8-species-like-categories.html#sect-3), the operad $\boldsymbol k[E] : n\mapsto \boldsymbol k$ constant at the 1-dimensional space carries the structure of an operad as follows: first, observe that $k[E]\circ k[E] = \int^m k[E]m\otimes k[E]^{\ast m} \cong \int^m k\otimes k[E^{\ast m}]$; this (plus the fact that $k[-]$ is strong monoidal) reduces the problem to the computation of the iterated Day convolution of $E$ with itself. A type of $E^{\ast m}(n)$ structure now consists of a *$m$-partition* on $n$ in the terminology of the red book, i.e. an ordered partition of $n$ into $m$ (possibly empty) disjoint subsets (so: $E^{\ast m}\cong {\bf Set}(-,m)$ with the action of a permutation defined as $f\mapsto f\circ \sigma^{-1}$); $E^{\ast m}$ is called the species $\text{Par}^{[m]}$ of $m$-partitions.
 
 The operad structure is once again obtained simply (but not completely trivially) by setting the multiplication as the map
 
@@ -320,7 +319,7 @@ k[E](m)\times k[E]n_1\times \dots\times k[E]n_m \ar[r] & k[E]\big(\sum n_i\big)
 
 sending $(\alpha;\beta_1,\dots, \beta_m)$ to $\alpha\beta_1\cdots\beta_m$ (product in $\boldsymbol k$).
 
-The species of *nonempty* sets also carries a structure of (set, and $k$-vector) operad, which in some respect is more interesting; the same reasoning can be repeated, until the characterization of $E_+^{\ast m}$ is due: in the terminology of the red book, a species of $E_+^{\ast m}$-structure on $n$ consists of an $m$-ballot, i.e. an unordered partition in nonempty subsets of $n$. The resulting species is denoted $\text{Bal}^{[k]}$ Here is a picture:
+The species of *nonempty* sets also carries a structure of (set, and $k$-vector) operad, which in some respect is more interesting; the same reasoning can be repeated, until the characterization of $E_+^{\ast m}$ is due. In the terminology of the red book, a species of $E_+^{\ast m}$-structure on $n$ consists of an $m$-ballot, i.e. an unordered partition into nonempty subsets of $n$. The resulting species is denoted $\text{Bal}^{[k]}$. Here is a picture:
 
 <img src="../ballots.png" alt="drawing" width="80%"/>
 
@@ -378,4 +377,3 @@ We summarize the situation in a table:
 </div>
 
 ## Algebras for an operad
-
