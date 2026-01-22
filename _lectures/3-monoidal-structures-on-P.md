@@ -22,7 +22,7 @@ A fundamental tenet of categorical combinatorics is that the richness of the obj
 
 ### Monoidal structure on $\bf B$ and $\bf Spc$
 
-In particular, there are three distinct *monoidal structures* on the category of species, all of which have a quite natural combinatorial interpretation. One of them is the most important for us because it is induced on $\bf Spc$ by a natural choice of a monoidal product on $\bf B$. The monoidal structure on $\bf B$ is essentially determined by the disjoint sum of finite set: in a skeleton for $\bf B$, $[n]\cup [m] = [n+m]$. This operation induces a *convolution* operation on $\bf Spc$.
+In particular, there are three distinct *monoidal structures* on the category of species, all of which have a quite natural combinatorial interpretation. One of them is the most important for us because it is induced on $\bf Spc$ by a natural choice of a monoidal product on $\bf B$. The monoidal structure on $\bf B$ is essentially determined by the disjoint sum of finite sets: in a skeleton for $\bf B$, $[n]\cup [m] = [n+m]$. This operation induces a *convolution* operation on $\bf Spc$.
 
 <div id="defi-1"></div>
 **Definition** (The "sum and shuffle" product on $\bf B$). The "sum and shuffle" monoidal structure $\oplus$ on $\bf B$ is the bifunctor $\\_\oplus\_ : {\bf B} \times {\bf B} \to \bf B$ defined as follows:
@@ -54,7 +54,7 @@ where $\cup$ denotes the disjoint union of sets. It can be easily checked that $
 
 In terms of their formal power series representation, the product corresponds to the plain *sum* of formal power series.
 
-In order to introduce the next construction, we need the following definition: let $X,Y$ be two sets on which a group $G$ is acting, respectively on the right and on the left.
+To introduce the next construction, we need the following definition: let $X,Y$ be two sets on which a group $G$ is acting, respectively on the right and on the left.
 
 We define the *equivariant product* $X\otimes_G Y$ of $X$ and $Y$ to be the set obtained as the coequaliser of the pair of maps
 
@@ -62,7 +62,7 @@ We define the *equivariant product* $X\otimes_G Y$ of $X$ and $Y$ to be the set 
 \setlength{\fboxrule}{1sp}
 \setlength{\fboxsep}{0sp}
 \fbox{\xymatrix{
-  X \times G \times Y \ar@<.5em>[r]^{X \times \beta} \ar@<-.5em>[r]_{\alpha \times Y} & X \times Y \ar[r] & X\otimes_G Y
+ X \times G \times Y \ar@<.5em>[r]^{X \times \beta} \ar@<-.5em>[r]_{\alpha \times Y} & X \times Y \ar[r] & X\otimes_G Y
 }}
 {% endtex %}
 
@@ -85,13 +85,13 @@ $$ a_0 + a_1 g(t) + a_2 (g(t) \cdot g(t)) + \dots $$
 
 (*Exercise*. Find an explicit expression for $\[t^n\](f\circ g)$ in terms of the $a_n, b_m$'s.)
 
-But one must be careful, as this relation is true for generating species but *not* for type generating species. For example, this is true for the species of permutation $\cal S$, which is equal to the substitution of the species $\cal C$ of cycles into the species $E$ of sets. For the species $\cal S$, the type generating series is $\dots$, whereas for the substitution $E\triangleleft \cal C$ the type generating series is $\dots$.
+But one must be careful, as this relation is true for generating species but *not* for type-generating species. For example, this is true for the species of permutation $\cal S$, which is equal to the substitution of the species $\cal C$ of cycles into the species $E$ of sets. For the species $\cal S$, the type generating series is $\dots$, whereas for the substitution $E\triangleleft \cal C$ the type generating series is $\dots$.
 
 The formula for the type generating series of a substitution $F\triangleleft G$ involves the *cycle index series* of the substituting species:
 
 $$ \widetilde{F \triangleleft G}(x) = Z_F(\tilde G(x), \tilde G(x^2), \tilde G(x^3),\dots) $$
 
-In lesson 1 we have seen how the category $[{\bf Fin}, {\bf Set}]$ inherits a (non strict) monoidal structure, called the *substitution product*: the substitution of a pair of functors $M,N : {\bf Fin}\to{\bf Set}$ is the functor
+In lesson 1 we have seen how the category $[{\bf Fin}, {\bf Set}]$ inherits a (non-strict) monoidal structure, called the *substitution product*: the substitution of a pair of functors $M,N : {\bf Fin}\to{\bf Set}$ is the functor
 
 $$ [n] \mapsto M \triangleleft N := (\text{Lan}_J M \circ \text{Lan}_J N) \circ J = \text{Lan}_J M \circ N$$
 
@@ -116,7 +116,7 @@ $$ ({\bf Spc},\circ) \leftrightarrows ({\bf AnF},\circ) $$
 
 ---
 
-As it is a bit convoluted to argue on the existence of the substitution monoidal structure, we give a sketch of an argument, based on having established the Day convolution (closed) monoidal structure. The full story is surveyed in [Coends, Chapter 6] and in turn, it comes from Kelly's paper "On the Operads of JP May".
+Since it is a bit convoluted to argue on the existence of the substitution monoidal structure, we give a sketch of an argument based on having established the Day convolution (closed) monoidal structure. The full story is surveyed in [Coends, Chapter 6] and in turn, it comes from Kelly's paper "On the Operads of JP May".
 
 <div id="label-8"></div>
 **Definition.** Iterated Day convolution in the category of species takes the following form:
@@ -243,8 +243,8 @@ Somewhat surprisingly, the class of categories embodying such a powerful languag
 
 1. admitting all finite limits;
 2. that is *cartesian closed*, meaning that there is a natural bijection
-   $$ {\cal E}(A\times B, C) \cong {\cal E}(A, C^B) $$
-   for every three objects $A,B,C$
+ $$ {\cal E}(A\times B, C) \cong {\cal E}(A, C^B) $$
+ for every three objects $A,B,C$
 3. having a *subobject classifier*, meaning an object $\Omega$ with the property that for every $A\in\cal E$ the poset of all subobjects of $A$ is parametrised by the set of morphisms into a fixed object $\Omega$ that thus "classifies" monomorphisms.
 
 Unwinding axiom 3, it means the following: there exists a unique monomorphism $\tau : 1 \to \Omega$ with the property that *every* monomorphism $m : U \to A$ into *every* object $A\in \cal E$ appears in a pullback square
@@ -253,8 +253,8 @@ Unwinding axiom 3, it means the following: there exists a unique monomorphism $\
 \setlength{\fboxrule}{1sp}
 \setlength{\fboxsep}{0sp}
 \fbox{\xymatrix{
-  U\ar[r]\ar[d]_m  & 1 \ar[d]^\tau  \\
-  A \ar[r] & \Omega
+ U\ar[r]\ar[d]_m  & 1 \ar[d]^\tau  \\
+ A \ar[r] & \Omega
 }}
 {% endtex %}
 
@@ -264,7 +264,7 @@ This request translates diagrammatically the request that every subset $X\hookri
 
 The meat is in the third axiom: having a subobject classifier is a powerful property for a category (familiar categories like groups, vector spaces, and $\bf Cat$ (categories and functor) cannot have one; prove it as an exercise.)
 
-The following facts do not add much depth to the following discussion, so we leave them as highly optional exercises; the only reason to engage with them is if you have never seen how both statements can be proved in fair generality
+The following facts do not add much depth to the following discussion, so we leave them as highly optional exercises; the only reason to engage with them is if you have never seen how both statements can be proved in fair generality.
 
 *Exercise* (The cartesian closure of $\bf Spc$). Show that the category of combinatorial species is *cartesian closed*, as a consequence of the following general fact.
 

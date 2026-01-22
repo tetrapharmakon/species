@@ -15,7 +15,7 @@ antex:
         \usepackage{tikz}
 ---
 
-This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$ and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a "Taylor expansion". Such functors are called *analytic*, and they can be characterised intrinsically as the finitary endofunctors of $\bf Set$ satisfying a weak exactness property.
+This chapter embarks on a more category-theoretic study of species. Every species has a canonical decomposition as an infinite sum $f_0 + f_1 + f_2 + \dots$, and it gives rise to an endofunctor $\bar F $ of $\bf Set$ that admits a "Taylor expansion". Such functors are called *analytic*, and they can be characterised intrinsically as the finitary endofunctors of $\bf Set$ satisfying a weak exactness property.
 
 ### Analytic functors, wide pullbacks
 
@@ -48,12 +48,12 @@ Since $J$ is not fully faithful, the category of combinatorial species cannot be
 
 Its essential image is thus a little bit more difficult to characterise than in the case of $[{\bf Fin}, {\bf Set}]$ examined in lecture 1.
 
-With a little bit more effort, we can however characterise such an essential image as the subcategory of those $F : {\bf Set} \to {\bf Set}$ such that
+With a little bit more effort, we can characterise such an essential image as the subcategory of those $F : {\bf Set} \to {\bf Set}$ such that
 
 1. $F$ is finitary;
 2. $F$ weakly preserves wide pullbacks.
 
-The second condition deserves a bite more explanation.
+The second condition deserves a bit more explanation.
 
 <div id="label-3"></div>
 **Definition.** An endofunctor $F : {\bf Set} \to {\bf Set}$ is said to *weakly preserve pullbacks* if for every pullback square
@@ -101,7 +101,7 @@ keeping in mind that the category $[S_n, {\bf Set}]$ is just the category of set
 - the *odd part* $f_o$ of a species $f : {\bf B} \to {\bf Set}$ consisting of the sum $\sum_{k\ge 0} f_{2k+1}=f_1+f_3+\dots$;
 - the *even part* $f_o$ of a species $f : {\bf B} \to {\bf Set}$ consisting of the sum $\sum_{k\ge 1} f_{2k}=f_2+f_4+\dots$.
 
-The following *splitting formula* for the cycle index series of the even and odd part of a species $f$ holds true:
+The following *splitting formula* for the cycle index series of the even and odd parts of a species $f$ holds true:
 
 $$ \begin{cases} Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2,-x_3,\dots)\right) \\ Z_{E_o} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) - Z_E(-x_1,x_2,-x_3,\dots)\right). \end{cases} $$
 
@@ -117,7 +117,7 @@ Writing the above coproduct as a sum and interpreting the quotient as a "fractio
 $$ FX = \sum_{n\ge 1} \frac{f(n)\times X^n}{n!}. $$
 
 <div id="label-8"></div>
-**Example** (The AF of the species of singletons). Recall that the species $U$ of singletons is defined as the species centered in $1$, with value a one-element set. So, the colimit that computes $\text{Lan}_J U$ reduces to be the identity functor ${\bf Set} \to {\bf Set}$.
+**Example** (The AF of the species of singletons). Recall that the species $U$ of singletons is defined as the species centred in $1$, with value a one-element set. So, the colimit that computes $\text{Lan}_J U$ reduces to the identity functor ${\bf Set} \to {\bf Set}$.
 
 <div id="label-9"></div>
 **Example** (The AF of a representable species). The species [concentrated](2-p-and-its-up-and-species.html#label-3) in $n\ge 1$ over the set $S_n$ gives rise to the functor $X\mapsto {\bf Set}(Jn, X)=X^n$ raising $X$ to the $n$th power.
@@ -163,7 +163,7 @@ A particular case of such an $\cal A$ is the class of analytic functors.
 2. $F$ is analytic;
 3. $F$ splits as a coproduct of sym-representables.
 
-When this is proved, the assumption of superfinitariness (is that even a name...?) can be removed obtaining Joyal's characterisation of $\cal A$.
+When this is proved, the assumption of superfinitariness (is that even a name...?) can be removed, obtaining Joyal's characterisation of $\cal A$.
 
 <div id="label-15"></div>
 **Theorem** (Characterisation of analytic functors, II). For a finitary functor $F : {\bf Set} \to {\bf Set}$ the following conditions are equivalent:
@@ -175,7 +175,7 @@ When this is proved, the assumption of superfinitariness (is that even a name...
 
 ### Proof of the first theorem
 
-Let's prove that $(1 \Rightarrow 3)$. First of all, we can assume that $F1\cong 1$. Note that as a consequence $F$ weakly preserve products, because it weakly preserves the pullback
+Let's prove that $(1 \Rightarrow 3)$. First of all, we can assume that $F1\cong 1$. Note that, as a consequence, $F$ weakly preserve products, because it weakly preserves the pullback
 
 {% tex classes: [antex, display] %}
 \setlength{\fboxrule}{1sp}
@@ -186,13 +186,13 @@ B \ar[r]& 1
 }}
 {% endtex %}
 
-This means that provided we choose a minimal $n_0, x_0$ as in [the previous remark](), every $f : X \to [n]$ such that $x_0$ lies in the image of $Ff$ must be an epimorphism.
+This means that, provided we choose a minimal $n_0, x_0$ as in [the previous remark](), every $f : X \to [n]$ such that $x_0$ lies in the image of $Ff$ must be an epimorphism.
 
 In particular, all elements in the set
 
 $$ \text{Fix}(F|x_0) := \{ f : [n] \to [n] \mid Ff(x_0)=x_0 \} $$
 
-are epimorphisms, and since $[n]$ is finite, they must be bijection as well. This determines a subgroup $H_F \le S_n$.
+are epimorphisms, and since $[n]$ is finite, they must be bijections as well. This determines a subgroup $H_F \le S_n$.
 
 We shall show that there exists an isomorphism of functors $\tilde{\xi}\_{x_0} : {\bf B}(n,-)/H_F \cong F$, where ${\xi}_{x_0}$ is the unique natural transformation corresponding to $x_0$ via Yoneda.
 
