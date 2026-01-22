@@ -242,7 +242,26 @@ $\iota_{\le n}$; as an exercise, prove that these functors can be described expl
 
 $$ l_nF : m \mapsto \begin{cases} Fm & m \le n \\ \varnothing & m > n \end{cases} \qquad \qquad r_nF : m \mapsto \begin{cases} Fm & m \le n \\ * & m > n \end{cases} $$
 
-We will say that a species $F$ has a contact of order $n$ with a species $G$ if $\tau_n F = \tau_n G$. We denote this relation as $F \mathrel{\sim_n} G$.
+Similarly we can consider the inclusion $\omega_n : {\bf B}_{\ge n} \hookrightarrow {\bf B}$ of the subcategory spanned by the objects $[n],[n+1],\dots$; reasoning dually we have a "level" decomposition of the topos $\bf Spc$ through a countable family of triple of adjoints
+
+$$ \lambda_n \dashv \omega_n^\ast \dashv \rho_n : {\bf Spc} \xrightarrow{\omega_n^*} [{\bf B}_{\ge n}, {\bf Set}] $$
+
+where 
+
+$$ \lambda_nF : m \mapsto 
+\begin{cases} 
+\varnothing & m < n \\
+Fm & m \ge n 
+\end{cases} \qquad \qquad \rho_nF : m \mapsto 
+\begin{cases} 
+\ast & m < n \\
+Fm & m \ge n 
+\end{cases} $$
+
+<div id="concentration"></div>
+Note that we can *concentrate* a species $P:{\bf B} \to{\bf Set}$ at $n\ge0$ by putting $\kappa_nP := (\lambda_n\times l_n)P=\lambda_nP\times l_nP$; this species sends $[n]$ to $P(n)$ and all other $m\ne n$ to $\varnothing$.
+
+Last, we will say that a species $F$ has a contact of order $n$ with a species $G$ if $\tau_n F = \tau_n G$. We denote this relation as $F \mathrel{\sim_n} G$.
 
 It is clear that when $F$ has contact of order $n$ with $G$, their associated series stand in the same relation.
 

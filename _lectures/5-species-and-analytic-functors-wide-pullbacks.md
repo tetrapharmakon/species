@@ -33,7 +33,7 @@ This chapter embarks on a more category-theoretic study of species. Every specie
 
 and for $X\in\bf Set$ the set $FX$ can be computed pointwise as the coend
 
-$$ \int^n f(n)\times X^n =: \left(\coprod_{n\ge 1} f(n)\times X^n\right)/\left\langle \begin{smallmatrix}\sigma.e; x_1,\dots,x_n) \sim (e, x_{\sigma 1},\dots, x_{\sigma n}) \\ \sigma \in S_n, n\ge 1\end{smallmatrix} \right\rangle \qquad(\star) $$
+$$ \int^n f(n)\times X^n =: \left(\sum_{n\ge 1} f(n)\times X^n\right)/\left\langle \begin{smallmatrix}\sigma.e; x_1,\dots,x_n) \sim (e, x_{\sigma 1},\dots, x_{\sigma n}) \\ \sigma \in S_n, n\ge 1\end{smallmatrix} \right\rangle \qquad(\star) $$
 
 Such a functor is called *analytic*, and we call similarly every functor that lies in the image of the functor $\text{Lan}_J$, where $J : {\bf B} \rightarrow {\bf Set}$ is the (nonfull) inclusion functor.
 
@@ -46,14 +46,14 @@ $$ \text{Lan}_J :  {\bf Spc} \leftrightarrows [{\bf Set}, {\bf Set}] : J^\ast. $
 
 Since $J$ is not fully faithful, $J^\ast$ is not a coreflection, so the category of combinatorial species cannot be seen as a full subcategory of endofunctors of $\bf Set$ subject to some additional property prescribed by the right adjoint $J^\ast$.
 
-Its essential image is thus a little bit more difficult to characterise than in the case of $[{\bf Fin}, {\bf Set}]$ examined in lecture 1.
+Its essential image is thus a little bit more difficult to characterise than in the case of $[{\bf Fin}, {\bf Set}]$ examined in [lecture 1](./1-finset-and-its-up.html).
 
-With a little bit more effort, we can characterise such an essential image as the subcategory of those $F : {\bf Set} \to {\bf Set}$ such that
+With a little more effort than there, we can characterise such an essential image as the subcategory of those $F : {\bf Set} \to {\bf Set}$ such that
 
 1. $F$ is finitary;
 2. $F$ weakly preserves wide pullbacks.
 
-The second condition deserves a bit more explanation.
+This will be the *fundamental representation theorem* of combinatorial species as analytic functors. The first condition is the well-known fact that $F$ preserves $\omega$-filtered colimits; the second condition deserves a bit more explanation.
 
 <div id="label-3"></div>
 **Definition.** An endofunctor $F : {\bf Set} \to {\bf Set}$ is said to *weakly preserve pullbacks* if for every pullback square
@@ -67,14 +67,25 @@ B \ar[r]& C
 }}
 {% endtex %}
 
-the canonical map $F(A\times_C B) \to FA \times_{FC} FB$ is surjective.
+the canonical map obtained through the universal property $F(A\times_C B) \to FA \times_{FC} FB$ is surjective.
 
 <div id="label-4"></div>
-**Definition.** Let $E$ be a set and $\cal C$ a category; a *($E$-ary) wide pullback* with sink $X \in \cal C$ is the limit of a diagram $E \to {\cal C}/X$ where $E$ is regarded as a discrete category and ${\cal C}/X$ is the slice of $\cal C$ over $X$.
+**Definition.** Let $S$ be a set and $\cal C$ a category; a *($S$-ary) wide pullback* with sink $X \in \cal C$ is the limit of a diagram $S \to {\cal C}/X$ where $S$ is regarded as a discrete category and ${\cal C}/X$ is the slice of $\cal C$ over $X$.
 
 In simple terms, a wide pullback is a pullback having possibly more than two arrows pointing to the same object.
 
-In more obscure terms, let $E$ be a set, and let $E^\rhd$ be the category where a distinguished new object $\infty$ has been forcefully rendered a terminal object; a $E$-ary wide pullback in $\cal C$ is a limit of a diagram $E^\rhd \to \cal C$.
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix@R=0mm{
+A_s\ar[ddr]&\\
+A_{s'}\ar[dr]&\\
+\vdots&X\\
+A_{s''}\ar[ur]
+}}
+{% endtex %}
+
+In more obscure terms, let $S$ be a set, and let $S^\rhd$ be the category where a distinguished new object $\infty$ has been forcefully rendered a terminal object; a $S$-ary wide pullback in $\cal C$ is a limit of a diagram $S^\rhd \to \cal C$.
 
 The characterisation of analytic functors in terms of weak preservation of wide pullbacks was first shown by Joyal in his "*Foncteurs analytiques*".
 
@@ -82,18 +93,18 @@ The proof will occupy the entire lecture, and it comes from a more modern presen
 
 ### Canonical decomposition and examples
 
-Since $\text{Lan}_J$ is a left adjoint, it is evident that $\text{Lan}_J(f \sqcup g) \cong \text{Lan}_J f \sqcup \text{Lan}_J g$, so that the class of analytic functors is close under finite (and in fact, arbitrarily large) coproducts. More importantly, the analytic functor associated to $f\sqcup g$ is just the coproduct of the analytic functors $F=\text{Lan}_Jf$ and $G=\text{Lan}_Jg$.
+Since $\text{Lan}_J$ is a left adjoint, it is evident that $\text{Lan}_J(f + g) \cong \text{Lan}_J f + \text{Lan}_J g$, so that the class of analytic functors is close under finite (and in fact, arbitrarily large) coproducts. More importantly, this proves that the analytic functor associated to $f+ g$ is just the coproduct of the analytic functors $F=\text{Lan}_Jf$ and $G=\text{Lan}_Jg$.
 
-Thus, to completely understand analytic functors, it is enough to understand the $\sqcup$-indecomposable objects of $\bf Spc$. Such indecomposable objects can be characterised.
+Thus, to completely understand analytic functors, it is enough to understand the $+$-indecomposable objects of $\bf Spc$. Such indecomposable objects can be characterised.
 
 <div id="label-5"></div>
-**Proposition** (Canonical decomposition of a species). Every combinatorial species $f : {\bf B} \to {\bf Set}$ splits into a countable sequence of $\sqcup$-indecomposable objects, unique up to reordering: the *canonical decomposition* of $f$.
+**Proposition** (Canonical decomposition of a species). Every combinatorial species $f : {\bf B} \to {\bf Set}$ splits into a countable sequence of $+$-indecomposable objects, unique up to reordering: the *canonical decomposition* of $f$.
 
-*Proof.* The category ${\bf B}$ splits as a coproduct of groups, namely ${\bf B} = \coprod_{n\ge 1} S_n$, so that a functor $f : {\bf B} \to {\bf Set}$ is in fact determined by a countable family of (left) $S_n$-sets $f_n : S_n \times X_n \to X_n$ under the isomorphism
+*Proof.* We have already observed that the groupoid ${\bf B}$ splits as a coproduct of groups, namely ${\bf B} = \sum_{n\ge 1} S_n$, so that a functor $f : {\bf B} \to {\bf Set}$ is in fact determined by a countable family of (left) $S_n$-sets $f_n : S_n \times X_n \to X_n$ under the isomorphism
 
-$$\textstyle {\bf Spc} = [{\bf B}, {\bf Set}] \cong \left[ \coprod_{n\ge 1} S_n , {\bf Set}\right] \cong \prod_{n\ge 1} [S_n, {\bf Set}] $$
+$$\textstyle {\bf Spc} = [{\bf B}, {\bf Set}] \cong \left[ \sum_{n\ge 1} S_n , {\bf Set}\right] \cong \prod_{n\ge 1} [S_n, {\bf Set}] $$
 
-keeping in mind that the category $[S_n, {\bf Set}]$ is just the category of sets equipped with a left $S_n$-action. Thus, the action of $f$ on objects and morphisms is determined as the sum $f_1 + f_2 + f_3 + \dots$
+keeping in mind that the category $[S_n, {\bf Set}]$ is just the category of sets equipped with a left $S_n$-action. Thus, the action of $f$ on objects and morphisms is determined as the sum $f_1 + f_2 + f_3 + \dots$ if $f_n := \kappa_n f$ in the sense of [lecture 2](./2-p-and-its-up-and-species.html#concentration).
 
 <div id="label-6"></div>
 **Corollary.** Since the decomposition of a species $f$ as a sum $f_1 + f_2 + f_3 + \dots$ is uniquely determined, the following concepts are well defined:
@@ -106,11 +117,11 @@ The following *splitting formula* for the cycle index series of the even and odd
 $$ \begin{cases} Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2,-x_3,\dots)\right) \\ Z_{E_o} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) - Z_E(-x_1,x_2,-x_3,\dots)\right). \end{cases} $$
 
 <div id="label-7"></div>
-**Example.** Let $f : {\bf B} \to {\bf Set}$ be the sym-representable species sending $[n]\mapsto S_n/H$; the associated analytic functor sends a set $X$ to the set $X^n/H$, where the tuples of elements of $X$ are identified iff they differ by a permutation in $H$.
+**Example.** Let $f : {\bf B} \to {\bf Set}$ be the [sym-representable species](./2-p-and-its-up-and-species.html#label-11) sending $[n]\mapsto S_n/H$; the associated analytic functor sends a set $X$ to the set $X^n/H$, where the tuples of elements of $X$ are identified iff they differ by a permutation in $H$.
 
 The functor $X\mapsto X^n/H$ is called *sym-representable analytic*.
 
-As an important corollary of the previous example and of the canonical decomposition, we obtain that every analytic functor splits into a disjoint union of sym-representables as follows: Let $F$ be analytic; then the equivalence relation in the coend $(\star)$ acts separately on each summand, and yields the decomposition of $FX$ as a coproduct $FX = \coprod_{n\ge 1} \frac{f(n)\times X^n}{\sim}$, where $\sim$ is the equivalence relation consisting of all pairs $(e;\vec x) \sim (f(\sigma).e; \vec x \cdot \sigma)$.
+As an important corollary of the previous example and of the canonical decomposition, we obtain that every analytic functor splits into a disjoint union of sym-representables as follows: Let $F$ be analytic; then the equivalence relation in the coend $(\star)$ acts separately on each summand, and yields the decomposition of $FX$ as a coproduct $FX = \sum_{n\ge 1} \frac{f(n)\times X^n}{\sim}$, where $\sim$ is the equivalence relation consisting of all pairs $(e;\vec x) \sim (f(\sigma).e; \vec x \cdot \sigma)$.
 
 Writing the above coproduct as a sum and interpreting the quotient as a "fraction by $n!$", we get that every analytic functor admits a *Taylor series expansion*
 
