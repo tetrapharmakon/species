@@ -100,7 +100,7 @@ where the last equality is Yoneda, and thus $\mu$ has components
 
 given permutations $\alpha, \beta_1,\dots, \beta_m$, where $\bar\beta=\beta_1 \mathbin{ш} \beta_2 \mathbin{ш} \dots \mathbin{ш} \beta_m$ is the shuffle (шафл) of the permutations $\beta_1,\dots, \beta_m$.
 
-Associativity of $\mu$ is better appreciated through a picture: given an an $n$-ary term $f\in Tn$, terms $g_1\in Tp_1,\dots,g_n\in Tp_n$, and moreover terms $h_{1,1},\dots, h_{1,q_{p_1}},\dots, h_{n,1},\dots, h_{n,p_n}$, the two graftings depicted below are equal.
+Associativity of $\mu$ is better appreciated through a picture: given an $n$-ary term $f\in Tn$, terms $g_1\in Tp_1,\dots,g_n\in Tp_n$, and moreover terms $h_{1,1},\dots, h_{1,q_{p_1}},\dots, h_{n,1},\dots, h_{n,p_n}$, the two graftings depicted below are equal.
 
 {% tex classes: [antex, display] %}
 \begin{tikzpicture}
@@ -277,7 +277,7 @@ As it is obvious, on the same set there can be non-isomorphic monoid structures;
 
 **Example.** The [species of singletons](./2-p-and-its-up-and-species.html#label-3) defines an operad since its associated analytic functor is the identity (which is a monad, of course!).
 
-**Example.** The [species of elements](./2-p-and-its-up-and-species.html#label-5bis) $J : {\bf B} \to {\bf Set}$ cosisting of the inclusion defines an operad *and a cooperad* (i.e. a $\circ$-comonoid in $\bf Spc$); I am recording the proof since it is an interesting piece of work I couldn't find in any reference so far. A formal reason why $J$ must be a cooperad is that the associated analytic functor $\text{Lan}_J J$ must be a comonad: the density comonad of $J$. In fact, establishing an explicit form for $\text{Lan}_J J$ will unravel both structures, so we embark in a
+**Example.** The [species of elements](./2-p-and-its-up-and-species.html#label-5bis) $J : {\bf B} \to {\bf Set}$ consisting of the inclusion defines an operad *and a cooperad* (i.e. a $\circ$-comonoid in $\bf Spc$); I am recording the proof since it is an interesting piece of work I couldn't find in any reference so far. A formal reason why $J$ must be a cooperad is that the associated analytic functor $\text{Lan}_J J$ must be a comonad: the density comonad of $J$. In fact, establishing an explicit form for $\text{Lan}_J J$ will unravel both structures, so we embark in a
 
 **Remark.** An explicit description for $\text{Lan}_J J$. It is well known that in order to compute $\text{Lan}_J J(X)$ for a set $X$, one has to compute the colimit of $J\circ \pi$ in the diagram 
 

@@ -20,11 +20,11 @@ We have seen that to a combinatorial species we can associate at least two impor
 
 - the *generating series* of $F$ is defined as the formal power series in $t$
 
-$$ \sum_{k\ge 1} \frac{|F[n]|}{n!} t^n $$
+$$ \sum_{n\ge 0} \frac{|F[n]|}{n!} t^n $$
 
 - its *type* generating series, instead, is defined as
 
-$$ \sum_{k\ge 1} |\pi_0 F[n]| t^n $$
+$$ \sum_{n\ge 0} |\pi_0 F[n]| t^n $$
 
 where the notation $\pi_0 F[n]$ denotes the quotient set $F[n]/S_n$ under the action of the symmetric group $S_n$ over $F[n]$. (This is no more and no less than the space of orbits of the action $S_n \curvearrowright F[n]$.)
 

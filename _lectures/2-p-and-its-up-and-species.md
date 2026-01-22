@@ -174,7 +174,7 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 {% endtex %}
 
 <div id="label-8"></div>
-**Example** (The species of oriented cycles). The species $\cal C$ of *oriented cycles* sends a finite set $[n]$ in the set of possible inequivalent ways to sit $n$ people at a round table, or more formally, in the set of cylic orderings of $\{x_1,\dots,x_n\}$, where the ordering $x_1,\dots,x_n$ is indistinguishable from $x_2,x_3\dots,x_n, x_1$, from $x_3, x_4\dots,x_n, x_1, x_2$, and frome very other cyclic permutation of its members. It can be shown by induction (or using simple arguments from group actions and orbits) that $\|{\cal C}[n]\| = (n-1)!$.
+**Example** (The species of oriented cycles). The species $\cal C$ of *oriented cycles* sends a finite set $[n]$ in the set of possible inequivalent ways to sit $n$ people at a round table, or more formally, in the set of cyclic orderings of $\{x_1,\dots,x_n\}$, where the ordering $x_1,\dots,x_n$ is indistinguishable from $x_2,x_3\dots,x_n, x_1$, from $x_3, x_4\dots,x_n, x_1, x_2$, and from every other cyclic permutation of its members. It can be shown by induction (or using simple arguments from group actions and orbits) that $\|{\cal C}[n]\| = (n-1)!$.
 
 
 {% tex classes: [antex, display] %}
@@ -220,7 +220,7 @@ These species will be the building blocks for our next lecture on analytic funct
 
 $$\tilde F : {\bf Set} \to {\bf Set} : X\mapsto \sum_{n\ge 1} \frac{f(n) \times X^n}{n!} $$
 
-where the quotient by $n!$ ihas to be interpreted as the quotient of the numerator by an action of the symmetric group.
+where the quotient by $n!$ has to be interpreted as the quotient of the numerator by an action of the symmetric group.
 
 ### Contact of order $n$ between species
 

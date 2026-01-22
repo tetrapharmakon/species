@@ -18,7 +18,7 @@ antex:
 In the words of R. Stanley, the basic problem of enumerative combinatorics is that of counting the number of elements
 of a finite set. 
 
-Inside this area of mathematics, there exists a tension between two different ways to concoct a proof for a statement (Stanley goes through a thorough analysis of what is really means answering the above problem). In the words of another combinatorialist, 
+Inside this area of mathematics, there exists a tension between two different ways to concoct a proof for a statement (Stanley goes through a thorough analysis of what it really means to answer the above problem). In the words of another combinatorialist, 
 
 <img src="../mendez-bij-proofs.png" alt="drawing" width="100%"/>
 
@@ -38,7 +38,7 @@ $$
 
 the claim now follows from comparing coefficients.
 
-There is however another way to argue, the **bijective** way: the *number* $\binom pk$ is nothing but the cardinality of the *set* of injections $N \hookrightarrow P$ if $N$ is a $n$-set and $P$ is a $P$-set. Thus, the question we have is: why is the cardinality of the set of injections $N \hookrightarrow P+Q$ equal to the product of the cardinalities of the sets $\text{Inj}(K,P)$ and $\text{Inj}(N\setminus K,Q)$? In the category $\bf Set$ coproducts and monomorphisms are pullback-stable, so to determine an injection $f:N\hookrightarrow P+Q$ it is sufficient to determine the sets $I,J$ in the pullbacks 
+There is however another way to argue, the **bijective** way: the *number* $\binom pk$ is nothing but the cardinality of the *set* of injections $N \hookrightarrow P$ if $N$ is an $n$-set and $P$ is a $p$-set. Thus, the question we have is: why is the cardinality of the set of injections $N \hookrightarrow P+Q$ equal to the product of the cardinalities of the sets $\text{Inj}(K,P)$ and $\text{Inj}(N\setminus K,Q)$? In the category $\bf Set$ coproducts and monomorphisms are pullback-stable, so to determine an injection $f:N\hookrightarrow P+Q$ it is sufficient to determine the sets $I,J$ in the pullbacks 
 
 {% tex classes: [antex, display] %}
 \setlength{\fboxrule}{1sp}
@@ -49,7 +49,7 @@ There is however another way to argue, the **bijective** way: the *number* $\bin
 }}
 {% endtex %}
 
-(the sets $I,J$ partition $N$: $I∩ J=\varnothing, I+J=N$).
+(the sets $I,J$ partition $N$: $I\cap  J=\varnothing, I+J=N$).
 
 Enumerative combinatorics has a tension between these two complementary styles of proof. Somehow, one is close to an *Erdősian* style, and the other is more in the vibe of G.-C. Rota (but this is not intended as a judgment in quality).
 

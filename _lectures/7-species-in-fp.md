@@ -41,7 +41,7 @@ A NAF $\mathbf{Set}^A \to \mathbf{Set}^B$ is defined as a $B$-indexed family of 
 - objects the categories $\mathbf{Set}^A, \mathbf{Set}^B,\dots$;
 - morphisms the NAFs $\mathbf{Set}^A \to \mathbf{Set}^B$.
 
-This can be promoted to a 2-category taking natural transformations between NAFs as 2-cells, but the choice of which transformations are admissible, in the sense that they preserve analiticity, is a subtle issue. In order for some results to be true, the class of transformations $F \Rightarrow G$ between two NAFs has to be restricted (taking for example only the *cartesian* natural transformations), collapsed (identifying two natural transformations under a certain equivalence relation), or both.
+This can be promoted to a 2-category taking natural transformations between NAFs as 2-cells, but the choice of which transformations are admissible, in the sense that they preserve analyticity, is a subtle issue. In order for some results to be true, the class of transformations $F \Rightarrow G$ between two NAFs has to be restricted (taking for example only the *cartesian* natural transformations), collapsed (identifying two natural transformations under a certain equivalence relation), or both.
 
 Now, let's observe that there is an alternative description of NAFs as "the opposite category of sets" up to equivalence; this result is rooted in a rather deep variety theorem for categories generated under coproducts.
 
@@ -91,7 +91,7 @@ $$
    \end{array}
 $$
 
-In this list $x$ is a variable from a fixed (unnamed) countable set, $n$ is a natural number, $\text{fix } M$ is the *fixpoint* of a term $M$, $\text{suc}$ and $\text{pred}$ behave like the successor and predecessor functions ver natural numbers, $\text{zero?}$ is a test: it returns $t$ if the number is not equal to zero, and $f$ otherwise (so, obviously, $\{t,f\}$ is a set of truth values). Finally, we have and if-then-else construct.
+In this list $x$ is a variable from a fixed (unnamed) countable set, $n$ is a natural number, $\text{fix } M$ is the *fixpoint* of a term $M$, $\text{suc}$ and $\text{pred}$ behave like the successor and predecessor functions over natural numbers, $\text{zero?}$ is a test: it returns $t$ if the number is not equal to zero, and $f$ otherwise (so, obviously, $\{t,f\}$ is a set of truth values). Finally, we have and if-then-else construct.
 
 Thanks to the above theorem we can interpret the category of NAFs as the opposite of the category of sets. Thus, when looking for a denotational semantics for PCF we can interpret types and terms as if they were sets.
 
