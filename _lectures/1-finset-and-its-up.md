@@ -38,9 +38,9 @@ As an immediate corollary, the opposite category ${\bf Fin}^\text{op}$ is the fr
 
 *Proof.* Let's first build an adjunction between the two categories; the "tautological" inclusion functor $J : {\bf Fin} \to {\bf Set}$ induces an adjunction
 
-$$ \text{Lan}_J : [{\bf Fin}, {\bf Set}] \leftrightarrows [{\bf Set}, {\bf Set}] : J^* $$
+$$ \text{Lan}_J : [{\bf Fin}, {\bf Set}] \leftrightarrows [{\bf Set}, {\bf Set}] : J^\ast $$
 
-where $J^*$ is the "precomposition with $J$" functor, and $\text{Lan}_J$ its left adjoint. This left adjoint is fully faithful because $J$ is fully faithful, and this entails that in the diagram
+where $J^\ast$ is the "precomposition with $J$" functor, and $\text{Lan}_J$ its left adjoint. This left adjoint is fully faithful because $J$ is fully faithful, and this entails that in the diagram
 
 {% tex classes: [antex, display] %}
 \setlength{\fboxrule}{1sp}
@@ -51,9 +51,9 @@ where $J^*$ is the "precomposition with $J$" functor, and $\text{Lan}_J$ its lef
 }}
 {% endtex %}
 
-the 2-cell $\eta : F \Rightarrow (\text{Lan}_J F)\circ J$ is invertible; $\eta$ is precisely the unit of the adjunction $\text{Lan}_J \dashv J^*$, and this, in turn, entails that the left adjoint in the adjunction is fully faithful.
+the 2-cell $\eta : F \Rightarrow (\text{Lan}_J F)\circ J$ is invertible; $\eta$ is precisely the unit of the adjunction $\text{Lan}_J \dashv J^\ast$, and this, in turn, entails that the left adjoint in the adjunction is fully faithful.
 
-It only remains to characterise the essential image of $\text{Lan}_J$ as the full subcategory of finitary functors on $\bf Set$. Once again, a general theorem comes to the rescue: the objects we are interested in are just the ones at whose components the counit of the adjunction $\text{Lan}_J \dashv J^*$ is an isomorphism. Unwinding this condition, we need to prove that the following conditions are equivalent:
+It only remains to characterise the essential image of $\text{Lan}_J$ as the full subcategory of finitary functors on $\bf Set$. Once again, a general theorem comes to the rescue: the objects we are interested in are just the ones at whose components the counit of the adjunction $\text{Lan}_J \dashv J^\ast$ is an isomorphism. Unwinding this condition, we need to prove that the following conditions are equivalent:
 
 1. $T : {\bf Set} \to {\bf Set}$ is finitary;
 2. The counit $\epsilon_T : \text{Lan}_J(TJ) \Rightarrow T$ is a natural isomorphism.

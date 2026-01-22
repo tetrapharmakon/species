@@ -124,7 +124,7 @@ which is associative and unital in the sense that
   a $J$-species $y(j^\prime)$ with the property that for every $J$-family of
   $I$-species $M = (M_j \mid j \in J)$ one has $y(j^\prime) \circ \boldsymbol M \cong M_{j^\prime}$.
 
-*Proof.* Once the notation is settled, the proof is a painstaking coend computation: let $w = (k_1,\ldots,k_r)$ be a tuple of elements of $K$, $u_1,\ldots,u_r$ a tuple of elements of $J^\ast$ (so an $r$-tuple of tuples $u_s = (u^1_s,\ldots,u^{\ell_s}_s)$), and $(x_1,\ldots,x_r)$ an $r$-decomposition of $n \in I^*$, i.e. an $r$-tuple of elements such that $x_1 \oplus \cdots \oplus x_r = n$ in $\mathbb{P}/I$. Then,
+*Proof.* Once the notation is settled, the proof is a painstaking coend computation: let $w = (k_1,\ldots,k_r)$ be a tuple of elements of $K$, $u_1,\ldots,u_r$ a tuple of elements of $J^\ast$ (so an $r$-tuple of tuples $u_s = (u^1_s,\ldots,u^{\ell_s}_s)$), and $(x_1,\ldots,x_r)$ an $r$-decomposition of $n \in I^\ast$, i.e. an $r$-tuple of elements such that $x_1 \oplus \cdots \oplus x_r = n$ in $\mathbb{P}/I$. Then,
 
 $$
 \begin{aligned}

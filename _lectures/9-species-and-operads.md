@@ -72,8 +72,9 @@ $$ \begin{aligned}
   {\bf Spc}\Big(\int^m Tm\times T^{*m}(-) , T\Big) & \cong \int_m {\bf Spc}\big(Tm\times T^{*m}(-) , T\big)                                                                          \\
                                                    & \cong \int_{mr} {\bf Set}\big(Tm\times T^{*m}r , Tr\big)                                                                        \\
                                                    & \cong \int_{mr, \vec n} {\bf Set}\Big(Tm\times Tn_1\times\dots\times Tn_m \times {\bf B}(\textstyle\sum n_i,r) , Tr\Big)        \\
-                                                   & \cong \int_{mr, \vec n} {\bf Set}\Big({\bf B}(\textstyle\sum n_i,r), {\bf Set}(Tm\times Tn_1\times\dots\times Tn_m   , Tr)\Big) \\
-                                                   & \cong {\bf Set}(Tm\times Tn_1\times\dots\times Tn_m  , T(\textstyle\sum n_i))
+                                                   & \cong \int_{mr, \vec n} {\bf Set}\Big({\bf B}(\textstyle\sum n_i,r), \\ 
+                                                   &\kern6em {\bf Set}(Tm\times Tn_1\times\dots\times Tn_m , Tr)\Big) \\
+                                                   & \cong {\bf Set}(Tm\times Tn_1\times\dots\times Tn_m , T(\textstyle\sum n_i))
  \end{aligned} $$
 
 where the last equality is Yoneda, and thus $\mu$ has components
@@ -339,33 +340,34 @@ sends $(\sigma ; \tau_1 , \dots, t_m)$ to the shuffle $\tau_{\sigma 1} \mathbin{
 
 **Example.** The $Lie$ operad.
 
-We summarize the situation in a table:
+We can summarize the situation in a table:
 
 <div align="center">
 
 <table>
 <thead>
 <tr>
-<th>Algebra type</th>
-<th>Description</th>
+<th>Operad</th>
+<th>Carrier</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="center">$Com, Com_+$</td>
-<td align="center">$E, E_+$</td>
+<td align="center">$E, E_+$</td><td>(terminal, nonempty terminal)</td>
 </tr>
 <tr>
 <td align="center">$As, As_+$</td>
-<td align="center">$L, L_+$</td>
+<td align="center">$L, L_+$</td><td>(linear orders, nonempty linear orders)</td>
 </tr>
 <tr>
 <td align="center">$Zinb$</td>
-<td align="center">$L_+$</td>
+<td align="center">$L_+$</td><td>(nonempty linear orders)</td>
 </tr>
 <tr>
 <td align="center">$Perm$</td>
-<td align="center">species of elements</td>
+<td align="center">$J$</td><td>(species of elements)</td>
 </tr>
 <tr>
 <td align="center">$Lie$</td>
@@ -377,3 +379,24 @@ We summarize the situation in a table:
 </div>
 
 ## Algebras for an operad
+
+Monoids want to act on things, and to every category of monoids there is an associated category of modules; moreover, if $T$ is an operad, $T\circ-$ is obviously a monad on $\bf Spc$; thus, a (left) module for an operad then consists of an Eilenberg-Moore algebra for the monad $T\circ-$. It is a species $X$ together with a map $\xi : T\circ A \to A$, satisfying the $(T\circ-)$-algebra equations. In components, let $A(m)$ be the components of the species $A$; then the action is a map 
+
+$$ \xi_r : \int^m Tm\times A^{*m}r \to Ar $$
+
+which corresponds to 
+
+$$ \xi_r : \int^{m,\vec n} Tm\times An_1\times\dots\times An_m \times {\bf B}(\sum n_i,r) \to Ar $$
+
+now little more can be said in general. However, if $A(m) \equiv A$ is constant on a set $A$ (and with a bit of care, such constants can be defined on *some* bases of enrichment for $\cal V$-species), observe that $T\circ A$ is also constant (at the object $\int^m Tm\times A^m$) and thus the notion of algebra reduces to a single object $A$, with maps $\xi^{(m)} : Tm\times A^m \to A$ for all $m\in\bf B$, subject to certain equations (the cowedge condition, and natural compatibility with the monoid structure of $T$).
+
+Note that since $-\circ A$ has a right adjoint for every species $A$ (even non constant), the algebra map $\xi$ is tantamount to a homomorphism of operads $\hat{\xi} : T \to \\{A,A\\}$, into the substitution-right-hom of [ref](./3-monoidal-structures-on-P.html#dayhom). Note also that if $A$ is again constant at $A$, the species $\\{A,A\\}$ sends $m$ to ${\bf Set}(A^m,A)$.
+
+An algebra (in the restricted, constant sense above) for the operad...
+
+- ...of endomorphisms consists of
+- ...$Com$ consists of 
+- ...$As$ consists of 
+- ...$Perm$ consists of 
+- ...$Lie$ consists of 
+- ...$Zinb$ consists of 

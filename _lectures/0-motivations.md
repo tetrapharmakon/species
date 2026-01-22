@@ -61,6 +61,12 @@ The theory was first introduced in two papers by A. Joyal:
 
 which promoted, for a long time, the idea that the category $\bf Spc$ of combinatorial species is a categorified analogue of the semiring $\mathbb N\llbracket T\rrbracket$.
 
+**Exercise.** Let $m\ge 1$ and $\vec n = (n_1,\dots,n_m)$ a vector of "dimensions". Count in two ways the cardinality of the set $R_k$ for $k\ge 0$, defined as follows:
+
+$$ R_k := \{\vec p = (p_1,\dots,p_n) \in \mathbb{N}^m \mid p_1n_1 + \dots + p_m n_m = k\} $$
+
+If you manage, congrats: you just found the rank of the (free) $k$-th cohomology $H^k(X_m,\mathbb Z)$ of the "general product of spheres" space $X_m := S^{n_1}\times S^{n_2}\times\dots\times S^{n_m}$!
+
 #### Reading list
 
 - Stanley, Richard P. _What is enumerative combinatorics?._ Enumerative Combinatorics. Boston, MA: Springer US, 1986. 1–63.

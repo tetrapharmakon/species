@@ -35,16 +35,16 @@ and for $X\in\bf Set$ the set $FX$ can be computed pointwise as the coend
 
 $$ \int^n f(n)\times X^n =: \left(\coprod_{n\ge 1} f(n)\times X^n\right)/\left\langle \begin{smallmatrix}\sigma.e; x_1,\dots,x_n) \sim (e, x_{\sigma 1},\dots, x_{\sigma n}) \\ \sigma \in S_n, n\ge 1\end{smallmatrix} \right\rangle \qquad(\star) $$
 
-Such a functor is called *analytic*, and we call similarly every functor that lies in the image of the functor $\text{Lan}_J$, where $J : {\bf B} \hookrightarrow {\bf Set}$ is the (nonfull) inclusion functor.
+Such a functor is called *analytic*, and we call similarly every functor that lies in the image of the functor $\text{Lan}_J$, where $J : {\bf B} \rightarrow {\bf Set}$ is the (nonfull) inclusion functor.
 
 <div id="label-2"></div>
-**Definition** (Analytic functor). An endofunctor $F$ of $\bf Set$ is called *analytic* if it lies in the essential image of $\text{Lan}_J$, or in other words, if it arises as the left Kan extension along $J : {\bf B} \hookrightarrow {\bf Set}$ of a combinatorial species $f : {\bf B} \to {\bf Set}$. Such a species will be called the *generating species* of $F$.
+**Definition** (Analytic functor). An endofunctor $F$ of $\bf Set$ is called *analytic* if it lies in the essential image of $\text{Lan}_J$, or in other words, if it arises as the left Kan extension along $J : {\bf B} \rightarrow {\bf Set}$ of a combinatorial species $f : {\bf B} \to {\bf Set}$. Such a species will be called the *generating species* of $F$.
 
 It is then evident that $\text{Lan}_J$ is the left adjoint in a pair
 
-$$ \text{Lan}_J :  {\bf Spc} \leftrightarrows [{\bf Set}, {\bf Set}] : J^*. $$
+$$ \text{Lan}_J :  {\bf Spc} \leftrightarrows [{\bf Set}, {\bf Set}] : J^\ast. $$
 
-Since $J$ is not fully faithful, the category of combinatorial species cannot be seen as a full subcategory of endofunctors of $\bf Set$ subject to some additional property prescribed by the coreflection $J^*$.
+Since $J$ is not fully faithful, $J^\ast$ is not a coreflection, so the category of combinatorial species cannot be seen as a full subcategory of endofunctors of $\bf Set$ subject to some additional property prescribed by the right adjoint $J^\ast$.
 
 Its essential image is thus a little bit more difficult to characterise than in the case of $[{\bf Fin}, {\bf Set}]$ examined in lecture 1.
 

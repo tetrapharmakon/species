@@ -231,7 +231,7 @@ As it is well-known, in the ring of formal power series $K\llbracket t\rrbracket
 
 Precomposition with $\iota_n$ determines a *truncation* functor
 
-$$ \iota^*_n := \tau_n : {\bf Spc} = [{\bf B}, {\bf Set}]\to [{\bf B}_{\le n}, {\bf Set}] $$
+$$ \iota^\ast_n := \tau_n : {\bf Spc} = [{\bf B}, {\bf Set}]\to [{\bf B}_{\le n}, {\bf Set}] $$
 
 and left and right Kan extensions along $\iota_n$ put $\tau_n$ in the middle of a triple of adjoint functors
 
