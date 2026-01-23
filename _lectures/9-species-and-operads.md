@@ -253,6 +253,8 @@ An object of $\nabla(J\circ\pi)$ now is a triple $(n,\varphi : n \to X,i\in n)$ 
 
 Associativity and unitality follow from the adjunction identities of $-\circ P\dashv \\{P,-\\}$. In particular, if $P$ is constant at a set $P_0$, one has $\\{P,P\\}(m) = {\bf Set}(P^m_0,P_0)$.
 
+<div id="exoperad-E"></div>
+
 **Example.** There is an operad structure on the [terminal object](./2-p-and-its-up-and-species.html#label-5) $E : n\mapsto\{\ast\}$ of set-species $\bf Spc$, but this is not very interesting (the structure is trivially given by the unique map $E\circ E \to E$, $y(1) \to E$ into $E$). Instead, on [$k$-vector species](./8-species-like-categories.html#sect-3), the operad $\boldsymbol k[E] : n\mapsto \boldsymbol k$ constant at the 1-dimensional space carries the structure of an operad as follows: first, observe that $k[E]\circ k[E] = \int^m k[E]m\otimes k[E]^{\ast m} \cong \int^m k\otimes k[E^{\ast m}]$; this (plus the fact that $k[-]$ is strong monoidal) reduces the problem to the computation of the iterated Day convolution of $E$ with itself. A type of $E^{\ast m}(n)$ structure now consists of a *$m$-partition* on $n$ in the terminology of the red book, i.e. an ordered partition of $n$ into $m$ (possibly empty) disjoint subsets (so: $E^{\ast m}\cong {\bf Set}(-,m)$ with the action of a permutation defined as $f\mapsto f\circ \sigma^{-1}$); $E^{\ast m}$ is called the species $\text{Par}^{[m]}$ of $m$-partitions.
 
 The operad structure is once again obtained simply (but not completely trivially) by setting the multiplication as the map
@@ -270,6 +272,8 @@ sending $(\alpha;\beta_1,\dots, \beta_m)$ to $\alpha\beta_1\cdots\beta_m$ (produ
 The species of *nonempty* sets also carries a structure of (set, and $k$-vector) operad, which in some respect is more interesting; the same reasoning can be repeated, until the characterization of $E_+^{\ast m}$ is due. In the terminology of the red book, a species of $E_+^{\ast m}$-structure on $n$ consists of an $m$-ballot, i.e. an unordered partition into nonempty subsets of $n$. The resulting species is denoted $\text{Bal}^{[k]}$. Here is a picture:
 
 <img src="../ballots.png" alt="drawing" width="80%"/>
+
+<div id="exoperad-L"></div>
 
 **Example.** The operad $As$ with carrier $L$ is obtained as the "natural" operad structure on $L=\sum_{n\ge 0} y(n)$; the unit is given by the first coprojection $\text{in}\_1 : y(1)\hookrightarrow \sum_{n\ge 0} y(n)$, and since $L\circ L\cong \sum_{n\ge 0} L^{\ast n}$, to define a multiplication $L\circ L\to L$ it is enough to define a map of species $L^{\ast n} \to L$; this can be done to the effect that in components, the multiplication $\mu_{As}$ is defined as
 
