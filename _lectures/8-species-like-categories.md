@@ -21,14 +21,24 @@ antex:
 There is a vast array of generalizations of the concept of species, which we now survey. Most of the theory developed so far applies in these more general contexts as well, with due care about details (for example, it is not very easy to define the substitution product for colored species).
 
 <div id="sect-1"></div>
-### Enriched, coloured species
+## Enriched, coloured species
 
 If $S$ is a set regarded as a discrete category, and $\cal V$ a *Bénabou cosmos* (i.e. a complete, cocomplete, symmetric monoidal closed category), we give the following definition, encompassing various (but not all) examples of this section.
 
 <div id="label-1"></div>
 **Definition.** The category $(S,{\cal V})\text{-}\mathbf{Spc}$ of *$(S,{\cal V})$-species* is defined as the functor category $\mathbf{Cat}({\bf B}[S],{\cal V})$ where ${\bf B}[S]$ is the free symmoncat on the set $S$.
 
-Evidently, the "category of species" studied so far is the category $(1,{\bf Set})\text{-}\mathsf{Spc}$ if $1$ is a singleton set.
+Evidently, the "category of species" studied so far is the category $(1,{\bf Set})\text{-}\mathsf{Spc}$ if $1$ is a singleton set. This is a simple, but powerful observation. The definition of a species or symmetric sequence makes sense in any symmetric monoidal category, for example the category of chain complexes and the category of simplicial sets. In both situations one can leverage on the fact that there is a *model structure* on the codomain category, allowing for the construction of homotopical/homological invariants to attach to a species. 
+
+For example, in the paper
+
+Berger, Clemens, and Ieke Moerdijk. _Axiomatic homotopy theory for operads._ Commentarii Mathematici Helvetici 78.4 (2003): 805-831.
+
+Berger and Moerdijk establish sufficient conditions for the existence of a model structure on symmetric operads within an arbitrary symmetric monoidal model category. This framework allows for a general homotopy theory where weak equivalences and fibrations of operads are defined based on their underlying collections. The paper works under the isomorphism ${\bf Spc}\cong \prod_{n\ge 0} {\bf Set}^{S_n}$ and calls the latter the category of *collections* (of left $S_n$-sets for all $n$). They then proceed to prove two theorems regarding the transfer of model structures from collections to operads:
+
+- *Model structure for reduced operads (Theorem 3.1):* In a cofibrantly generated monoidal model category where the unit is cofibrant, a model structure exists for reduced operads if there is a symmetric monoidal fibrant replacement functor and a "commutative Hopf interval". A Hopf interval is a commutative Hopf object $H$ that factors the folding map $I \sqcup I \to I$ into a cofibration followed by a weak equivalence.
+- *Model structure for general operads (Theorem 3.2):* For cartesian closed model categories, such as simplicial sets or compactly generated topological spaces, a model structure exists for all operads provided there is a symmetric monoidal fibrant replacement functor.
+
 
 <div id="label-2"></div>
 **Remark.** One could have defined a category $({\cal A},{\cal V})\text{-}\mathsf{Spc}$ as the functor category $\mathbf{Cat}({\bf B}[{\cal A}],{\cal V})$ (the free symmoncat construction makes sense for every category, not just the discrete ones). This is, however, a different kind of gadget, which would deserve the name of *free (cocomplete) 2-rig on $\cal A$*; species, in this perspective, occupy a special role as they are free *on a set*, much like a polynomial ring is free on a set of generators (for its multiplication) regarded as variables.
@@ -47,7 +57,7 @@ Regarding species as formal power series, the category $\mathbf{Cat}({\bf B}[S],
 **Exercise.** ($\star$) I have had for quite some time, in the back of my head, the idea that it is interesting to study species when $\cal V$ is compact closed, or star-autonomous; see for example [here](https://arxiv.org/abs/math/0612496), where some work is done in this direction. If this sounds like an interesting project for you, please let's do it together.
 
 <div id="sect-2"></div>
-#### Substitution product of colored species
+### Substitution product of colored species
 
 An explicit description of the $n$-fold convolution of presheaves $M_1,\ldots,M_n : \mathbb{P}/I \to \mathbf{Set}$ is given in [Mé96, 2.1]: the coend in Equation (5) splits as the sum
 
@@ -172,7 +182,7 @@ picks out the component at $j$ of the $J$-family $M : J \to \mathbb{P}/I$.
 ---
 
 <div id="sect-3"></div>
-### Vector species
+## Vector species
 
 Let $k$ be a field. The category of $k$-vector species (it would be more natural to call them *$k$-linear*, however this might cause confusion with the concept of linear species below, which doesn't pertain to vector spaces) is the category $(1,k\text{-}{\bf Vect})\text{-}\mathbf{Spc}$ of functors ${\bf B} \to k\text{-}{\bf Vect}$.
 
@@ -267,7 +277,7 @@ The category of $k$-vector species is now equipped with the Day, Hadamard, and s
 ---
 
 <div id="sect-4"></div>
-#### Linear species
+### Linear species
 
 The category $\mathbf{Lin}$ is defined as the category of totally
 ordered finite sets $\langle n \rangle := \{1 < \cdots < n\}$ and
@@ -326,7 +336,7 @@ codomain of species in the category of *$R$-weighted sets*.
 ---
 
 <div id="sect-5"></div>
-### Weighted species
+## Weighted species
 
 Fix a commutative, unitary ring $R$. The category of *weighted sets* is defined as the following comma category construction:
 
@@ -424,7 +434,7 @@ Thus, for a formally real ring $R$, the cone of sums of squares induces a canoni
 ---
 
 <div id="sect-6"></div>
-#### Moebius species
+### Moebius species
 
 <div id="label-15"></div>
 **Definition.** Let $\bf Set$ be the category of sets, equipped with the tautological functor $J \colon \mathbf{Set} \to \mathbf{Cat}$ regarding each set as a discrete category; let $\mathbf{Pos}^{\top\\!\bot}$ be the category of posets with top and bottom, where morphisms are top- and bottom-preserving monotone maps; consider the comma category
@@ -515,7 +525,7 @@ $$
 ---
 
 <div id="sect-7"></div>
-#### Nominal sets
+### Nominal sets
 
 <div id="label-19"></div>
 **Definition.** Consider the chain of inclusions
@@ -532,7 +542,7 @@ The group-theoretic properties of $S_\infty$ are the subject of intense study in
 **Definition.** The category $\bf Nom$ of *nominal sets* is the category of (set-theoretic) left
 actions of $S_\infty$, or in other words the category of functors $F \colon S_\infty \to \mathbf{Set}$.
 
-#### Reading list
+### Reading list
 
 - Bergeron, François, et al. _Combinatorial species and tree-like structures_. No. 67. Cambridge University Press, 1998.
 - Méndez, Miguel, and Julia Yang. _Möbius species._ Advances in Mathematics 85.1 (1991): 83-128

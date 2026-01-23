@@ -133,10 +133,17 @@ $$ \lambda A. \int^{U,V \in \cal A} FU \times GV \times {\cal A}(A,U\otimes V) $
 
 and on morphisms (natural transformations of presheaves) by the evident functoriality of this construction.
 
-(*Exercise:* Prove that if $\cal A$ is a cartesian category (i.e., $\otimes = \times$), then $F * G \cong F\times G$; prove that the monoidal unit of $*$ is the representable presheaf $y(I)$ on the monoidal unit of $({\cal A}, \otimes)$.)
+*Exercise.* Prove that if $\cal A$ is a cartesian category (i.e., $\otimes = \times$), then $F * G \cong F\times G$; prove that the monoidal unit of $*$ is the representable presheaf $y(I)$ on the monoidal unit of $({\cal A}, \otimes)$.
+
+*Exercise.* Prove that if $FU\equiv F_0$ and $GV \equiv G_0$ are constant at objects $F_0,G_0$, then $F\ast G$ is also constant at $F_0\times G_0$; it's not as immediate as it seems! Use as a preliminary result that 
+
+$$ \int^{U,V \in \cal A} {\cal A}(A,U\otimes V) \cong \{\ast\} $$
+
+(in words: the coend in question is the terminal object.)
+
 
 #### Reading list
 
 - Brian Day, _Construction of Biclosed Categories_, PhD thesis. School of Mathematics of the University of New South Wales, September 1970.
-- https://ncatlab.org/toddtrimble/published/multisorted+Lawvere+theories
+- [https://ncatlab.org/toddtrimble/published/multisorted+Lawvere+theories](https://ncatlab.org/toddtrimble/published/multisorted+Lawvere+theories)
 - Loregian, Fosco. _(Co)end calculus._ Vol. 468. Cambridge University Press, 2021.
