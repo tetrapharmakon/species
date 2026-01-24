@@ -95,7 +95,9 @@ The proof will occupy the entire lecture, and it comes from a more modern presen
 
 Since $\text{Lan}_J$ is a left adjoint, it is evident that $\text{Lan}_J(f + g) \cong \text{Lan}_J f + \text{Lan}_J g$, so that the class of analytic functors is close under finite (and in fact, arbitrarily large) coproducts. More importantly, this proves that the analytic functor associated to $f+ g$ is just the coproduct of the analytic functors $F=\text{Lan}_Jf$ and $G=\text{Lan}_Jg$.
 
-Thus, to completely understand analytic functors, it is enough to understand the $+$-indecomposable objects of $\bf Spc$. Such indecomposable objects can be characterised.
+Thus, to completely understand analytic functors, it is enough to understand the $+$-indecomposable objects of $\bf Spc$. Such indecomposable objects can be characterised. 
+
+**Notation.** Recall, or learn, that an object $A$ of a monoidal category $(\cal K,\otimes,I)$ is called *$\otimes$-indecomposable* if whenever $A=X\otimes Y$ either $X$ or $Y$ is the tensor unit. In particular, in the case of species, a $+$-indecomposable object will be called a *molecule*, and a $\ast$-indecomposable object ($\ast$ being the Day convolution operation) an *atom*. The nomenclature is handy (although it clashes with other situations with which it has no relation afawk), because every molecule is a product of atoms, so it's a "monomial", and every species is a (possibly infinite) sum of monomials: a power series.
 
 <div id="label-5"></div>
 **Proposition** (Canonical decomposition of a species). Every combinatorial species $f : {\bf B} \to {\bf Set}$ splits into a countable sequence of $+$-indecomposable objects, unique up to reordering: the *canonical decomposition* of $f$.
