@@ -58,17 +58,40 @@ In fact, linearity can be strengthened into *cocontinuity*:
 
 > is a coproduct diagram.
 
-**Example** (The derivative of the species of elements). ...
+**Example** (The derivative of the species of elements). The derivative of the species of elements is the species of elements itself. This can be seen reflected
 
-**Example** (The derivative of the species of singletons). ...
+- in the fact that $\frac d{dt}(\exp t) = \exp t$, or
+- with a more combinatoria argument, noting that $\partial E(n) = E(n+1)= E(n)$ for all $n\ge 0$.
 
-**Example** (The derivative of the species of a representable species). ...
+**Example** (The derivative of the species of singletons). The derivative of the representable $y(1)$ is the species defined as
 
-**Example** (The derivative of the species of linear orders). ...
+$$ 
+\partial y(1)(n) = 
+\begin{cases}
+\{\ast\}& n=0\\ 
+\varnothing & n\ne 0
+\end{cases}
+$$
+
+So $\partial y(1)=y(0)$. So *the monoidal unit for Day convolution is the initial object*; in differential algebra lingo, $y(0)$ is a $\partial$-constant. Note how the proof that the unit of a differential ring is a constant using the Leibniz rule adapts, but only up to a certain point: indeed,
+
+$$ \partial\big(y(0)\big) = \partial\big( y(0) * y(0) \big) \cong \partial y(0) \ast y(0) + y(0) \ast\partial y(0) \cong \partial\big(y(0)\big) + \partial\big(y(0)\big) $$
+
+so $J=\partial\big(y(0)\big)$ is an object "so small that $J\cong 2\cdot J$", but in principle it doesn't have to be initial!
+
+*Exercise.* Find why, in the particular case of species, it must however be the case that $J\cong\varnothing$. Hint: prove that if $J\cong 2\cdot J$, then there exists an epimorphism $J\twoheadrightarrow \varnothing$. Conclude.
+
+**Example** (The derivative of the species of a representable species). More in general, abstracting from the previous example, $\partial y(n) = y(n-1)$, with the implicit convention that $\partial y(0)=\varnothing$.
+
+**Example** (The derivative of the species of linear orders). This is where the combinatorial arguments start to the the only ways to argue.
 
 **Example** (The derivative of the species of subsets). ...
 
-**Example** (The derivative of the species of cycles). ...
+**Example** (The derivative of the species of cycles). A species of $\partial C(n)$ structure is a species of $C(n+1)$ structure, i.e. a cyclic order on a set with $n+1$ elements, of which one has been singled out. But then, that element is the head, or tail, of a linear order and $\partial C(n)\cong L(n)$. More formally, the maps $C(n+1) \to L(n)$ defined as 
+
+$$ \{\circ_1 < \circ_2 < \dots < \circ_n < \bullet_{n+1} < \circ_1\} \mapsto \{\circ_1 < \circ_2 < \dots < \circ_n\}$$
+
+are equivariant for all $n$.
 
 **Example** (The derivative of the species of permutations). ... 
 
