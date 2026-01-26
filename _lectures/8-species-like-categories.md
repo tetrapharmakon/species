@@ -542,6 +542,11 @@ The group-theoretic properties of $S_\infty$ are the subject of intense study in
 **Definition.** The category $\bf Nom$ of *nominal sets* is the category of (set-theoretic) left
 actions of $S_\infty$, or in other words the category of functors $F \colon S_\infty \to \mathbf{Set}$.
 
+<div id="sect-7"></div>
+### Generalized $q$-species
+
+Something about this paper eventually: [https://doi.org/10.1006/jabr.1995.1278](https://doi.org/10.1006/jabr.1995.1278).
+
 ### Reading list
 
 - Bergeron, François, et al. _Combinatorial species and tree-like structures_. No. 67. Cambridge University Press, 1998.
