@@ -14,8 +14,9 @@ body {
 	background-color: #FCE8AD;
 	color: #272b2e;
 	text-align: justify;
-  margin: 20%;
-	max-width: 50%;
+	margin: 1.5rem auto;
+	max-width: 60ch;
+	padding: 1rem;
 }
 
 
