@@ -22,7 +22,7 @@ It would be very useful, for many practical purposes, to have a category "like $
 
 The framework was established by André Joyal (and more recently extended by Yeong-Nan Yeh, a student of Lawvere at Buffalo) to expand the reach of combinatorial differential and functional calculus.
 
-The idea is similar to how one obtains the integers from the *semi*ring $\mathbb N$ with a "Grothendieck group" construction; a "virtual species" would now be a pair $(F,G)$, interpreted as a formal difference $F-G$ of species, with two of them, say $\Phi=(F,G)$ and $\Phi'=(F^\prime,G^\prime)$ equivalent if and only if $F+G^\prime=F^\prime+G$.
+The idea is similar to how one obtains the integers from the *semi*ring $\mathbb N$ with a "Grothendieck group" construction; a "virtual species" would now be a pair $(F,G)$, interpreted as a formal difference $F-G$ of species, with two of them, say $\Phi=(F,G)$ and $\Phi^\prime=(F^\prime,G^\prime)$ equivalent if and only if $F+G^\prime=F^\prime+G$.
 
 In order for this definition to work as expected, however, it must be the case that the coproduct of species makes it into a traced monoidal category. This seems a pretty strong requirement, but it turns out that it is true!
 
@@ -82,10 +82,10 @@ Note that all take value in rings with *integer* coefficients.
 
 **Remark.** Operations on ordinary species are extended to the ring of virtual species through linearity and distributivity. Note that *new* operations, that do not make sense for ordinary species, can be defined and are nontrivial.
 
-- *Derivation and Pointing:* The derivative $\Phi'$ is defined as $F' - G'$, and the pointing operation $\Phi^\bullet$ is $F^\bullet - G^\bullet$.
+- *Derivation and Pointing:* The derivative $\Phi^\prime$ is defined as $F^\prime - G^\prime$, and the pointing operation $\Phi^\bullet$ is $F^\bullet - G^\bullet$.
 - *Substitution:* The partitional composition $\Phi \circ \Psi$ is defined using a two-sort species construction. For a species $F$, the virtual species $F(X - Y)$ is defined as $F(X + Y) \times (E(X) \cdot E^{-1}(Y))$, where $E^{-1}$ is the multiplicative inverse of the species of sets.
 - *Multiplicative Inverse:* For a species $F$ where $F(0) = 1$, a multiplicative inverse $1/F$ exists in $Virt$. For the species of sets $E$, the inverse is $E^{-1} = \sum_{k \ge 0} (-1)^k (E_+)^k$, where $E_+$ is the species of non-empty sets.
-- *Substitutional Inverse:* For a species $G$ where $G(0) = 0$ and $G'(0) = 1$, there exists a unique substitutional inverse $G^{\langle -1 \rangle}$ such that $G \circ G^{\langle -1 \rangle} = G^{\langle -1 \rangle} \circ G = X$.
+- *Substitutional Inverse:* For a species $G$ where $G(0) = 0$ and $G^\prime(0) = 1$, there exists a unique substitutional inverse $G^{\langle -1 \rangle}$ such that $G \circ G^{\langle -1 \rangle} = G^{\langle -1 \rangle} \circ G = X$.
 
 **Theorem** (Yeh 1986). Let $\mathfrak{A}$ be the set of (isomorphism classes) of atoms in $\bf Spc$. The ring $Virt$ of non-weighted virtual species is isomorphic to the ring of formal power series $\mathbb{Z}\llbracket \mathfrak{A} \rrbracket$ in an infinite number of variables, where each variable corresponds to an atomic species (such as $X, E_2, E_3, C_3, \dots$). This identifies that every virtual species has a unique molecular decomposition $\Phi = \sum_{M \in \mathfrak{M}} \phi_M M$, where the coefficients $\phi_M$ are integers. This decomposition serves as a strict generalization of the cycle index series.
 
@@ -94,10 +94,10 @@ Yeh also identified a fundamental relationship between the category of species a
 **Remark** (Combinatorial Logarithm and Connected Components). Virtual species allow for a generalized definition of "connected structures" even for species that do not naturally possess them in the semi-ring $\bf Spc$. If $F$ is a species such that $F(0) = 1$, there exists a unique virtual species $\Gamma = F^c$ satisfying the equation $F = E^\Gamma = E\circ\Gamma$. This virtual species $\Gamma$ is called the *combinatorial logarithm* of $F$ and denoted $\log F$. For example, the species $L$ of linear orders does not have an ordinary species of connected components, but it possesses a (strictly) virtual species of connected components $L^c$ in $Virt$.
 
 The existence of subtraction changes the nature of solutions to combinatorial differential equations.
-- **Non-constant Solutions to $\Phi' = 0$:** In the ring of virtual species, the equation $\Phi' = 0$ has an infinite number of non-constant solutions, such as $\Phi = nC_n - X^n$ for $n \ge 2$. This makes the theory of differential equations inherently "less well-defined" than in ordinary calculus. For any differential 2-rig $\cal R$, one can define the *ring of constants* as the full subcategory spanned by the objects $C$ such that $\partial C\cong 0$; this is a sub-2-rig of $\cal R$, since 
+- **Non-constant Solutions to $\Phi^\prime = 0$:** In the ring of virtual species, the equation $\Phi^\prime = 0$ has an infinite number of non-constant solutions, such as $\Phi = nC_n - X^n$ for $n \ge 2$. This makes the theory of differential equations inherently "less well-defined" than in ordinary calculus. For any differential 2-rig $\cal R$, one can define the *ring of constants* as the full subcategory spanned by the objects $C$ such that $\partial C\cong 0$; this is a sub-2-rig of $\cal R$, since 
     - it contains $\varnothing$, since $\partial$ preserves it *qua* empty coproduct;
-    - it contains $C+C'$, since $\partial(C+C')\cong \partial C+\partial C'\cong \varnothing+\varnothing\cong \varnothing$;
-    - it contains $C\otimes C'$, since $\partial(C\otimes C') \cong \varnothing\otimes C' + C\otimes\varnothing\cong \varnothing$;
+    - it contains $C+C^\prime$, since $\partial(C+C^\prime)\cong \partial C+\partial C^\prime\cong \varnothing+\varnothing\cong \varnothing$;
+    - it contains $C\otimes C^\prime$, since $\partial(C\otimes C^\prime) \cong \varnothing\otimes C^\prime + C\otimes\varnothing\cong \varnothing$;
     - Note how more in general every 2-rig is an actegory over its 2-rig of constants: $\partial(C\otimes X) \cong C \otimes \partial X$.
-- **Integration:** For any virtual species $\Psi$, the equation $\Phi' = \Psi$ has a general solution $\Phi = \Omega + \int \Psi$, where $\Omega$ is any solution to $\Omega' = 0$.
+- **Integration:** For any virtual species $\Psi$, the equation $\Phi^\prime = \Psi$ has a general solution $\Phi = \Omega + \int \Psi$, where $\Omega$ is any solution to $\Omega^\prime = 0$.
 - **Iterative Methods:** The Newton-Raphson method for species is defined using the derivative and inverses within the virtual species framework to solve functional equations like $Y = X \cdot R(Y)$.
