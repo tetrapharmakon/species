@@ -96,6 +96,8 @@ The problem is, we cannot develop such an expression by simplifying, since the s
 - In case $F$ is the species concentrated on an object $X$ at degree $n$, the free operad is associated to the free monad over the functor $X\times-$ (i.e. the free monad over said analytic functor); it's the monad given by actions of the free monoid $X^\ast$ on $X$ as alphabet. The operad is obtained restricting its action to $\bf B$ along the inclusion $J$.
 - In case $F=c_X$ is the species constant on an object $X$, the associated analytic functor sends a set $Y$ to the product $X\times \mathbb N[Y]$ of $X$ and the free commutative monoid (set of multisets) on $Y$. The free monad over this, restricted to $\bf B$ along $J$, yields the free operad over $c_X$.
 
+<div id="alg_operad"></div>
+
 ## Algebras for an operad
 
 Monoids want to act on things, and to every category of monoids there is an associated category of modules; moreover, if $T$ is an operad, $T\circ-$ is obviously a monad on $\bf Spc$; thus, a (left) module for an operad then consists of an Eilenberg-Moore algebra for the monad $T\circ-$. It is a species $X$ together with a map $\xi : T\circ A \to A$, satisfying the $(T\circ-)$-algebra equations. In components, let $A(m)$ be the components of the species $A$; then the action is a map 
