@@ -91,6 +91,8 @@ The characterisation of analytic functors in terms of weak preservation of wide 
 
 The proof will occupy the entire lecture, and it comes from a more modern presentation of this idea in Adamek-Velebil that is purely elementary, in the sense that it relies on elementary category theory and is pretty straightforward.
 
+<div id="canonical_deco"></id>
+
 ### Canonical decomposition and examples
 
 Since $\text{Lan}_J$ is a left adjoint, it is evident that $\text{Lan}_J(f + g) \cong \text{Lan}_J f + \text{Lan}_J g$, so that the class of analytic functors is close under finite (and in fact, arbitrarily large) coproducts. More importantly, this proves that the analytic functor associated to $f+ g$ is just the coproduct of the analytic functors $F=\text{Lan}_Jf$ and $G=\text{Lan}_Jg$.

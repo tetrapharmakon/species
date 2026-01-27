@@ -179,8 +179,6 @@ for every $J$-family $M$ of $I$-species, where $y(j)$ is the representable
 $J$-species at a singleton $j = \\{ j \\} \in \mathbb{P}/J$. The Yoneda lemma
 picks out the component at $j$ of the $J$-family $M : J \to \mathbb{P}/I$.
 
----
-
 <div id="sect-3"></div>
 ## Vector species
 
@@ -274,8 +272,6 @@ Another reason why $k$-vector species are important is the presence of an adjunc
 
 The category of $k$-vector species is now equipped with the Day, Hadamard, and substitution monoidal products, and $P\mapsto k[P]$ turns out to be a strong monoidal functor with respect to all three products. Moreover, a $\bf Set$-species is connected or positive if and only if its $k$-linearization is such.
 
----
-
 <div id="sect-4"></div>
 ### Linear species
 
@@ -332,8 +328,6 @@ differential equations in $\mathbf{LSpc}$ have unique solutions, following more 
 Usually one compensates for the extreme rigidity of the domain category of
 an $\mathbb{L}$-species by fixing a commutative ring $R$ and `enriching' the
 codomain of species in the category of *$R$-weighted sets*.
-
----
 
 <div id="sect-5"></div>
 ## Weighted species
@@ -431,8 +425,6 @@ $$
 
 Thus, for a formally real ring $R$, the cone of sums of squares induces a canonical preorder reflecting the ring’s algebraic notion of positivity, even though it does not necessarily define a partial order.
 
----
-
 <div id="sect-6"></div>
 ### Moebius species
 
@@ -521,8 +513,6 @@ $$
 P_i \cong Q_{\sigma i}
 \qquad \text{for each } i = 1, \ldots, n.
 $$
-
----
 
 <div id="sect-7"></div>
 ### Nominal sets

@@ -114,8 +114,6 @@ $$ ({\bf Spc},\circ) \leftrightarrows ({\bf AnF},\circ) $$
 
 *Exercise.* (Disregarded in commutative algebra courses.) Given two formal power series $f,g \in K\llbracket t\rrbracket$, find an explicit formula for the coefficient $c_n$ of degree $n$ in the series $f\circ g(t)$. (Is it possible to "decategorify" the above expression for $F\circ G$, given that if $f,g$ are the generating series of $F,G$ respectively, then $c_n$ is the cardinality of $F\circ G$?)
 
----
-
 Since it is a bit convoluted to argue on the existence of the substitution monoidal structure, we give a sketch of an argument based on having established the Day convolution (closed) monoidal structure. The full story is surveyed in [Coends, Chapter 6] and in turn, it comes from Kelly's paper "On the Operads of JP May".
 
 <div id="label-8"></div>

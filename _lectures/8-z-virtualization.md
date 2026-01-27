@@ -66,7 +66,7 @@ This allows for the
 - **Multiplication:** $(F - G) \cdot (H - K) = (F \cdot H + G \cdot K) - (F \cdot K + G \cdot H)$.
 - **Neutral Elements:** The empty species $0$ (specifically $0 - 0$) serves as the additive identity, and the unit species $1$ (specifically $1 - 0$) serves as the multiplicative identity.
 
-Recall from [lecture XXX]() that every virtual species $\Phi$ possesses a unique representation in reduced form expressed as $\Phi = \Phi^+ - \Phi^-$. In this representation, the species $\Phi^+$ and $\Phi^-$ are unrelated, meaning they share no common non-empty molecular subspecies. 
+Recall from [lecture 6](./5-species-and-analytic-functors-wide-pullbacks.html#canonical_deco) that every virtual species $\Phi$ possesses a unique representation in reduced form expressed as $\Phi = \Phi^+ - \Phi^-$. In this representation, the species $\Phi^+$ and $\Phi^-$ are unrelated, meaning they share no common non-empty molecular subspecies. 
 
 - *Positive Part ($\Phi^+$):* The species representing the positive component.
 - *Negative Part ($\Phi^-$):* The species representing the negative component.

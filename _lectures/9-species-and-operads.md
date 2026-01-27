@@ -177,6 +177,7 @@ Associativity of $\mu$ is better appreciated through a picture: given an $n$-ary
 \end{tikzpicture}
 {% endtex %}
 
+<div id="monad-from-opd"></div>
 **Proposition.** Every operad $T : {\bf B} \to {\bf Set}$ defines a monad $\flat T : {\bf Set} \to {\bf Set}$ as follows:
 
 - the underlying endofunctor $\flat T$ is
