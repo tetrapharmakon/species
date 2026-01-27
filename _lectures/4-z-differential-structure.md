@@ -23,7 +23,7 @@ antex:
 
 Every species $F : {\bf B} \to {\bf Set}$ admits a "formal derivative" $F^\prime$ so that the generating series of $F^\prime$ is the formal derivative of $g_F(t)$:
 
-$$ g_{F'}(t) = \frac{d}{dt}g_F(t) $$
+$$ g_{F^\prime}(t) = \frac{d}{dt}g_F(t) $$
 
 Since the formal derivative of (exponential) power series is defined by shifting coefficients, because $\frac{d}{dt}\frac{t^n}{n!} = t^{n-1}{(n-1)!}$, the derivative $F^\prime$ is defined acting on a finite set $n$ with $n$ elements as $F^\prime[n] = F[n+1]$ (without restricting to a skeleton of $\bf B$, this is written $F[A] = F[A+1]$ where $A+1$ is the coproduct of $A$ with a singleton).
 
@@ -43,7 +43,11 @@ In fact, linearity can be strengthened into *cocontinuity*:
 
 **Proposition.** The derivative of species has both a left adjoint $\boldsymbol L$ and a right adjoint $\boldsymbol R$; as a consequence, $\partial$ preserves all limits and colimits in $\bf Spc$.
 
-*Proof.*
+**Lemma.** There is a natural isomorphism $\partial\cong [y(1),-]$ where $[-,-]$ is Day internal hom.
+
+*Proof of Proposition.* Using the Lemma, clearly $\boldsymbol L \cong y(1) * -$; at the same time, $\partial\cong [y(1),-]$ is cocontinuous, because $y(1)$ is a tiny object; the existence of $\boldsymbol R$ follows, and its description can be extracted from the universal property; explicitly, 
+
+$$ \textstyle L(F)(U) = \sum_{x\in U} F(U\setminus \{x\}) \qquad R(F)(U) = \prod_{x\in U} F(U\setminus \{x\}) $$
 
 **Remark.** Note also that the Leibniz rule can be rephrased as follows:
 > The $\partial$ functor is equipped with a tensorial strength $\partial X \ast Y \to \partial(X \ast Y)$, such that the diagram
@@ -57,6 +61,15 @@ In fact, linearity can be strengthened into *cocontinuity*:
 {% endtex %}
 
 > is a coproduct diagram.
+
+**Remark.** The derivative $F^\prime$ of a species $F$ is defined on a finite set $U$ by the collection of $F$-structures placed on the augmented set $U +\\{\bullet\\}$, where $\\{\bullet\\}$ is a singleton disjoint from $U$. This means that an $F^\prime$-structure on $U$ is exactly equivalent to an $F$-structure on a set of cardinality $n+1$. To determine the nature of the derivative species for a given $F$, one analyzes the structural configuration remaining on $U$ once the distinguished element $*$ is removed or its specific placement within the $F$-structure is isolated. This deserves more explanation. 
+
+The distinguished point $\bullet$ acts as a "marker" that breaks the symmetry or the uniformity of the original structure. An $F$-structure on the set $U \cup \{\bullet\}$, with the element $\bullet$ distinct from all elements in $U$, allows one to describe the rest of the structure in $U$ relative to that distinguished position. 
+
+The process that we will use below to determine $F'$ for any species $F$ is more or less as follows:
+1.  Define the Augmented Structure: Start with an $F$-structure on the set $U$ plus the extra point $\bullet$.
+2.  Identify the Role of $\bullet $: Observe how the structure is partitioned or ordered because of the presence of $\bullet$.
+3.  Translate to $U$: Describe the remaining elements of $U$ using standard species operations (such as the partitional product or substitution) that account for the "hole" or "marker" left behind by $\bullet$.
 
 **Example** (The derivative of the species of elements). The derivative of the species of elements is the species of elements itself. This can be seen reflected
 
@@ -83,9 +96,13 @@ so $J=\partial\big(y(0)\big)$ is an object "so small that $J\cong 2\cdot J$", bu
 
 **Example** (The derivative of the species of a representable species). More in general, abstracting from the previous example, $\partial y(n) = y(n-1)$, with the implicit convention that $\partial y(0)=\varnothing$.
 
-**Example** (The derivative of the species of linear orders). This is where the combinatorial arguments start to the the only ways to argue.
+**Example** (The derivative of the species of linear orders). This is where the combinatorial arguments start to the the only ways to argue. The derivative $L^\prime$ of the species of linear orders is isomorphic to the partitional product $L^2$, also expressed as $L \ast L$. Combinatorially, an $L^\prime$-structure on a finite set $U$ is a linear ordering of the set $U \cup \\{\bullet\\}$; removing the distinguished element $\bullet$ splits the original linear order into a prefix and a suffix, each of which is a linear order on its respective subset. This combinatorial result is a lifting of the analytic identity $\frac{d}{dx}(1-x)^{-1} = (1-x)^{-2}$.
 
-**Example** (The derivative of the species of subsets). ...
+**Example** (The derivative of the species of subsets). The species $\wp$ of subsets is characterized by the combinatorial identity $\wp \cong E \ast E$, where $E$ is the species of sets and we know that $E^\prime \cong E$, thus the Leibniz rule gives
+
+$$\wp^\prime = (E \ast E)^\prime = E^\prime \ast E + E \ast E^\prime = E \ast E + E \ast E = 2E^2 = 2\wp.$$
+
+Thus, the derivative of the species of subsets is isomorphic to two copies of itself. This mirrors the analytic property of the associated generating series $e^{2x}$, whose derivative is $2e^{2x}$.
 
 **Example** (The derivative of the species of cycles). A species of $\partial C(n)$ structure is a species of $C(n+1)$ structure, i.e. a cyclic order on a set with $n+1$ elements, of which one has been singled out. But then, that element is the head, or tail, of a linear order and $\partial C(n)\cong L(n)$. More formally, the maps $C(n+1) \to L(n)$ defined as 
 
@@ -93,12 +110,32 @@ $$ \{\circ_1 < \circ_2 < \dots < \circ_n < \bullet_{n+1} < \circ_1\} \mapsto \{\
 
 are equivariant for all $n$.
 
-**Example** (The derivative of the species of permutations). ... 
+**Example** (The derivative of the species of permutations). The species $S$ of permutations is characterized by the combinatorial equation $S \cong E \circ C$, which states that every permutation is a set ($E$) of disjoint cycles ($C$). To find the derivative $S^\prime$, one applies the combinatorial chain rule for substitution: $(F \circ G)^\prime \cong (F^\prime \circ G) \ast G^\prime$. Substituting the known derivatives $E^\prime \cong E$ and $C^\prime \cong L$ into the formula yields:
+
+$$S^\prime = (E^\prime \circ C) \ast C^\prime = (E \circ C) \ast L = S \ast L.$$
+
+Consequently, the derivative of the species of permutations is isomorphic to the partitional product of the species of permutations and the species of linear orders. This reflects the analytic derivative of the generating series $(1-x)^{-1}$, which is $(1-x)^{-2}$, noting that the series for $S \ast L$ is $(\frac{1}{1-x}) \cdot (\frac{1}{1-x}) = (\frac{1}{1-x})^2$.
+
+**Example** (The derivative of the species of partitions). For the species $Par$ of set partitions, an $F^\prime$-structure consists of a partition of $U + \\{\bullet\\}$; the block containing the distinguished element $\bullet$ is isolated and removed, leaving a standard partition on the remaining subset of $U$. This leads to the combinatorial identity $Par^\prime \cong E \ast Par$, where $E$ is the species of sets representing the elements grouped in the block that originally contained $\bullet$. Similarly, for the species $a$ of trees, adding a distinguished element $\bullet$ to the set $U$ and subsequently removing it transforms the unrooted tree into an assembly of rooted trees, expressed as $a^\prime \cong E(A)$. This occurs because the edges previously connected to $\bullet$ in the original tree on $U + \\{\bullet\\}$ become the roots of the tree components that remain on $U$.
+
+It is usually sufficient to apply in sequence linearity, the Leibniz rule, and the chain rule, to establish explicit descriptions for the iterated derivatives of "commonly used" species; of course, one can in principle also argue with the universal property alone, and prove what the Day internal hom amounts to in each case. But without making a guess, it's almost always impossible to find who is the correct candidate for the terminal wedge that describes the Day hom... So, the combinatorial approach of drawing pretty pictures is really the winning one!
+
+Some examples of iterated derivatives:
+
+- Since $L^\prime\cong L^2$, $L^{\prime\prime} \cong 2 \cdot L \ast L^\prime\cong 2 \cdot L L^2 = 2 L^3$ and more generally $L^{(n)} \cong n!\cdot L^{n+1}$;
+- Since $\wp^\prime\cong 2\cdot\wp$, $\wp^{\prime\prime} \cong 2\cdot \wp^\prime=4\cdot\wp$ and more generally $\wp^{(n)} \cong 2^n\cdot \wp$;
+- Since $S^\prime\cong S\ast L$, $S^{\prime\prime}\cong S^\prime\ast L + S\ast L^\prime=2\cdot(S\ast L^2)$ and more generally, $S^{(n)}\cong$...? (Try!)
 
 **Remark.** Taylor expansion of a species 
 
 **Definition.** Kähler differentials 
 
 **Definition.** Differential equations on $\bf Spc$
+
+For example:
+
+- the species $\wp$ of subsets satisfies the differential equation $Y^\prime = 2\cdot Y$;
+- the species $S$ of permutations satisfies the differential equation $Y^\prime = L\ast Y$;
+- the species $Par$ of set partitions satisfies the differential equation $Y^\prime = E\ast Y$.
 
 **Definition.** The category of differential operators on $\bf Spc$
