@@ -124,7 +124,7 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 **Example** (The species of elements). The nonfull inclusion functor $J : {\bf B} \to {\bf Set}$ defines a species, called the *species of elements* in the red book (and denoted $\epsilon$ therein).
 
 <div id="label-6"></div>
-**Example** (The species of permutations). The species $S$ of permutations sends each finite set $[n]$ into the (carrier of the) symmetric group on $n$ letters, $S_n$. The symmetric group acts on itself by conjugation: if $\tau \in S_n$, $\sigma : S_n \to S_n$ is the map sending $\tau\mapsto \sigma\tau\sigma^{-1}$.
+**Example** (The species of permutations). The species $\cal S$ of permutations sends each finite set $[n]$ into the (carrier of the) symmetric group on $n$ letters, $S_n$. The symmetric group acts on itself by conjugation: if $\tau \in S_n$, $\sigma : S_n \to S_n$ is the map sending $\tau\mapsto \sigma\tau\sigma^{-1}$.
 
 {% tex classes: [antex, display] %}
 \begin{tikzpicture}
@@ -134,8 +134,8 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 \node (4) at (0,.75) {$\left(\begin{smallmatrix} 1&2&3\\3&1&2 \end{smallmatrix}\right)$};
 \node (5) at (1.25,.75) {$\left(\begin{smallmatrix} 1&2&3\\3&2&1 \end{smallmatrix}\right)$};
 \node (6) at (2.5,.75) {$\left(\begin{smallmatrix} 1&2&3\\2&3&1 \end{smallmatrix}\right)$};
-\node[gray!40,draw,densely dotted,fit=(1) (2) (3) (4) (5) (6)] (box) {$S_3$};
-\draw[|->] ($(box.east)+(.15,0)$) -- +(1.325cm,0) node[above, pos=.5] {$\sigma \cdot\_$};
+\node[gray,draw,densely dotted,fit=(1) (2) (3) (4) (5) (6)] (box) {$S_3$};
+\draw[|->] ($(box.east)+(.15,0)$) -- +(1.325cm,0) node[above, pos=.5, font=\tiny] {$\sigma^{-1} \cdot\_\cdot \sigma$};
 \begin{scope}[xshift=5.5cm]
 \node (1) at (0,0) {$\left(\begin{smallmatrix} 1&2&3\\1&3&2 \end{smallmatrix}\right)$};
 \node (2) at (1.25,0) {$\left(\begin{smallmatrix} 1&2&3\\1&2&3 \end{smallmatrix}\right)$};
@@ -149,7 +149,7 @@ Similarly, with the additional request of cocompleteness, one proves the followi
 {% endtex %}
 
 <div id="label-7"></div>
-**Example** (The species of linear orders). The species $L$ of linear orders sends each finite set $[n]$ to the set of all possible linear orderings of $[n]$; the set $L[n]$ has exactly $n!$ elements, because each linear ordering $\{x_1 \le \dots \le x_n\}$ of an $n$-element set can be thought as a permutation of $(12\dots n)$; so, each $L[n]$ possesses a certain bijection into $S[n]$ (the image of $[n]$ under the species of permutations), which however is not natural (two objects of $\bf Spc$ regarded as sequences of left $S_n$-sets must be isomorphic *together with their action* in order to be isomorphic as species).
+**Example** (The species of linear orders). The species $\cal L$ of linear orders sends each finite set $[n]$ to the set of all possible linear orderings of $[n]$; the set ${\cal L}[n]$ has exactly $n!$ elements, because each linear ordering $\{x_1 \le \dots \le x_n\}$ of an $n$-element set can be thought as a permutation of $(12\dots n)$; so, each ${\cal L}[n]$ possesses a certain bijection into ${\cal S}[n]$ (the image of $[n]$ under the species of permutations), which however is not natural (two objects of $\bf Spc$ regarded as sequences of left $S_n$-sets must be isomorphic *together with their action* in order to be isomorphic as species).
 
 {% tex classes: [antex, display] %}
 \def\ordBloc#1#2#3{\draw (0,0) rectangle (3,1);\node (1) at (.5,.5) {$#1$};\node (2) at (1.5,.5) {$#2$};\node (3) at (2.5,.5) {$#3$};
@@ -172,6 +172,10 @@ Similarly, with the additional request of cocompleteness, one proves the followi
   \end{scope}\end{scope}
 \end{tikzpicture}
 {% endtex %}
+
+The species $\cal L$ is isomorphic to the infinite coproduct of all representables: 
+
+$$ {\cal L} \cong y[0] + y[1] + y[2] + \dots $$
 
 <div id="label-8"></div>
 **Example** (The species of oriented cycles). The species $\cal C$ of *oriented cycles* sends a finite set $[n]$ in the set of possible inequivalent ways to sit $n$ people at a round table, or more formally, in the set of cyclic orderings of $\{x_1,\dots,x_n\}$, where the ordering $x_1,\dots,x_n$ is indistinguishable from $x_2,x_3\dots,x_n, x_1$, from $x_3, x_4\dots,x_n, x_1, x_2$, and from every other cyclic permutation of its members. It can be shown by induction (or using simple arguments from group actions and orbits) that $\|{\cal C}[n]\| = (n-1)!$.
@@ -205,12 +209,10 @@ One can also cook up more abstract examples of combinatorial species:
 
 <div id="label-9"></div>
 **Example** (The species *centered* in $n\in\mathbb N$).
-Let $n\ge 1$ be a natural number. The species $c_n : {\bf B} \to {\bf Set}$, "concentrated" or "centered" in $n$ is defined as the functor sending $[n] \in \bf B$ to a singleton set $\bullet$, and every other set to the empty set. Clearly, $c_1 = U$ above, and $c_n$ can legitimately be called the species of *$n$-element sets*. More generally we can talk about the species $c_n^E$, concentrated in $n$, and such that $c_n^E([n]) = E$, and empty otherwise.
+Let $n\ge 1$ be a natural number. The species $c_n : {\bf B} \to {\bf Set}$, "concentrated" or "centered" in $n$ is defined as the functor sending $[n] \in \bf B$ to a singleton set $\bullet$, and every other set to the empty set. Clearly, $c_1 = U$ above, and $c_n$ can legitimately be called the species of *$n$-element sets*. More generally we can talk about the species $c_n^E$, concentrated in $n$, and such that $c_n^E([n]) = E$, and empty otherwise. The action of $S_n$ on $E$ is trivial.
 
 <div id="label-10"></div>
-**Example** (The *representable* species as a particular case). Each representable functor $y[n] : {\bf B} \to \bf Set$ is a combinatorial species acting as follows: $y[n][k] := {\bf B}(n,k)$ is empty if $n\ne k$, so the species is centered in $n$, and $y[n][n] = S_n$ is the (underlying set of the) symmetric group on $n$ elements. The action on morphisms is the same as in the species of permutations, and in fact the species of permutation arises as the infinite sum
-
-$$ S = y[1] + y[2] + y[3] + \dots $$
+**Example** (The *representable* species as a particular case). Each representable functor $y[n] : {\bf B} \to \bf Set$ is a combinatorial species acting as follows: $y[n][k] := {\bf B}(n,k)$ is empty if $n\ne k$, but the species is not centered in $n$, since the action of $S_n$ on itself is not trivial; $y[n][n] = S_n$ is the (underlying set of the) symmetric group on $n$ elements and $S_n$ acts on itself by multiplication.
 
 <div id="label-11"></div>
 **Example** (The sym-representable species $n\mapsto S_n/H_n$).
