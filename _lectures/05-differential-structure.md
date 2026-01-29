@@ -155,7 +155,36 @@ Some examples of iterated derivatives:
 - Since $\wp^\prime\cong 2\cdot\wp$, $\wp^{\prime\prime} \cong 2\cdot \wp^\prime=4\cdot\wp$ and more generally $\wp^{(n)} \cong 2^n\cdot \wp$;
 - Since $S^\prime\cong S\ast L$, $S^{\prime\prime}\cong S^\prime\ast L + S\ast L^\prime=2\cdot(S\ast L^2)$ and more generally, $S^{(n)}\cong$...? (Try!)
 
-**Remark.** Taylor expansion of a species 
+**Remark.** The Taylor-Maclaurin expansion of a species $F: {\bf B} \to \mathbf{Set}$ is defined by the isomorphism 
+
+$$F(A+X) \cong \sum_{n=0}^\infty \frac{\partial^n F(A)}{n!} X^n.$$ 
+
+In this expression, $X$ and $A$ are sets, and the notation $F(-)$ denotes the analytic functor $Lan_J F: \mathbf{Set} \to \mathbf{Set}$ induced by the species $F$. The term $\partial^n F(A)$ represents the $n$-th derivative of the species $F$ evaluated as an analytic functor at the set $A$. The division by $n!$ in the sum denotes the quotient by the action of the symmetric group $S_n$ over the $n$-th derivative.
+
+Using coend notation to formally manage the quotient by the symmetric group, the expansion is represented as:
+$$\int^{n \in {\bf B}} \partial^n F(A) \times X^n \cong \int^n F(A + n) \times X^n \cong F(A+X)$$.
+
+The $n$-fold derivation $\partial^n F$ is interpreted as a derivative with respect to an $n$-set $U$, so that $\partial^n F[A] = F[A + U]$ (so one cal write $\partial^UF$ as well). When viewed as an analytic functor in the variable $A$, the $n$-th derivative is defined by the coend 
+
+$$\partial^U F(A) = \int^m F[m+U] \times A^m.$$ 
+
+The Taylor expansion is then calculated as the double coend $\int^n \int^m F[m + n] \times A^m \times X^n$. 
+
+By Yoneda, $F[A+U] \cong \int^V F[V] \times {\bf B}(V, A+U)$, whence 
+
+$$ \begin{aligned}
+\int^{nm} F[m+n] \times A^m \times X^n
+&\cong \int^{nmj} F[j] \times {\bf B}(j,m+n) \times A^m \times X^n\\
+&\cong 
+\int^{j} F[j] \times
+\left(
+  \int^{m,n} {\bf B}(j,m+n) \times A^m \times X^n
+\right).\\ 
+&\cong \int^{j} F[j] \times (A+X)^j
+\end{aligned}$$
+
+The final step of the proof utilizes the fact that $\mathbf{Set}$ is extensive, i.e. there is an equivalence of categories $\mathbf{Set}/A \times \mathbf{Set}/X \cong \mathbf{Set}/(A+X)$, which results in the identity $\int^{m,n} {\bf B}(j, m+n) \times A^m \times X^n \cong (A+X)^j$. Consequently, the double coend evaluates to $\int^j F[j] \times (A+X)^j$, which is the definition of the analytic functor evaluated at the set $A+X$.
+
 
 **Definition.** Kähler differentials 
 
