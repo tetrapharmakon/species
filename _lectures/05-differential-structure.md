@@ -108,6 +108,35 @@ Thus, the derivative of the species of subsets is isomorphic to two copies of it
 
 $$ \{\circ_1 < \circ_2 < \dots < \circ_n < \bullet_{n+1} < \circ_1\} \mapsto \{\circ_1 < \circ_2 < \dots < \circ_n\}$$
 
+or better, depicted as follows,
+
+{% tex classes: [antex, display] %}
+\begin{tikzpicture}
+\draw (0,0) circle (1cm);
+\draw[->] (-110:1.15cm) arc (-110:-70:1.15cm);
+\foreach \i/\j in {1/1,2/2,3/3,4/4,5/\star}{
+  \node[draw, fill=white, circle, inner sep=1pt] at (\i*360/5+90+72:1cm) {\footnotesize ${\j}$};
+  }
+\begin{scope}[xshift=3cm]
+\draw (-120:1cm) arc (-120:90:1cm);
+% \draw[red] (90:1cm) arc (-90:90:1cm);
+\draw[dotted] (0,0) circle (1cm);
+\draw[->] (-110:1.15cm) arc (-110:-70:1.15cm);
+\foreach \i/\j in {1/1,2/2,3/3,4/4,5/\star}{
+  \node[draw, fill=white, circle, inner sep=1pt] at (\i*360/5+90+72:1cm) {\footnotesize ${\j}$};
+  }
+\end{scope}
+\begin{scope}[xshift=5cm]
+\foreach \j in {1,2,3,4}{
+\node[draw, fill=white, circle, inner sep=1pt] at (\j,0) {\footnotesize ${\j}$};
+}
+\foreach \j in {1,2,3}{
+\node at (\j+0.5,0) {\footnotesize $\le$};
+}
+\end{scope}
+\end{tikzpicture}
+{% endtex %}
+
 are equivariant for all $n$.
 
 **Example** (The derivative of the species of permutations). The species $S$ of permutations is characterized by the combinatorial equation $S \cong E \circ C$, which states that every permutation is a set ($E$) of disjoint cycles ($C$). To find the derivative $S^\prime$, one applies the combinatorial chain rule for substitution: $(F \circ G)^\prime \cong (F^\prime \circ G) \ast G^\prime$. Substituting the known derivatives $E^\prime \cong E$ and $C^\prime \cong L$ into the formula yields:
