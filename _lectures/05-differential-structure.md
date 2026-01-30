@@ -186,7 +186,79 @@ $$ \begin{aligned}
 The final step of the proof utilizes the fact that $\mathbf{Set}$ is extensive, i.e. there is an equivalence of categories $\mathbf{Set}/A \times \mathbf{Set}/X \cong \mathbf{Set}/(A+X)$, which results in the identity $\int^{m,n} {\bf B}(j, m+n) \times A^m \times X^n \cong (A+X)^j$. Consequently, the double coend evaluates to $\int^j F[j] \times (A+X)^j$, which is the definition of the analytic functor evaluated at the set $A+X$.
 
 
-**Definition.** Kähler differentials 
+**Definition.** Consider the following result, a classical fact from differential algebra: 
+
+> The space of derivations on a ring $R$ is parametrized by the space of sections of the "bundle" $\text{ev}_0 : R[X]/(X^2) \to R$ sending a polynomial $a+bX + (X^2)$ to $a$. 
+
+More informally, a derivation is a point $R \to R[\varepsilon]$ such that the diagram 
+
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+A
+}}
+{% endtex %}
+
+commutes. The $R$-module $R[\varepsilon] := R[X]/(X^2)$ is called the module of *Kähler differentials* of $R$.
+
+There is an analogue of this construction for (differential) 2-rigs. Let $\mathcal{R}$ be a cocomplete $2$-rig.
+
+Consider the unique $2$-cell $!:\varnothing \Rightarrow (- \otimes t^2)$, where $-\otimes t^2$ "multiplies by $t^2$"; this is just syntactic sugar for the endofunctor of ${\cal R}[t]$ that "multiplies (Day convolution) by $t^2$". Then, the coinverter
+
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+\mathcal{R}[t]
+  \rtwocell^{\varnothing}_{-\otimes t^2}{}
+&
+\mathcal{R}[t]
+  \ar[r]^{q}
+&
+\mathcal{R}[\varepsilon]
+}}
+{% endtex %}
+
+coincides with the procedure of killing off polynomials divisible by
+$t^2$, hence $\mathcal{R}[\varepsilon]$ is the "quotient $2$-rig" by the ideal
+$(t^2)$. The ring operation is defined on the equivalence classes as
+
+$$
+(a + tb)(c + td) = ac + (ad + bc)t + t^2 bd .
+$$
+
+Now we would like to build the "space of sections" of a canonical
+"evaluation at $0$" map
+
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+\mathcal{R}[t]
+  \rtwocell^{\varnothing}_{-\otimes t^2}{}
+&
+\mathcal{R}[t]
+  \ar[r]^{q}
+  \ar[dr]_{ev_0}
+&
+\mathcal{R}[\varepsilon]
+  \ar@{-->}[d]^{\text{section}}
+\\
+&&
+\mathcal{R}
+}}
+{% endtex %}
+
+together with $\mathcal{R}[t] \xrightarrow{ev_0} \mathcal{R}$, i.e. an analogue of the map $ev_0$. The latter, as a functor $ev_0 : \mathcal{R} \otimes \mathbf{Spc} \to \mathcal{R} : \textstyle(A,F) \mapsto \sum_{F_0} A$ is induced by the universal property of coproducts.
+
+**Theorem.** There is an isomorphism
+
+$$
+\mathrm{Der}[\mathcal{R}]
+\cong\{\text{sections}/\mathcal{R} \text{ of } ev_0 : \mathcal{R}[\varepsilon] \to \mathcal{R}\}.
+$$
+
 
 **Definition.** Differential equations on $\bf Spc$
 
