@@ -177,6 +177,49 @@ Associativity of $\mu$ is better appreciated through a picture: given an $n$-ary
 \end{tikzpicture}
 {% endtex %}
 
+The associativity axiom, in diagrammatic form, assumes the following perverse shape: to be completely clear, denote $\mu^m_{k_1,\dots,k_m}$ the multiplication $Tm \times Tn_1 \times\dots\times Tn_k$, and suppose given suitable integers $h_{11},\dots,h_{1,n_1},\dots h_{m1},\dots, h_{m,n_m}$. Then the square
+
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix@C=5pc@R=2.8pc{
+% top-left
+{\begin{array}{l}
+Tm 
+\times {\color{red}Tn_1} \times {\color{blue}Th_{11} \times\cdots\times Th_{1,n_1}}\\
+\times {\color{red}Tn_2}\times  Th_{21}\times\cdots\times Th_{2,n_2}\times\cdots\\
+\times {\color{red}Tn_m}\times  {\color{orange!70!black}Th_{m1}\times\cdots\times Th_{m,n_m}}
+\end{array}}
+\ar[r]^-{Tm\times\textcolor{blue}{\mu^{n_1}_{h_{1j}}} \times\dots \times \textcolor{orange!70!black}{\mu^{n_m}_{h_{mj}}}}
+\ar[d]_-{\textcolor{red}{\mu^m_{n_1,\dots,n_m}} \times Th_{ij}}&
+% top-right
+{\begin{array}{l}
+Tm \times {\color{blue}T(\sum h_{1j})} \times\cdots\times {\color{orange!70!black}T(\sum h_{mj})}
+\end{array}}\ar[d]^{\mu^m_{\sum h_{1j},\dots, \sum h_{mj}}}
+\\
+% bottom-left
+{\begin{array}{l}
+{\color{red}T(\sum n_i)}\times Th_{11}\times\cdots\times Th_{1,n_1}\\
+\times Th_{21}\times\cdots\times Th_{2,n_2}\times\cdots\\
+\times Th_{m1}\times\cdots\times Th_{m,n_m}
+\end{array}}
+\ar[r]_-{\mu^{\sum n_i}_{h_{ij}}}&
+% bottom-right
+{T\bigl(\sum h_{1j}+\dots+\sum h_{mj}\bigr)}
+}}
+{% endtex %}
+
+has to commute. Left and right unit are expressed, instead, by the commutativity of the two triangles
+
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix@C=2cm{
+ Tm\ar@{=}[dr]\ar[r]^-{Tm \times e \times \dots \times e} & Tm \times T1 \times\dots T1\ar[d]^{\mu^m_{1,\dots,1}} &\ar[d]_{\mu^1_m} T1 \times Tm & Tm \ar[l]_-{e\times Tm}\ar@{=}[dl]\\ 
+ & Tm & Tm &
+}}
+{% endtex %}
+
 <div id="monad-from-opd"></div>
 **Proposition.** Every operad $T : {\bf B} \to {\bf Set}$ defines a monad $\flat T : {\bf Set} \to {\bf Set}$ as follows:
 
