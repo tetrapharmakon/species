@@ -264,7 +264,7 @@ X^{\sum n_i} \times T\left(\sum n_i\right)  \ar[r]^-{\text{in}_{k=\sum n_i}} &
 
 ## Examples of operads
 
-As is obvious, on the same set there can be non-isomorphic monoid structures; similarly, even if usually there is just *one* important implicitly understood operad structure on a species, there can be many. One example is the species of linear orders $L$: it is the *associative operad* $As$ operad with respect to a natural composition operation, but it is also an operad $Zinb$, the *Zinbiel* operad, with respect to a different structure.
+As is obvious, on the same set there can be non-isomorphic monoid structures; similarly, even if usually there is just *one* important implicitly understood operad structure on a species, there can be many. One example is the species of linear orders $L$: it is the *associative operad* ${\tt As}$ operad with respect to a natural composition operation, but it is also an operad ${\tt Zinb}$, the *Zinbiel* operad, with respect to a different structure.
 
 **Example.** The [species of singletons](./2-p-and-its-up-and-species.html#label-3) defines an operad since its associated analytic functor is the identity (which is a monad, of course!).
 
@@ -317,9 +317,51 @@ The species of *nonempty* sets also carries a structure of (set, and $k$-vector)
 
 <img src="../ballots.png" alt="drawing" width="80%"/>
 
+As simple as this may seem, the terminal species with its unique $\circ$-monoid structure plays a fundamental role in the theory of operads; one should think of the unique element $a_n\in E(n)$ as a unique "$n$-ary abstract operation", as depicted in this figure:
+
+{% tex classes: [antex, display] %}
+\def\len{.5}
+\begin{tikzpicture}[scale=.75]
+\fill[gray!40] (-.5,-.5) rectangle (1.5,1.5) node[above left, font=\small, black] {$E(1)$};
+\draw (\len,-.25) -- (\len,\len+.25);
+\draw[fill=white] (0,0) rectangle (2*\len,\len) node[pos=.5, font=\small] {$a_1$};
+\begin{scope}[xshift=2.5cm]
+\fill[gray!40] (-.5,-.5) rectangle (1.5,1.5) node[above left, font=\small, black] {$E(2)$};
+\draw (\len,-.25) -- (\len,0);
+\draw (.25*2*\len,0) -- ++(0,\len+.25);
+\draw (.75*2*\len,0) -- ++(0,\len+.25);
+\draw[fill=white] (0,0) rectangle (2*\len,\len) node[pos=.5, font=\small] {$a_2$};
+\end{scope}
+\begin{scope}[xshift=5cm]
+\fill[gray!40] (-.5,-.5) rectangle (1.5,1.5) node[above left, font=\small, black] {$E(3)$};
+\draw (\len,-.25) -- (\len,0);
+\draw (.25*2*\len,0) -- ++(0,\len+.25);
+\draw (\len,0) -- ++(0,\len+.25);
+\draw (.75*2*\len,0) -- ++(0,\len+.25);
+\draw[fill=white] (0,0) rectangle (2*\len,\len) node[pos=.5, font=\small] {$a_3$};
+\end{scope}
+\begin{scope}[xshift=7.5cm]
+\node[font=\large] at (0,.25) {$\cdots$};
+\end{scope}
+\end{tikzpicture}
+{% endtex %}
+
+**Exercise.** Use the associativity property of ${\tt Com}$ to prove that "$a_2$ is associative", in the sense that the diagram
+
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+? \ar[r]\ar[d]& E(2)\times E(1)\times E(2) \ar[d]^-{\mu^2_{12}}\\ 
+E(2)\times E(2)\times E(1) \ar[r]_-{\mu^2_{21}} & E(3)
+}}
+{% endtex %}
+
+commutes for a certain choice of object $[?]$; which one? It is tedious to make this precise, but you should take it as a mandala exercise.
+
 <div id="exoperad-L"></div>
 
-**Example.** The operad $As$ with carrier $L$ is obtained as the "natural" operad structure on $L=\sum_{n\ge 0} y(n)$; the unit is given by the first coprojection $\text{in}\_1 : y(1)\hookrightarrow \sum_{n\ge 0} y(n)$, and since $L\circ L\cong \sum_{n\ge 0} L^{\ast n}$, to define a multiplication $L\circ L\to L$ it is enough to define a map of species $L^{\ast n} \to L$; this can be done to the effect that in components, the multiplication $\mu_{As}$ is defined as
+**Example.** The operad ${\tt As}$ with carrier $L$ is obtained as the "natural" operad structure on $L=\sum_{n\ge 0} y(n)$; the unit is given by the first coprojection $\text{in}\_1 : y(1)\hookrightarrow \sum_{n\ge 0} y(n)$, and since $L\circ L\cong \sum_{n\ge 0} L^{\ast n}$, to define a multiplication $L\circ L\to L$ it is enough to define a map of species $L^{\ast n} \to L$; this can be done to the effect that in components, the multiplication $\mu_{\tt As}$ is defined as
 
 {% tex classes: [antex, display] %}
 \setlength{\fboxrule}{1sp}
@@ -331,15 +373,15 @@ L(m)\times Ln_1\times \dots\times Ln_m \ar[r] & L\big(\sum n_i\big)
 
 sends $(\sigma ; \tau_1 , \dots, t_m)$ to the shuffle $\tau_{\sigma 1} \mathbin{ш} \dots \mathbin{ш} \tau_{\sigma m}$.
 
-**Example.** A different operad structure (the operad $Zinb$) over $L_+$. The Zinbiel operad, denoted as $Zinb$, is a ($k$-vector) operad that encodes the structure of a "Zinbiel algebra". The name of the operad is a whimsical reversal of the name "Leibniz," attributed to a virtual mathematician. A Zinbiel algebra is defined as a vector space $A$ equipped with a binary operation $\prec$ that satisfies the fundamental Zinbiel relation: $(x \prec y) \prec z = x \prec (y \prec z + z \prec y)$.
+**Example.** A different operad structure (the operad ${\tt Zinb}$) over $L_+$. The Zinbiel operad, denoted as ${\tt Zinb}$, is a ($k$-vector) operad that encodes the structure of a "Zinbiel algebra". The name of the operad is a whimsical reversal of the name "Leibniz," attributed to a virtual mathematician. A Zinbiel algebra is defined as a vector space $A$ equipped with a binary operation $\prec$ that satisfies the fundamental Zinbiel relation: $(x \prec y) \prec z = x \prec (y \prec z + z \prec y)$.
 
-The underlying species of $Zinb$ is the group algebra of the symmetric group $K[\Sigma_n]$, that is the $k$-vector space over the basis $L_+(n)$. This implies that the dimension of $Zinb(n)$ is exactly $n!$. The operadic composition in $Zinb$ can be described combinatorially; given a partition $X$ of a set $I$, the composition yields the sum of all linear orders $l$ on $I$ such that the restriction of $l$ to each block $S \in X$ matches the prescribed orders on those blocks, and the order induced by $l$ on the set of minimum elements of those blocks matches the order on the partition $X$ itself.
+The underlying species of ${\tt Zinb}$ is the group algebra of the symmetric group $K[\Sigma_n]$, that is the $k$-vector space over the basis $L_+(n)$. This implies that the dimension of ${\tt Zinb}(n)$ is exactly $n!$. The operadic composition in ${\tt Zinb}$ can be described combinatorially; given a partition $X$ of a set $I$, the composition yields the sum of all linear orders $l$ on $I$ such that the restriction of $l$ to each block $S \in X$ matches the prescribed orders on those blocks, and the order induced by $l$ on the set of minimum elements of those blocks matches the order on the partition $X$ itself.
 
-**Example.** The $Lie$ operad. The underlying species of the $k$-vector operad whose algebras (in the sense of [ref](./9-z-more-operads.html#alg_operad)) are Lie algebras is a fundamentally new object. Suppose $x_\bullet = \\{x_1,x_2,x_3,\dots\\}$ is a countably infinite set of variables. $Lie(n)$ is the vector space spanned by all the "bracket sequences" in the elements $\\{x_1,\dots,x_n\\}$ (or just $\\{1,\dots,n\\}$ for short) —parenthesized arrangements where each element of $\\{x_1,\dots,x_n\\}$ appears exactly once, which can be parametrized as binary trees, which are then subject to the relations generated by antisymmetry and the Jacobi identity. For example, $Lie(2)$ is the set of bracketings $\\{[1,2],[2,1]\\}$ modded out by the relation $[2,1]=-[1,2]$, and $Lie(3)$ is the set containing $\\{[i,j] \mid i < j\\}$ as well as $[i,[j,k]]$ for all $i,j,k$, subject to the Jacobi relation
+**Example.** The ${\tt Lie}$ operad. The underlying species of the $k$-vector operad whose algebras (in the sense of [ref](./9-z-more-operads.html#alg_operad)) are Lie algebras is a fundamentally new object. Suppose $x_\bullet = \\{x_1,x_2,x_3,\dots\\}$ is a countably infinite set of variables. ${\tt Lie}(n)$ is the vector space spanned by all the "bracket sequences" in the elements $\\{x_1,\dots,x_n\\}$ (or just $\\{1,\dots,n\\}$ for short) —parenthesized arrangements where each element of $\\{x_1,\dots,x_n\\}$ appears exactly once, which can be parametrized as binary trees, which are then subject to the relations generated by antisymmetry and the Jacobi identity. For example, ${\tt Lie}(2)$ is the set of bracketings $\\{[1,2],[2,1]\\}$ modded out by the relation $[2,1]=-[1,2]$, and ${\tt Lie}(3)$ is the set containing $\\{[i,j] \mid i < j\\}$ as well as $[i,[j,k]]$ for all $i,j,k$, subject to the Jacobi relation
 
 $$ [1,[2,3]] + [3,[1,2]] + [2,[3,1]] = 0 $$
 
-The operad structure on $Lie$ is obtained from the fact that binary trees can be grafted onto each other, and that this grafting operation respects the quotient by antisimmetry and Jacobi. If an element $b_m \in Lie(m)$ (say, $b_4$ is the equivalence class of $[[1,[2,3]],4]$) is the equivalence class of a bracketing of $1,\dots,m$, and we are given bracketings $t_1,\dots, t_m$ (say, $t_1=[1,[2,3]]$, $t_2=[[1,2],[[3,4],5]]$, $t_3=[1,2]$, $t_4=[[[1,2],3],4]$) then 
+The operad structure on ${\tt Lie}$ is obtained from the fact that binary trees can be grafted onto each other, and that this grafting operation respects the quotient by antisimmetry and Jacobi. If an element $b_m \in {\tt Lie}(m)$ (say, $b_4$ is the equivalence class of $[[1,[2,3]],4]$) is the equivalence class of a bracketing of $1,\dots,m$, and we are given bracketings $t_1,\dots, t_m$ (say, $t_1=[1,[2,3]]$, $t_2=[[1,2],[[3,4],5]]$, $t_3=[1,2]$, $t_4=[[[1,2],3],4]$) then 
 
 $$ \begin{aligned} b_4\circ (t_1,\dots,t_4) &= [[t_1,[t_2,t_3]],t_4] \\ 
 &= [[[x_1,[x_2,x_3]],[[[y_1,y_2],[[y_3,y_4],y_5]],[z_1,z_2]]],[[[w_1,w_2],w_3],w_4]] \end{aligned} $$
@@ -360,23 +402,23 @@ We can summarize the situation in a table:
 </thead>
 <tbody>
 <tr>
-<td align="center">$Com, Com_+$</td>
+<td align="center">${\tt Com}, {\tt Com}_+$</td>
 <td align="center">$E, E_+$</td><td>(terminal, nonempty terminal)</td>
 </tr>
 <tr>
-<td align="center">$As, As_+$</td>
+<td align="center">${\tt As}, {\tt As}_+$</td>
 <td align="center">$L, L_+$</td><td>(linear orders, nonempty linear orders)</td>
 </tr>
 <tr>
-<td align="center">$Zinb$</td>
+<td align="center">${\tt Zinb}$</td>
 <td align="center">$L_+$</td><td>(nonempty linear orders)</td>
 </tr>
 <tr>
-<td align="center">$Perm$</td>
+<td align="center">${\tt Perm}$</td>
 <td align="center">$J$</td><td>(species of elements)</td>
 </tr>
 <tr>
-<td align="center">$Lie$</td>
+<td align="center">${\tt Lie}$</td>
 <td align="center"></td>
 </tr>
 </tbody>
