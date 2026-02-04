@@ -20,6 +20,7 @@ This chapter embarks on a more category-theoretic study of species. Every specie
 ### Analytic functors, wide pullbacks
 
 <div id="label-1"></div>
+
 **Construction.** Given a combinatorial species $f : {\bf B} \to \bf Set$, we can consider the left Kan extension
 
 {% tex classes: [antex, display] %}
@@ -38,6 +39,7 @@ $$ \int^n f(n)\times X^n =: \left(\sum_{n\ge 1} f(n)\times X^n\right)/\left\lang
 Such a functor is called *analytic*, and we call similarly every functor that lies in the image of the functor $\text{Lan}_J$, where $J : {\bf B} \rightarrow {\bf Set}$ is the (nonfull) inclusion functor.
 
 <div id="label-2"></div>
+
 **Definition** (Analytic functor). An endofunctor $F$ of $\bf Set$ is called *analytic* if it lies in the essential image of $\text{Lan}_J$, or in other words, if it arises as the left Kan extension along $J : {\bf B} \rightarrow {\bf Set}$ of a combinatorial species $f : {\bf B} \to {\bf Set}$. Such a species will be called the *generating species* of $F$.
 
 It is then evident that $\text{Lan}_J$ is the left adjoint in a pair
@@ -56,6 +58,7 @@ With a little more effort than there, we can characterise such an essential imag
 This will be the *fundamental representation theorem* of combinatorial species as analytic functors. The first condition is the well-known fact that $F$ preserves $\omega$-filtered colimits; the second condition deserves a bit more explanation.
 
 <div id="label-3"></div>
+
 **Definition.** An endofunctor $F : {\bf Set} \to {\bf Set}$ is said to *weakly preserve pullbacks* if for every pullback square
 
 {% tex classes: [antex, display] %}
@@ -70,6 +73,7 @@ B \ar[r]& C
 the canonical map obtained through the universal property $F(A\times_C B) \to FA \times_{FC} FB$ is surjective.
 
 <div id="label-4"></div>
+
 **Definition.** Let $S$ be a set and $\cal C$ a category; a *($S$-ary) wide pullback* with sink $X \in \cal C$ is the limit of a diagram $S \to {\cal C}/X$ where $S$ is regarded as a discrete category and ${\cal C}/X$ is the slice of $\cal C$ over $X$.
 
 In simple terms, a wide pullback is a pullback having possibly more than two arrows pointing to the same object.
@@ -91,7 +95,7 @@ The characterisation of analytic functors in terms of weak preservation of wide 
 
 The proof will occupy the entire lecture, and it comes from a more modern presentation of this idea in Adamek-Velebil that is purely elementary, in the sense that it relies on elementary category theory and is pretty straightforward.
 
-<div id="canonical_deco"></id>
+<div id="canonical_deco"></div>
 
 ### Canonical decomposition and examples
 
@@ -102,6 +106,7 @@ Thus, to completely understand analytic functors, it is enough to understand the
 **Notation.** Recall, or learn, that an object $A$ of a monoidal category $(\cal K,\otimes,I)$ is called *$\otimes$-indecomposable* if whenever $A=X\otimes Y$ either $X$ or $Y$ is the tensor unit. In particular, in the case of species, a $+$-indecomposable object will be called a *molecule*, and a $\ast$-indecomposable object ($\ast$ being the Day convolution operation) an *atom*. The nomenclature is handy (although it clashes with other situations with which it has no relation afawk), because every molecule is a product of atoms, so it's a "monomial", and every species is a (possibly infinite) sum of monomials: a power series.
 
 <div id="label-5"></div>
+
 **Proposition** (Canonical decomposition of a species). Every combinatorial species $f : {\bf B} \to {\bf Set}$ splits into a countable sequence of $+$-indecomposable objects, unique up to reordering: the *canonical decomposition* of $f$.
 
 *Proof.* We have already observed that the groupoid ${\bf B}$ splits as a coproduct of groups, namely ${\bf B} = \sum_{n\ge 1} S_n$, so that a functor $f : {\bf B} \to {\bf Set}$ is in fact determined by a countable family of (left) $S_n$-sets $f_n : S_n \times X_n \to X_n$ under the isomorphism
@@ -111,6 +116,7 @@ $$\textstyle {\bf Spc} = [{\bf B}, {\bf Set}] \cong \left[ \sum_{n\ge 1} S_n , {
 keeping in mind that the category $[S_n, {\bf Set}]$ is just the category of sets equipped with a left $S_n$-action. Thus, the action of $f$ on objects and morphisms is determined as the sum $f_1 + f_2 + f_3 + \dots$ if $f_n := \kappa_n f$ in the sense of [lecture 2](./2-p-and-its-up-and-species.html#concentration).
 
 <div id="label-6"></div>
+
 **Corollary.** Since the decomposition of a species $f$ as a sum $f_1 + f_2 + f_3 + \dots$ is uniquely determined, the following concepts are well defined:
 
 - the *odd part* $f_o$ of a species $f : {\bf B} \to {\bf Set}$ consisting of the sum $\sum_{k\ge 0} f_{2k+1}=f_1+f_3+\dots$;
@@ -121,6 +127,7 @@ The following *splitting formula* for the cycle index series of the even and odd
 $$ \begin{cases} Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2,-x_3,\dots)\right) \\ Z_{E_o} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) - Z_E(-x_1,x_2,-x_3,\dots)\right). \end{cases} $$
 
 <div id="label-7"></div>
+
 **Example.** Let $f : {\bf B} \to {\bf Set}$ be the [sym-representable species](./2-p-and-its-up-and-species.html#label-11) sending $[n]\mapsto S_n/H$; the associated analytic functor sends a set $X$ to the set $X^n/H$, where the tuples of elements of $X$ are identified iff they differ by a permutation in $H$.
 
 The functor $X\mapsto X^n/H$ is called *sym-representable analytic*.
@@ -132,31 +139,39 @@ Writing the above coproduct as a sum and interpreting the quotient as a "fractio
 $$ FX = \sum_{n\ge 1} \frac{f(n)\times X^n}{n!}. $$
 
 <div id="label-8"></div>
+
 **Example** (The AF of the species of singletons). Recall that the species $U$ of singletons is defined as the species centred in $1$, with value a one-element set. So, the colimit that computes $\text{Lan}_J U$ reduces to the identity functor ${\bf Set} \to {\bf Set}$.
 
 <div id="label-9"></div>
+
 **Example** (The AF of a representable species). The species [concentrated](2-p-and-its-up-and-species.html#label-3) in $n\ge 1$ over the set $S_n$ gives rise to the functor $X\mapsto {\bf Set}(Jn, X)=X^n$ raising $X$ to the $n$th power.
 
 <div id="label-10"></div>
+
 **Example** (The AF of the species of sets). The [species of sets](2-p-and-its-up-and-species.html#label-5) $E$ gives rise to the analytic functor sending a set $X$ to the set of *finite multisets* on $X$, i.e. finite $\mathbb N$-linear combinations of elements of $X$ like $3x+y+z$ or $x+2y+11w+t$...
 
 From the colimit formula for $\text{Lan}_JE$ we derive that $\tilde E$ sends $X$ to $\sum_n X^n/S_n$ (quotient sets), and this means that in an $n$-tuple of elements of $X$, the order of the coordinates does not matter, but the number of repetitions does.
 
 <div id="label-11"></div>
+
 **Example** (The AF of the species of permutations). The species of [permutations](2-p-and-its-up-and-species.html#label-6) gives rise to the analytic functor sending $X$ to $\sum_n X^n$. This functor builds the free monoid (if the sum starts from 0) or the free semigroup (if the sum starts from 1) on the set $X$.
 
 <div id="label-12"></div>
+
 **Example** (The AF of the species of oriented cycles).
 
 <div id="label-12-bis"></div>
+
 **Example** (The AF of the species of subsets).
 
 We now embark on the proof of the characterisation theorem for analytic functors. We provide an elementary proof in two parts.
 
 <div id="label-13"></div>
+
 **Definition.** An endofunctor of $\bf Set$ is called *superfinitary* if there exists a finite set $[n] = \\{1,\dots,n\\}$ with the property that for each $X \in \bf Set$, the set $FX$ is the union of the images of $Fh$'s, with $h : [n] \to X$. In simple words, $F$ is superfinitary if, there exists an $n\ge 0$ such that for every set $X$, $FX$ is generated by the set $X^n$. Note that in this definition, $n$ is *the same* for all $X$'s.
 
 <div id="here"></div>
+
 **Remark.** Observe that if $F$ is superfinitary,
 
 1. we can choose a *minimal* $n$ with the property that $X^n$ generates $FX$; say this minimal $n$ is called $n_0$. Then,
@@ -173,6 +188,7 @@ This apparently simple lemma has powerful consequences: when we want to prove a 
 A particular case of such an $\cal A$ is the class of analytic functors.
 
 <div id="label-14"></div>
+
 **Theorem** (Characterisation of analytic functors, I). For a superfinitary functor $F : {\bf Set} \to {\bf Set}$ the following conditions are equivalent:
 
 1. $F$ weakly preserves pullbacks;
@@ -182,6 +198,7 @@ A particular case of such an $\cal A$ is the class of analytic functors.
 When this is proved, the assumption of superfinitariness (is that even a name...?) can be removed, obtaining Joyal's characterisation of $\cal A$.
 
 <div id="label-15"></div>
+
 **Theorem** (Characterisation of analytic functors, II). For a finitary functor $F : {\bf Set} \to {\bf Set}$ the following conditions are equivalent:
 
 1. $F$ is analytic;
