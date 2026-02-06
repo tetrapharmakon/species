@@ -137,7 +137,7 @@ or better, depicted as follows,
 \end{tikzpicture}
 {% endtex %}
 
-are equivariant for all $n$.
+are equivariant for all $n$. Note that $\\#C(n)=(n-1)!$, so $\\#\partial C(n) = n!$, in bijection with $L(n)$.
 
 **Example** (The derivative of the species of permutations). The species $S$ of permutations is characterized by the combinatorial equation $S \cong E \circ C$, which states that every permutation is a set ($E$) of disjoint cycles ($C$). To find the derivative $S^\prime$, one applies the combinatorial chain rule for substitution: $(F \circ G)^\prime \cong (F^\prime \circ G) \ast G^\prime$. Substituting the known derivatives $E^\prime \cong E$ and $C^\prime \cong L$ into the formula yields:
 
@@ -154,6 +154,8 @@ Some examples of iterated derivatives:
 - Since $L^\prime\cong L^2$, $L^{\prime\prime} \cong 2 \cdot L \ast L^\prime\cong 2 \cdot L L^2 = 2 L^3$ and more generally $L^{(n)} \cong n!\cdot L^{n+1}$;
 - Since $\wp^\prime\cong 2\cdot\wp$, $\wp^{\prime\prime} \cong 2\cdot \wp^\prime=4\cdot\wp$ and more generally $\wp^{(n)} \cong 2^n\cdot \wp$;
 - Since $S^\prime\cong S\ast L$, $S^{\prime\prime}\cong S^\prime\ast L + S\ast L^\prime=2\cdot(S\ast L^2)$ and more generally, $S^{(n)}\cong$...? (Try!)
+
+## Taylor expansion
 
 **Remark.** The Taylor-Maclaurin expansion of a species $F: {\bf B} \to \mathbf{Set}$ is defined by the isomorphism 
 
@@ -185,6 +187,7 @@ $$ \begin{aligned}
 
 The final step of the proof utilizes the fact that $\mathbf{Set}$ is extensive, i.e. there is an equivalence of categories $\mathbf{Set}/A \times \mathbf{Set}/X \cong \mathbf{Set}/(A+X)$, which results in the identity $\int^{m,n} {\bf B}(j, m+n) \times A^m \times X^n \cong (A+X)^j$. Consequently, the double coend evaluates to $\int^j F[j] \times (A+X)^j$, which is the definition of the analytic functor evaluated at the set $A+X$.
 
+## Kahler differentials
 
 **Definition.** Consider the following result, a classical fact from differential algebra: 
 
@@ -259,6 +262,26 @@ $$
 \cong\{\text{sections}/\mathcal{R} \text{ of } ev_0 : \mathcal{R}[\varepsilon] \to \mathcal{R}\}.
 $$
 
+## $\partial$-algebras and coalgebras
+
+### Definition of Up and Down Operators
+In the big book, an "up operator" $u$ on a species $P$ is a $\partial$-coalgebra structure on $P$, denoted $P \to \partial P$; dually, a down operator $d$ is a $\partial$-algebra structure, denoted $\partial P \to P$. There are inserter diagrams
+
+$$ ... $$
+
+**Proposition.** The Day convolution of two $\partial$-coalgebras $(P,u)(Q,v)$ is a $\partial$-coalgebra $(P \cdot Q, w)$, where  $w : u \cdot id + id \cdot v$ [8.12.2]. This construction establishes ${\bf Spc}^\uparrow$ as a symmetric monoidal category $({\bf Spc}^\uparrow, \cdot, \beta)$ [8.12.2]. 
+
+**Proposition.** The duality functor $(-)^*$ establishes a relationship between up and down operators [8.12.3]. If $(p, u)$ is a species with up operators, its dual $(p^*, u^*)$ is a species with down operators, where $u^*: (p^*)' \to p^*$ corresponds to the dual of the up operator $u$ [8.12.3]. On the subcategory of finite-dimensional species, this defines an inverse strong monoidal contravariant functor between $({\bf Spc}^\uparrow, \cdot_q)$ and $(Sp_d, \cdot_q)$ [8.12.3].
+
+### Algebraic Derivations and Coderivations
+A species with up or down operators can interact with monoid and comonoid structures in species [8.12.4]. 
+*   **Up Derivation:** An up operator $u$ is a derivation of a monoid $(p, \mu, \iota)$ if it satisfies the compatibility diagram where $u \circ \mu = \mu' \circ (u \cdot id + id \cdot u)$ [8.12.4].
+*   **Up Coderivation:** An up operator $u$ is a coderivation of a comonoid $(p, \Delta, \epsilon)$ if $\Delta' \circ u = (u \cdot id + id \cdot u) \circ \Delta$ [8.12.4].
+*   **$q$-Versions:** Skewed derivations and coderivations are defined by replacing the standard operator sum with the $q$-deformed version $u \cdot id + \tau_q \cdot u$ [8.12.5]. 
+
+The exponential species $E$ serves as a primary example where the down operator $d$ is a derivation of the monoid $E$ and the up operator $u$ is a coderivation of the comonoid $E$ [8.12.5]. The linear order species $L$ is a comonoid in ${\bf Spc}^\uparrow$ when equipped with an up operator that adds a new minimum element to the order [8.12.5].
+
+## Differential equations
 
 **Definition.** Differential equations on $\bf Spc$
 
