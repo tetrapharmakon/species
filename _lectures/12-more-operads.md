@@ -128,6 +128,26 @@ An algebra (in the restricted, constant sense above) for the operad...
 - ...$\tt As$ (or $\tt As_+$) (having carrier $L$ (or $L_+$), see [lecture 9](./9-species-and-operads.html#exoperad-L)) consists of a family of maps $\xi^{(m)} : S_m\times A^m \to A$; an element $(\sigma;(x_1,\dots,x_m))$ can be thought of as a linear order on its second component: $x_{\sigma 1} < \dots < x_{\sigma m}$, in such a way that $\xi^{(m)}(\sigma;\vec x)$ prescribes the product of the $x_i$'s in the order specified by $\sigma$; again, the operations of arity $m\ge 2$ are reducible to $\xi^{(2)} : A\times A \to A$. Reasoning via the associated analytic functor, an algebra for the associated monad is a monoid (resp., a semigroup).
 - ...$Perm$ (having carrier the species of elements $J$) consists of a family of maps $\xi^{(m)} : m \times A^m \to A$; as such, the $m$-tuple of elements...
 
+## Operads and Lawvere theories 
+
+One can obtain, from a similar recipe, *Lawvere theories* as monoids in a substitution-monoidal category: $[{\bf Fin},{\bf Set}]$ (as in [lecture 1](./01-finset-and-its-up.md)).
+
+However, Lawvere theories are strictly more general than operads precisely because they are necessarily formulated in a *cartesian* monoidal setting (whereas operads live in a symmetric monoidal setting without diagonals). 
+
+Concretely, operads encode only operations with *many* inputs and *a single* output, and their composition mechanism enforces *linearity of variables*: each input is used exactly once. As a result, operads cannot express structural operations such as duplication (diagonals), deletion (projections), or arbitrary reuse of variables (so, for example, it is impossible to write $x\mapsto (x,x)\mapsto (x,x^{-1})\mapsto x⋅ x^{-1}$, to the effect that there is no operad whose algebras are groups). 
+
+Lawvere theories, by contrast, freely allow operations with multiple outputs and are equipped with canonical diagonal and projection maps, making it possible to model algebraic theories where variables may be copied, discarded, or reused. This additional expressive power is essential for capturing most classical algebraic structures—such as groups, rings, lattices, and Boolean algebras, which fundamentally rely on equations involving variable duplication or weakening and therefore lie beyond the expressive scope of operads.
+
+More precisely, a Lawvere theory is obtained as follows, mimicking the recipe that yielded operads in the previous lecture:
+
+- Start with ${\bf Fin}$ and its Cartesian monoidal structure;
+- Equip the category $[{\bf Fin},{\bf Set}]$ with the Day convolution product, but observe that since its domain is Cartesian monoidal, this monoidal structure collapses into the Cartesian monoidal structure on $[{\bf Fin},{\bf Set}]$;
+- thus the iterated Day convolution boils down to $F\mapsto F^{\times n}$;
+- thus, one can define a substitution product, via the equivalence $[{\bf Fin},{\bf Set}] \cong [{\bf Set},{\bf Set}]_\omega$ (between finitary functors, and functors in $[{\bf Fin},{\bf Set}]$) given by left Kan extension along $J : {\bf Fin} \to {\bf Set}$: note that ow $J$ *is* fully faithful, and this makes all the difference.
+- An "operad" in this setting is a $\circ$-monoid where if $F,G : [{\bf Fin},{\bf Set}]$ are two functors, the substitution $F\circ G$ is defined as 
+
+$$ F\circ G = \int^n Fn \times G^{\times n}(m) = \int^{n,k_1,\dots,k_n} Fn \times Gk_1 \times\dots \times Gk_n \times {\bf Fin}(k_1\times\dots \times k_n,m) $$
+
 **Remark** (Operads and virtual species). An operad in the category of virtual species is a virtual species $\Phi$ that satisfies the requirements of a monoid with respect to the substitution product. This structural definition requires a composition morphism $\gamma: \Phi \circ \Phi \to \Phi$ and a unit morphism $\eta: X \to \Phi$ that fulfill the associativity and unit axioms within the ring $Virt$. 
 
 The introduction of virtual species provides results for operadic structures that are not possible in the semi-ring of ordinary species. Specifically, every virtual species $G$ where $G(0) = 0$ and $G^\prime(0) = 1$ possesses a unique substitutional inverse $G^{\langle -1 \rangle}$. This inverse satisfies the identities $G \circ G^{\langle -1 \rangle} = X$ and $G^{\langle -1 \rangle} \circ G = X$. This allows for the explicit resolution of combinatorial functional equations of the form $F = A \circ \Psi$, where the solution is determined as $\Psi = A^{\langle -1 \rangle} \circ F$. For instance, the species of rooted trees $A$ has a substitutional inverse $A^{\langle -1 \rangle} = X \cdot E^{-1}$, which is used to define the virtual species $\Lambda = X + E_2 - X^2$ in the context of the dissymmetry theorem for trees.

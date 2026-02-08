@@ -265,21 +265,29 @@ $$
 ## $\partial$-algebras and coalgebras
 
 ### Definition of Up and Down Operators
-In the big book, an "up operator" $u$ on a species $P$ is a $\partial$-coalgebra structure on $P$, denoted $P \to \partial P$; dually, a down operator $d$ is a $\partial$-algebra structure, denoted $\partial P \to P$. There are inserter diagrams
+In the big book, an "up operator" $u$ on a species $P$ is a $\partial$-coalgebra structure on $P$, denoted $P \to \partial P$; dually, a down operator $d$ is a $\partial$-algebra structure, denoted $\partial P \to P$. The species with an up or down operator form categories ${\bf Spc}^\uparrow$ and ${\bf Spc}^\downarrow$ There are inserter diagrams
 
-$$ ... $$
+{% tex classes: [antex, display] %}
+\setlength{\fboxrule}{1sp}
+\setlength{\fboxsep}{0sp}
+\fbox{\xymatrix{
+{\bf Spc}^\uparrow\drtwocell<\omit>{}\ar[r]\ar[d] & {\bf Spc}\ar@{=}[d] & {\bf Spc}^\downarrow\drtwocell<\omit>{}\ar[r]\ar[d] & {\bf Spc} \ar[d]^-\partial\\ 
+{\bf Spc} \ar[r]_-\partial & {\bf Spc} & {\bf Spc}\ar@{=}[r] & {\bf Spc} 
+}}
+{% endtex %}
 
-**Proposition.** The Day convolution of two $\partial$-coalgebras $(P,u)(Q,v)$ is a $\partial$-coalgebra $(P \cdot Q, w)$, where  $w : u \cdot id + id \cdot v$ [8.12.2]. This construction establishes ${\bf Spc}^\uparrow$ as a symmetric monoidal category $({\bf Spc}^\uparrow, \cdot, \beta)$ [8.12.2]. 
 
-**Proposition.** The duality functor $(-)^*$ establishes a relationship between up and down operators [8.12.3]. If $(p, u)$ is a species with up operators, its dual $(p^*, u^*)$ is a species with down operators, where $u^*: (p^*)' \to p^*$ corresponds to the dual of the up operator $u$ [8.12.3]. On the subcategory of finite-dimensional species, this defines an inverse strong monoidal contravariant functor between $({\bf Spc}^\uparrow, \cdot_q)$ and $(Sp_d, \cdot_q)$ [8.12.3].
+**Proposition.** The Day convolution of two $\partial$-coalgebras $(P,u)(Q,v)$ is a $\partial$-coalgebra $(P \cdot Q, w)$, where  $w : u \cdot id + id \cdot v$. This construction establishes ${\bf Spc}^\uparrow$ as a symmetric monoidal category $({\bf Spc}^\uparrow, \cdot, \beta)$. 
+
+**Proposition.** The duality functor $(-)^\ast$ establishes a relationship between up and down operators. If $(p, u)$ is a species with up operators, its dual $(p^\ast, u^\ast)$ is a species with down operators, where $u^\ast: \partial(p^\ast) \to p^\ast$ corresponds to the dual of the up operator $u$. On the subcategory of finite-dimensional species, this defines an inverse strong monoidal contravariant functor between $({\bf Spc}^\uparrow, \cdot_q)$ and $(Sp_d, \cdot_q)$.
 
 ### Algebraic Derivations and Coderivations
-A species with up or down operators can interact with monoid and comonoid structures in species [8.12.4]. 
-*   **Up Derivation:** An up operator $u$ is a derivation of a monoid $(p, \mu, \iota)$ if it satisfies the compatibility diagram where $u \circ \mu = \mu' \circ (u \cdot id + id \cdot u)$ [8.12.4].
-*   **Up Coderivation:** An up operator $u$ is a coderivation of a comonoid $(p, \Delta, \epsilon)$ if $\Delta' \circ u = (u \cdot id + id \cdot u) \circ \Delta$ [8.12.4].
-*   **$q$-Versions:** Skewed derivations and coderivations are defined by replacing the standard operator sum with the $q$-deformed version $u \cdot id + \tau_q \cdot u$ [8.12.5]. 
+A species with up or down operators can interact with monoid and comonoid structures in species. 
+*   *Up derivation*: An up operator $u$ is a derivation of a monoid $(p, \mu, \iota)$ if it satisfies the compatibility diagram where $u \circ \mu = \mu^\prime \circ (u \cdot id + id \cdot u)$.
+*   *Up coderivation*: An up operator $u$ is a coderivation of a comonoid $(p, \Delta, \epsilon)$ if $\Delta^\prime \circ u = (u \cdot id + id \cdot u) \circ \Delta$.
+*   *$q$-Versions*: Skewed derivations and coderivations are defined by replacing the standard operator sum with the $q$-deformed version $u \cdot id + \tau_q \cdot u$. 
 
-The exponential species $E$ serves as a primary example where the down operator $d$ is a derivation of the monoid $E$ and the up operator $u$ is a coderivation of the comonoid $E$ [8.12.5]. The linear order species $L$ is a comonoid in ${\bf Spc}^\uparrow$ when equipped with an up operator that adds a new minimum element to the order [8.12.5].
+The exponential species $E$ serves as a primary example where the down operator $d$ is a derivation of the monoid $E$ and the up operator $u$ is a coderivation of the comonoid $E$. The linear order species $L$ is a comonoid in ${\bf Spc}^\uparrow$ when equipped with an up operator that adds a new minimum element to the order.
 
 ## Differential equations
 

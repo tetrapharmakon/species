@@ -278,7 +278,7 @@ Let ${\cal C}^\lor = [\mathcal{C}, {\bf Set}]$ be the category of functors $F : 
 
 $$ \Omega : C\mapsto \text{Sub}_{\cal C}(yC) = \{R \hookrightarrow yC \} $$
 
-(in simple words: $C$ goes to the set of isomorphism classes of monics with codomain $yC$, the representable functor on $C$).
+(in words: $C$ goes to the set of isomorphism classes of monics with codomain $yC$, the representable functor on $C$).
 
 1. Characterise $y(n)={\bf B}(n, -)$ in the case of species;
 2. Specialise the above definition to $\mathcal C = \bf B$: who is $\Omega$ in this case (remember that the map $R \to y(n)$ must be a *natural transformation*, not just a collection of components: what constraint does this condition pose on $R$?)

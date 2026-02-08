@@ -17,6 +17,7 @@ antex:
         \usepackage{tikz}
         \def\Opd{\mathbf{Opd}}
         \usepackage{amsmath}
+        \usetikzlibrary{decorations.markings}
         \newcommand{\sha}{\mathbin{\text{\foreignlanguage{russian}{ш}}}}
         \tikzset{
           pics/vertex/.style args={#1}{
@@ -38,7 +39,65 @@ antex:
 
 An operad is a monoid for the substitution product discussed in [lecture 3](./3-monoidal-structures-on-P.html#defi-5). As such, "the theory of operads" is the study of the category $\mathbf{Opd}={\bf Mon}({\bf Spc},\circ)$; but things are never as simple as they seem...
 
-First, let's flesh out what the definition prescribes. An *operad* consists of a functor $T : {\bf B} \to \bf Set$, equipped with
+### Some more intuition on the substitution product
+
+The operation of substitution can be given a combinatorial meaning as follows: an $(F \circ G)$-structure on a finite set $U$ is defined by a triplet $(\pi, x, \vec\gamma)$ where:
+
+1. $\pi$ is a partition of the set $U$, which is divided into a collection of disjoint non-empty blocks $(U_1,\dots, U_n)$.
+2. $x\in F[n]$ is an $F$-structure on $U$; This structure is placed on the set $[n]\cong \{U_1,\dots, U_n\}$ of blocks that constitute the partition $\pi$.
+3. A collection of $G$-structures $\gamma_1,\dots,\gamma_n$ where $\gamma_i \in G[U_i]$ for all $1\le i\le n$.
+
+The set of all $(F \circ G)$-structures on $U$ is formally expressed as the disjoint sum over the set of all possible partitions $\pi$ of $U$ of the product of the $F$-structures on the partition and the $G$-structures on each block:
+
+$$ (F \circ G)[U] = \sum_{\pi \in Par[U]} F[\pi] \times \prod_{p \in \pi} G[p]. $$
+
+### Fundamental Combinatorial Examples
+Several essential combinatorial species are defined or characterized through this substitution operation:
+
+**Example** (The Species of Endofunctions). Every endofunction on a set $U$ is uniquely represented as a permutation of disjoint rooted trees. This is expressed by the combinatorial identity $End \cong S \circ \mathfrak a$, where $S$ is the species of permutations and $\mathfrak a$ is the species of rooted trees.
+
+**Example** (The Species of Permutations). A permutation is defined as an assembly of disjoint oriented cycles. This follows the identity ${\cal S} \cong E \circ {\cal C}$, where $E$ is the species of sets and $\cal C$ is the species of cyclic permutations.
+
+{% tex classes: [antex, display] %}
+\tikzset{
+  circ arrow/.style args={#1}{
+    decoration={markings,
+      mark=at position #1 with {\arrow{latex}}
+    },
+    postaction={decorate}
+  }
+}
+\begin{tikzpicture}[scale=.75]
+\fill[gray!20, rounded corners] (-3.5,-2.5) rectangle (2,2.5); \node[below left, black] at (2,-2.5) {${\cal S}\cong E\circ \cal C$};
+\draw[circ arrow=0.31] (-6em,2em) circle (2em);
+\begin{scope}[xshift=-6em,yshift=2em]
+\foreach \i in {1,2,3,4,5}{
+\node[font=\footnotesize,circle,fill=gray!20,inner sep=1pt] (\i) at (\i*360/5:2em) {$\i$};
+}
+\end{scope}
+\begin{scope}[yshift=2em]
+\draw[circ arrow=0.5] (0,0) circle (1.5em);
+\foreach \i/\j in {1/6,2/7,3/8}{
+\node[font=\footnotesize,circle,fill=gray!20,inner sep=1pt] at (\i*360/3:1.5em) {$\j$};
+}
+\end{scope}
+\begin{scope}[xshift=-2em,yshift=-4em]
+\draw[circ arrow=0.79] (0,0) circle (1em);
+\foreach \i/\j in {1/9,2/10}{
+\node[font=\footnotesize,circle,fill=gray!20,inner sep=1pt] at (\i*360/2:1em) {$\j$};
+}
+\end{scope}
+\end{tikzpicture}
+{% endtex %}
+
+**Example** (The Species of set Partitions and Ballots). A partition of a set is defined as a set of non-empty disjoint sets. This corresponds to the identity $Par \cong E\circ E_+$, where $E$ is the species of sets and $E_+$ is the species of non-empty sets.
+
+A *ballot*, or ordered partition, is defined as a linear ordering of non-empty sets. This satisfies the equation $Bal \cong L \circ E_+$, where $L$ is the species of linear orders.
+
+
+---
+
+Now, with the definition in hand, and algebraist's goggles on, let's flesh out what the definition prescribes. An *operad* consists of a functor $T : {\bf B} \to \bf Set$, equipped with
 
 - multiplication, a natural transformation of type $\mu : T \circ T\Rightarrow T$, subject to the associativity axiom (the two compositions are mediated by the associator):
 
