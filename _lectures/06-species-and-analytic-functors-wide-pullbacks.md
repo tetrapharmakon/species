@@ -48,7 +48,7 @@ $$ \text{Lan}_J :  {\bf Spc} \leftrightarrows [{\bf Set}, {\bf Set}] : J^\ast. $
 
 Since $J$ is not fully faithful, $J^\ast$ is not a coreflection, so the category of combinatorial species cannot be seen as a full subcategory of endofunctors of $\bf Set$ subject to some additional property prescribed by the right adjoint $J^\ast$.
 
-Its essential image is thus a little bit more difficult to characterise than in the case of $[{\bf Fin}, {\bf Set}]$ examined in [lecture 1](./1-finset-and-its-up.html).
+Its essential image is thus a little bit more difficult to characterise than in the case of $[{\bf Fin}, {\bf Set}]$ examined in [lecture 1](./01-finset-and-its-up.html).
 
 With a little more effort than there, we can characterise such an essential image as the subcategory of those $F : {\bf Set} \to {\bf Set}$ such that
 
@@ -113,7 +113,7 @@ Thus, to completely understand analytic functors, it is enough to understand the
 
 $$\textstyle {\bf Spc} = [{\bf B}, {\bf Set}] \cong \left[ \sum_{n\ge 1} S_n , {\bf Set}\right] \cong \prod_{n\ge 1} [S_n, {\bf Set}] $$
 
-keeping in mind that the category $[S_n, {\bf Set}]$ is just the category of sets equipped with a left $S_n$-action. Thus, the action of $f$ on objects and morphisms is determined as the sum $f_1 + f_2 + f_3 + \dots$ if $f_n := \kappa_n f$ in the sense of [lecture 2](./2-p-and-its-up-and-species.html#concentration).
+keeping in mind that the category $[S_n, {\bf Set}]$ is just the category of sets equipped with a left $S_n$-action. Thus, the action of $f$ on objects and morphisms is determined as the sum $f_1 + f_2 + f_3 + \dots$ if $f_n := \kappa_n f$ in the sense of [lecture 2](./02-p-and-its-up-and-species.html#concentration).
 
 <div id="label-6"></div>
 
@@ -128,7 +128,7 @@ $$ \begin{cases} Z_{E_e} = \frac12 \left( Z_E(x_1, x_2,x_3,\dots) + Z_E(-x_1,x_2
 
 <div id="label-7"></div>
 
-**Example.** Let $f : {\bf B} \to {\bf Set}$ be the [sym-representable species](./2-p-and-its-up-and-species.html#label-11) sending $[n]\mapsto S_n/H$; the associated analytic functor sends a set $X$ to the set $X^n/H$, where the tuples of elements of $X$ are identified iff they differ by a permutation in $H$.
+**Example.** Let $f : {\bf B} \to {\bf Set}$ be the [sym-representable species](./02-p-and-its-up-and-species.html#label-11) sending $[n]\mapsto S_n/H$; the associated analytic functor sends a set $X$ to the set $X^n/H$, where the tuples of elements of $X$ are identified iff they differ by a permutation in $H$.
 
 The functor $X\mapsto X^n/H$ is called *sym-representable analytic*.
 
@@ -219,7 +219,7 @@ B \ar[r]& 1
 }}
 {% endtex %}
 
-This means that, provided we choose a minimal $n_0, x_0$ as in [the previous remark](./5-species-and-analytic-functors-wide-pullbacks.html#here), every $f : X \to [n]$ such that $x_0$ lies in the image of $Ff$ must be an epimorphism.
+This means that, provided we choose a minimal $n_0, x_0$ as in [the previous remark](./05-species-and-analytic-functors-wide-pullbacks.html#here), every $f : X \to [n]$ such that $x_0$ lies in the image of $Ff$ must be an epimorphism.
 
 In particular, all elements in the set
 
