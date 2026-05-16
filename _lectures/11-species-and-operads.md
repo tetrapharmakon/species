@@ -302,7 +302,7 @@ evidently, $\flat T$ is the analytic functor associated to $T$, so the construct
 - the multiplication (component) $\mu : (\flat T)((\flat T)X) \to (\flat T)X$ is defined from the composition
 
 $$ \begin{aligned}
-  \int^{m} (M_T(X))^m \times Tm
+  \int^{m} (\flat T(X))^m \times Tm
    & \cong \int^{m} \Bigl[ \int^{n} X^n \times Tn \Bigr]^m \times Tm                                                   \\
    & \cong \int^{m} \left(\int^{\vec n} X^{n_1+\cdots+n_m} \times T{n_1} \times \cdots \times T{n_m} \right) \times Tm \\
    & \cong \int^{m,\vec n} X^{n_1+\cdots+n_m} \times T{n_1} \times \cdots \times T{n_m} \times  Tm                     \\
